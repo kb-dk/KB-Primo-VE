@@ -1,0 +1,33 @@
+// Fixes the skewed logo after adding kbdk design
+@media print, screen and (min-width: 40em) {
+  prm-logo {
+    padding-left: 1.5rem;
+    width: 100%;
+  }
+  prm-logo .product-logo a {
+    height:140%;
+  }
+}
+
+// Change the darker color in the header
+// so that it looks the same as the other navbar in the header
+.prm-primary-bg.prm-hue1,
+prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
+prm-topbar .top-nav-bar,
+prm-search-bar.prm-hue1,
+prm-atoz-search-bar.prm-hue1,
+prm-browse-search-bar.prm-hue1,
+prm-tags-search-bar.prm-hue1,
+prm-newspapers-search-bar.prm-hue1,
+prm-collection-gallery-header .prm-hue1.collection-header-inner,
+prm-tree-nav prm-spinner .prm-hue1.diamond {
+  background-color: $primary-color;
+  color: $secondary-color !important;
+}
+
+// Changed the font for the top bar
+prm-topbar,
+prm-main-menu[menu-type=menu] .md-button{
+  font-family: $font1;
+  font-weight: normal !important;
+}

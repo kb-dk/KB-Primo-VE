@@ -1,0 +1,48 @@
+.md-button.button-confirm {
+  color: #171717; }
+
+.item-title a {
+  text-decoration: none !important; }
+
+@media print, screen and (min-width: 40em) {
+  prm-logo {
+    padding-left: 1.5rem;
+    width: 100%; }
+
+  prm-logo .product-logo a {
+    height: 140%; } }
+.prm-primary-bg.prm-hue1,
+prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
+prm-topbar .top-nav-bar,
+prm-search-bar.prm-hue1,
+prm-atoz-search-bar.prm-hue1,
+prm-browse-search-bar.prm-hue1,
+prm-tags-search-bar.prm-hue1,
+prm-newspapers-search-bar.prm-hue1,
+prm-collection-gallery-header .prm-hue1.collection-header-inner,
+prm-tree-nav prm-spinner .prm-hue1.diamond {
+  background-color: #FFF6C4;
+  color: #002E70 !important; }
+
+prm-topbar,
+prm-main-menu[menu-type=menu] .md-button {
+  font-family: "nowaymedium", sans-serif;
+  font-weight: normal !important; }
+
+.prm-secondary-color.prm-hue1,
+.link-alt-color,
+.section-title prm-icon,
+.result-item-actions .pin-button,
+prm-add-query-to-saved-searches .custom-button.pin-button,
+prm-search-bookmark-filter .prm-hue1.md-button,
+prm-topbar .prm-hue1.top-nav-bar,
+prm-pre-filters md-input-container.is-active :focus,
+prm-account-overview .institutions-list md-list-item.is-selected
+.institution-name,
+prm-recomendation-item .media-on-hover .pin-button,
+prm-tree-nav md-list md-list-item .md-button.branch-name.is-selected,
+prm-tree-nav md-list md-list-item md-button.branch-name.is-selected,
+.result-item-actions .md-icon-button {
+  color: #171717 !important; }
+
+/*# sourceMappingURL=custom_styles.css.map */
