@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Format size</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.375,4 L9.375,7 L14.5833333,7 L14.5833333,19 L17.7083333,19 L17.7083333,7 L22.9166667,7 L22.9166667,4 L9.375,4 Z M3.125,12 L6.25,12 L6.25,19 L9.375,19 L9.375,12 L12.5,12 L12.5,9 L3.125,9 L3.125,12 Z" id="path-1"></path>
+    </defs>
+    <g id="Services" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Service---Desktop" transform="translate(-1249.000000, -232.000000)">
+            <g id="Content" transform="translate(393.000000, 192.000000)">
+                <g id="Page-header">
+                    <g id="Icon/Format-size" transform="translate(853.150943, 36.000000)">
+                        <g id="ic-format-size-24px">
+                            <polygon id="Shape" points="0 0 25 0 25 24 0 24"></polygon>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                            <g id="Color/Dark-grey-50-#989898" mask="url(#mask-2)" fill="#989898">
+                                <rect id="Rectangle" x="0" y="0" width="25" height="24"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Print</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.7916667,8 L5.20833333,8 C3.47916667,8 2.08333333,9.34 2.08333333,11 L2.08333333,17 L6.25,17 L6.25,21 L18.75,21 L18.75,17 L22.9166667,17 L22.9166667,11 C22.9166667,9.34 21.5208333,8 19.7916667,8 Z M16.6666667,19 L8.33333333,19 L8.33333333,14 L16.6666667,14 L16.6666667,19 Z M19.7916667,12 C19.21875,12 18.75,11.55 18.75,11 C18.75,10.45 19.21875,10 19.7916667,10 C20.3645833,10 20.8333333,10.45 20.8333333,11 C20.8333333,11.55 20.3645833,12 19.7916667,12 Z M18.75,3 L6.25,3 L6.25,7 L18.75,7 L18.75,3 Z" id="path-1"></path>
+    </defs>
+    <g id="Services" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Service---Desktop" transform="translate(-1280.000000, -231.000000)">
+            <g id="Content" transform="translate(393.000000, 192.000000)">
+                <g id="Page-header">
+                    <g id="Icon/Print" transform="translate(885.181818, 36.000000)">
+                        <g id="ic-local-printshop-24px">
+                            <polygon id="Shape" points="0 0 25 0 25 24 0 24"></polygon>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                            <g id="Color/Dark-grey-50-#989898" mask="url(#mask-2)" fill="#989898">
+                                <rect id="Rectangle" x="0" y="0" width="25" height="24"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
