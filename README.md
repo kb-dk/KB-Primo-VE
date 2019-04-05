@@ -1,10 +1,8 @@
-# primo-explore-rex
+# KB-Primo-VE
 
 A Primo customization package by Royal Danish Library.
 
-Build status: [![CircleCI](https://circleci.com/gh/Det-Kongelige-Bibliotek/primo-explore-rex.svg?style=svg&circle-token=9d6d8e12ee425278b1efc8a5aa3e1d10db487f5e)](https://circleci.com/gh/Det-Kongelige-Bibliotek/primo-explore-rex)
-
-Target Primo release: August release
+Target Primo ve release: August release
 
 The following instructions are intended for Unix-like operating systems. 
 
@@ -16,7 +14,7 @@ The following instructions are intended for Unix-like operating systems.
 ## Building the package
 To build the package, navigate into the root directory, and run the following command.
 
-     gulp run --view NUI --browserify
+     gulp run --view VIEWNAME --ve --browserify
 
 ## CSS preprocessing
 We utilize [SASS](http://sass-lang.com/) (with the SCSS syntax) for CSS preprocessing. SASS files are located under [css/sass](https://github.com/Det-Kongelige-Bibliotek/primo-explore-rex/tree/master/css/sass). To start CSS preproccessing, install `sass` and run the following command in the root directory of the repository. 
