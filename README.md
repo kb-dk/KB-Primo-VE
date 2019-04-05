@@ -8,11 +8,11 @@ The following instructions are intended for Unix-like operating systems.
 
 ## Installation
 - Clone or download this repository into the proper place in your [Primo Development Environment](https://github.com/ExLibrisGroup/primo-explore-devenv).
-- Navigate into the directory where you cloned this repository (the root directory).
+- Navigate into the directory where you cloned this repository.
 - Run `npm install` to install development dependencies.
 
 ## Building the package
-To build the package, navigate into the root directory, and run the following command.
+To build the package, navigate into the root directory (primo-explore-devenv), and run the following command.
 
      gulp run --view VIEWNAME --ve --browserify
 
