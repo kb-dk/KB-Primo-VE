@@ -1,6 +1,6 @@
 import {
   viewName
-} from './viewName';
+} from '../shared/viewName';
 
 class ChatBoxController {
   constructor($scope, scriptLoaderService, localeService) {
@@ -23,8 +23,8 @@ class ChatBoxController {
   constructChatBoxScriptUrl() {
     let scriptUrlBase = 'https://region-eu.libanswers.com/load_chat.php?hash=';
     let scriptIds = {
-      'en_US': '2065a8d15fb45f3c911c2b223cc81286',
-      'da_DK': '7df867c6243394f970f8550332c4b607'
+      'en': '2065a8d15fb45f3c911c2b223cc81286',
+      'da': '7df867c6243394f970f8550332c4b607'
     };
     this.scriptId = scriptIds[this.localeService.current()];
     this.scriptUrl = scriptUrlBase + this.scriptId;
@@ -47,6 +47,6 @@ export let ChatBoxConfig = {
   name: 'rexChatBox',
   config: {
     controller: ChatBoxController,
-    templateUrl: 'custom/' + viewName + '/html/chatBox.component.html',
+    templateUrl: 'custom/' + viewName + '/html/chatbox/chatBox.component.html',
   }
 }

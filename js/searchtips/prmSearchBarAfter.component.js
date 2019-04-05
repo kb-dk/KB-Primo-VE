@@ -1,4 +1,4 @@
-import { viewName } from './viewName';
+import { viewName } from '../shared/viewName';
 
 class PrmSearchBarAfterController {
   constructor($element) {
@@ -32,7 +32,7 @@ PrmSearchBarAfterController.$inject = ['$element'];
 export let PrmSearchBarAfterConfig = {
   name: 'prmSearchBarAfter',
   config: {
-    templateUrl: 'custom/' + viewName + '/html/prmSearchBarAfter.component.html',
+    templateUrl: 'custom/' + viewName + '/html/searchtips/prmSearchBarAfter.component.html',
     controller: PrmSearchBarAfterController,
   }
 }

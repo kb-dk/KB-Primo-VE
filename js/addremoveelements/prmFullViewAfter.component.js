@@ -1,6 +1,6 @@
 import {
   viewName
-} from './viewName';
+} from '../shared/viewName';
 
 class PrmFullViewAfterController {
   constructor($element, $scope) {
@@ -104,6 +104,6 @@ export let PrmFullViewAfterConfig = {
       parentCtrl: '<',
     },
     controller: PrmFullViewAfterController,
-    templateUrl: 'custom/' + viewName + '/html/prmFullViewAfter.component.html',
+    templateUrl: 'custom/' + viewName + '/html/addremoveelements/prmFullViewAfter.component.html',
   }
 };

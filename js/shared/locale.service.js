@@ -4,6 +4,7 @@ export class LocaleService {
   }
 
   current() {
+    console.log(this.$location.search().lang);
     return this.$location.search().lang;
   }
 }

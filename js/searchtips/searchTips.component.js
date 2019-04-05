@@ -1,4 +1,4 @@
-import { viewName } from './viewName';
+import { viewName } from '../shared/viewName';
 
 class SearchTipsController {
   constructor($mdDialog, localeService) {
@@ -19,7 +19,7 @@ class SearchTipsController {
         }
       },
       controllerAs: '$ctrl',
-      templateUrl: 'custom/' + viewName + '/html/searchTips_' + this.localeService.current() + '.html',
+      templateUrl: 'custom/' + viewName + '/html/searchtips/searchTips_' + this.localeService.current() + '.html',
       parent: angular.element(document.body),
       targetEvent: event,
       clickOutsideToClose: true,
@@ -35,6 +35,6 @@ export let SearchTipsConfig = {
   name: 'rexSearchTips',
   config: {
     controller: SearchTipsController,
-    templateUrl: 'custom/' + viewName + '/html/searchTips.component.html'
+    templateUrl: 'custom/' + viewName + '/html/searchtips/searchTips.component.html'
   }
 }

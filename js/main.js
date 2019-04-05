@@ -1,73 +1,122 @@
-import { viewName } from './viewName';
+// Shared
+import { viewName } from './shared/viewName';
+import { NavigationService } from './shared/navigation.service';
+import { ScriptLoaderService } from './shared/scriptLoader.service';
+import { LocaleService } from './shared/locale.service';
 
-import { NavigationService } from './navigation.service';
-import { AnnouncementService } from './announcement.service';
-import { ScriptLoaderService } from './scriptLoader.service';
-import { PickUpNumbersService } from './pickUpNumbers.service';
-import { LinkedPersonsService } from './linkedPersons.service';
-import { GoogleAnalyticsService } from './googleAnalytics.service';
-import { LocaleService } from './locale.service';
+// Googleanalytics
+// import { GoogleAnalyticsService } from './googleanalytics/googleAnalytics.service';
 
-import { OpeningHoursConfig } from './openingHours.component';
-import { SearchTipsConfig } from './searchTips.component';
-import { AltmetricsConfig } from './altmetrics.component';
-import { LinkedPersonsConfig } from './linkedPersons.component';
-// import { ChatBoxConfig } from './chatBox.component';
+// Footer
+import { PrmExploreFooterAfterConfig } from './footer/prmExploreFooterAfter.component';
 
-import { PrmFinesAfterConfig } from './prmFinesAfter.component';
-import { PrmLogoAfterConfig } from './prmLogoAfter.component';
-import { PrmTopbarAfterConfig } from './prmTopbarAfter.component';
-import { PrmSearchBarAfterConfig } from './prmSearchBarAfter.component';
-import { PrmFullViewAfterConfig } from './prmFullViewAfter.component';
-import { PrmPersonalInfoAfterConfig } from './prmPersonalInfoAfter.component';
-import { PrmRequestsAfterConfig } from './prmRequestsAfter.component';
-import { PrmRequestsOverviewAfterConfig } from './prmRequestsOverviewAfter.component';
-import { PrmRequestServicesAfterConfig } from './prmRequestServicesAfter.component';
-import { PrmExploreMainAfterConfig } from './prmExploreMainAfter.component';
-// import { PrmBriefResultAfterConfig } from './prmBriefResultAfter.component';
+// Announcement
+// import { AnnouncementService } from './announcement/announcement.service';
+// import { PrmTopbarAfterConfig } from './announcement/prmTopbarAfter.component';
+
+// Pickupnumbers
+// import { PickUpNumbersService } from './pickupnumbers/pickUpNumbers.service';
+// import { PrmRequestsAfterConfig } from './pickupnumbers/prmRequestsAfter.component';
+// import { PrmRequestsOverviewAfterConfig } from './pickupnumbers/prmRequestsOverviewAfter.component';
+
+// Linkedperson
+// import { LinkedPersonsService } from './linkedperson/linkedPersons.service';
+// import { LinkedPersonsConfig } from './linkedperson/linkedPersons.component';
+
+// Openinghours
+// import { OpeningHoursConfig } from './openinghours/openingHours.component';
+
+// Searchtips
+import { PrmSearchBarAfterConfig } from './searchtips/prmSearchBarAfter.component';
+import { SearchTipsConfig } from './searchtips/searchTips.component';
+
+// Altmetrics
+// import { AltmetricsConfig } from './altmetrics/altmetrics.component';
+
+// Chatbox
+import { PrmExploreMainAfterConfig } from './chatbox/prmExploreMainAfter.component';
+import { ChatBoxConfig } from './chatbox/chatBox.component';
+
+// Fines
+// import { PrmFinesAfterConfig } from './fines/prmFinesAfter.component';
+
+// Personalinfo
+// import { PrmPersonalInfoAfterConfig } from './personalinfo/prmPersonalInfoAfter.component';
+
+// Add / remove elements
+// import { PrmFullViewAfterConfig } from './addremoveelements/prmFullViewAfter.component';
+// import { PrmRequestServicesAfterConfig } from './addremoveelements/prmRequestServicesAfter.component';
+
 
 angular.module('viewCustom', [
   'angularLoadMonkeyPatched',
   'ngMaterial'
 ])
-.run(['$rootScope', ($rootScope) => {
-  $rootScope.viewName = viewName;
-}])
-.run(['googleAnalyticsService', (googleAnalyticsService) => {
-  let trackingId =  'UA-77177865-1';
-  googleAnalyticsService.initialize(trackingId)
-  .then(() => googleAnalyticsService.trackPageViews())
-  .catch((e) => {
-    console.log('Google anayltics could not be initialized.');
-    console.log(e);
-  });
-}]);
+    .run(['$rootScope', ($rootScope) => {
+      $rootScope.viewName = viewName;
+    }]);
+// Googleanalytics
+// .run(['googleAnalyticsService', (googleAnalyticsService) => {
+//   let trackingId =  'UA-77177865-1';
+//   googleAnalyticsService.initialize(trackingId)
+//   .then(() => googleAnalyticsService.trackPageViews())
+//   .catch((e) => {
+//     console.log('Google anayltics could not be initialized.');
+//     console.log(e);
+//   });
+// }]);
+
 
 angular.module('viewCustom')
-  .service('navigationService', NavigationService)
-  .service('announcementService', AnnouncementService)
-  .service('scriptLoaderService', ScriptLoaderService)
-  .service('pickUpNumbersService', PickUpNumbersService)
-  .service('linkedPersonsService', LinkedPersonsService)
-  .service('googleAnalyticsService', GoogleAnalyticsService)
-  .service('localeService', LocaleService)
-  .component(OpeningHoursConfig.name, OpeningHoursConfig.config)
-  .component(SearchTipsConfig.name, SearchTipsConfig.config)
-  .component(AltmetricsConfig.name, AltmetricsConfig.config)
-  .component(LinkedPersonsConfig.name, LinkedPersonsConfig.config)
-//  .component(ChatBoxConfig.name, ChatBoxConfig.config)
-  .component(PrmFinesAfterConfig.name, PrmFinesAfterConfig.config)
-  .component(PrmLogoAfterConfig.name, PrmLogoAfterConfig.config)
-  .component(PrmTopbarAfterConfig.name, PrmTopbarAfterConfig.config)
-  .component(PrmSearchBarAfterConfig.name, PrmSearchBarAfterConfig.config)
-  .component(PrmFullViewAfterConfig.name, PrmFullViewAfterConfig.config)
-  .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
-  .component(PrmRequestsAfterConfig.name, PrmRequestsAfterConfig.config)
-  .component(PrmRequestsOverviewAfterConfig.name, PrmRequestsOverviewAfterConfig.config)
-  .component(PrmRequestServicesAfterConfig.name, PrmRequestServicesAfterConfig.config)
-  .component(PrmExploreMainAfterConfig.name, PrmExploreMainAfterConfig.config)
-// .component(PrmBriefResultAfterConfig.name, PrmBriefResultAfterConfig.config)
+
+// Shared
+    .service('navigationService', NavigationService)
+    .service('scriptLoaderService', ScriptLoaderService)
+    .service('localeService', LocaleService)
+
+    // Googleanalytics
+    //   .service('googleAnalyticsService', GoogleAnalyticsService)
+
+    // Footer
+    .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
+
+    // Announcement
+    //   .service('announcementService', AnnouncementService)
+    //   .component(PrmTopbarAfterConfig.name, PrmTopbarAfterConfig.config)
+
+    // Pickupnumbers
+    //   .service('pickUpNumbersService', PickUpNumbersService)
+    //   .component(PrmRequestsAfterConfig.name, PrmRequestsAfterConfig.config)
+    //   .component(PrmRequestsOverviewAfterConfig.name, PrmRequestsOverviewAfterConfig.config)
+
+    // Linkedperson
+    //   .service('linkedPersonsService', LinkedPersonsService)
+    //   .component(LinkedPersonsConfig.name, LinkedPersonsConfig.config)
+
+    // Openinghours
+    //   .component(OpeningHoursConfig.name, OpeningHoursConfig.config)
+
+    // Searchtips
+    .component(PrmSearchBarAfterConfig.name, PrmSearchBarAfterConfig.config)
+    .component(SearchTipsConfig.name, SearchTipsConfig.config)
+
+    // Altmetrics
+    // .component(AltmetricsConfig.name, AltmetricsConfig.config)
+
+    // Chatbox
+      .component(PrmExploreMainAfterConfig.name, PrmExploreMainAfterConfig.config)
+      .component(ChatBoxConfig.name, ChatBoxConfig.config)
+
+    // Fines
+    //   .component(PrmFinesAfterConfig.name, PrmFinesAfterConfig.config)
+
+    // Personalinfo
+    // .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
+
+    // Add / remove elements
+    // .component(PrmFullViewAfterConfig.name, PrmFullViewAfterConfig.config)
+    // .component(PrmRequestServicesAfterConfig.name, PrmRequestServicesAfterConfig.config)
+
 
 // Pre-ES2015 code.
-require('./angularLoadMonkeyPatched');
-// require('./prmBriefResultAfter.component');
+require('./shared/angularLoadMonkeyPatched');

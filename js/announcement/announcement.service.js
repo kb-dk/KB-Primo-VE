@@ -1,6 +1,6 @@
 import {
   viewName
-} from './viewName';
+} from '../shared/viewName';
 
 /**
  * Annoncement service.
@@ -73,7 +73,7 @@ export class AnnouncementService {
             }
           },
           controllerAs: '$ctrl',
-          templateUrl: 'custom/' + viewName + '/html/announcement.html',
+          templateUrl: 'custom/' + viewName + '/html/announcement/announcement.html',
         });
 
         ctrl._toastPromise.then(hideCallback).catch(hideCallback).then(() => ctrl._dismiss());

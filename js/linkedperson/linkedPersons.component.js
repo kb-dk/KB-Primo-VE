@@ -1,6 +1,6 @@
 import {
   viewName
-} from './viewName';
+} from '../shared/viewName';
 
 class LinkedPersonsController {
   constructor(linkedPersonsService, $mdDialog) {
@@ -43,6 +43,6 @@ export let LinkedPersonsConfig = {
       onLoad: '&',
     },
     controller: LinkedPersonsController,
-    templateUrl: 'custom/' + viewName + '/html/linkedPersons.component.html',
+    templateUrl: 'custom/' + viewName + '/html/linkedPerson/linkedPersons.component.html',
   }
 }
