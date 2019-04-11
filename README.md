@@ -39,19 +39,19 @@ Running the E2E tests require Chrome (or Chromium) to be available on the machin
 
     ./node_modules/protractor/bin/protractor ./test/e2e/conf.js
 ## New Primo functionalities 
-1- Showing an announcement bar and hiding it using cookie:
+1. Displays a message on the top of the screen if there is text (other than &nbsp;) in the nui.message.announcement code table. and hiding it using cookie:
     * Related files: 
         * js: 
-            1- announcement.service.js
-            2- prmTopbarAfter.component.js  
+            1. announcement.service.js
+            1. prmTopbarAfter.component.js  
         * html:
-            1- announcement.html
+            1. announcement.html
         * css:
-            1- kbdk-design.css
-            2- _announcement.scss  
+            1. kbdk-design.css
+            1. _announcement.scss  
         * lables:
-            1- nui.message.announcement
-            2- nui.message.dismiss    
+            1. nui.message.announcement
+            1. nui.message.dismiss    
     *           
 ## License
 
