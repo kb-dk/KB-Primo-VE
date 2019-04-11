@@ -11,8 +11,8 @@ import { LocaleService } from './shared/locale.service';
 import { PrmExploreFooterAfterConfig } from './footer/prmExploreFooterAfter.component';
 
 // Announcement
-// import { AnnouncementService } from './announcement/announcement.service';
-// import { PrmTopbarAfterConfig } from './announcement/prmTopbarAfter.component';
+import { AnnouncementService } from './announcement/announcement.service';
+import { PrmTopbarAfterConfig } from './announcement/prmTopbarAfter.component';
 
 // Pickupnumbers
 // import { PickUpNumbersService } from './pickupnumbers/pickUpNumbers.service';
@@ -49,11 +49,11 @@ import { ChatBoxConfig } from './chatbox/chatBox.component';
 
 
 angular.module('viewCustom', [
-  'angularLoadMonkeyPatched',
-  'ngMaterial'
+    'angularLoadMonkeyPatched',
+    'ngMaterial'
 ])
     .run(['$rootScope', ($rootScope) => {
-      $rootScope.viewName = viewName;
+        $rootScope.viewName = viewName;
     }]);
 // Googleanalytics
 // .run(['googleAnalyticsService', (googleAnalyticsService) => {
@@ -81,8 +81,8 @@ angular.module('viewCustom')
     .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
 
     // Announcement
-    //   .service('announcementService', AnnouncementService)
-    //   .component(PrmTopbarAfterConfig.name, PrmTopbarAfterConfig.config)
+      .service('announcementService', AnnouncementService)
+      .component(PrmTopbarAfterConfig.name, PrmTopbarAfterConfig.config)
 
     // Pickupnumbers
     //   .service('pickUpNumbersService', PickUpNumbersService)
@@ -104,18 +104,18 @@ angular.module('viewCustom')
     // .component(AltmetricsConfig.name, AltmetricsConfig.config)
 
     // Chatbox
-      .component(PrmExploreMainAfterConfig.name, PrmExploreMainAfterConfig.config)
-      .component(ChatBoxConfig.name, ChatBoxConfig.config)
+    .component(PrmExploreMainAfterConfig.name, PrmExploreMainAfterConfig.config)
+    .component(ChatBoxConfig.name, ChatBoxConfig.config)
 
-    // Fines
-    //   .component(PrmFinesAfterConfig.name, PrmFinesAfterConfig.config)
+// Fines
+//   .component(PrmFinesAfterConfig.name, PrmFinesAfterConfig.config)
 
-    // Personalinfo
-    // .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
+// Personalinfo
+// .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
 
-    // Add / remove elements
-    // .component(PrmFullViewAfterConfig.name, PrmFullViewAfterConfig.config)
-    // .component(PrmRequestServicesAfterConfig.name, PrmRequestServicesAfterConfig.config)
+// Add / remove elements
+// .component(PrmFullViewAfterConfig.name, PrmFullViewAfterConfig.config)
+// .component(PrmRequestServicesAfterConfig.name, PrmRequestServicesAfterConfig.config)
 
 
 // Pre-ES2015 code.

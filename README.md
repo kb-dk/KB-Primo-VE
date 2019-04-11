@@ -39,7 +39,7 @@ Running the E2E tests require Chrome (or Chromium) to be available on the machin
 
     ./node_modules/protractor/bin/protractor ./test/e2e/conf.js
 ## KB-Primo-VE functionalities 
-1. Displays a message on the top of the screen if there is text (other than &nbsp;) in the nui.message.announcement code table. and hiding it using cookie:
+1. **Announcement service**: Displays a message on the top of the screen if there is text (other than &nbsp;) in the nui.message.announcement code table. and hiding it using cookie:
     * Related files: 
         * js: 
             1. announcement.service.js
