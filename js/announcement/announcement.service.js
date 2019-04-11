@@ -7,10 +7,11 @@ import {
  * Displays a md-toast on top of the view, containing an announcement retrieved from the code tables.
  */
 export class AnnouncementService {
-  constructor($translate, $mdToast, $rootScope) {
+  constructor($translate, $mdToast, $rootScope, $cookies) {
     this.$translate = $translate;
     this.$mdToast = $mdToast;
     this.$rootScope = $rootScope;
+    this.$cookies = $cookies;
 
     this._dismissed = false;
 
@@ -42,9 +43,15 @@ export class AnnouncementService {
       if (ctrl._dismissed === true) {
         reject('The announcement has been dismissed.');
         return;
-      };
+      }
 
       ctrl.$translate('nui.message.announcement').then((translation) => {
+        // Check if there is a cookie with this message
+        let cookie = ctrl.$cookies.get('announcement');
+        if (cookie === translation){
+          reject('The announcement has been dismissed before.');
+          return;
+        }
         // If there is no announcement to be displayed.
         if ((!translation) || ['announcement', '&nbsp;', ''].includes(translation)) {
           // translation is assigned 'announcement' in the absence of a matching entry.
@@ -69,6 +76,10 @@ export class AnnouncementService {
             return {
               close: () => {
                 ctrl.$mdToast.hide();
+                // Save as cookie
+                ctrl.$translate('nui.message.announcement').then((response) => {
+                  return ctrl.$cookies.put('announcement', response);
+                });
               }
             }
           },
@@ -87,4 +98,4 @@ export class AnnouncementService {
 
 };
 
-AnnouncementService.$inject = ['$translate', '$mdToast', '$rootScope'];
+AnnouncementService.$inject = ['$translate', '$mdToast', '$rootScope', '$cookies'];
