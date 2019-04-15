@@ -129,4 +129,3 @@ angular.module('viewCustom')
 
 // Pre-ES2015 code.
 require('./shared/angularLoadMonkeyPatched');
-require('./footer');
