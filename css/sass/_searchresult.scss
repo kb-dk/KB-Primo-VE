@@ -1,0 +1,22 @@
+div.list-item-wrapper{
+  background-color: white;
+
+  prm-brief-result .item-title span{
+    color: $secondary-color;
+    mark{
+      background-color: transparent;
+      color: $secondary-color;
+    }
+  }
+
+  span.button-content:hover,
+  .md-button.arrow-link-button:hover .button-content{
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+div.flex-order-4:empty{
+  display: none;
+}
+

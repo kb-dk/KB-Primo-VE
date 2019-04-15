@@ -1,0 +1,16 @@
+// Search result on top of header
+
+@media print, screen and (min-width: 64em) {
+  md-content{
+    overflow: visible !important;
+  }
+  md-content, prm-search > div.layout-row{
+    z-index: 2;
+  }
+  md-content > div, .sidebar {
+    margin-top: -84px;
+    z-index: 2;
+  }
+
+}
+

@@ -1,3 +1,5 @@
+@import "shared";
+
 // Fixes the skewed logo after adding kbdk design
 @media print, screen and (min-width: 40em) {
   prm-logo {
@@ -20,9 +22,11 @@ prm-browse-search-bar.prm-hue1,
 prm-tags-search-bar.prm-hue1,
 prm-newspapers-search-bar.prm-hue1,
 prm-collection-gallery-header .prm-hue1.collection-header-inner,
-prm-tree-nav prm-spinner .prm-hue1.diamond {
+prm-tree-nav prm-spinner .prm-hue1.diamond,
+.header.topbar-wrapper{
   background-color: $primary-color;
   color: $secondary-color !important;
+
 }
 
 // Changed the font for the top bar
@@ -30,4 +34,28 @@ prm-topbar,
 prm-main-menu[menu-type=menu] .md-button{
   font-family: $font1;
   font-weight: normal !important;
+}
+
+.header.topbar-wrapper{
+  position: relative;
+  -webkit-transition: min-height 200ms ease-in;
+  transition: min-height 200ms ease-in;
+  color: #002E70;
+  padding: 1.5rem 0 0 0;
+}
+
+prm-searchbar, prm-topbar, md-content{
+  @extend .inner-content;
+}
+
+prm-main-menu[menu-type=menu] .md-button {
+  font-size: 14px;
+}
+prm-topbar .md-button:hover:not([disabled]),
+.md-button.button-over-dark:hover:not([disabled]){
+  background-color: transparent;
+}
+
+.buttons-group div:first-child .md-button, .buttons-group .md-button{
+  box-shadow: none;
 }
