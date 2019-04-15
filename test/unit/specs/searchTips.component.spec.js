@@ -21,13 +21,13 @@ describe('searchTipsContoller,', function() {
   describe('when the selected language is English,', function() {
     
     beforeEach(function() {
-      localeService.current = () => 'en_US';  
+      localeService.current = () => 'en';
     });
 
     it('should display the English search tips.', function() {
       searchTipsController.showSearchTips();
       expect($mdDialog.show).toHaveBeenCalled();
-      $httpBackend.expectGET('custom/NUI/html/searchTips_en_US.html').respond(200);
+      $httpBackend.expectGET('custom/NUI/html/searchTips_en.html').respond(200);
       $httpBackend.flush();
     });    
   });
@@ -35,13 +35,13 @@ describe('searchTipsContoller,', function() {
   describe('when the selected language is Danish,', function() {
     
     beforeEach(function() {
-      localeService.current = () => 'da_DK';  
+      localeService.current = () => 'da';  
     });
 
     it('should display the Danish search tips.', function() {
       searchTipsController.showSearchTips();
       expect($mdDialog.show).toHaveBeenCalled();
-      $httpBackend.expectGET('custom/NUI/html/searchTips_da_DK.html').respond(200);
+      $httpBackend.expectGET('custom/NUI/html/searchTips_da.html').respond(200);
       $httpBackend.flush();
     });    
   });

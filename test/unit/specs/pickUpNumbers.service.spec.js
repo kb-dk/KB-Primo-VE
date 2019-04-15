@@ -7,7 +7,7 @@ describe('picKUpNumbersService,', function() {
     $httpBackend = _$httpBackend_;
     
     $location = _$location_;
-    spyOn($location, 'absUrl').and.returnValue('https://rex.kb.dk/primo-explore/account?vid=NUI&section=requests&lang=da_DK');
+    spyOn($location, 'absUrl').and.returnValue('https://rex.kb.dk/primo-explore/account?vid=NUI&section=requests&lang=da');
     
 
     $httpBackend.when('GET', 'https://rex.kb.dk/cgi-bin/get_pickup_number_text?z37_rec_key=0092310720000100008')

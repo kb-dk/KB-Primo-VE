@@ -6,7 +6,7 @@ describe('nagivationService,', () => {
   // Mocking $window service.
   beforeEach(() => {
 
-    dummyPath = 'https://rex.kb.dk/primo-explore/a/dummy/path/within/the/app?vid=NUI&lang=da_DK';
+    dummyPath = 'https://rex.kb.dk/primo-explore/a/dummy/path/within/the/app?vid=NUI&lang=da';
 
     module(($provide) => {
       
@@ -27,7 +27,7 @@ describe('nagivationService,', () => {
     $window = _$window_;
 
     spyOn($location, 'search').and.returnValue({
-      lang: 'da_DK',
+      lang: 'da',
       vid: 'NUI'
     });
 
@@ -46,7 +46,7 @@ describe('nagivationService,', () => {
     it('should navigate to the home page.', () => {
       nagivationService.navigateToHomePage();
       // dump($window);
-      expect($window.location.href).toEqual('https://rex.kb.dk/primo-explore/search?vid=NUI&lang=da_DK');
+      expect($window.location.href).toEqual('https://rex.kb.dk/primo-explore/search?vid=NUI&lang=da');
     });
 
   });
@@ -60,7 +60,7 @@ describe('nagivationService,', () => {
 
     it('should navigate to the home page if no URL is given.', () => {
       nagivationService.navigateTo();
-      expect($window.location.href).toEqual('https://rex.kb.dk/primo-explore/search?vid=NUI&lang=da_DK');
+      expect($window.location.href).toEqual('https://rex.kb.dk/primo-explore/search?vid=NUI&lang=da');
     });
 
   })

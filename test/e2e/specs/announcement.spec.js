@@ -2,7 +2,7 @@ describe('Announcement', function() {
   let EC = protractor.ExpectedConditions;
   let topbar = $('prm-topbar');
   let languageButton = element(by.model('$ctrl.selectedLanguage'));
-  let englishOption = $('md-option[value="en_US"]');
+  let englishOption = $('md-option[value="en"]');
   let announcement = $('md-toast.rex-announcement');
   let announcementDismissButton = $('md-toast.rex-announcement button[ng-click="$ctrl.close()"]');
   let userArea = $('prm-user-area');

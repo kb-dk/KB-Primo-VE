@@ -17,9 +17,9 @@ describe('chatBoxController,', () => {
 
   describe('$onInit method,', () => {
 
-    it('should load the chat box in English when the locale is "en_US".', (done) => {
+    it('should load the chat box in English when the locale is "en".', (done) => {
       let localeService = {
-        current: () => 'en_US',
+        current: () => 'en',
       };
 
       let chatBoxController = $componentController('rexChatBox', {
@@ -35,9 +35,9 @@ describe('chatBoxController,', () => {
       }).catch(done.fail);
     });
 
-    it('should load the chat box in Danish when the locale is "da_DK".', (done) => {
+    it('should load the chat box in Danish when the locale is "da".', (done) => {
       let localeService = {
-        current: () => 'da_DK',
+        current: () => 'da',
       };
 
       let chatBoxController = $componentController('rexChatBox', {
@@ -57,7 +57,7 @@ describe('chatBoxController,', () => {
 
   it('$onDestroy method should unload the chat box script.', () => {
     let localeService = {
-      current: () => 'da_DK',
+      current: () => 'da',
     };
 
     let chatBoxController = $componentController('rexChatBox', {
