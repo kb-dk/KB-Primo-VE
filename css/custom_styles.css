@@ -65,7 +65,6 @@ a:hover {
   text-decoration: none !important; }
 
 md-content > div, .sidebar {
-  padding: .5em .75rem;
   margin: 0 .75rem;
   background-color: white; }
 
@@ -79,7 +78,7 @@ div.flex-0:empty, md-content > div:empty, .sidebar:empty, md-content:empty {
   display: none; }
 
 #facets .sidebar-inner-wrapper {
-  padding: 0; }
+  padding: .5em .75rem; }
 #facets .section-title, #facets .sidebar-header {
   font-family: 'nowaymedium', sans-serif;
   position: relative;
@@ -339,6 +338,9 @@ div.list-item-wrapper {
 
 div.flex-order-4:empty {
   display: none; }
+
+div.list-items-list {
+  padding: .5em .75rem; }
 
 @media print, screen and (min-width: 64em) {
   md-content {
