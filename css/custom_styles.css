@@ -312,6 +312,7 @@ prm-search-bar .advanced-search-backdrop {
   padding-left: 0 !important; }
 
 button.switch-to-advanced, button.switch-to-simple {
+  display: none;
   background-color: transparent !important; }
   button.switch-to-advanced:hover, button.switch-to-advanced:focus, button.switch-to-simple:hover, button.switch-to-simple:focus {
     background-color: transparent !important; }
@@ -326,6 +327,8 @@ prm-alert-bar {
 
 div.list-item-wrapper {
   background-color: white; }
+  div.list-item-wrapper h3.item-title {
+    font-weight: 300; }
   div.list-item-wrapper prm-brief-result .item-title span {
     color: #002E70; }
     div.list-item-wrapper prm-brief-result .item-title span mark {
@@ -343,6 +346,9 @@ div.list-items-list {
   padding: .5em .75rem; }
 
 @media print, screen and (min-width: 64em) {
+  button.switch-to-advanced, button.switch-to-simple {
+    display: block; }
+
   md-content {
     overflow: visible !important; }
 
