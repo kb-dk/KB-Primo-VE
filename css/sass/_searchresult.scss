@@ -1,6 +1,8 @@
 div.list-item-wrapper{
   background-color: white;
-
+  h3.item-title{
+    font-weight: 300;
+  }
   prm-brief-result .item-title span{
     color: $secondary-color;
     mark{
