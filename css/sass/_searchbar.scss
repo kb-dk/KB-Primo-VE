@@ -38,6 +38,7 @@ prm-search-bar .advanced-search-backdrop{
 }
 
 button.switch-to-advanced, button.switch-to-simple{
+  display: none;
   background-color: transparent !important;
   &:hover, &:focus{
     background-color: transparent !important;
