@@ -8502,7 +8502,7 @@ ul li ul li {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(/assets/img/icons/icon-chevron.svg);
+    background-image: url(../img/icons/icon-chevron.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: .75rem;
@@ -8538,7 +8538,7 @@ ul li ul li {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(/assets/img/icons/icon-arrow-dropdown.svg);
+    background-image: url(../img/icons/icon-arrow-dropdown.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - .75rem) center; }
 .mol-d4e97117-4bf7-4516-92fa-54bb0abc40fb ul {
@@ -8700,7 +8700,7 @@ figure.article-center img {
     outline: none;
     float: right;
     margin: 0;
-    background-image: url(/assets/img/icons/icon-clear.svg);
+    background-image: url(../img/icons/icon-clear.svg);
     background-position: calc(100% - 24px) center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -8912,7 +8912,7 @@ figure.article-center img {
     overflow: hidden;
     border-radius: 2px;
     border: 1px solid #989898;
-    background-image: url(/assets/img/icons/icon-arrow-dropdown.svg);
+    background-image: url(../img/icons/icon-arrow-dropdown.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - .75rem) center; }
 
@@ -9083,7 +9083,7 @@ aside ul li ul li:last-child {
         width: 1.5rem;
         position: absolute;
         right: .75rem;
-        background-image: url(/assets/img/icons/icon-arrow-dropdown.svg);
+        background-image: url(../img/icons/icon-arrow-dropdown.svg);
         background-repeat: no-repeat;
         background-position: center; }
     .org-c8bfbf49-fc45-4e14-8fb3-e80d40ee1285 .menu a, .org-c8bfbf49-fc45-4e14-8fb3-e80d40ee1285 .menu span {
