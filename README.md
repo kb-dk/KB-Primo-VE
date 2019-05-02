@@ -39,9 +39,10 @@ Running the E2E tests require Chrome (or Chromium) to be available on the machin
 
     ./node_modules/protractor/bin/protractor ./test/e2e/conf.js
 ## KB-Primo-VE functionalities 
-**Announcement service**: Displays a message on top of the screen, every time there is a new text (other than ``` &nbsp; ```) in the nui.message.announcement code table, if it hasn't already been dismissed by user. If you are only interested in this functionality, use the following repository:  https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
-           
-    *           
+
+**Announcement service**: Displays a message on the top of the screen, every time there is a new text (other than ``` &nbsp; ```) in the nui.message.announcement code table, if it hasn't already been dismissed by user. If you are only interested in this functionality, use the following repository:  https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
+**LibChat service**: includes a chat service, provided by libanswers/ springshare, onto the user interface (all pages). If you are only interested in this functionality, use the following repository: https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-libChat
+          
 ## License
 
 This software is released under the [MIT License](http://www.opensource.org/licenses/MIT).
