@@ -41,6 +41,7 @@ Running the E2E tests require Chrome (or Chromium) to be available on the machin
 ## KB-Primo-VE functionalities 
 
 **Announcement service**: Displays a message on the top of the screen, every time there is a new text (other than ``` &nbsp; ```) in the nui.message.announcement code table, if it hasn't already been dismissed by user. If you are only interested in this functionality, use the following repository:  https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
+
 **LibChat service**: includes a chat service, provided by libanswers/ springshare, onto the user interface (all pages). If you are only interested in this functionality, use the following repository: https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-libChat
           
 ## License
