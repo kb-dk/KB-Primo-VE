@@ -72,7 +72,7 @@ export class LinkedPersonsService {
   }
 
   getLocaleId() {
-    return this.localeService.current() == 'da_DK' ? 'da' : 'en';
+    return this.localeService.current() == 'da' ? 'da' : 'en';
   }
 
   getData(uri) {

@@ -1,0 +1,92 @@
+#facets {
+  .sidebar-inner-wrapper{
+    padding: .5em .75rem;
+  }
+  .section-title, .sidebar-header {
+    font-family: 'nowaymedium', sans-serif;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 0;
+
+    .section-title-header {
+      color: $secondary-color;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    prm-icon {
+      display: none;
+    }
+
+  }
+
+  .section-content .md-chips {
+    .text-number-space {
+      font-family: "nowayregular", sans-serif;
+      font-weight: 400;
+    }
+
+    .md-chip .facet-title {
+      color: $secondary-color;
+    }
+
+    md-checkbox.md-checked ._md-icon {
+      background-color: $black;
+    }
+  }
+
+  button h3 {
+    display: inline-flex;
+    align-items: center;
+
+    &:after {
+      transition: -webkit-transform 500ms;
+      transition: transform 500ms, -webkit-transform 500ms;
+      height: 15px;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  button[aria-expanded="false"] h3:after {
+    content: "⌃";
+    transform: scaleY(-1);
+  }
+
+  button[aria-expanded="true"] h3:after {
+    content: "⌃";
+  }
+
+  .sidebar-section ~ div {
+    border-bottom: 1px solid #D6D6D6;
+    padding: 0;
+  }
+
+  .md-button:hover:not([disabled]),
+  .md-button:focus:not([disabled]),
+  .md-button.hovered:not([disabled]),
+  .md-button.md-focused:not([disabled]),
+  .md-button._md-focused:not([disabled]),
+  .section-content .md-chips .md-chip .facet-title._md-focused:not([disabled]),
+  .section-content .md-chips .md-chip .facet-title.hovered:not([disabled]),
+  .section-content .md-chips .md-chip .facet-title.md-focused:not([disabled]),
+  .section-content .md-chips .md-chip .facet-title:focus:not([disabled]),
+  .section-conte75remnt .md-chips .md-chip .facet-title:hover:not([disabled]) {
+    color: $secondary-color;
+    background-color: transparent;
+  }
+
+  // Facet not sticky
+  .primo-scrollbar {
+    position: relative !important;
+  }
+
+  .multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover {
+    color: white;
+    background-color: darken($secondary-color, 10%);
+  }
+}
+

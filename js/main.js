@@ -10,6 +10,9 @@ import { LocaleService } from './shared/locale.service';
 // Footer
 import { PrmExploreFooterAfterConfig } from './footer/prmExploreFooterAfter.component';
 
+// Logo
+import { PrmLogoAfterConfig } from './logo/prmLogoAfter.component';
+
 // Announcement
 import { AnnouncementService } from './announcement/announcement.service';
 import { PrmTopbarAfterConfig } from './announcement/prmTopbarAfter.component';
@@ -30,8 +33,12 @@ import { PrmTopbarAfterConfig } from './announcement/prmTopbarAfter.component';
 import { PrmSearchBarAfterConfig } from './searchtips/prmSearchBarAfter.component';
 import { SearchTipsConfig } from './searchtips/searchTips.component';
 
+// Add / remove elements
+import { PrmFullViewAfterConfig } from './addremoveelements/prmFullViewAfter.component';
+import { PrmRequestServicesAfterConfig } from './addremoveelements/prmRequestServicesAfter.component';
+
 // Altmetrics
-// import { AltmetricsConfig } from './altmetrics/altmetrics.component';
+import { AltmetricsConfig } from './altmetrics/altmetrics.component';
 
 // Chatbox
 import { PrmExploreMainAfterConfig } from './chatbox/prmExploreMainAfter.component';
@@ -43,17 +50,15 @@ import { ChatBoxConfig } from './chatbox/chatBox.component';
 // Personalinfo
 // import { PrmPersonalInfoAfterConfig } from './personalinfo/prmPersonalInfoAfter.component';
 
-// Add / remove elements
-// import { PrmFullViewAfterConfig } from './addremoveelements/prmFullViewAfter.component';
-// import { PrmRequestServicesAfterConfig } from './addremoveelements/prmRequestServicesAfter.component';
+
 
 
 angular.module('viewCustom', [
-    'angularLoadMonkeyPatched',
-    'ngMaterial'
+  'angularLoadMonkeyPatched',
+  'ngMaterial'
 ])
     .run(['$rootScope', ($rootScope) => {
-        $rootScope.viewName = viewName;
+      $rootScope.viewName = viewName;
     }]);
 // Googleanalytics
 // .run(['googleAnalyticsService', (googleAnalyticsService) => {
@@ -80,6 +85,8 @@ angular.module('viewCustom')
     // Footer
     .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
 
+    //Logo
+    .component(PrmLogoAfterConfig.name, PrmLogoAfterConfig.config)
     // Announcement
       .service('announcementService', AnnouncementService)
       .component(PrmTopbarAfterConfig.name, PrmTopbarAfterConfig.config)
@@ -100,22 +107,24 @@ angular.module('viewCustom')
     .component(PrmSearchBarAfterConfig.name, PrmSearchBarAfterConfig.config)
     .component(SearchTipsConfig.name, SearchTipsConfig.config)
 
+    // Add / remove elements
+    .component(PrmFullViewAfterConfig.name, PrmFullViewAfterConfig.config)
+    .component(PrmRequestServicesAfterConfig.name, PrmRequestServicesAfterConfig.config)
+
     // Altmetrics
-    // .component(AltmetricsConfig.name, AltmetricsConfig.config)
+    .component(AltmetricsConfig.name, AltmetricsConfig.config)
 
     // Chatbox
-    .component(PrmExploreMainAfterConfig.name, PrmExploreMainAfterConfig.config)
-    .component(ChatBoxConfig.name, ChatBoxConfig.config)
+      .component(PrmExploreMainAfterConfig.name, PrmExploreMainAfterConfig.config)
+      .component(ChatBoxConfig.name, ChatBoxConfig.config)
 
-// Fines
-//   .component(PrmFinesAfterConfig.name, PrmFinesAfterConfig.config)
+    // Fines
+    //   .component(PrmFinesAfterConfig.name, PrmFinesAfterConfig.config)
 
-// Personalinfo
-// .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
+    // Personalinfo
+    // .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
 
-// Add / remove elements
-// .component(PrmFullViewAfterConfig.name, PrmFullViewAfterConfig.config)
-// .component(PrmRequestServicesAfterConfig.name, PrmRequestServicesAfterConfig.config)
+
 
 
 // Pre-ES2015 code.

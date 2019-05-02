@@ -75,7 +75,7 @@ class OpeningHoursController {
 
       this.scriptLoaderService.load('https://static.kb.dk/libcal/openingHours_min.js').then(() => {
 
-        let i18n = (this.localeService.current() === "da_DK") ? this._danish_i18n : this._english_i18n;
+        let i18n = (this.localeService.current() === "da") ? this._danish_i18n : this._english_i18n;
 
         this._openingHours = OpeningHours;
 

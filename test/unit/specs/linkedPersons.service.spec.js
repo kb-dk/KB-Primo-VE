@@ -6,7 +6,7 @@ describe('linkedPersonsService,', () => {
 
   beforeEach(inject((_localeService_) => {
     localeService = _localeService_;
-    localeService.current = () => 'da_DK';
+    localeService.current = () => 'da';
   }));
 
   beforeEach(inject((_$httpBackend_) => {
@@ -110,7 +110,7 @@ describe('linkedPersonsService,', () => {
   });
 
   it('should be able to retrieve and transform data in English.', (done) => {
-    localeService.current = () => 'en_US';
+    localeService.current = () => 'en';
     linkedPersonsService.getMultiple(uris).then((persons) => {
         expect(persons).toBeTruthy();        
         expect(persons[0].name[0]).toEqual('English Name');        

@@ -29,8 +29,8 @@ export class NavigationService {
   navigateToHomePage() {
     let params = this.$location.search();
     let vid = params.vid || viewName;
-    let lang = params.lang || "da_DK";
-    let split = this.$location.absUrl().split('/primo-explore/');
+    let lang = params.lang || "da";
+    let split = this.$location.absUrl().split('/discovery/');
 
     if (split.length === 1) {
       console.log('Could not process the URL : ' + split[0]);
@@ -38,7 +38,7 @@ export class NavigationService {
     }
 
     let baseUrl = split[0];
-    this.$window.location.href = baseUrl + '/primo-explore/search?vid=' + vid + '&lang=' + lang;
+    this.$window.location.href = baseUrl + '/discovery/search?vid=' + vid + '&lang=' + lang;
     return true;
   };
 
