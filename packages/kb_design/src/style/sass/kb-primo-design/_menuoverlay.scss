@@ -1,0 +1,34 @@
+.md-dialog-is-showing {
+  .light-on-dark-dialog .md-button {
+    color: $grey;
+  }
+  .__gt-sm prm-main-menu[menu-type=full] .custom-links-container {
+    margin-top: 11rem;
+  }
+
+  prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=full] .overlay-menu-item .md-headline {
+    font-size: 19px;
+    color: $secondary-color;
+    font-family: "nowaymedium", sans-serif;
+    font-weight: normal !important;
+  }
+  prm-main-menu[menu-type=full] .custom-links-container .main-menu-button .transparent-card {
+    padding: 35px 0;
+  }
+  .overlay-menu-content .md-button, .overlay-menu-item.layout-align-center-center.layout-row{
+    background-color: rgba(0,0,0,.1);
+    color: #fff;
+    border-radius: 5px;
+    height: 2.875rem;
+    font-size: .875rem;
+    padding-left: 2.875rem;
+    padding-right: 2.875rem;
+    outline: none;
+    -webkit-transition: background-color 200ms ease-in;
+    transition: background-color 200ms ease-in;
+    margin: 0 .75rem .75rem 0;
+  }
+  .md-icon-button.close-button{
+    padding: .5em;
+  }
+}

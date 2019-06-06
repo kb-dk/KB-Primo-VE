@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>logo circle twitter bird</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer/Desktop" transform="translate(-1082.000000, -288.000000)">
+            <g id="Address" transform="translate(1044.000000, 108.000000)">
+                <g id="logo-circle-twitter-bird" transform="translate(38.000000, 180.000000)">
+                    <g id="Filled_Icons" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M12,0 C5.383,0 0,5.383 0,12 C0,18.617 5.383,24 12,24 C18.617,24 24,18.617 24,12 C24,5.383 18.617,0 12,0 Z M17.262,9.385 C17.268,9.498 17.27,9.611 17.27,9.725 C17.27,13.202 14.623,17.214 9.782,17.214 C8.296,17.214 6.912,16.777 5.747,16.03 C7.121,16.191 8.519,15.823 9.644,14.941 C8.493,14.918 7.521,14.158 7.186,13.112 C7.583,13.187 7.989,13.173 8.374,13.066 C7.17,12.826 6.263,11.761 6.263,10.487 C6.263,10.476 6.263,10.464 6.263,10.452 C6.618,10.649 7.025,10.767 7.455,10.782 C6.749,10.309 6.284,9.505 6.284,8.592 C6.284,8.11 6.414,7.658 6.64,7.268 C7.938,8.861 9.877,9.91 12.065,10.018 C12.02,9.826 11.997,9.624 11.997,9.419 C11.997,7.965 13.176,6.787 14.63,6.787 C15.387,6.787 16.07,7.106 16.551,7.619 C17.151,7.5 18.501,7.353 18.501,7.353 C18.147,7.882 17.776,9.013 17.262,9.385 Z" id="Shape"></path>
+                    </g>
+                    <g id="Frames-24px">
+                        <rect id="Rectangle-path" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
