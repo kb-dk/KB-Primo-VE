@@ -19,6 +19,6 @@
   "main": "./dist/js/announcement.js",
   "scripts": {
     "build": "webpack --mode production",
-    "postbuild": "mkdir ./dist/css && cp ./src/announcement.css ./dist/css/ "
+    "postbuild": "mkdir -p ./dist/css && cp ./src/announcement.css ./dist/css/ "
   }
 }
