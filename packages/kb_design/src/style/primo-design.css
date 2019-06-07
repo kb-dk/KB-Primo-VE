@@ -266,16 +266,17 @@ button, .md-button {
 footer a {
   color: white !important; }
 
-.org-11bfca9f-f278-4d0e-8384-2a2d064e8f6c.page-notification {
+.page-notification {
+  background-color: #002E70;
   justify-content: left; }
-  .org-11bfca9f-f278-4d0e-8384-2a2d064e8f6c.page-notification a {
+  .page-notification a {
     color: white; }
-  .org-11bfca9f-f278-4d0e-8384-2a2d064e8f6c.page-notification .md-toast-content {
+  .page-notification .md-toast-content {
     box-shadow: none;
     border-radius: 0;
     padding: 0;
     min-height: 0; }
-    .org-11bfca9f-f278-4d0e-8384-2a2d064e8f6c.page-notification .md-toast-content:before {
+    .page-notification .md-toast-content:before {
       min-height: 0; }
 
 .md-autocomplete-suggestions .suggestion-scope {
