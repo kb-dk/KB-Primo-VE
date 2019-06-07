@@ -14,5 +14,5 @@
  ![Screenshot](announcement.jfif)     
 
 # Create the package
-nmp install
-npm run build
+* nmp install
+* npm run build
