@@ -1,3 +1,3 @@
 # Create the package
-nmp install
-npm run build
+* npm install
+* npm run build
