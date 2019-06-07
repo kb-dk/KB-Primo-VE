@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/star border</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,15.5087504 L16.3269231,18.1049043 L15.1911055,13.1830295 L19.0312505,9.82966365 L13.9471154,9.39697135 L12,4.7455295 L10.0528846,9.39697135 L4.96874954,9.82966365 L8.80889446,13.1830295 L7.67307692,18.1049043 L12,15.5087504 Z M23.5204329,8.36932735 L17.2463945,13.832068 L19.1394231,21.9450483 L12,17.6181252 L4.86057692,21.9450483 L6.75360554,13.832068 L0.479567077,8.36932735 L8.75480769,7.66620212 L12,0.0399999619 L15.2451923,7.66620212 L23.5204329,8.36932735 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/star-border" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="star-border" transform="translate(0.000000, 1.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Color/Dark-blue-#002E70" mask="url(#mask-2)" fill="#002E70">
+                <g transform="translate(0.000000, -1.000000)" id="Rectangle">
+                    <rect x="0" y="0" width="24" height="24"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
