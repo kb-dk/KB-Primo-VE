@@ -16,7 +16,7 @@ var PrmExploreFooterAfterConfig = exports.PrmExploreFooterAfterConfig = {
     }
 };
 
-},{"../shared/viewName":4}],2:[function(require,module,exports){
+},{"../shared/viewName":5}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -61,34 +61,35 @@ var PrmLogoAfterConfig = exports.PrmLogoAfterConfig = {
   }
 };
 
-},{"../shared/viewName":4}],3:[function(require,module,exports){
+},{"../shared/viewName":5}],3:[function(require,module,exports){
 'use strict';
 
-var _viewName = require('./shared/viewName');
+var _viewName = require('../../src/js/shared/viewName');
 
-var _prmExploreFooterAfter = require('./footer/prmExploreFooterAfter.component');
+var _navigation = require('../../src/js/shared/navigation.service');
 
-var _prmLogoAfter = require('./logo/prmLogoAfter.component');
+var _prmExploreFooterAfter = require('../../src/js/footer/prmExploreFooterAfter.component');
 
-var _prmSearchBarAfter = require('./topcontainer/prmSearchBarAfter.component');
+var _prmLogoAfter = require('../../src/js/logo/prmLogoAfter.component');
+
+var _prmSearchBarAfter = require('../../src/js/topcontainer/prmSearchBarAfter.component');
 
 // Logo
-// // Shared
 angular.module('viewCustom', ['angularLoad']).run(['$rootScope', function ($rootScope) {
     $rootScope.viewName = _viewName.viewName;
 }]);
 
 // Top container (design element)
 
-// import { LocaleService } from './shared/locale.service';
 
 // Footer
+// // Shared
 
 
 angular.module('viewCustom')
 
 // Shared
-//     .service('localeService', LocaleService)
+.service('navigationService', _navigation.NavigationService)
 
 // Footer
 .component(_prmExploreFooterAfter.PrmExploreFooterAfterConfig.name, _prmExploreFooterAfter.PrmExploreFooterAfterConfig.config)
@@ -98,7 +99,74 @@ angular.module('viewCustom')
 // Top container (design element)
 .component(_prmSearchBarAfter.PrmSearchBarAfterConfig.name, _prmSearchBarAfter.PrmSearchBarAfterConfig.config);
 
-},{"./footer/prmExploreFooterAfter.component":1,"./logo/prmLogoAfter.component":2,"./shared/viewName":4,"./topcontainer/prmSearchBarAfter.component":5}],4:[function(require,module,exports){
+},{"./footer/prmExploreFooterAfter.component":1,"./logo/prmLogoAfter.component":2,"./shared/navigation.service":4,"./shared/viewName":5,"./topcontainer/prmSearchBarAfter.component":6}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NavigationService = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _viewName = require('./viewName');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * A service handling navigation logic. 
+ */
+var NavigationService = exports.NavigationService = function () {
+  function NavigationService($location, $window) {
+    _classCallCheck(this, NavigationService);
+
+    this.$location = $location;
+    this.$window = $window;
+  }
+
+  /**
+   * Opens the given url in a new tab, 
+   * or navigates to the home page if the url is blank.
+   * @param {string} url- The URL to be navigated to.
+   */
+
+
+  _createClass(NavigationService, [{
+    key: 'navigateTo',
+    value: function navigateTo(url) {
+      if (typeof url === 'undefined' || url === "") this.navigateToHomePage();else this.$window.open(url, '_blank');
+    }
+  }, {
+    key: 'navigateToHomePage',
+
+
+    /**
+     * Navigates to the home page with a reload.
+     * @return {boolean} Booelan value indicating if the navigation was successful.
+     */
+    value: function navigateToHomePage() {
+      var params = this.$location.search();
+      var vid = params.vid || _viewName.viewName;
+      var lang = params.lang || "da";
+      var split = this.$location.absUrl().split('/discovery/');
+
+      if (split.length === 1) {
+        console.log('Could not process the URL : ' + split[0]);
+        return false;
+      }
+
+      var baseUrl = split[0];
+      this.$window.location.href = baseUrl + '/discovery/search?vid=' + vid + '&lang=' + lang;
+      return true;
+    }
+  }]);
+
+  return NavigationService;
+}();
+
+NavigationService.$inject = ['$location', '$window'];
+
+},{"./viewName":5}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -107,7 +175,7 @@ Object.defineProperty(exports, "__esModule", {
 // Define the view name here.
 var viewName = exports.viewName = "45KBDK_KGL:KGL_VU1";
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -120,11 +188,12 @@ var _viewName = require('../shared/viewName');
 var PrmSearchBarAfterConfig = exports.PrmSearchBarAfterConfig = {
   name: 'prmSearchBarAfter',
   config: {
+    bindings: { parentCtrl: '<' },
     templateUrl: 'custom/' + _viewName.viewName + '/html/topcontainer/prmSearchBarAfter.component.html'
   }
 };
 
-},{"../shared/viewName":4}]},{},[3])
+},{"../shared/viewName":5}]},{},[3])
 
 
 //# sourceMappingURL=custom.js.map

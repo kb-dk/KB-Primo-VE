@@ -1,0 +1,19 @@
+{
+  "name": "primo-ve-kb_design",
+  "version": "1.0.0",
+  "description": "Transpiles scss to css",
+  "keywords": [
+    "kb_design",
+    "primo"
+  ],
+  "author": "Royal Danish library",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "directories": {},
+  "main": "./dist/css/primo-kb-design.css",
+  "scripts": {
+    "build": "node-sass ./sass/kb-primo-design.scss  kb-primo-design.css"
+  }
+}

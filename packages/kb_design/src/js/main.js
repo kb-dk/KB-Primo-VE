@@ -1,6 +1,5 @@
 // // Shared
 import { viewName } from './shared/viewName';
-// import { LocaleService } from './shared/locale.service';
 import { NavigationService } from './shared/navigation.service';
 
 // Footer
@@ -20,7 +19,6 @@ angular.module('viewCustom', ['angularLoad'])
 angular.module('viewCustom')
 
 // Shared
-//     .service('localeService', LocaleService)
     .service('navigationService', NavigationService)
 
 // Footer
