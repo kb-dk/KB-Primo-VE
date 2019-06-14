@@ -359,6 +359,59 @@ div.list-items-list {
 .prm-full-view-dialog ~ .close-button.md-icon-button prm-icon {
   color: #002E70 !important; }
 
+/*CSS to Hide Virtual Browse and Virtual Browse Button/link on Full Display */
+#virtualBrowse {
+  display: none; }
+
+button[aria-label="Virtual Browse"] {
+  display: none; }
+
+/* Change the order, and move the send to section to the top */
+#full-view-container > *:first-child {
+  display: flex;
+  flex-direction: column; }
+
+#action_list {
+  order: 0 !important; }
+
+#brief {
+  order: 1 !important; }
+
+#getit_link1_0 {
+  order: 2 !important; }
+
+#getit_link1_1 {
+  order: 3 !important; }
+
+#details {
+  order: 4 !important; }
+
+#links {
+  order: 5 !important; }
+
+#citationTrails {
+  order: 6 !important; }
+
+#virtualBrowse {
+  order: 7 !important; }
+
+#action_list {
+  margin-bottom: 2.5em;
+  /*Hide the header for the send to section*/
+  /* Style the action list/send to list */ }
+  #action_list .section-head {
+    display: none; }
+  #action_list .full-view-section-content {
+    padding-left: 0; }
+  #action_list .prm-icon md-icon, #action_list prm-icon md-icon.md-primoExplore-theme, #action_list span.button-text {
+    color: #002E70 !important; }
+  #action_list md-nav-bar nav {
+    justify-content: left; }
+
+/* Remove the services index navigation menu in the full display */
+.full-view-inner-container .services-index-under {
+  display: none; }
+
 .md-dialog-is-showing .light-on-dark-dialog .md-button {
   color: #989898; }
 
