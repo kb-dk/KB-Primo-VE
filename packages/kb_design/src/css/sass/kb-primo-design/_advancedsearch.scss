@@ -1,0 +1,12 @@
+// More space between fields in advanced search
+prm-search-bar .advanced-search-wrapper .inputs-row>md-input-container{
+  margin-right: 1em;
+}
+
+// Change the background color and font color in advanced search
+div.advanced-search-backdrop.visible{
+  background-color: $theme-sky-blue-50;
+}
+prm-search-bar .search-switch-buttons .md-button.switch-to-simple{
+  color: $secondary-color;
+}

@@ -1,12 +1,39 @@
 // Colors
-$theme-yellow: #FFF6C4;
-$theme-color: $theme-yellow;
-$primary-color: $theme-yellow;
-$secondary-color: #002E70;
-$grey: #989898;
-$black: #171717;
+$theme-dark-blue-100 : #002e70;
+$theme-dark-blue-5: #f2f4f8;
+$theme-almost-black-100: #171717;
+$theme-almost-black-50: #989898;
+$theme-light-gray: #d6d6d6;
+$theme-almost-black-05: #f5f5f5;
+$theme-red-100: #ff2947;
+$theme-pink-100: #f391b8;
+$theme-pink-50: #f9c8dc;
+$theme-pink-15: #feeff5;
+$theme-orange: #ffa83e;
+$theme-yellow-100: #feec89;
+$theme-yellow-50: #fff6c4;
+$theme-yellow-15: #fffdee;
+$theme-sky-blue-100: #96e2fd;
+$theme-sky-blue-50: #caf0fe;
+$theme-sky-blue-15: #f0fbff;
+$theme-green-100: #26d466;
+$theme-teal-100: #8ae3db;
+$theme-teal-50: #c4f1ed;
+$theme-teal-15: #eefbfa;
+
+$theme-color: $theme-yellow-50;
+
+$primary-color: $theme-yellow-50;
+$secondary-color: $theme-dark-blue-100;
+$grey: $theme-almost-black-50;
+$black: $theme-almost-black-100;
+
+$light-header: $theme-sky-blue-100;
+$lighter-header: $theme-sky-blue-50;
+$links: $theme-dark-blue-100;
 
 // Fonts
-$font1: 'nowaymedium', sans-serif;
+$font_r: 'nowayregular', sans-serif;
+$font_m: 'nowaymedium', sans-serif;
 
 
