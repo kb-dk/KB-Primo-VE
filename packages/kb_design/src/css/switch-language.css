@@ -1,0 +1,16 @@
+prm-user-area-expandable {
+    display: flex;
+    flex-direction: row;
+}
+
+prm-user-area-expandable .user-button {
+    order: 1 !important;
+}
+
+prm-user-area-expandable md-menu {
+    order: 2 !important;
+}
+
+prm-user-area-expandable prm-user-area-expandable-after {
+    order: 0 !important;
+}

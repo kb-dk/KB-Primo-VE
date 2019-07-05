@@ -14,6 +14,6 @@
   "directories": {},
   "main": "./dist/css/primo-kb-design.css",
   "scripts": {
-    "build": "node-sass ./sass/kb-primo-design.scss  kb-primo-design.css"
+    "build": "node-sass ./css/sass/kb-primo-design.scss  ./css/kb-primo-design.css && node-sass ./css/sass/kb-primo-design.scss  ./../../../css/kb-primo-design.css"
   }
 }

@@ -1,29 +1,33 @@
-prm-logo > .product-logo a{
+prm-logo{
   display: none;
- }
-
-prm-top-bar-before{
-  float: left;
-}
-.logo{
-  height: 24px !important;
-  z-index: 2;
 }
 
-@media print, screen and (min-width: 64em) {
-  .logo {
-    min-height: 6rem;
-  }
-}
-
-prm-search-bar{
-  z-index: -1;
-}
-.logo a{
-  text-decoration: none;
-
-  &:hover, &:focus{
-    box-shadow: none;
-    background-color: transparent;
-  }
-}
+//prm-logo > .product-logo a{
+//  display: none;
+// }
+//
+//prm-top-bar-before{
+//  float: left;
+//}
+//.logo{
+//  height: 24px !important;
+//  z-index: 2;
+//}
+//
+//@media print, screen and (min-width: 64em) {
+//  .logo {
+//    min-height: 6rem;
+//  }
+//}
+//
+//prm-search-bar{
+//  z-index: -1;
+//}
+//.logo a{
+//  text-decoration: none;
+//
+//  &:hover, &:focus{
+//    box-shadow: none;
+//    background-color: transparent;
+//  }
+//}
