@@ -8989,11 +8989,11 @@ blockquote:before {
 .icon.icon-account-circle:before {
     content: '\f205'; }
 .icon.icon-facebook {
-    background-image: url(../../src/img/icons/icon-facebook.svg); }
+    background-image: url(../img/icon-facebook.svg); }
 .icon.icon-twitter {
-    background-image: url(../../src/img/icons/icon-twitter.svg); }
+    background-image: url(../img/icon-twitter.svg); }
 .icon.icon-button-right {
-    background-image: url(../../src/img/icons/icon-button-right.svg);
+    background-image: url(../img/icons/icon-button-right.svg);
     background-size: cover; }
 .icon.icon-crown {
     background-image: url(../img/icons/icon-crown.svg); }
@@ -9021,21 +9021,21 @@ img {
 .logo {
     width: 10rem;
     height: 100%;
-    background-image: url(../../src/img/logo-mobile.png);
+    background-image: url(../img/logo-mobile.png);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain; }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .logo {
-        background-image: url(../../src/img/logo-mobile.svg); } }
+        background-image: url(../img/logo-mobile.svg); } }
 @media print, screen and (min-width: 64em) {
     .logo {
-        background-image: url(../../src/img/logo-ie.png);
+        background-image: url(../img/logo-ie.png);
         background-position: center;
         width: 9rem; } }
 @media print and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), print and (min-resolution: 192dpi), screen and (min-width: 64em) and (min-resolution: 192dpi) {
     .logo {
-        background-image: url(../../src/img/logo.svg); } }
+        background-image: url(../img/logo.svg); } }
 @media screen and (min-width: 75em) {
     .logo {
         width: 12rem; } }
@@ -9191,7 +9191,7 @@ ul li ul li {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../../src/img/icons/icon-chevron.svg);
+    background-image: url(../img/icons/icon-chevron.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: .75rem;
@@ -9227,7 +9227,7 @@ ul li ul li {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../../src/img/icons/icon-arrow-dropdown.svg);
+    background-image: url(../img/icons/icon-arrow-dropdown.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - .75rem) center; }
 .mol-d4e97117-4bf7-4516-92fa-54bb0abc40fb ul {
@@ -9389,7 +9389,7 @@ figure.article-center img {
     outline: none;
     float: right;
     margin: 0;
-    background-image: url(../../src/img/icons/icon-clear.svg);
+    background-image: url(../img/icons/icon-clear.svg);
     background-position: calc(100% - 24px) center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -9601,7 +9601,7 @@ figure.article-center img {
     overflow: hidden;
     border-radius: 2px;
     border: 1px solid #989898;
-    background-image: url(../../src/img/icons/icon-arrow-dropdown.svg);
+    background-image: url(../img/icons/icon-arrow-dropdown.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - .75rem) center; }
 
@@ -9772,7 +9772,7 @@ aside ul li ul li:last-child {
         width: 1.5rem;
         position: absolute;
         right: .75rem;
-        background-image: url(../../src/img/icons/icon-arrow-dropdown.svg);
+        background-image: url(../img/icons/icon-arrow-dropdown.svg);
         background-repeat: no-repeat;
         background-position: center; }
     .org-c8bfbf49-fc45-4e14-8fb3-e80d40ee1285 .menu a, .org-c8bfbf49-fc45-4e14-8fb3-e80d40ee1285 .menu span {
@@ -10635,6 +10635,9 @@ h3.item-title a {
 md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner h3 {
   color: #002e70; }
 
+primo-explore > div {
+  min-height: 70%; }
+
 prm-alert-bar {
   display: none; }
 
@@ -10660,6 +10663,9 @@ prm-alert-bar {
 
 #facets .primo-scrollbar {
   position: relative !important; }
+
+footer a {
+  color: white !important; }
 
 div.top-nav-bar {
   background-color: #96e2fd; }
@@ -10767,8 +10773,50 @@ button.button-large.button-with-icon md-icon[md-svg-icon="primo-ui:magnifying-gl
 button span[class*="available"] {
   color: #002e70 !important; }
 
+.icon.icon-facebook {
+  background-image: url(../img/icon-facebook.svg); }
+
+.icon.icon-twitter {
+  background-image: url(../img/icon-twitter.svg); }
+
 prm-logo {
   display: none; }
+
+.org_navigation-header {
+  order: 1;
+  position: relative;
+  background-color: #002E70 !important;
+  padding: 12px 0;
+  display: block;
+  height: 48px; }
+  .org_navigation-header .inner-content {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .org_navigation-header .logo {
+    background-image: url(../img/logo-navigation-header.png);
+    width: 95px; }
+  .org_navigation-header .right-panel a {
+    float: right;
+    color: #eefbfa;
+    font-family: 'nowaymedium';
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    line-height: 24px; }
+
+prm-explore-main {
+  display: flex;
+  flex-direction: column; }
+  prm-explore-main .org_navigation-header {
+    order: -3; }
+  prm-explore-main prm-topbar {
+    order: -2; }
+  prm-explore-main prm-search-bar {
+    order: -1; }
 
 #select_value_label_7, #select_value_label_10 {
   padding-top: 0; }
@@ -10819,43 +10867,43 @@ div.list-items-list {
 }
 
 #action_list {
-    order: 0 !important;
+    order: -9 !important;
 }
 
 #brief {
-    order: 1 !important;
+    order: -8 !important;
 }
 
 #getit_link1_0 {
-    order: 2 !important;
+    order: -7 !important;
 }
 
 #getit_link1_1 {
-    order: 3 !important;
+    order: -6 !important;
 }
 
 #details {
-    order: 4 !important;
+    order: -5 !important;
 }
 
 #citationTrails {
-    order: 5 !important;
+    order: -4 !important;
 }
 
 #links {
-    order: 6 !important;
+    order: -3 !important;
 }
 
 #virtualBrowse {
-    order: 7 !important;
+    order: -2 !important;
 }
 
 #tags {
-    order: 8 !important;
+    order: -1 !important;
 }
 
 .syndetic-unbound-section {
-    order: 9 !important;
+    order: -1 !important;
 }
 
 /* Create smaller space underneath the bar*/

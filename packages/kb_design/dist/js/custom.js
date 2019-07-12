@@ -4,45 +4,38 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.PrmExploreFooterAfterConfig = undefined;
-
-var _viewName = require('../shared/viewName');
-
-// import {PrmExploreFooterAfterController} from './prmExploreFooterAfter.component';
-
-// class PrmExploreFooterAfterController {
-//     constructor() {
-//         // this.iconLink = 'hi';
-//     }
-//
-//     iconLink () {
-//         return 'Hi';
-//     };
-//
-// }
-
 var PrmExploreFooterAfterConfig = exports.PrmExploreFooterAfterConfig = {
     name: 'prmExploreFooterAfter',
     config: {
         bindings: { parentCtrl: '<' },
-        // controller: PrmExploreFooterAfterController,
-        templateUrl: 'custom/' + _viewName.viewName + '/html/footer/footer' + '.html'
+        templateUrl: function templateUrl() {
+            var query = window.location.search.substring(1);
+            var start = query.indexOf('vid') + 4;
+            query = query.substring(start);
+            var end = query.indexOf('&');
+            var vid = query.substring(0, end);
+            if (!window.location.port) {
+                vid = vid.replace(":", "-");
+            }
+            var templateUrl = 'custom/' + vid + '/html/footer/footer.html';
+            return templateUrl;
+        }
+
     }
 };
 
-},{"../shared/viewName":4}],2:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.PrmUserAreaExpandableAfterConfig = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _viewName = require('../shared/viewName');
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// import { viewNameService } from '../shared/viewNameService';
 
 var PrmUserAreaExpandableAfterController = function () {
     function PrmUserAreaExpandableAfterController($location, $window) {
@@ -77,7 +70,19 @@ var PrmUserAreaExpandableAfterConfig = exports.PrmUserAreaExpandableAfterConfig 
             parentCtrl: '<'
         }, reloadOnSearch: false,
         controller: PrmUserAreaExpandableAfterController,
-        templateUrl: 'custom/' + _viewName.viewName + '/html/language/language.html'
+        // templateUrl: 'custom/' + viewName + '/html/language/language.html'
+        templateUrl: function templateUrl() {
+            console.log(window.location.port);
+            var query = window.location.search.substring(1);
+            var start = query.indexOf('vid') + 4;
+            query = query.substring(start);
+            var end = query.indexOf('&');
+            var vid = query.substring(0, end);
+            if (!window.location.port) {
+                vid = vid.replace(":", "-");
+            }var templateUrl = 'custom/' + vid + '/html/language/language.html';
+            return templateUrl;
+        }
     }
 };
 
@@ -108,37 +113,41 @@ app.controller('prmUserAreaExpandableAfterController', ['$location', '$window', 
     }
 }]);*/
 
-},{"../shared/viewName":4}],3:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 'use strict';
 
 var _prmExploreFooterAfter = require('./footer/prmExploreFooterAfter.component');
 
 var _prmUserAreaExpandableAfter = require('./language/prmUserAreaExpandableAfter.component');
 
+// View name
+// import { ViewNameProvider } from './shared/viewNameProvider';
+
 // Footer
 angular.module('viewCustom', ['angularLoad']);
+// .run(['$rootScope', ($rootScope, ViewNameService) => {
+//     $rootScope.viewName = ViewNameService.getViewName();
+// }]);
+
+// Navigation header
+// import { PrmTopBarBeforeConfig } from './navigation-header/navigation-header';
 
 // Language switcher
-
-
 angular.module('viewCustom')
+
+// View name
+//     .provider('viewNameProvider', ViewNameProvider)
 
 // Footer
 .component(_prmExploreFooterAfter.PrmExploreFooterAfterConfig.name, _prmExploreFooterAfter.PrmExploreFooterAfterConfig.config)
 
+// Header
+//     .component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)
+
 // Language switcher
 .component(_prmUserAreaExpandableAfter.PrmUserAreaExpandableAfterConfig.name, _prmUserAreaExpandableAfter.PrmUserAreaExpandableAfterConfig.config);
 
-},{"./footer/prmExploreFooterAfter.component":1,"./language/prmUserAreaExpandableAfter.component":2}],4:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// Define the view name here.
-var viewName = exports.viewName = "45KBDK_KGL:KGL_VU1";
-
-},{}]},{},[3])
+},{"./footer/prmExploreFooterAfter.component":1,"./language/prmUserAreaExpandableAfter.component":2}]},{},[3])
 
 
 //# sourceMappingURL=custom.js.map
