@@ -1,1 +1,1 @@
-<button class="md-no-style md-button md-ink-ripple width-100" ng-click="$ctrl.changeLanguage()" aria-label="">{{'nui.menu.language' | translate}}</button>
+<button class="md-no-style md-button md-ink-ripple width-100" ng-if="!$ctrl.isSignedIn()" ng-click="$ctrl.changeLanguage()" aria-label="">{{'nui.menu.language' | translate}}</button>
