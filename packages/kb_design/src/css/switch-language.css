@@ -1,3 +1,4 @@
+/* Change the order of the elements in the right side of the top bar*/
 prm-user-area-expandable {
     display: flex;
     flex-direction: row;
@@ -13,4 +14,13 @@ prm-user-area-expandable md-menu {
 
 prm-user-area-expandable prm-user-area-expandable-after {
     order: 0 !important;
+}
+
+/* Hide language switcher */
+prm-user-area-expandable prm-user-area-expandable-after .change-language{
+    display:none;
+}
+/* Show language switcher if not logged in*/
+prm-user-area-expandable button ~ prm-user-area-expandable-after .change-language{
+    display:unset;
 }
