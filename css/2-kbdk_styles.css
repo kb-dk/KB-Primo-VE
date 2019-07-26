@@ -2499,29 +2499,29 @@ template {
 
 @font-face {
     font-family: 'nowayregular';
-    src: url("../../../../../../fonts/Noway-Regular-webfont/noway-regular-webfont.eot");
-    src: url("../../../../../../fonts/Noway-Regular-webfont/noway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../../../../../fonts/Noway-Regular-webfont/noway-regular-webfont.woff2") format("woff2"), url("../../../../../../fonts/Noway-Regular-webfont/noway-regular-webfont.woff") format("woff"), url("../../../../../../fonts/Noway-Regular-webfont/noway-regular-webfont.ttf") format("truetype"), url("../../../../../../fonts/Noway-Regular-webfont/noway-regular-webfont.svg#nowayregular") format("svg");
+    src: url("../fonts/Noway-Regular-webfont/noway-regular-webfont.eot");
+    src: url("../fonts/Noway-Regular-webfont/noway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Noway-Regular-webfont/noway-regular-webfont.woff2") format("woff2"), url("../fonts/Noway-Regular-webfont/noway-regular-webfont.woff") format("woff"), url("../fonts/Noway-Regular-webfont/noway-regular-webfont.ttf") format("truetype"), url("../fonts/Noway-Regular-webfont/noway-regular-webfont.svg#nowayregular") format("svg");
     font-weight: normal;
     font-style: normal; }
 
 @font-face {
     font-family: 'nowaymedium';
-    src: url("../../../../../../fonts/Noway-Medium-webfont/noway-medium-webfont.eot");
-    src: url("../../../../../../fonts/Noway-Medium-webfont/noway-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../../../../../../fonts/Noway-Medium-webfont/noway-medium-webfont.woff2") format("woff2"), url("../../../../../../fonts/Noway-Medium-webfont/noway-medium-webfont.woff") format("woff"), url("../../../../../../fonts/Noway-Medium-webfont/noway-medium-webfont.ttf") format("truetype"), url("../../../../../../fonts/Noway-Medium-webfont/noway-medium-webfont.svg#nowaymedium") format("svg");
+    src: url("../fonts/Noway-Medium-webfont/noway-medium-webfont.eot");
+    src: url("../fonts/Noway-Medium-webfont/noway-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Noway-Medium-webfont/noway-medium-webfont.woff2") format("woff2"), url("../fonts/Noway-Medium-webfont/noway-medium-webfont.woff") format("woff"), url("../fonts/Noway-Medium-webfont/noway-medium-webfont.ttf") format("truetype"), url("../fonts/Noway-Medium-webfont/noway-medium-webfont.svg#nowaymedium") format("svg");
     font-weight: normal;
     font-style: normal; }
 
 @font-face {
     font-family: 'nowaybold';
-    src: url("../../../../../../fonts/Noway-Bold-webfont/noway-bold-webfont.eot");
-    src: url("../../../../../../fonts/Noway-Bold-webfont/noway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../../../../../fonts/Noway-Bold-webfont/noway-bold-webfont.woff2") format("woff2"), url("../../../../../../fonts/Noway-Bold-webfont/noway-bold-webfont.woff") format("woff"), url("../../../../../../fonts/Noway-Bold-webfont/noway-bold-webfont.ttf") format("truetype"), url("../../../../../../fonts/Noway-Bold-webfont/noway-bold-webfont.svg#nowaymedium") format("svg");
+    src: url("../fonts/Noway-Bold-webfont/noway-bold-webfont.eot");
+    src: url("../fonts/Noway-Bold-webfont/noway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Noway-Bold-webfont/noway-bold-webfont.woff2") format("woff2"), url("../fonts/Noway-Bold-webfont/noway-bold-webfont.woff") format("woff"), url("../fonts/Noway-Bold-webfont/noway-bold-webfont.ttf") format("truetype"), url("../fonts/Noway-Bold-webfont/noway-bold-webfont.svg#nowaymedium") format("svg");
     font-weight: normal;
     font-style: normal; }
 
 @font-face {
     font-family: 'material-icons';
-    src: url("../../../../../../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot");
-    src: url("../../../../../../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot?#iefix") format("embedded-opentype"), url("../../../../../../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2") format("woff2"), url("../../../../../../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff") format("woff"), url("../../../../../../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf") format("truetype"), url("../../../../../../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg#nowaymedium") format("svg");
+    src: url("../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot");
+    src: url("../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot?#iefix") format("embedded-opentype"), url("../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2") format("woff2"), url("../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff") format("woff"), url("../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf") format("truetype"), url("../fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg#nowaymedium") format("svg");
     font-weight: normal;
     font-style: normal; }
 
@@ -8204,13 +8204,13 @@ blockquote:before {
 .footer-logo {
     width: 7rem;
     height: 100%;
-    background-image: url(../../../../../../img/footer-logo.svg);
+    background-image: url(../img/footer-logo.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; }
 @media print, screen and (min-width: 64em) {
     .footer-logo {
-        background-image: url(../../../../../../img/footer-logo.svg);
+        background-image: url(../img/footer-logo.svg);
         width: 7rem; } }
 .footer-logo span {
     display: inline-block;
@@ -8300,11 +8300,11 @@ blockquote:before {
 .icon.icon-account-circle:before {
     content: '\f205'; }
 .icon.icon-facebook {
-    background-image: url(../../../../../../img/icons/icon-facebook.svg); }
+    background-image: url(../img/icon-facebook.svg); }
 .icon.icon-twitter {
-    background-image: url(../../../../../../img/icons/icon-twitter.svg); }
+    background-image: url(../img/icon-twitter.svg); }
 .icon.icon-button-right {
-    background-image: url(../../../../../../img/icons/icon-button-right.svg);
+    background-image: url(../img/icons/icon-button-right.svg);
     background-size: cover; }
 .icon.icon-crown {
     background-image: url(../img/icons/icon-crown.svg); }
@@ -8332,21 +8332,21 @@ img {
 .logo {
     width: 10rem;
     height: 100%;
-    background-image: url(../../../../../../img/logo-mobile.png);
+    background-image: url(../img/logo-mobile.png);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain; }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .logo {
-        background-image: url(../../../../../../img/logo-mobile.svg); } }
+        background-image: url(../img/logo-mobile.svg); } }
 @media print, screen and (min-width: 64em) {
     .logo {
-        background-image: url(../../../../../../img/logo-ie.png);
+        background-image: url(../img/logo-ie.png);
         background-position: center;
         width: 9rem; } }
 @media print and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 64em) and (-webkit-min-device-pixel-ratio: 2), print and (min-resolution: 192dpi), screen and (min-width: 64em) and (min-resolution: 192dpi) {
     .logo {
-        background-image: url(../../../../../../img/logo.svg); } }
+        background-image: url(../img/logo.svg); } }
 @media screen and (min-width: 75em) {
     .logo {
         width: 12rem; } }
@@ -8502,7 +8502,7 @@ ul li ul li {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../../../../../../img/icons/icon-chevron.svg);
+    background-image: url(../img/icons/icon-chevron.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: .75rem;
@@ -8538,7 +8538,7 @@ ul li ul li {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../../../../../../img/icons/icon-arrow-dropdown.svg);
+    background-image: url(../img/icons/icon-arrow-dropdown.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - .75rem) center; }
 .mol-d4e97117-4bf7-4516-92fa-54bb0abc40fb ul {
@@ -8700,7 +8700,7 @@ figure.article-center img {
     outline: none;
     float: right;
     margin: 0;
-    background-image: url(../../../../../../img/icons/icon-clear.svg);
+    background-image: url(../img/icons/icon-clear.svg);
     background-position: calc(100% - 24px) center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -8912,7 +8912,7 @@ figure.article-center img {
     overflow: hidden;
     border-radius: 2px;
     border: 1px solid #989898;
-    background-image: url(../../../../../../img/icons/icon-arrow-dropdown.svg);
+    background-image: url(../img/icons/icon-arrow-dropdown.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - .75rem) center; }
 
@@ -9083,7 +9083,7 @@ aside ul li ul li:last-child {
         width: 1.5rem;
         position: absolute;
         right: .75rem;
-        background-image: url(../../../../../../img/icons/icon-arrow-dropdown.svg);
+        background-image: url(../img/icons/icon-arrow-dropdown.svg);
         background-repeat: no-repeat;
         background-position: center; }
     .org-c8bfbf49-fc45-4e14-8fb3-e80d40ee1285 .menu a, .org-c8bfbf49-fc45-4e14-8fb3-e80d40ee1285 .menu span {
