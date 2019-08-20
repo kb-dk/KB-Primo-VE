@@ -1,9 +1,14 @@
 .page-notification{
-  background-color: #002E70;
-  a{
-    color:white;
-  }
   justify-content: left;
+
+  a{
+    color:#002E70;
+    &:hover{
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+
   .md-toast-content{
     box-shadow: none;
     border-radius: 0;

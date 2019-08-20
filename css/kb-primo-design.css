@@ -59,6 +59,9 @@ h3.item-title a {
 md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner h3 {
   color: #002e70; }
 
+primo-explore > div {
+  min-height: 70%; }
+
 prm-alert-bar {
   display: none; }
 
@@ -84,6 +87,9 @@ prm-alert-bar {
 
 #facets .primo-scrollbar {
   position: relative !important; }
+
+footer a {
+  color: white !important; }
 
 div.top-nav-bar {
   background-color: #96e2fd; }
@@ -191,8 +197,65 @@ button.button-large.button-with-icon md-icon[md-svg-icon="primo-ui:magnifying-gl
 button span[class*="available"] {
   color: #002e70 !important; }
 
+.icon.icon-facebook {
+  background-image: url(../img/icon-facebook.svg); }
+
+.icon.icon-twitter {
+  background-image: url(../img/icon-twitter.svg); }
+
+.page-notification {
+  justify-content: left; }
+  .page-notification a {
+    color: #002E70; }
+    .page-notification a:hover {
+      box-shadow: none;
+      background-color: transparent; }
+  .page-notification .md-toast-content {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    min-height: 0; }
+    .page-notification .md-toast-content:before {
+      min-height: 0; }
+
 prm-logo {
   display: none; }
+
+.org_navigation-header {
+  order: -3;
+  position: relative;
+  background-color: #002E70 !important;
+  padding: 12px 0;
+  display: block;
+  height: 48px; }
+  .org_navigation-header .inner-content {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .org_navigation-header .logo {
+    background-image: url(../img/logo-navigation-header.png);
+    width: 95px; }
+  .org_navigation-header .right-panel a {
+    float: right;
+    color: #eefbfa;
+    font-family: 'nowaymedium';
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    line-height: 24px; }
+
+prm-explore-main, prm-account {
+  display: flex;
+  flex-direction: column; }
+  prm-explore-main .org_navigation-header, prm-account .org_navigation-header {
+    order: -3; }
+  prm-explore-main prm-topbar, prm-account prm-topbar {
+    order: -2; }
+  prm-explore-main prm-search-bar, prm-account prm-search-bar {
+    order: -1; }
 
 #select_value_label_7, #select_value_label_10 {
   padding-top: 0; }

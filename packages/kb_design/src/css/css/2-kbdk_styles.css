@@ -8300,9 +8300,9 @@ blockquote:before {
 .icon.icon-account-circle:before {
     content: '\f205'; }
 .icon.icon-facebook {
-    background-image: url(../img/icons/icon-facebook.svg); }
+    background-image: url(../img/icon-facebook.svg); }
 .icon.icon-twitter {
-    background-image: url(../img/icons/icon-twitter.svg); }
+    background-image: url(../img/icon-twitter.svg); }
 .icon.icon-button-right {
     background-image: url(../img/icons/icon-button-right.svg);
     background-size: cover; }
