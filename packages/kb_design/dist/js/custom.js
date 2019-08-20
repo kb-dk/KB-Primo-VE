@@ -51,10 +51,12 @@ var PrmUserAreaExpandableAfterController = function () {
             var lang = this.$location.search().lang;
             if (lang === 'da') {
                 this.$location.search('lang', 'en');
+                document.getElementsByTagName("BODY")[0].lang = 'en';
             } else {
                 this.$location.search('lang', 'da');
             }
             this.$window.location.href = this.$location.absUrl();
+            document.getElementsByTagName("BODY")[0].lang = 'da';
         }
     }]);
 
@@ -72,7 +74,6 @@ var PrmUserAreaExpandableAfterConfig = exports.PrmUserAreaExpandableAfterConfig 
         controller: PrmUserAreaExpandableAfterController,
         // templateUrl: 'custom/' + viewName + '/html/language/language.html'
         templateUrl: function templateUrl() {
-            console.log(window.location.port);
             var query = window.location.search.substring(1);
             var start = query.indexOf('vid') + 4;
             query = query.substring(start);
@@ -118,36 +119,80 @@ app.controller('prmUserAreaExpandableAfterController', ['$location', '$window', 
 
 var _prmExploreFooterAfter = require('./footer/prmExploreFooterAfter.component');
 
+var _navigationHeader = require('./navigation-header/navigation-header');
+
 var _prmUserAreaExpandableAfter = require('./language/prmUserAreaExpandableAfter.component');
 
-// View name
-// import { ViewNameProvider } from './shared/viewNameProvider';
-
-// Footer
+// Navigation header
 angular.module('viewCustom', ['angularLoad']);
 // .run(['$rootScope', ($rootScope, ViewNameService) => {
 //     $rootScope.viewName = ViewNameService.getViewName();
 // }]);
 
-// Navigation header
-// import { PrmTopBarBeforeConfig } from './navigation-header/navigation-header';
-
 // Language switcher
+// Footer
 angular.module('viewCustom')
-
-// View name
-//     .provider('viewNameProvider', ViewNameProvider)
 
 // Footer
 .component(_prmExploreFooterAfter.PrmExploreFooterAfterConfig.name, _prmExploreFooterAfter.PrmExploreFooterAfterConfig.config)
 
-// Header
-//     .component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)
+// Navigation header
+.component(_navigationHeader.PrmTopBarBeforeConfig.name, _navigationHeader.PrmTopBarBeforeConfig.config)
 
 // Language switcher
 .component(_prmUserAreaExpandableAfter.PrmUserAreaExpandableAfterConfig.name, _prmUserAreaExpandableAfter.PrmUserAreaExpandableAfterConfig.config);
 
-},{"./footer/prmExploreFooterAfter.component":1,"./language/prmUserAreaExpandableAfter.component":2}]},{},[3])
+},{"./footer/prmExploreFooterAfter.component":1,"./language/prmUserAreaExpandableAfter.component":2,"./navigation-header/navigation-header":4}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PrmTopBarBeforeController = function () {
+    function PrmTopBarBeforeController($element) {
+        _classCallCheck(this, PrmTopBarBeforeController);
+
+        this.$element = $element;
+    }
+
+    _createClass(PrmTopBarBeforeController, [{
+        key: '$postLink',
+        value: function $postLink() {
+
+            var parentElement = this.$element.parent().parent().parent();
+            // Move the header.
+            var container = angular.element(parentElement.children()[0]);
+            container.append(this.$element.children()[0]);
+        }
+    }]);
+
+    return PrmTopBarBeforeController;
+}();
+
+PrmTopBarBeforeController.$inject = ['$element'];
+
+var PrmTopBarBeforeConfig = exports.PrmTopBarBeforeConfig = {
+    name: 'prmTopBarBefore',
+    config: {
+        bindings: { parentCtrl: '<' },
+        controller: PrmTopBarBeforeController,
+        templateUrl: function templateUrl() {
+            var query = window.location.search.substring(1);
+            var start = query.indexOf('vid') + 4;
+            query = query.substring(start);
+            var end = query.indexOf('&');
+            var vid = query.substring(0, end);
+            return 'custom/' + vid + '/html/navigation-header/navigation-header.html';
+        }
+    }
+};
+
+},{}]},{},[3])
 
 
 //# sourceMappingURL=custom.js.map
