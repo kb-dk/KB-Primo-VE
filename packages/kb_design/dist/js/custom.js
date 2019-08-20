@@ -187,6 +187,9 @@ var PrmTopBarBeforeConfig = exports.PrmTopBarBeforeConfig = {
             query = query.substring(start);
             var end = query.indexOf('&');
             var vid = query.substring(0, end);
+            if (!window.location.port) {
+                vid = vid.replace(":", "-");
+            }
             return 'custom/' + vid + '/html/navigation-header/navigation-header.html';
         }
     }
