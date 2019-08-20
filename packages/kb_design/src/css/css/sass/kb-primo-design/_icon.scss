@@ -1,0 +1,86 @@
+// Changed icon colors
+.prm-secondary-color.prm-hue1,
+.link-alt-color,
+.section-title prm-icon,
+.result-item-actions .pin-button,
+prm-add-query-to-saved-searches .custom-button.pin-button,
+prm-search-bookmark-filter .prm-hue1.md-button,
+prm-topbar .prm-hue1.top-nav-bar,
+prm-pre-filters md-input-container.is-active :focus,
+prm-account-overview .institutions-list md-list-item.is-selected
+.institution-name,
+prm-recomendation-item .media-on-hover .pin-button,
+prm-tree-nav md-list md-list-item .md-button.branch-name.is-selected,
+prm-tree-nav md-list md-list-item md-button.branch-name.is-selected,
+.result-item-actions .md-icon-button{
+  color: $black !important;
+}
+
+//
+
+button.button-notice{
+  color: $links !important;
+  &:hover{
+    background-color: transparent !important;
+  }
+}
+
+// Search icon flip back
+prm-icon[icon-definition="magnifying-glass"] md-icon{
+  transform: rotate(180deg) scaleY(-1);
+  color: $black!important;
+  font-size: 24px;
+}
+// Search icon no background color on hover and focus
+.md-button.button-confirm:hover:not([disabled]), .md-button.button-confirm:focus:not([disabled]){
+  background-color: transparent;
+
+}
+
+svg#magnifying-glass{
+  transform: scale(-.6,.6) !important;
+}
+// Change the icon colors in full view
+#action_list button.md-button:hover span.button-text{
+  color: $black !important;
+}
+
+#action_list prm-icon md-icon, #action_list span.button-text{
+  color: $grey ;
+}
+
+
+.prm-full-view-dialog~.close-button.md-icon-button prm-icon,
+.md-button.arrow-link-button .button-content:hover{
+  color: $black !important;
+}
+
+prm-icon[icon-definition="multiple-items"] md-icon{
+  color: $grey !important;
+}
+
+// Change the search icon in advanced search to blue
+button.button-large.button-with-icon{
+  md-icon[md-svg-icon="primo-ui:magnifying-glass"], span[translate="link.title.search.search"]{
+  color: $secondary-color !important;
+}
+}
+
+// Change the pin icon color
+.result-item-actions .md-icon-button {
+  color: $grey!important;
+  &:hover{
+    color: $black!important;
+  }
+
+}
+
+
+button span[class*="available"]{
+  color: $secondary-color !important;
+}
+
+.icon.icon-facebook {
+  background-image: url(../img/icon-facebook.svg); }
+.icon.icon-twitter {
+  background-image: url(../img/icon-twitter.svg); }

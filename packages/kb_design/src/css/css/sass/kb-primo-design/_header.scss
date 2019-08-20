@@ -1,0 +1,68 @@
+div.top-nav-bar {
+  background-color: $light-header;
+}
+
+prm-search-bar, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column{
+  background-color: $lighter-header;
+}
+prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column{
+  color: $links;
+}
+prm-topbar .md-button,
+.md-button.button-over-dark,
+prm-search-bar .search-switch-buttons .md-button.switch-to-advanced,
+.md-button.button-confirm {
+  color: $links;
+}
+
+.md-button.button-confirm:hover:not([disabled]) {
+  color: $links;
+
+}
+
+// Changed the font for the top bar
+prm-topbar,
+prm-main-menu[menu-type=menu] .md-button,
+button, .md-button {
+  font-family: $font_m;
+  font-weight: normal !important;
+  font-size: 12px;
+}
+
+// Hide lines between the options in the top bar
+.buttons-group div:first-child .md-button, .buttons-group .md-button {
+  box-shadow: none;
+}
+
+// Hide dividers in the search bar '/'
+.search-options md-divider {
+  display: none;
+  //width: 10% !important;
+}
+
+// Remove the divs with differnet flex boxes in top and search header and add a fix padding
+.top-nav-bar > div.flex-50, .layout-row > .flex-0 {
+  display: none;
+  //width: 10% !important;
+}
+
+.search-elements-wrapper {
+  padding-left: 1em;
+}
+
+.top-nav-bar-links {
+  padding-left: 2.5em;
+  float: left;
+}
+
+.search-elements-wrapper{
+  max-width: 80% !important;
+}
+prm-atoz-search-bar div.layout-column.flex-sm-85.flex-md-75.flex.flex-lg-55.flex-xl-50 {
+  max-width: 100% !important;
+}
+
+// Hide the menu button when user is not logged in
+md-menu.md-menu._md button.button-with-menu-arrow:not(.user-menu-button){
+  display: none;
+}

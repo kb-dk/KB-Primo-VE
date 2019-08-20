@@ -17,3 +17,8 @@ md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner {
     color: $links;
   }
 }
+
+// Push footer further down when there is no content
+primo-explore > div {
+  min-height: 70%;
+}

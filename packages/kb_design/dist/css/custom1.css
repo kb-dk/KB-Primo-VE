@@ -10567,6 +10567,15 @@ article {
     height: 70px; }
 .overview .left {
     float: left; }
+/* Bug fixing: after adding the announcement bar the overlays (like when you click on the more (...) button) don't
+show up properly and the following code fixes it */
+
+md-backdrop, .md-dialog-container {
+  position: fixed; }
+
+md-toast {
+  z-index: 78; }
+
 /*CSS to Hide Virtual Browse and Virtual Browse Button/link on Full Display */
 #virtualBrowse {
     display:none;
@@ -10778,6 +10787,21 @@ button span[class*="available"] {
 
 .icon.icon-twitter {
   background-image: url(../img/icon-twitter.svg); }
+
+.page-notification {
+  justify-content: left; }
+  .page-notification a {
+    color: #002E70; }
+    .page-notification a:hover {
+      box-shadow: none;
+      background-color: transparent; }
+  .page-notification .md-toast-content {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    min-height: 0; }
+    .page-notification .md-toast-content:before {
+      min-height: 0; }
 
 prm-logo {
   display: none; }

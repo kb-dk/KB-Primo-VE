@@ -5,43 +5,43 @@
 }
 
 #action_list {
-    order: 0 !important;
+    order: -9 !important;
 }
 
 #brief {
-    order: 1 !important;
+    order: -8 !important;
 }
 
 #getit_link1_0 {
-    order: 2 !important;
+    order: -7 !important;
 }
 
 #getit_link1_1 {
-    order: 3 !important;
+    order: -6 !important;
 }
 
 #details {
-    order: 4 !important;
+    order: -5 !important;
 }
 
 #citationTrails {
-    order: 5 !important;
+    order: -4 !important;
 }
 
 #links {
-    order: 6 !important;
+    order: -3 !important;
 }
 
 #virtualBrowse {
-    order: 7 !important;
+    order: -2 !important;
 }
 
 #tags {
-    order: 8 !important;
+    order: -1 !important;
 }
 
 .syndetic-unbound-section {
-    order: 9 !important;
+    order: -1 !important;
 }
 
 /* Create smaller space underneath the bar*/
