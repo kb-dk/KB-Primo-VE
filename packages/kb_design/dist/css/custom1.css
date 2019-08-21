@@ -10807,7 +10807,7 @@ prm-logo {
   display: none; }
 
 .org_navigation-header {
-  order: 1;
+  order: -3;
   position: relative;
   background-color: #002E70 !important;
   padding: 12px 0;
@@ -10832,14 +10832,14 @@ prm-logo {
     letter-spacing: -0.2px;
     line-height: 24px; }
 
-prm-explore-main {
+prm-explore-main, prm-account {
   display: flex;
   flex-direction: column; }
-  prm-explore-main .org_navigation-header {
+  prm-explore-main .org_navigation-header, prm-account .org_navigation-header {
     order: -3; }
-  prm-explore-main prm-topbar {
+  prm-explore-main prm-topbar, prm-account prm-topbar {
     order: -2; }
-  prm-explore-main prm-search-bar {
+  prm-explore-main prm-search-bar, prm-account prm-search-bar {
     order: -1; }
 
 #select_value_label_7, #select_value_label_10 {
@@ -10894,41 +10894,41 @@ div.list-items-list {
     order: -9 !important;
 }
 
-#brief {
-    order: -8 !important;
-}
+/*#brief {*/
+    /*order: -8 !important;*/
+/*}*/
 
-#getit_link1_0 {
-    order: -7 !important;
-}
+/*#getit_link1_0 {*/
+    /*order: -7 !important;*/
+/*}*/
 
-#getit_link1_1 {
-    order: -6 !important;
-}
+/*#getit_link1_1 {*/
+    /*order: -6 !important;*/
+/*}*/
 
-#details {
-    order: -5 !important;
-}
+/*#details {*/
+    /*order: -5 !important;*/
+/*}*/
 
-#citationTrails {
-    order: -4 !important;
-}
+/*#citationTrails {*/
+    /*order: -4 !important;*/
+/*}*/
 
-#links {
-    order: -3 !important;
-}
+/*#links {*/
+    /*order: -3 !important;*/
+/*}*/
 
-#virtualBrowse {
-    order: -2 !important;
-}
+/*#virtualBrowse {*/
+    /*order: -2 !important;*/
+/*}*/
 
-#tags {
-    order: -1 !important;
-}
+/*#tags {*/
+    /*order: -1 !important;*/
+/*}*/
 
-.syndetic-unbound-section {
-    order: -1 !important;
-}
+/*.syndetic-unbound-section {*/
+    /*order: -1 !important;*/
+/*}*/
 
 /* Create smaller space underneath the bar*/
 #action_list {
@@ -10949,6 +10949,10 @@ div.list-items-list {
 /* Remove the services index navigation menu in the full display */
 .full-view-inner-container .services-index-under{
     display: none;
+}
+prm-location-items .summary-brief , .text-trim-ellipsis span{
+    white-space: normal!important;
+    color: #002E70;
 }
 /* Change the order of the elements in the right side of the top bar*/
 prm-user-area-expandable {
