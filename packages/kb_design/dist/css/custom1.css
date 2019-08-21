@@ -10950,6 +10950,10 @@ div.list-items-list {
 .full-view-inner-container .services-index-under{
     display: none;
 }
+prm-location-items .summary-brief , .text-trim-ellipsis span{
+    white-space: normal!important;
+    color: #002E70;
+}
 /* Change the order of the elements in the right side of the top bar*/
 prm-user-area-expandable {
     display: flex;
