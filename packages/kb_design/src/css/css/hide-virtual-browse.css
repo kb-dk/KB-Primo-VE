@@ -1,7 +1,0 @@
-/*CSS to Hide Virtual Browse and Virtual Browse Button/link on Full Display */
-#virtualBrowse {
-    display:none;
-}
-button[aria-label="Virtual Browse"]{
-    display:none;
-}

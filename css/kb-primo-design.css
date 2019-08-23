@@ -85,6 +85,9 @@ prm-alert-bar {
 #facets div.md-chip, #facets button.button-as-link {
   width: 100%; }
 
+#facets prm-facet-range button.button-as-link {
+  width: 71px; }
+
 #facets .primo-scrollbar {
   position: relative !important; }
 
