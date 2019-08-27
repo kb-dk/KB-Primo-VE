@@ -10854,6 +10854,9 @@ prm-explore-main, prm-account {
   #select_value_label_7 span, #select_value_label_10 span {
     height: 100%; }
 
+ul.md-autocomplete-suggestions li {
+  list-style: none; }
+
 .md-subheader._md.md-primoExplore-theme .text.tiny-uppercase-text {
   font-weight: 400 !important;
   text-transform: unset;
