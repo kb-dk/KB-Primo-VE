@@ -4,5 +4,9 @@ show up properly and the following code fixes it */
 md-backdrop, .md-dialog-container {
   position: fixed; }
 
+.md-dialog-container{
+  top: 0!important;
+}
+
 md-toast {
   z-index: 78; }
