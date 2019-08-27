@@ -27,6 +27,10 @@
     width: 71px;
   }
 
+  md-icon[md-svg-icon="primo-ui:exclude-facet"]{
+    position: relative;
+  }
+
   // Facet not sticky
   .primo-scrollbar {
     position: relative !important;
