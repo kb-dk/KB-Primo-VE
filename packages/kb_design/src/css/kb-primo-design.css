@@ -62,9 +62,6 @@ md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner h3 {
 primo-explore > div {
   min-height: 70%; }
 
-prm-alert-bar {
-  display: none; }
-
 #facets .section-title, #facets .sidebar-header {
   position: relative;
   display: inline-flex;
@@ -84,6 +81,9 @@ prm-alert-bar {
 
 #facets div.md-chip, #facets button.button-as-link {
   width: 100%; }
+
+#facets prm-facet-range button.button-as-link {
+  width: 71px; }
 
 #facets .primo-scrollbar {
   position: relative !important; }
@@ -222,7 +222,7 @@ prm-logo {
   display: none; }
 
 .org_navigation-header {
-  order: 1;
+  order: -3;
   position: relative;
   background-color: #002E70 !important;
   padding: 12px 0;
@@ -247,14 +247,14 @@ prm-logo {
     letter-spacing: -0.2px;
     line-height: 24px; }
 
-prm-explore-main {
+prm-explore-main, prm-account {
   display: flex;
   flex-direction: column; }
-  prm-explore-main .org_navigation-header {
+  prm-explore-main .org_navigation-header, prm-account .org_navigation-header {
     order: -3; }
-  prm-explore-main prm-topbar {
+  prm-explore-main prm-topbar, prm-account prm-topbar {
     order: -2; }
-  prm-explore-main prm-search-bar {
+  prm-explore-main prm-search-bar, prm-account prm-search-bar {
     order: -1; }
 
 #select_value_label_7, #select_value_label_10 {

@@ -8,41 +8,41 @@
     order: -9 !important;
 }
 
-#brief {
-    order: -8 !important;
-}
+/*#brief {*/
+    /*order: -8 !important;*/
+/*}*/
 
-#getit_link1_0 {
-    order: -7 !important;
-}
+/*#getit_link1_0 {*/
+    /*order: -7 !important;*/
+/*}*/
 
-#getit_link1_1 {
-    order: -6 !important;
-}
+/*#getit_link1_1 {*/
+    /*order: -6 !important;*/
+/*}*/
 
-#details {
-    order: -5 !important;
-}
+/*#details {*/
+    /*order: -5 !important;*/
+/*}*/
 
-#citationTrails {
-    order: -4 !important;
-}
+/*#citationTrails {*/
+    /*order: -4 !important;*/
+/*}*/
 
-#links {
-    order: -3 !important;
-}
+/*#links {*/
+    /*order: -3 !important;*/
+/*}*/
 
-#virtualBrowse {
-    order: -2 !important;
-}
+/*#virtualBrowse {*/
+    /*order: -2 !important;*/
+/*}*/
 
-#tags {
-    order: -1 !important;
-}
+/*#tags {*/
+    /*order: -1 !important;*/
+/*}*/
 
-.syndetic-unbound-section {
-    order: -1 !important;
-}
+/*.syndetic-unbound-section {*/
+    /*order: -1 !important;*/
+/*}*/
 
 /* Create smaller space underneath the bar*/
 #action_list {

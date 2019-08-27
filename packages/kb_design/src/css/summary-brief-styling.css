@@ -1,0 +1,4 @@
+prm-location-items .summary-brief , .text-trim-ellipsis span{
+    white-space: normal!important;
+    color: #002E70;
+}

@@ -10573,6 +10573,10 @@ show up properly and the following code fixes it */
 md-backdrop, .md-dialog-container {
   position: fixed; }
 
+.md-dialog-container{
+  top: 0!important;
+}
+
 md-toast {
   z-index: 78; }
 
@@ -10646,9 +10650,6 @@ md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner h3 {
 
 primo-explore > div {
   min-height: 70%; }
-
-prm-alert-bar {
-  display: none; }
 
 #facets .section-title, #facets .sidebar-header {
   position: relative;
@@ -10952,6 +10953,33 @@ div.list-items-list {
 /* Remove the services index navigation menu in the full display */
 .full-view-inner-container .services-index-under{
     display: none;
+}
+prm-request-services .labeled-block .block-body {
+    max-height: 30em;
+}
+
+prm-request-services h3.section-title{
+    display:none;
+}
+
+prm-request-services prm-service-button button.button-as-link,
+prm-request-services prm-service-button button.md-button.button-as-link{
+    background-color: #002E70;
+    border: 1px solid #002E70;
+    color: white;
+    font-family: "nowayregular", sans-serif;
+    height: 2.875rem;
+    font-size: .875rem;
+    padding-left: 2.875rem;
+    padding-right: 2.875rem;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+prm-request-services prm-service-button button.button-as-link:hover:not([disabled]),
+prm-request-services prm-service-button button.md-button.button-as-link:hover:not([disabled]){
+    background-color: #00193d;
+    color: white;
 }
 prm-location-items .summary-brief , .text-trim-ellipsis span{
     white-space: normal!important;
