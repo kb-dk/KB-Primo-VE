@@ -10974,12 +10974,12 @@ prm-request-services prm-service-button button.md-button.button-as-link{
     border: 1px solid #002E70;
     color: white;
     font-family: "nowayregular", sans-serif;
-    height: 2.875rem;
-    font-size: .875rem;
-    padding-left: 2.875rem;
-    padding-right: 2.875rem;
     margin: 1rem;
     border-radius: 5px;
+    font-size: .75rem;
+    height: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
 }
 
 prm-request-services prm-service-button button.button-as-link:hover:not([disabled]),
