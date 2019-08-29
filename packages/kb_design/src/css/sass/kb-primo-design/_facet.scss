@@ -35,5 +35,14 @@
   .primo-scrollbar {
     position: relative !important;
   }
+
+  /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */
+  .sidebar-inner-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar-inner-wrapper .sidebar-section:nth-child(2){
+    order:-5;
+  }
 }
 

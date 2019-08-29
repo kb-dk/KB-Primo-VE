@@ -10587,6 +10587,7 @@ md-toast {
 button[aria-label="Virtual Browse"]{
     display:none;
 }
+@charset "UTF-8";
 body, h1, h2, h3, h4 {
   letter-spacing: -0.2px;
   text-align: left;
@@ -10651,34 +10652,35 @@ md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner h3 {
 primo-explore > div {
   min-height: 70%; }
 
-#facets .section-title, #facets .sidebar-header {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-  margin-bottom: 0; }
-
-#facets h3.section-title-header, #facets strong {
-  margin-left: 0;
-  font-weight: 400 !important; }
-
-#facets md-icon {
-  position: absolute;
-  right: 0;
-  top: 0; }
-
-#facets div.md-chip, #facets button.button-as-link {
-  width: 100%; }
-
-#facets prm-facet-range button.button-as-link {
-  width: 71px; }
-
-#facets md-icon[md-svg-icon="primo-ui:exclude-facet"] {
-  position: relative; }
-
-#facets .primo-scrollbar {
-  position: relative !important; }
+#facets {
+  /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
+  #facets .section-title, #facets .sidebar-header {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 0; }
+  #facets h3.section-title-header, #facets strong {
+    margin-left: 0;
+    font-weight: 400 !important; }
+  #facets md-icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  #facets div.md-chip, #facets button.button-as-link {
+    width: 100%; }
+  #facets prm-facet-range button.button-as-link {
+    width: 71px; }
+  #facets md-icon[md-svg-icon="primo-ui:exclude-facet"] {
+    position: relative; }
+  #facets .primo-scrollbar {
+    position: relative !important; }
+  #facets .sidebar-inner-wrapper {
+    display: flex;
+    flex-direction: column; }
+  #facets .sidebar-inner-wrapper .sidebar-section:nth-child(2) {
+    order: -5; }
 
 footer a {
   color: white !important; }
