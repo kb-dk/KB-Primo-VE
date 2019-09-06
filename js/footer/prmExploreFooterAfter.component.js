@@ -1,23 +1,19 @@
-import {viewName} from '../shared/viewName';
-import {LocaleService} from "../shared/locale.service";
-
-class PrmExploreFooterAfterController {
-    constructor(localeService) {
-        this.localeService = localeService;
-    }
-
-     locale(){
-        return this.LocaleService.current();
-     }
-}
-
-PrmExploreFooterAfterController.$inject = ['localeService'];
-
 export let PrmExploreFooterAfterConfig = {
     name: 'prmExploreFooterAfter',
     config: {
         bindings: {parentCtrl: '<'},
-        controller: PrmExploreFooterAfterController,
-        templateUrl: 'custom/' + viewName + '/html/footer/footer' + '.html',
+        templateUrl: function(){
+            let query = window.location.search.substring(1);
+            let start = query.indexOf('vid')+4;
+            query = query.substring(start);
+            let end = query.indexOf('&');
+            let vid = query.substring(0, end);
+            if (!window.location.port){
+                vid = vid.replace(":", "-");
+            }
+            let templateUrl = 'custom/' + vid + '/html/footer/footer.html';
+            return templateUrl;
+        },
+
     }
-}
+};
