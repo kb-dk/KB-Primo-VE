@@ -5,3 +5,7 @@
   }
 }
 
+// Fixes not showing suggestions in Firefox
+ul.md-autocomplete-suggestions li {
+  list-style: none;
+}
