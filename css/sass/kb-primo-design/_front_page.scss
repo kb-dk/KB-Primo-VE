@@ -1,4 +1,15 @@
+prm-static[section="homepage"]{
+  padding:0;
 
-.org-c2710682-7e51-4505-bd94-d40665c25bda{
-
+  .default-card{
+    padding: 1.5rem;
+  }
+  .org-c2710682-7e51-4505-bd94-d40665c25bda{
+    a{
+      margin-bottom: .75rem;
+    }
+    a, a div{
+      width:100%;
+    }
+  }
 }

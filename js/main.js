@@ -19,4 +19,3 @@ angular.module('viewCustom')
 
 // Language switcher
 .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config);
-
