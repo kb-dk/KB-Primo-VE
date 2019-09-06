@@ -18,7 +18,9 @@
     "email": "muse@kb.dk"
   },
   "scripts": {
-    "test": "node_modules/karma/bin/karma start ./test/unit/karma.conf.js --single-run"
+    "test": "node_modules/karma/bin/karma start ./test/unit/karma.conf.js --single-run",
+    "sass": "node_modules/node-sass/bin/node-sass ./css/sass/kb-primo-design.scss ./css/kb-primo-design.css",
+    "start": "( cd ../../../ && gulp run --view 45KBDK_KGL:KGL --ve --browserify )"
   },
   "devDependencies": {
     "jasmine-core": "^2.5.2",
@@ -28,6 +30,7 @@
     "karma-firefox-launcher": "^1.0.1",
     "karma-html2js-preprocessor": "^1.1.0",
     "karma-jasmine": "^1.1.0",
+    "node-sass": "^4.12.0",
     "protractor": "^5.1.1",
     "watchify": "^3.8.0"
   },

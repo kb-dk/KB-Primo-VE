@@ -1,7 +1,12 @@
+/* Bug fixing: after adding the announcement bar the overlays (like when you click on the more (...) button) don't
+show up properly and the following code fixes it */
+
 md-backdrop, .md-dialog-container {
   position: fixed; }
 
+.md-dialog-container{
+  top: 0!important;
+}
+
 md-toast {
   z-index: 78; }
-
-/*# sourceMappingURL=announcement.css.map */
