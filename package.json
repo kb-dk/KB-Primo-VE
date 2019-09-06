@@ -31,6 +31,7 @@
     "karma-html2js-preprocessor": "^1.1.0",
     "karma-jasmine": "^1.1.0",
     "node-sass": "^4.12.0",
+    "primo-ve-announcement": "git+https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement.git",
     "protractor": "^5.1.1",
     "watchify": "^3.8.0"
   },
