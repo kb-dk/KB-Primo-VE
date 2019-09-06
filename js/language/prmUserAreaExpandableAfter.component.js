@@ -1,5 +1,3 @@
-import { viewName } from '../shared/viewName';
-
 class PrmUserAreaExpandableAfterController {
 
     constructor($location, $window) {
@@ -11,10 +9,14 @@ class PrmUserAreaExpandableAfterController {
         let lang = this.$location.search().lang;
         if (lang === 'da'){
             this.$location.search('lang', 'en');
+            document.getElementsByTagName("BODY")[0].lang = 'en';
+
         } else {
             this.$location.search('lang', 'da');
         }
         this.$window.location.href = this.$location.absUrl();
+        document.getElementsByTagName("BODY")[0].lang = 'da';
+
     }
 }
 
@@ -27,33 +29,16 @@ export let PrmUserAreaExpandableAfterConfig=  {
             parentCtrl: '<'
         }, reloadOnSearch: false,
         controller: PrmUserAreaExpandableAfterController,
-        templateUrl: 'custom/' + viewName + '/html/language/language.html'
+        templateUrl: function(){
+            let query = window.location.search.substring(1);
+            let start = query.indexOf('vid')+4;
+            query = query.substring(start);
+            let end = query.indexOf('&');
+            let vid = query.substring(0, end);
+            if (!window.location.port){
+                vid = vid.replace(":", "-");
+            }            let templateUrl = 'custom/' + vid + '/html/language/language.html';
+            return templateUrl;
+        },
     }
 };
-
-/*
-let app = angular.module('viewCustom', ['angularLoad']);
-
-app.component('prmUserAreaExpandableAfter', {
-    bindings: { parentCtrl: '<' },
-    reloadOnSearch: false,
-    controller: 'prmUserAreaExpandableAfterController',
-    template: `<button class="md-no-style md-button md-ink-ripple width-100" ng-click="$ctrl.changeLanguage()" aria-label="">{{'nui.menu.language' | translate}}</button>`
-});
-
-app.controller('prmUserAreaExpandableAfterController', ['$location', '$window', function ($location, $window) {
-    let vm = this;
-    vm.changeLanguage = changeLanguage;
-
-    function changeLanguage() {
-        console.log($location.search().lang);
-        let lang = $location.search().lang;
-        if (lang === 'da'){
-            $location.search('lang', 'en');
-        } else {
-            $location.search('lang', 'da');
-        }
-        console.log($location.absUrl());
-        $window.location.href = $location.absUrl();
-    }
-}]);*/

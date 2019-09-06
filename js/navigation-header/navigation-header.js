@@ -30,5 +30,5 @@ export let PrmTopBarBeforeConfig = {
             }
             return 'custom/' + vid + '/html/navigation-header/navigation-header.html';
         },
-    }
+    },
 }
