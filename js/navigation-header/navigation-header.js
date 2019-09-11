@@ -25,9 +25,7 @@ export let PrmTopBarBeforeConfig = {
             query = query.substring(start);
             let end = query.indexOf('&');
             let vid = query.substring(0, end);
-            if (!window.location.port) {
-                vid = vid.replace(":", "-");
-            }
+            vid = vid.replace(":", "-");
             return 'custom/' + vid + '/html/navigation-header/navigation-header.html';
         },
     },

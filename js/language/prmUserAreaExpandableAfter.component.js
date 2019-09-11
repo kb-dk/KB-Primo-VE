@@ -35,9 +35,8 @@ export let PrmUserAreaExpandableAfterConfig=  {
             query = query.substring(start);
             let end = query.indexOf('&');
             let vid = query.substring(0, end);
-            if (!window.location.port){
                 vid = vid.replace(":", "-");
-            }            let templateUrl = 'custom/' + vid + '/html/language/language.html';
+            let templateUrl = 'custom/' + vid + '/html/language/language.html';
             return templateUrl;
         },
     }
