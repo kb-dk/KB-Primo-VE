@@ -20,7 +20,8 @@
   "scripts": {
     "test": "node_modules/karma/bin/karma start ./test/unit/karma.conf.js --single-run",
     "sass": "node_modules/node-sass/bin/node-sass ./css/sass/kb-primo-design.scss ./css/kb-primo-design.css",
-    "start": "( cd ../../../ && gulp run --view 45KBDK_KGL-KGL --ve --browserify )"
+    "start": "( cd ../../../ && gulp run --view 45KBDK_KGL-KGL --ve --browserify )",
+    "pack": "( cd ../../../packages && mkdir 45KBDK_KGL-KGL && cd 45KBDK_KGL-KGL && mkdir css && mkdir fonts && mkdir html && mkdir js && mkdir img && cp -a ../../primo-explore/custom/45KBDK_KGL-KGL/css/custom1.css css/ && cp -a ../../primo-explore/custom/45KBDK_KGL-KGL/js/custom.js js/ && cp -a ../../primo-explore/custom/45KBDK_KGL-KGL/html/* html/ && cp -a ../../primo-explore/custom/45KBDK_KGL-KGL/fonts/* fonts/ && cp -a ../../primo-explore/custom/45KBDK_KGL-KGL/img/* img/ )"
   },
   "devDependencies": {
     "jasmine-core": "^2.5.2",
