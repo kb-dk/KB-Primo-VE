@@ -19,3 +19,6 @@ angular.module('viewCustom')
 
 // Language switcher
 .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config);
+
+// Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
+require('primo-ve-announcement/dist/index.js');
