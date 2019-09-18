@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+rm -r packages/45KBDK_KGL-KGL/
 cd packages
 mkdir 45KBDK_KGL-KGL
 cd 45KBDK_KGL-KGL
