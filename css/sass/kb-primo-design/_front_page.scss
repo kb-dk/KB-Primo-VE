@@ -7,6 +7,11 @@ prm-static[section="homepage"]{
   .org-c2710682-7e51-4505-bd94-d40665c25bda{
     a{
       margin-bottom: .75rem;
+      &:hover, &:active{
+        background-color: transparent;
+        color: inherit;
+        box-shadow: none;
+      }
     }
     a, a div{
       width:100%;
