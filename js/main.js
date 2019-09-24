@@ -7,7 +7,13 @@ import {PrmTopBarBeforeConfig} from './navigation-header/navigation-header';
 // Language switcher
 import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandableAfter.component';
 
-angular.module('viewCustom', ['angularLoad']);
+angular.module('viewCustom', ['angularLoad'])
+    .run(['$rootScope', ($rootScope) => {
+        let query = window.location.search.substring(1);
+        query = query.substring(query.indexOf('vid')+4);
+        let vid = query.substring(0, query.indexOf('&'));
+        $rootScope.viewName = vid.replace(":", "-");
+    }]);
 
 angular.module('viewCustom')
 
@@ -15,7 +21,7 @@ angular.module('viewCustom')
 .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
 
 // Navigation header
-.component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)
+.component(PrmTopBarBeforeConfig.name,  PrmTopBarBeforeConfig.config)
 
 // Language switcher
 .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config);

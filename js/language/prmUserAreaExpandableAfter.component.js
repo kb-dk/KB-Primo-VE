@@ -29,15 +29,8 @@ export let PrmUserAreaExpandableAfterConfig=  {
             parentCtrl: '<'
         }, reloadOnSearch: false,
         controller: PrmUserAreaExpandableAfterController,
-        templateUrl: function(){
-            let query = window.location.search.substring(1);
-            let start = query.indexOf('vid')+4;
-            query = query.substring(start);
-            let end = query.indexOf('&');
-            let vid = query.substring(0, end);
-                vid = vid.replace(":", "-");
-            let templateUrl = 'custom/' + vid + '/html/language/language.html';
-            return templateUrl;
-        },
+        templateUrl: ["$rootScope", function($rootScope){
+            return 'custom/' + $rootScope.viewName + '/html/language/language.html';
+        }],
     }
 };
