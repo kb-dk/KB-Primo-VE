@@ -27,4 +27,7 @@ angular.module('viewCustom')
 .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config);
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
-require('primo-ve-announcement/dist/index.js');
+require('kb-primo-ve-announcement/dist/index.js');
+
+// Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Hide-New-User-If-Loggedin.git
+require('kb-primo-ve-hide-new-user-if-loggedin/dist/index.js');

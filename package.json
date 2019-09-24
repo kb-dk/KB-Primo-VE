@@ -31,8 +31,9 @@
     "karma-firefox-launcher": "^1.0.1",
     "karma-html2js-preprocessor": "^1.1.0",
     "karma-jasmine": "^1.1.0",
+    "kb-primo-ve-announcement": "^1.0.0",
+    "kb-primo-ve-hide-new-user-if-loggedin": "^1.0.0",
     "node-sass": "^4.12.0",
-    "primo-ve-announcement": "git+https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement.git",
     "protractor": "^5.1.1",
     "watchify": "^3.8.0"
   },

@@ -10902,6 +10902,10 @@ prm-static[section="homepage"] {
     padding: 1.5rem; }
   prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a {
     margin-bottom: .75rem; }
+    prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a:hover, prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a:active {
+      background-color: transparent;
+      color: inherit;
+      box-shadow: none; }
   prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a, prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a div {
     width: 100%; }
 
