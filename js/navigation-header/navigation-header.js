@@ -17,16 +17,12 @@ PrmTopBarBeforeController.$inject = ['$element'];
 export let PrmTopBarBeforeConfig = {
     name: 'prmTopBarBefore',
     config: {
-        bindings: {parentCtrl: '<'},
-        controller: PrmTopBarBeforeController,
-        templateUrl: function(){
-            let query = window.location.search.substring(1);
-            let start = query.indexOf('vid')+4;
-            query = query.substring(start);
-            let end = query.indexOf('&');
-            let vid = query.substring(0, end);
-            vid = vid.replace(":", "-");
-            return 'custom/' + vid + '/html/navigation-header/navigation-header.html';
+        bindings: {
+            parentCtrl: '<'
         },
+        controller: PrmTopBarBeforeController,
+        templateUrl: ["$rootScope", function($rootScope){
+            return 'custom/' + $rootScope.viewName + '/html/navigation-header/navigation-header.html';
+        }],
     },
 }
