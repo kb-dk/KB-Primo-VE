@@ -1,4 +1,4 @@
-/*Styles for primo-explore-help-menu: MW 20190409 */
+/*!*Styles for primo-explore-help-menu: MW 20190409 *!*/
 
 #search-help-menu-content h2 {font-weight: 500;}
 #search-help-menu-content h3 {font-weight: 400;}
@@ -20,3 +20,6 @@ a.helpMenu--location-button {
 div.helpMenu--location{
 	padding-bottom: 10px;
 }
+
+#search-help-dialog ul li{ list-style: none;}
+#search-help-dialog a:hover{background-color: transparent;box-shadow: none;}
