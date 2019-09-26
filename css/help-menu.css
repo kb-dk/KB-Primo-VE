@@ -1,0 +1,25 @@
+/*!*Styles for primo-explore-help-menu: MW 20190409 *!*/
+
+#search-help-menu-content h2 {font-weight: 500;}
+#search-help-menu-content h3 {font-weight: 400;}
+#search-help-menu-content img {
+  border: 2px solid #999999;
+  border-radius: 4px;
+  margin: 20px;
+  padding: 10px;
+}
+a.helpMenu--location-button {
+  padding: 6px;
+  background-color: #22647B;
+  border-radius: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+}
+
+div.helpMenu--location{
+	padding-bottom: 10px;
+}
+
+#search-help-dialog ul li{ list-style: none;}
+#search-help-dialog a:hover{background-color: transparent;box-shadow: none;}
