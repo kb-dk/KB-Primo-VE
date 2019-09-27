@@ -3,3 +3,8 @@ button.s-lch-widget-float-btn.online {
     border: none;
     box-shadow: none;
 }
+
+/* Fixes that chat box locates on top of page numbers */
+.facet-to-left prm-page-nav-menu{
+    bottom: 5em;
+}

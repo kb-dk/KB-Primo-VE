@@ -10585,6 +10585,11 @@ button.s-lch-widget-float-btn.online {
     border: none;
     box-shadow: none;
 }
+
+/* Fixes that chat box locates on top of page numbers */
+.facet-to-left prm-page-nav-menu{
+    bottom: 5em;
+}
 /*!*Styles for primo-explore-help-menu: MW 20190409 *!*/
 
 #search-help-menu-content h2 {font-weight: 500;}
