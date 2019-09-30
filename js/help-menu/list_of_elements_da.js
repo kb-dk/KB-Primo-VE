@@ -6,7 +6,7 @@ export const list_of_elements_da = [
         "icon":{"code":"description","group":"action"},
         "template":`
       <p>KB Libraries Search contains articles, books, journals, databases, films, music, dissertations, and other scholarly materials for your research</p>
-      <h2>Search Tips {{'fulldisplay.footer.title' | translate}}</h2>
+      <h2>Search Tips</h2>
       <code>brief info about title or subject keyword searches</code>
       <br /><br />
       <h2>Filtering</h2>
