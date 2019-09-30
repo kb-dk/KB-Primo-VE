@@ -1,6 +1,6 @@
 export const list_of_elements_da = [
     {
-        "id":"Kom i gang",
+        "id":"getting-started",
         "title":"Kom i gang",
         "description":"brief static html content with an overview on how to use BULS; links to direct to main BULS help page in WordPress, other pages, and/or other sections of the menu",
         "icon":{"code":"description","group":"action"},
