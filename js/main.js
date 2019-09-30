@@ -9,8 +9,10 @@ import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandable
 
 // Search tips (help-menu Visual studio addon - https://github.com/bulib/primo-explore-bu/tree/master/packages/help-menu)
 import 'primo-explore-help-menu';
+// import './help-menu/help-menu';
 
-import {list_of_elements} from './help-menu/custum-help-menu-content';
+import {list_of_elements_en} from './help-menu/list_of_elements_en';
+import {list_of_elements_da} from './help-menu/list_of_elements_da';
 
 angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
     .run(['$rootScope', ($rootScope) => {
@@ -21,8 +23,19 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
     }]);
 
 angular.module('viewCustom')
+.constant('helpMenuConfig',{ "list_of_elements": (function(){
+        let query = window.location.search.substring(1);
+        query = query.substring(query.indexOf('lang')+5);
+        let lang;
+        if (query.length >2){
+            lang = query.substring(0, query.indexOf('&'));
+        } else {
+            lang = query;
+        }
+        return lang === 'en' ? list_of_elements_en : list_of_elements_da;
 
-.constant('helpMenuConfig', { "list_of_elements": list_of_elements })
+    })()
+})
 
 // Footer
 .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)

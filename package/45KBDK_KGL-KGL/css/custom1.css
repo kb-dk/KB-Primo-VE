@@ -681,12 +681,6 @@ md-list.prm-list.prm-linkable-list-items .md-button.arrow-link-button md-list-it
     color: #7d1538; }
 .prm-personalization-bg, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked .md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked ._md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked .md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked ._md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked .md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked ._md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked .md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked ._md-thumb, .sidebar .personalization-section md-checkbox.md-checked .md-icon, .sidebar .personalization-section .sidebar-list li:before, .sidebar .personalization-section ul li:before {
     background-color: #7d1538; }
-
-/* primary color hook end*/
-
-prm-no-search-result > md-card {
-    display:none;
-}
 @charset "UTF-8";
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -10580,7 +10574,7 @@ md-backdrop, .md-dialog-container {
 md-toast {
   z-index: 78; }
 
-button.s-lch-widget-float-btn.online {
+button.s-lch-widget-float-btn{
     background-color: transparent;
     border: none;
     box-shadow: none;

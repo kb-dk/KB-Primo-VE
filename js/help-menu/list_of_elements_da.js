@@ -1,12 +1,12 @@
-export const list_of_elements = [
+export const list_of_elements_da = [
     {
-        "id":"getting-started",
-        "title":"Getting Started",
+        "id":"Kom i gang",
+        "title":"Kom i gang",
         "description":"brief static html content with an overview on how to use BULS; links to direct to main BULS help page in WordPress, other pages, and/or other sections of the menu",
         "icon":{"code":"description","group":"action"},
         "template":`
       <p>KB Libraries Search contains articles, books, journals, databases, films, music, dissertations, and other scholarly materials for your research</p>
-      <h2>Search Tips</h2>
+      <h2>Search Tips {{'fulldisplay.footer.title' | translate}}</h2>
       <code>brief info about title or subject keyword searches</code>
       <br /><br />
       <h2>Filtering</h2>
@@ -33,7 +33,7 @@ export const list_of_elements = [
         "description":`TBD info about ILL, scope of collections, and problem cases`,
         "icon":{"code":"swap_horiz","group":"action"},
     },
-    {}, //DIVIDER, // conceptual 
+    {}, //DIVIDER, // conceptual
     {
         "id":"guides",
         "title":"Guides",
@@ -46,7 +46,7 @@ export const list_of_elements = [
         "description":"list of common terms (jargon) and definitions",
         "icon":{"code":"view_list","group":"action"}
     },
-    {}, //DIVIDER, 
+    {}, //DIVIDER,
     {
         "id":"query-builder",
         "title":"Query Builder",
