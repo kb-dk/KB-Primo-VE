@@ -1,3 +1,8 @@
+/* Fixes bug in the kbdk-design file that makes 'afhentningssted' looks strange in full display */
+body{
+  overflow-x: unset;
+}
+
 body, h1, h2, h3, h4{
   letter-spacing: -0.2px;
   text-align: left;

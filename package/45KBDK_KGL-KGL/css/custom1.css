@@ -3220,7 +3220,7 @@ h2, h3, h4, .right-col strong, .datepicker th, aside ul li a.active, .org-c3af7b
 h1.display-text, .org-54d5e739-f8cc-4994-a9c9-0aa293d7b729 .inner-content h1 {
     font-family: 'Libre Baskerville', serif; }
 
-/*/
+/*!
  *  Material Design Iconic Font by Sergey Kupletsky (@zavoloklom) - http://zavoloklom.github.io/material-design-iconic-font/
  *  License - http://zavoloklom.github.io/material-design-iconic-font/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
@@ -8532,7 +8532,8 @@ body {
     font-size: 16px;
     letter-spacing: -0.0125rem;
     line-height: 1.5rem;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+}
 body.login-open {
     overflow: hidden; }
 
@@ -8983,14 +8984,14 @@ blockquote:before {
 .icon.icon-account-circle:before {
     content: '\f205'; }
 .icon.icon-facebook {
-    background-image: url(../img/icon-facebook.svg); }
+    background-image: url(/assets/img/icons/icon-facebook.svg); }
 .icon.icon-twitter {
-    background-image: url(../img/icon-twitter.svg); }
+    background-image: url(/assets/img/icons/icon-twitter.svg); }
 .icon.icon-button-right {
-    background-image: url(../img/icons/icon-button-right.svg);
+    background-image: url(/assets/img/icons/icon-button-right.svg);
     background-size: cover; }
 .icon.icon-crown {
-    background-image: url(../img/icons/icon-crown.svg); }
+    background-image: url(/assets/img/icons/icon-crown.svg); }
 .icon.icon-xsmall {
     width: .75rem;
     height: .75rem;
@@ -9185,7 +9186,7 @@ ul li ul li {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../img/icons/icon-chevron.svg);
+    background-image: url(/assets/img/icons/icon-chevron.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: .75rem;
@@ -9221,7 +9222,7 @@ ul li ul li {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/icons/icon-arrow-dropdown.svg);
+    background-image: url(/assets/img/icons/icon-arrow-dropdown.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - .75rem) center; }
 .mol-d4e97117-4bf7-4516-92fa-54bb0abc40fb ul {
@@ -9383,7 +9384,7 @@ figure.article-center img {
     outline: none;
     float: right;
     margin: 0;
-    background-image: url(../img/icons/icon-clear.svg);
+    background-image: url(/assets/img/icons/icon-clear.svg);
     background-position: calc(100% - 24px) center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -9595,7 +9596,7 @@ figure.article-center img {
     overflow: hidden;
     border-radius: 2px;
     border: 1px solid #989898;
-    background-image: url(../img/icons/icon-arrow-dropdown.svg);
+    background-image: url(/assets/img/icons/icon-arrow-dropdown.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - .75rem) center; }
 
@@ -9766,7 +9767,7 @@ aside ul li ul li:last-child {
         width: 1.5rem;
         position: absolute;
         right: .75rem;
-        background-image: url(../img/icons/icon-arrow-dropdown.svg);
+        background-image: url(/assets/img/icons/icon-arrow-dropdown.svg);
         background-repeat: no-repeat;
         background-position: center; }
     .org-c8bfbf49-fc45-4e14-8fb3-e80d40ee1285 .menu a, .org-c8bfbf49-fc45-4e14-8fb3-e80d40ee1285 .menu span {
@@ -10561,6 +10562,7 @@ article {
     height: 70px; }
 .overview .left {
     float: left; }
+
 /* Bug fixing: after adding the announcement bar the overlays (like when you click on the more (...) button) don't
 show up properly and the following code fixes it */
 
@@ -10617,6 +10619,9 @@ button[aria-label="Virtual Browse"]{
     display:none;
 }
 @charset "UTF-8";
+body {
+  overflow-x: unset; }
+
 body, h1, h2, h3, h4 {
   letter-spacing: -0.2px;
   text-align: left;
