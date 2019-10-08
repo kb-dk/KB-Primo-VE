@@ -7,17 +7,23 @@ export const list_of_elements_da = [
         "template":`
       <p>KB Dsicovery indeholder artiker, bøger, tidsskrifter, databaser, film, musik, afhandlinger og andet mateiriale til dine studier og forskning</p>
       <h2>Søgetips</h2>
-      <code>evt kort info om søgning; der kan benyttes særlig formattering etc.</code>
-      <br /><br />
+    	<tl>
+      <li>Kombiner, udvid eller afgræns din søgning med operatorerne OG, ELLER, IKKE. Husk at skrive operatorerne med store bogstaver.</li>
+      <li>Brug * til at søge på varianter af et ord, f.eks. ungdom* (ungdommen, ungdomsinstitution, ungdomskriminalitet osv.).</li>
+      <li>Brug ? for at erstatte et enkelt bogstav, f.eks. wom?n (woman og women). Du skal bruge ?? for at erstatte æ, ø og å.</li>
+      <li>Brug (...) parentes til at gruppere søgeord, f.eks. Regering OR (demokrati ELLER parlamentarisme).</li>
+      <li>Brug "..." citationstegn hvis du vil søge på et sammensat begreb, f.eks. "global warming".</li>
+      </tl>
+      <br />
       <h2>Filtrering</h2>
-      <p>Brug facetterne i venstre side til at afgrænse dit resultat...</p>
-      <p>Afgræns til e-ressourcer, fysiske materialer, artikler fra Peer-Reviewed tidsskrifter ... </p>
+      <li>Brug filtreringsmuligheder efter søgning til at afgrænse til materialetype - forfatter, emne, årstal, bibliotek m.v.</li>
+      <li>Du finder filtrene i højre side - eller i bunden hvis du benytter en telefon eller tablet.</li>
     `
     },
     {
         "id":"tutorials-da",
         "title":"Tutorials - skal vi have det? kan fjernes midlertidigt",
-        "description":"at a minimum, links to individual videos and a playlist of existing KB video tutorials",
+        "description":"at a minimum, links to individual videos and a playlist of existing KB video tutorials (tbd if in Kaltura, WordPress, or youtube); if possible and desired, embed using Kaltura embed code",
         "icon":{"code":"shop_two","group":"action"},
     },
     {}, // DIVIDER, // search-specific
@@ -30,7 +36,7 @@ export const list_of_elements_da = [
     {
         "id":"didnt-find-da",
         "title":"Fandt du ikke det du søgte?",
-        "description":`Korte forslag, evt link til opdateret version af <a href='https://kub.kb.dk/c.php?g=579871&p=4002189'>denne side</a> eller lignende`,
+        "template":`<p>Korte forslag, evt link til færdig version af <a href="https://kub.kb.dk/c.php?g=675327">denne side</a> eller lignende</p>`,
         "icon":{"code":"swap_horiz","group":"action"},
     },
     {}, //DIVIDER, // conceptual
