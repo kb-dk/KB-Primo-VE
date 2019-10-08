@@ -23,3 +23,4 @@ div.helpMenu--location{
 
 #search-help-dialog ul li{ list-style: none;}
 #search-help-dialog a:hover{background-color: transparent;box-shadow: none;}
+#search-help-dialog md-dialog-actions {display:none;}
