@@ -15,14 +15,14 @@ export const list_of_elements_da = [
       <li>Brug "..." citationstegn hvis du vil søge på et sammensat begreb, f.eks. "global warming".</li>
       </tl>
       <br />
-      <h2>Filtrering</h2>
+      <h2>Afgræns dine resultater</h2>
       <li>Brug filtreringsmuligheder efter søgning til at afgrænse til materialetype - forfatter, emne, årstal, bibliotek m.v.</li>
-      <li>Du finder filtrene i højre side - eller i bunden hvis du benytter en telefon eller tablet.</li>
+      <li>Du finder filtrene i venstre side - eller i bunden hvis du benytter en telefon eller tablet.</li>
     `
     },
     {
         "id":"tutorials-da",
-        "title":"Tutorials - skal vi have det? kan fjernes midlertidigt",
+        "title":"Tutorials - skal vi have dem? kan fjernes midlertidigt",
         "description":"at a minimum, links to individual videos and a playlist of existing KB video tutorials (tbd if in Kaltura, WordPress, or youtube); if possible and desired, embed using Kaltura embed code",
         "icon":{"code":"shop_two","group":"action"},
     },

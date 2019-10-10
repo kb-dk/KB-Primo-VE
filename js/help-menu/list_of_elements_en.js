@@ -36,7 +36,7 @@ export const list_of_elements_en = [
     {
         "id":"didnt-find-en",
         "title":"Didn't find it?",
-        "description":`Korte forslag, evt link til færdig version af <a href="https://kub.kb.dk/c.php?g=675328">denne side</a> eller lignende`,
+        "template":`<p>Korte forslag, evt link til færdig version af <a href="https://kub.kb.dk/c.php?g=675328">denne side</a> eller lignende</p>`,
         "icon":{"code":"swap_horiz","group":"action"},
     },
     {}, //DIVIDER, // conceptual
