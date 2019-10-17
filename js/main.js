@@ -1,5 +1,6 @@
 // Footer
 import {PrmExploreFooterAfterConfig} from './footer/prmExploreFooterAfter.component';
+import {KbFooterConfig} from './footer/kbFooter.component';
 
 // Navigation header
 import {PrmTopBarBeforeConfig} from './navigation-header/navigation-header';
@@ -9,6 +10,8 @@ import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandable
 
 // Search tips (help-menu Visual studio addon - https://github.com/bulib/primo-explore-bu/tree/master/packages/help-menu)
 //import 'primo-explore-help-menu';
+
+// Localized version of Search tips (help-menu Visual studio addon - https://github.com/bulib/primo-explore-bu/tree/master/packages/help-menu)
 import './help-menu/help-menu';
 
 import {list_of_elements_en} from './help-menu/list_of_elements_en';
@@ -39,6 +42,7 @@ angular.module('viewCustom')
 
 // Footer
 .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
+.component(KbFooterConfig.name, KbFooterConfig.config)
 
 // Navigation header
 .component(PrmTopBarBeforeConfig.name,  PrmTopBarBeforeConfig.config)
