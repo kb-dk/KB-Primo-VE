@@ -7,11 +7,17 @@ export const list_of_elements_en = [
         "template":`
       <p>KB Libraries Search contains articles, books, journals, databases, films, music, dissertations, and other scholarly materials for your research</p>
       <h2>Search Tips</h2>
-      <code>brief info about title or subject keyword searches</code>
-      <br /><br />
+      <tl>
+      <li>Combine, expand, or limit your search through the operators AND, OR, NOT. Please remember to write the operators with capital letters.</li>
+      <li>Use * as a wildcard character to search for variants of a word, for instance pest* (pester, pesticide, pestilence, etc.)</li>
+      <li>Use ? as a wildcard to replace a single letter, for instance wom?n (woman and women). You must use ?? to replace æ, ø, and å.</li>
+      <li>Use (...) parenthesis to group query words, for instance Government AND (democracy OR cabinet responsibility).</li>
+      <li>Use "..." quotation marks, if you want to search for a compound term, for instance "global warming".</li>
+      </tl>
+      <br />
       <h2>Filtering</h2>
-      <p>Use the filters to limit to one or more material types (books, articles)</p>
-      <p>Use Peer-Reviewed Articles to quickly limit to only these results...</p>
+      <li>Use the filtering features after the search to limit for type of material, author, subject, year, library, etc.</li>
+      <li>You find the filter options to the left of the results list - or at the bottom of the screen, if you use a telephone or tablet.</li>
     `
     },
     {
@@ -30,7 +36,7 @@ export const list_of_elements_en = [
     {
         "id":"didnt-find-en",
         "title":"Didn't find it?",
-        "description":`TBD info about ILL, scope of collections, and problem cases`,
+        "template":`<p>Korte forslag, evt link til færdig version af <a href="https://kub.kb.dk/c.php?g=675328">denne side</a> eller lignende</p>`,
         "icon":{"code":"swap_horiz","group":"action"},
     },
     {}, //DIVIDER, // conceptual
