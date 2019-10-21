@@ -3,7 +3,8 @@ import {PrmExploreFooterAfterConfig} from './footer/prmExploreFooterAfter.compon
 import {KbFooterConfig} from './footer/kbFooter.component';
 
 // Navigation header
-import {PrmTopBarBeforeConfig} from './navigation-header/navigation-header';
+import {PrmTopBarBeforeConfig} from './navigation-header/prmTopBarBefore';
+import {KbNavigationHeaderConfig} from './navigation-header/kbNavigationHeader';
 
 // Language switcher
 import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandableAfter.component';
@@ -49,6 +50,7 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
     // Navigation header
     .component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)
+    .component(KbNavigationHeaderConfig.name, KbNavigationHeaderConfig.config)
 
     // Language switcher
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)

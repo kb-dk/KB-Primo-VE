@@ -10621,6 +10621,7 @@ button[aria-label="Virtual Browse"]{
     display:none;
 }
 @charset "UTF-8";
+/* Fixes bug in the kbdk-design file that makes 'afhentningssted' looks strange in full display */
 body {
   overflow-x: unset; }
 
@@ -10880,7 +10881,7 @@ prm-logo {
 prm-explore-main, prm-account {
   display: flex;
   flex-direction: column; }
-  prm-explore-main .org_navigation-header, prm-account .org_navigation-header {
+  prm-explore-main kb-navigation-header, prm-account kb-navigation-header {
     order: -3; }
   prm-explore-main prm-topbar, prm-account prm-topbar {
     order: -2; }

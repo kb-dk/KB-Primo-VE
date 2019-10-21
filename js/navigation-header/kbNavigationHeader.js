@@ -1,26 +1,25 @@
-class PrmTopBarBeforeController {
+class KbNavigationHeaderController {
     constructor($element) {
         this.$element = $element;
     };
 
     $postLink() {
-
-        let parentElement = this.$element.parent().parent().parent();
-        // Move the header.
+        let parentElement = this.$element.parent().parent().parent().parent();
+        // Move navigation header to the top
         let container = angular.element(parentElement.children()[0]);
-        container.append(this.$element.children()[0]);
+        container.append(this.$element);
     };
 }
 
-PrmTopBarBeforeController.$inject = ['$element'];
+KbNavigationHeaderController.$inject = ['$element'];
 
-export let PrmTopBarBeforeConfig = {
-    name: 'prmTopBarBefore',
+export let KbNavigationHeaderConfig = {
+    name: 'kbNavigationHeader',
     config: {
         bindings: {
             parentCtrl: '<'
         },
-        controller: PrmTopBarBeforeController,
+        controller: KbNavigationHeaderController,
         templateUrl: ["viewName", function(viewName){
             return 'custom/' + viewName + '/html/navigation-header/navigation-header.html';
         }],
