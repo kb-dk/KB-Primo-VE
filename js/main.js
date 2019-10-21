@@ -19,16 +19,16 @@ import {list_of_elements_en} from './help-menu/list_of_elements_en';
 import {list_of_elements_da} from './help-menu/list_of_elements_da';
 
 angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
-    .run(['$rootScope', ($rootScope) => {
+
+    .constant('viewName', (function(){
         let query = window.location.search.substring(1);
         query = query.substring(query.indexOf('vid')+4);
         // If there are other parameters after vid, then remove them
         let vid = query.substring(0, query.indexOf('&'))?query.substring(0, query.indexOf('&')):query;
-        $rootScope.viewName = vid.replace(":", "-");
-    }]);
+        return vid.replace(":", "-");
+    })())
 
-angular.module('viewCustom')
-.constant('helpMenuConfig',{ "list_of_elements": (function(){
+    .constant('helpMenuConfig',{ "list_of_elements": (function(){
         let query = window.location.search.substring(1);
         query = query.substring(query.indexOf('lang')+5);
         let lang;

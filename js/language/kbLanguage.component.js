@@ -24,8 +24,8 @@ export let KbLanguageConfig=  {
             parentCtrl: '<',
         },
         controller: KbLanguageController,
-        templateUrl: ["$rootScope", function($rootScope){
-            return 'custom/' + $rootScope.viewName + '/html/language/language.html';
+        templateUrl: ["viewName", function(viewName){
+            return 'custom/' + viewName + '/html/language/language.html';
         }],
     }
 };

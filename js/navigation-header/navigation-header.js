@@ -21,8 +21,8 @@ export let PrmTopBarBeforeConfig = {
             parentCtrl: '<'
         },
         controller: PrmTopBarBeforeController,
-        templateUrl: ["$rootScope", function($rootScope){
-            return 'custom/' + $rootScope.viewName + '/html/navigation-header/navigation-header.html';
+        templateUrl: ["viewName", function(viewName){
+            return 'custom/' + viewName + '/html/navigation-header/navigation-header.html';
         }],
     },
 }

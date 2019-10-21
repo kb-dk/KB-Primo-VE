@@ -1,9 +1,8 @@
 export let KbFooterConfig = {
     name: 'kbFooter',
     config: {
-        templateUrl: ["$rootScope", function($rootScope){
-            return 'custom/' + $rootScope.viewName + '/html/footer/footer.html';
+        templateUrl: ["viewName", function(viewName){
+            return 'custom/' + viewName + '/html/footer/footer.html';
         }],
-
     }
 };
