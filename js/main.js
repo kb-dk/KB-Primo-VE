@@ -20,38 +20,39 @@ import {list_of_elements_da} from './help-menu/list_of_elements_da';
 
 angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
-    .constant('viewName', (function(){
+    .constant('viewName', (function () {
         let query = window.location.search.substring(1);
-        query = query.substring(query.indexOf('vid')+4);
+        query = query.substring(query.indexOf('vid') + 4);
         // If there are other parameters after vid, then remove them
-        let vid = query.substring(0, query.indexOf('&'))?query.substring(0, query.indexOf('&')):query;
+        let vid = query.substring(0, query.indexOf('&')) ? query.substring(0, query.indexOf('&')) : query;
         return vid.replace(":", "-");
     })())
 
-    .constant('helpMenuConfig',{ "list_of_elements": (function(){
-        let query = window.location.search.substring(1);
-        query = query.substring(query.indexOf('lang')+5);
-        let lang;
-        if (query.length >2){
-            lang = query.substring(0, query.indexOf('&'));
-        } else {
-            lang = query;
-        }
-        return lang === 'en' ? list_of_elements_en : list_of_elements_da;
+    .constant('helpMenuConfig', {
+        "list_of_elements": (function () {
+            let query = window.location.search.substring(1);
+            query = query.substring(query.indexOf('lang') + 5);
+            let lang;
+            if (query.length > 2) {
+                lang = query.substring(0, query.indexOf('&'));
+            } else {
+                lang = query;
+            }
+            return lang === 'en' ? list_of_elements_en : list_of_elements_da;
 
-    })()
-})
+        })()
+    })
 
-// Footer
-.component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
-.component(KbFooterConfig.name, KbFooterConfig.config)
+    // Footer
+    .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
+    .component(KbFooterConfig.name, KbFooterConfig.config)
 
-// Navigation header
-.component(PrmTopBarBeforeConfig.name,  PrmTopBarBeforeConfig.config)
+    // Navigation header
+    .component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)
 
-// Language switcher
-.component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
-.component(KbLanguageConfig.name, KbLanguageConfig.config)
+    // Language switcher
+    .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
+    .component(KbLanguageConfig.name, KbLanguageConfig.config)
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
 require('kb-primo-ve-announcement/dist/index.js');
