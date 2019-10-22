@@ -57,11 +57,10 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
     .component(KbLanguageConfig.name, KbLanguageConfig.config)
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
-require('kb-primo-ve-announcement/dist/index.js');
+require('kb-primo-ve-announcement');
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Hide-New-User-If-Loggedin.git
-require('kb-primo-ve-hide-new-user-if-loggedin/dist/index.js');
-
+require('kb-primo-ve-hide-new-user-if-loggedin');
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-libChat.git
-require('kb-primo-ve-libchat/dist/index.js');
+require('kb-primo-ve-libchat');
