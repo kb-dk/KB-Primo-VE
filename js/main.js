@@ -11,10 +11,7 @@ import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandable
 import {KbLanguageConfig} from './language/kbLanguage.component';
 
 // Search tips (help-menu Visual studio addon - https://github.com/bulib/primo-explore-bu/tree/master/packages/help-menu)
-//import 'primo-explore-help-menu';
-
-// Localized version of Search tips (help-menu Visual studio addon - https://github.com/bulib/primo-explore-bu/tree/master/packages/help-menu)
-import './help-menu/help-menu';
+import 'primo-explore-help-menu';
 
 import {list_of_elements_en} from './help-menu/list_of_elements_en';
 import {list_of_elements_da} from './help-menu/list_of_elements_da';
@@ -27,10 +24,15 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
         // If there are other parameters after vid, then remove them
         let vid = query.substring(0, query.indexOf('&')) ? query.substring(0, query.indexOf('&')) : query;
         return vid.replace(":", "-");
-    })())
-
-    .constant('helpMenuConfig', {
+    })()
+    )
+        
+    // TODO: Find a way to reuse the function in a constant value
+    .constant(      
+        'helpMenuConfig', {
+            
         "list_of_elements": (function () {
+            console.log(window);
             let query = window.location.search.substring(1);
             query = query.substring(query.indexOf('lang') + 5);
             let lang;
@@ -41,7 +43,19 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
             }
             return lang === 'en' ? list_of_elements_en : list_of_elements_da;
 
-        })()
+        })(),
+            
+        "helpMenuTitle": (function () {
+            let query = window.location.search.substring(1);
+            query = query.substring(query.indexOf('lang') + 5);
+            let lang;
+            if (query.length > 2) {
+                lang = query.substring(0, query.indexOf('&'));
+            } else {
+                lang = query;
+            }
+            return lang === 'en' ? 'Search help' : 'Hjælp til søgning';
+        })(),
     })
 
     // Footer

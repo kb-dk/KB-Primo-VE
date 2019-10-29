@@ -67,6 +67,18 @@ md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner h3 {
 primo-explore > div {
   min-height: 70%; }
 
+prm-search-result-list prm-search-result-tool-bar {
+  padding-right: 1.5rem; }
+  prm-search-result-list prm-search-result-tool-bar md-toolbar.md-toolbar-tools.results-title {
+    background-color: white;
+    padding-left: 1rem !important; }
+
+prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top {
+  top: 6em !important; }
+
+prm-explore-main .header {
+  z-index: 15; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title, #facets .sidebar-header {

@@ -22,3 +22,22 @@ md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner {
 primo-explore > div {
   min-height: 70%;
 }
+
+// Fixes style issues in the prm-search reslt toolbar
+prm-search-result-list prm-search-result-tool-bar{
+  padding-right: 1.5rem;
+  md-toolbar.md-toolbar-tools.results-title{
+    background-color: white;
+    padding-left: 1rem!important;
+  }
+}
+
+// Fixes the original bug for floating icons hide under the search result toolbox
+prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top{
+  top: 6em!important;
+}
+
+// Fixes the original bug for floating icons hide under the selected post
+prm-explore-main .header {
+  z-index: 15;
+}
