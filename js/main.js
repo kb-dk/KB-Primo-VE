@@ -16,6 +16,9 @@ import 'primo-explore-help-menu';
 import {list_of_elements_en} from './help-menu/list_of_elements_en';
 import {list_of_elements_da} from './help-menu/list_of_elements_da';
 
+// ChatBox scriptId
+import {scriptIds} from "./chat-box/scriptIds.constant";
+
 angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
     .constant('viewName', (function () {
@@ -32,7 +35,6 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
         'helpMenuConfig', {
             
         "list_of_elements": (function () {
-            console.log(window);
             let query = window.location.search.substring(1);
             query = query.substring(query.indexOf('lang') + 5);
             let lang;
@@ -57,6 +59,9 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
             return lang === 'en' ? 'Search help' : 'Hjælp til søgning';
         })(),
     })
+
+    // ChatBox scriptId
+    .constant('scriptIds' , scriptIds)
 
     // Footer
     .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
