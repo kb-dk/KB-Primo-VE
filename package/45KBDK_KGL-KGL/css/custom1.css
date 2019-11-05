@@ -10620,6 +10620,10 @@ div.helpMenu--location{
 button[aria-label="Virtual Browse"]{
     display:none;
 }
+prm-databases-categorize .sticking-wrapper {
+    padding-top: 24px;
+    background-color: #f3f3f3;
+}
 @charset "UTF-8";
 /* Fixes bug in the kbdk-design file that makes 'afhentningssted' looks strange in full display */
 body {
