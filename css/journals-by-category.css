@@ -2,3 +2,7 @@ prm-databases-categorize .sticking-wrapper {
     padding-top: 24px;
     background-color: #f3f3f3;
 }
+
+prm-databases-categorize .md-button {
+    color: #171717;
+}

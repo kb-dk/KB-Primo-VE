@@ -10624,6 +10624,10 @@ prm-databases-categorize .sticking-wrapper {
     padding-top: 24px;
     background-color: #f3f3f3;
 }
+
+prm-databases-categorize .md-button {
+    color: #171717;
+}
 @charset "UTF-8";
 /* Fixes bug in the kbdk-design file that makes 'afhentningssted' looks strange in full display */
 body {
