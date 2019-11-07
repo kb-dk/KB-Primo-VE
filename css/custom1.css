@@ -10586,6 +10586,14 @@ button.s-lch-widget-float-btn{
 .facet-to-left prm-page-nav-menu{
     bottom: 5em;
 }
+prm-personal-info md-card md-card-content button.md-button, #personal_settings-focus{
+    display: none;
+}
+
+#kbEditProfile{
+  -webkit-appearance: textfield;
+}
+
 /*!*Styles for primo-explore-help-menu: MW 20190409 *!*/
 
 #search-help-menu-content h2 {font-weight: 500;}
@@ -10898,14 +10906,14 @@ prm-logo {
     letter-spacing: -0.2px;
     line-height: 24px; }
 
-prm-explore-main, prm-account {
+prm-explore-main, prm-account, prm-full-view-cont {
   display: flex;
   flex-direction: column; }
-  prm-explore-main kb-navigation-header, prm-account kb-navigation-header {
+  prm-explore-main kb-navigation-header, prm-account kb-navigation-header, prm-full-view-cont kb-navigation-header {
     order: -3; }
-  prm-explore-main prm-topbar, prm-account prm-topbar {
+  prm-explore-main prm-topbar, prm-account prm-topbar, prm-full-view-cont prm-topbar {
     order: -2; }
-  prm-explore-main prm-search-bar, prm-account prm-search-bar {
+  prm-explore-main prm-search-bar, prm-account prm-search-bar, prm-full-view-cont prm-search-bar {
     order: -1; }
 
 #select_value_label_7, #select_value_label_10 {

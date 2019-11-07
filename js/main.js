@@ -1,3 +1,7 @@
+// Edit profile
+import {PrmPersonalInfoAfterConfig} from './edit-profile/prmPersonalInfoAfter.component';
+import {KbEditProfileConfig} from './edit-profile/kbEditProfile.component';
+
 // Footer
 import {PrmExploreFooterAfterConfig} from './footer/prmExploreFooterAfter.component';
 import {KbFooterConfig} from './footer/kbFooter.component';
@@ -62,6 +66,11 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
     // ChatBox scriptId
     .constant('scriptIds' , scriptIds)
+
+
+    // Edit profile
+    .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
+    .component(KbEditProfileConfig.name, KbEditProfileConfig.config)
 
     // Footer
     .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
