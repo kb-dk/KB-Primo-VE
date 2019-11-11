@@ -34,11 +34,9 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
     })()
     )
         
-    // TODO: Find a way to reuse the function in a constant value
-    .constant(      
-        'helpMenuConfig', {
-            
-        "list_of_elements": (function () {
+    .constant(
+        'helpMenuConfig', (function () {
+            // Find the language from the url
             let query = window.location.search.substring(1);
             query = query.substring(query.indexOf('lang') + 5);
             let lang;
@@ -47,22 +45,20 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
             } else {
                 lang = query;
             }
-            return lang === 'en' ? list_of_elements_en : list_of_elements_da;
-
-        })(),
-            
-        "helpMenuTitle": (function () {
-            let query = window.location.search.substring(1);
-            query = query.substring(query.indexOf('lang') + 5);
-            let lang;
-            if (query.length > 2) {
-                lang = query.substring(0, query.indexOf('&'));
-            } else {
-                lang = query;
+            // Set the translations according to the language
+            if (lang === 'en'){
+                return {
+                    "list_of_elements": list_of_elements_en ,
+                    "helpMenuTitle": 'Search help'
+                }
+            } else{
+                return {
+                    "list_of_elements": list_of_elements_da,
+                    "helpMenuTitle": 'Hjælp til søgning'
+                }
             }
-            return lang === 'en' ? 'Search help' : 'Hjælp til søgning';
         })(),
-    })
+)
 
     // ChatBox scriptId
     .constant('scriptIds' , scriptIds)
