@@ -11,11 +11,11 @@ export const list_of_elements_da = [
       <li>Brug * i din søgning, hvis du er usikker på, hvordan et ord staves, eller ønsker at din søgning skal omfatte varianter af et ord. F.eks. vil en søgning på <i>col*r</i> give hits på <i>colour</i> og <i>color</i>. En søgning på <i>child*</i> vil give hits på <i>child's</i>, <i>children</i>, <i>childhood</i> osv.</li>
       <li>Brug ? hvis du er usikker på et enkelt bogstav i dit søgeord. F.eks. vil en søgning på <i>su?anne</i> give hits på <i>susanne</i> og <i>suzanne</i>.</li>
       <li>Brug (...) parenteser hvis du vil være sikker på, at dine søgeord grupperes på den rigtige måde. F.eks. <i>Shakespeare OG (sonnet ELLER tragedy)</i>.</li>
-      <li>Brug "..." anførselsteg hvis du søger på sammenhængende ord eller sætninger. F.eks. vil en søgning på <i>"climate change"</i> give dig hits, hvor disse ord står ved siden af hinanden i præcis denne rækkefølge.</li>
+      <li>Brug "..." anførselstegn hvis du søger på sammenhængende ord eller sætninger. F.eks. vil en søgning på <i>"climate change"</i> give dig hits, hvor disse ord står ved siden af hinanden i præcis denne rækkefølge.</li>
       </tl>
       <br />
       <h2>Får du for mange hits?</h2>
-      <li>Du kan indsnævre søgeresulatet ved at bruge filtreringsmulighederne i venstre side af skærmen. Klikker du f.eks. på <i>Bøger</i> under <i>Materialetyper</i>, afgrænser du dit søgeresultat til kun at vise bøger.</li>
+      <li>Du kan indsnævre søgeresultatet ved at bruge filtreringsmulighederne i venstre side af skærmen. Klikker du f.eks. på <i>Bøger</i> under <i>Materialetyper</i>, afgrænser du dit søgeresultat til kun at vise bøger.</li>
       <li>Se alle vores søgetips på siden <a href= >Hjælp til søgning</a>.</li>
     `
     },
@@ -30,23 +30,38 @@ export const list_of_elements_da = [
         "id":"whats-in-search-da",
         "title":"Hvad søger jeg i?",
  //       "description":`kort beskrivelse af materialetyper og samlinger, evt. også undermenuer. Nok også link ud til oversigt over CDI samlinger`,
-        "template":`<p>Du søger i den samlede mængde af materialer fra Det Kgl. Bibliotek, inklusive universitetsbibliotekerne i København, Roskilde og Aarhus.  Det vil sige bøger (trykte og e-bøger), artikler, tidsskrifter, billeder, håndskrifter, noder, film, online materialer og meget andet.</p>
-        <p>I søgesystemet finder du også artikler, anmeldelser, m.m. fra store eksterne databaser som eksempelvis JSTOR, PsycInfo, SocIndex, Scopus, Web of Science, Infomedia osv. </p>
+        "template":`<p>Du søger i den samlede mængde af materialer fra Det Kgl. Bibliotek, inklusive universitetsbibliotekerne i København, Roskilde og Aarhus.  Det vil sige bøger (trykte og e-bøger), artikler, tidsskrifter, billeder, håndskrifter, noder, film og meget andet.</p>
+        <p>I søgesystemet finder du også artikler, anmeldelser, m.m. fra store eksterne databaser som eksempelvis JSTOR, PsycInfo, SocIndex, Scopus, Web of Science osv. </p>
        <p><a href="https://kub.kb.dk/c.php?g=659327">Læs mere om, hvad søgesystemet indeholder</a></p>
        <p>Se også den komplette liste over Det Kgl. Biblioteks <a href= >særlige samlinger</a>.</p>`,
         "icon":{"code":"toc","group":"action"}
+    },
+        {
+        "id":"feedback-da",
+        "title":"Login, passwords, PIN-kode?",
+        "template":`<p><a href="https://soeg.kb.dk/discovery/account?vid=45KBDK_KGL:KGL&section=personal_details">Skift password og PIN-kode her</a> </p>
+        <tl>
+        <li>Ansatte og studerende ved <b>AU, KU, RUC</b> skal logge ind via WAYF</li>
+        <li>Ansatte ved <b>hospitaler</b> i Region Midtjylland og Region Hovedstaden skal også logge ind via WAYF</li>
+        <li><b>Alle andre brugere</b> skal logge ind via NEM-ID første gang - derefter kan logges ind med email og password.</li>
+        <li>Din <b>PIN-kode</b> skal du bruge i udlånsautomaterne.</li>
+        </tl>
+        <br/>
+        <p><a href="https://kub.kb.dk/c.php?g=675327">Udvidet vejledning til login.</a> </p>`,
+        "icon":{"code":"info","group":"action"},
     },
     {}, //DIVIDER, // conceptual
     {
         "id":"didnt-find-da",
         "title":"Fandt du ikke det du søgte?",
-        "template":`<p>Hvis du ikke fandt, det du søgte efter, har du flere muligheder.</p>
+        "template":`<p>Hvis du ikke fandt, det du søgte efter, har du flere muligheder:</p>
         <tl>
-        <li>Vi kan forsøge skaffe materialet til dig fra andre biblioteket </li>
+        <li>Vi kan forsøge at skaffe materialet til dig fra andre biblioteker </li>
         <li>Vi undersøger, om vi kan købe materialet til biblioteket</li>
-        <li>Du kan selv søge videre i andre systemer</li>
+        <li>Vi kan hjælpe dig, med at søge videre i andre systemer</li>
         </tl>
-        <p><a href="https://kub.kb.dk/c.php?g=675327">Læs mere her</a> </p>`,
+        <br/>
+        <p><a href="https://kub.kb.dk/c.php?g=675327">Læs mere om mulighederne</a> </p>`,
         "icon":{"code":"swap_horiz","group":"action"},
     },
         {
@@ -89,7 +104,7 @@ export const list_of_elements_da = [
     {
         "id":"saving-results-da",
         "title":"Mine favoritter og gemte søgninger",
-        "template":  `<p> Når du er logget ind til biblioteket, har du mulighed for at gemme søgninger og gemme links til materialer i ’Mine favoritter’.</p>
+        "template":  `<p> Når du er logget ind, har du mulighed for at gemme søgninger og gemme enkeltresultater til senere brug i ’Mine favoritter’.</p>
 			<p> Se mere under <a href="" target="_blank">Hjælp til søgning</a> </p> `,
         "icon":{"code":"save","group":"content"}
     },

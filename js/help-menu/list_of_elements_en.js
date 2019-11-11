@@ -8,15 +8,15 @@ export const list_of_elements_en = [
       <h2>Search Tips</h2>
       <tl>
       <li>Combine, expand, or limit your search through the operators AND, OR, NOT. Please remember to write the operators with capital letters.</li>
-      <li>Use * as a wildcard character to search for variants of a word, for instance pest* (pester, pesticide, pestilence, etc.)</li>
-      <li>Use ? as a wildcard to replace a single letter, for instance wom?n (woman and women). You must use ?? to replace æ, ø, and å.</li>
-      <li>Use (...) parenthesis to group query words, for instance Government AND (democracy OR cabinet responsibility).</li>
-      <li>Use "..." quotation marks, if you want to search for a compound term, for instance "global warming".</li>
+      <li>Use * as a wildcard character to search for variants of a word, for instance <i>pest*</i> (pester, pesticide, pestilence, etc.)</li>
+      <li>Use ? as a wildcard to replace a single letter, for instance <i>wom?n</i> for <i>woman</i> and <i>women</i>.</li>
+      <li>Use (...) parenthesis to group query words, for instance <i>Government AND (democracy OR cabinet responsibility)</i>.</li>
+      <li>Use "..." quotation marks, if you want to search for a compound term, for instance <i>"global warming"</i>.</li>
       </tl>
       <br />
-      <h2>Filtering</h2>
-      <li>Use the filtering features after the search to limit for type of material, author, subject, year, library, etc.</li>
-      <li>You find the filter options to the left of the results list - or at the bottom of the screen, if you use a telephone or tablet.</li>
+      <h2>Too many results?</h2>
+      <li>Use the filtering features to the left of the results list to limit your results by type of material, author, subject, year, library, etc.</li>
+      <li>Find more search tips on our <a href="https://www.kb.dk/services/laan-og-aflevering/hjaelp-til-soegning" target="_blank">general services page</a>.</li>
     `
     },
 //   {
@@ -29,32 +29,47 @@ export const list_of_elements_en = [
 
     {
         "id":"whats-in-search-en",
-        "title":"What's in Search?",
+        "title":"What am I searching?",
 //        "description":`brief description of material types, "scopes", and collections; may have submenus for each of the above; likely also link out to WordPress page with all PCI collections`,
-        "template":`<p>Du søger i den samlede mængde af materialer fra Det Kgl. Bibliotek, inklusive universitetsbibliotekerne i København, Roskilde og Aarhus.  Det vil sige bøger (trykte og e-bøger), artikler, tidsskrifter, billeder, håndskrifter, noder, film, online materialer og meget andet.</p>
-        <p>I søgesystemet finder du også artikler, anmeldelser, m.m. fra store eksterne databaser som eksempelvis JSTOR, PsycInfo, SocIndex, Scopus, Web of Science, Infomedia osv. </p>
-       <p><a href="https://kub.kb.dk/c.php?g=659327">Læs mere om, hvad søgesystemet indeholder</a></p>
-       <p>Se også den komplette liste over Det Kgl. Biblioteks <a href= >særlige samlinger</a>.</p>`,
+        "template":`<p>Your search will cover the full collections of the Royal Danish Library, including the library collections of Copenhagen, Roskilde and Aarhus universities. These include books (print and electronic), articles, journals, images, manuscripts, scores, film, and more.</p>
+        <p>You will also find articles, reviews, etc., from major external databases like JSTOR, PsycInfo, SocIndex, Scopus, Web of Science, and more. </p>
+       <p><a href="https://kub.kb.dk/c.php?g=659333&p=4653941">Learn more about what the search system covers</a></p>
+       <p>Additionally, see the full list of the Royal Danish Library <a href= >special collections</a>.</p>`,
         "icon":{"code":"toc","group":"action"}
+    },
+            {
+        "id":"feedback-en",
+        "title":"Login, passwords, PIN code?",
+        "template":`<p><a href="https://soeg.kb.dk/discovery/account?vid=45KBDK_KGL:KGL&section=personal_details">Change password and PIN code</a> </p>
+        <tl>
+        <li><b>AU, KU, RUC</b> students and faculty log in using WAYF and their institution credentials.</li>
+        <li><b>Hospital</b> employees in Region Midtjylland and Region Hovedstaden also use WAYF to log in.</li>
+        <li><b>All other users</b> need to log in using NEM-ID the first time - then email and password can be used to log in.</li>
+        <li>Your <b>PIN code</b> is for use in the self-service lending machines.</li>
+        </tl>
+        <br/>
+        <p><a href="https://kub.kb.dk/c.php?g=">Need more help?</a> </p>`,
+        "icon":{"code":"info","group":"action"},
     },
     {}, //DIVIDER, communication
     {
         "id":"didnt-find-en",
         "title":"Didn't find it?",
-        "template":`<p>Hvis du ikke fandt, det du søgte efter, har du flere muligheder.</p>
+        "template":`<p>If you could not find what you were looking for, we provide several service options.</p>
         <tl>
-        <li>Vi kan forsøge skaffe materialet til dig fra andre biblioteket </li>
-        <li>Vi undersøger, om vi kan købe materialet til biblioteket</li>
-        <li>Du kan selv søge videre i andre systemer</li>
+        <li>We will try to retrieve the item from a different library. </li>
+        <li>We might be able to purchase the item, and make it available to library users.</li>
+        <li>We can guide you to other search systems</li>
         </tl>
-        <p><a href="https://kub.kb.dk/c.php?g=675327">Læs mere her</a> </p>`,
+        <br/>
+        <p><a href="https://kub.kb.dk/c.php?g=675328">Learn more about these options.</a> </p>`,
         "icon":{"code":"swap_horiz","group":"action"},
     },
     {
         "id":"ask-us-en",
-        "title":"Ask Us",
+        "title":"Ask the library",
         "description":"needs definition; how to point to chat? link to ask a librarian?",
-        "template": `<p>Du kan få hjælp til login, søgning, fjernadgang etc. ved at kontakte <a href="https://www.kb.dk/spoerg" target="_blank">Spørg Biblioteket.</a></p>`,
+        "template": `<p>For help with login, search, remote access, etc, please <a href="https://www.kb.dk/spoerg" target="_blank">Ask the Library.</a></p>`,
         "icon":{"code":"forum","group":"communication"}
     },
 
@@ -81,28 +96,28 @@ export const list_of_elements_en = [
     {}, //DIVIDER, Search Help
      {
         "id":"account-en",
-        "title":"Account",
+        "title":"My account",
         "description":"information about My Library Account functionality- loans, renewals, policies?; may also highlight or link to My Library Account",
-        "template": `<p>For at se din konto skal du være logget ind. Du finder din konto ved at klikke på dit navn i øverste højre hjørne af skærmen. </p>
-    	<p>Her har du mulighed for at se dine lån og reservationer, forny hjemlån, betale gebyrer og ændre pinkode m.m.</p>
-    	 <p><a href="" target="_blank">Hjælp til login.</a></p>`,
+        "template": `<p>You need to log in to see your account. You can access your account under your name in the top right corner.</p>
+    	<p>Your account provides information on your loans and requestes. You can renew your loans, pay your fines, and change your password and PIN code.</p>
+    	 <p><a href="" target="_blank">Get help on login.</a></p>`,
         "icon":{"code":"account_box","group":"action"}
     },
     {
         "id":"saving-results-en",
-        "title":"Saving Results",
+        "title":"My Favorites, and Saved searches",
         "description":"information about My Favorites, exporting results, ref managers",
-        "template":  `<p> Når du er logget ind til biblioteket, har du mulighed for at gemme søgninger og gemme links til materialer i ’Mine favoritter’.</p>
-			<p> Se mere under <a href="" target="_blank">Hjælp til søgning</a> </p> `,
+        "template":  `<p>You can save searches and individual results in <i>My Favourites</i> if you are logged in.</p>
+			<p>You can get more help on our <a href="" target="_blank">Search Help page</a> </p> `,
         "icon":{"code":"save","group":"content"}
     },
     {
         "id":"citing-sources-en",
-        "title":"Citing Sources",
+        "title":"Reference management",
         "description":"likely, but may depend on if including saving results; would have info about ref managers",
-        "template":  `<p> Søgesystemet indeholder flere værktøjer til referencehåndtering, bl.a. Mendely, Endnote og Refworks. Du finder dem under de tre prikker ved hvert materiale i resultatlisten.</p>
-           <p>Bruger du Zotero, ligger den ikke her, men i din browser. <a href="https://kub.kb.dk/zotero" target="_blank">Læs mere om Zotero</a>.</p>
-			<p> Du kan læse mere om referencehåndtering på <a href="https://library.au.dk/studerende/referencehaandtering/" target="_blank">AU Librarys side om emnet</a>.</p> `,
+        "template":  `<p> There are several reference management tools integrated with the search system, e.g., Mendeley, Endnote, and Refworks. They are located beneath the three dots by each item in the results list.</p>
+           <p>If you use Zotero, you won't find it here, as it operates in your browser. <a href="https://kub.kb.dk/zoteroeng" target="_blank">Learn more about Zotero</a>.</p>
+			<p>You can learn more about reference management on <a href="https://library.au.dk/en/students/reference-management/" target="_blank">AU Library's help page</a>.</p> `,
         "icon":{"code":"create","group":"content"}
     },
 //    {}, //DIVIDER,
