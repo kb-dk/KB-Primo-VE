@@ -32,7 +32,7 @@ export const list_of_elements_da = [
  //       "description":`kort beskrivelse af materialetyper og samlinger, evt. også undermenuer. Nok også link ud til oversigt over CDI samlinger`,
         "template":`<p>Du søger i den samlede mængde af materialer fra Det Kgl. Bibliotek, inklusive universitetsbibliotekerne i København, Roskilde og Aarhus.  Det vil sige bøger (trykte og e-bøger), artikler, tidsskrifter, billeder, håndskrifter, noder, film og meget andet.</p>
         <p>I søgesystemet finder du også artikler, anmeldelser, m.m. fra store eksterne databaser som eksempelvis JSTOR, PsycInfo, SocIndex, Scopus, Web of Science osv. </p>
-       <p><a href="https://kub.kb.dk/c.php?g=659327">Læs mere om, hvad søgesystemet indeholder</a></p>
+       <p><a href="https://kub.kb.dk/c.php?g=659327">Læs mere om, hvad bibliotekssystemet indeholder</a></p>
        <p>Se også den komplette liste over Det Kgl. Biblioteks <a href= >særlige samlinger</a>.</p>`,
         "icon":{"code":"toc","group":"action"}
     },
@@ -112,7 +112,7 @@ export const list_of_elements_da = [
         "id":"citing-sources-da",
         "title":"Hjælp til referencehåndtering",
         "description":"kort oversigt over Primos muligheder, med links til flere informationer om ref managers",
-        "template":  `<p> Søgesystemet indeholder flere værktøjer til referencehåndtering, bl.a. Mendely, Endnote og Refworks. Du finder dem under de tre prikker ved hvert materiale i resultatlisten.</p>
+        "template":  `<p> Bibliotekssystemet indeholder flere værktøjer til referencehåndtering, bl.a. Mendely, Endnote og Refworks. Du finder dem under de tre prikker ved hvert materiale i resultatlisten.</p>
            <p>Bruger du Zotero, ligger den ikke her, men i din browser. <a href="https://kub.kb.dk/zotero" target="_blank">Læs mere om Zotero</a>.</p>
 			<p> Du kan læse mere om referencehåndtering på <a href="https://library.au.dk/studerende/referencehaandtering/" target="_blank">AU Librarys side om emnet</a>.</p> `,
         "icon":{"code":"create","group":"content"}
