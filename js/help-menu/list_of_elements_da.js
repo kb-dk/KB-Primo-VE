@@ -16,7 +16,7 @@ export const list_of_elements_da = [
       <br />
       <h2>Får du for mange hits?</h2>
       <li>Du kan indsnævre søgeresultatet ved at bruge filtreringsmulighederne i venstre side af skærmen. Klikker du f.eks. på <i>Bøger</i> under <i>Materialetyper</i>, afgrænser du dit søgeresultat til kun at vise bøger.</li>
-      <li>Se alle vores søgetips på siden <a href= >Hjælp til søgning</a>.</li>
+      <li>Se alle vores søgetips på siden <a href="https://www.kb.dk/services/laan-og-aflevering/hjaelp-til-soegning" target="_blank">Hjælp til søgning</a>.</li>
     `
     },
 //    {
@@ -33,7 +33,7 @@ export const list_of_elements_da = [
         "template":`<p>Du søger i den samlede mængde af materialer fra Det Kgl. Bibliotek, inklusive universitetsbibliotekerne i København, Roskilde og Aarhus.  Det vil sige bøger (trykte og e-bøger), artikler, tidsskrifter, billeder, håndskrifter, noder, film og meget andet.</p>
         <p>I søgesystemet finder du også artikler, anmeldelser, m.m. fra store eksterne databaser som eksempelvis JSTOR, PsycInfo, SocIndex, Scopus, Web of Science osv. </p>
        <p><a href="https://kub.kb.dk/c.php?g=659327">Læs mere om, hvad bibliotekssystemet indeholder</a></p>
-       <p>Se også den komplette liste over Det Kgl. Biblioteks <a href= >særlige samlinger</a>.</p>`,
+       <p>Se også den komplette liste over Det Kgl. Biblioteks <a href="https://www.kb.dk/find-materiale" target="_blank">særlige samlinger</a>.</p>`,
         "icon":{"code":"toc","group":"action"}
     },
         {
@@ -43,11 +43,11 @@ export const list_of_elements_da = [
         <tl>
         <li>Ansatte og studerende ved <b>AU, KU, RUC</b> skal logge ind via WAYF</li>
         <li>Ansatte ved <b>hospitaler</b> i Region Midtjylland og Region Hovedstaden skal også logge ind via WAYF</li>
-        <li><b>Alle andre brugere</b> skal logge ind via NEM-ID første gang - derefter kan logges ind med email og password.</li>
+        <li><b>Alle andre brugere</b> skal logge ind via NEM-ID første gang - derefter kan de logge ind med email og password.</li>
         <li>Din <b>PIN-kode</b> skal du bruge i udlånsautomaterne.</li>
         </tl>
         <br/>
-        <p><a href="https://kub.kb.dk/c.php?g=675327">Udvidet vejledning til login.</a> </p>`,
+        <p><a href="https://www.kb.dk/services/laan-og-aflevering" target="_blank">Udvidet vejledning til login.</a> </p>`,
         "icon":{"code":"info","group":"action"},
     },
     {}, //DIVIDER, // conceptual
@@ -68,7 +68,7 @@ export const list_of_elements_da = [
         "id":"ask-us-da",
         "title":"Spørg biblioteket",
  //       "description":"needs definition; how to point to chat? link to ask a librarian?",
-        "template": `<p>Du kan få hjælp til login, søgning, fjernadgang etc. ved at kontakte <a href="https://www.kb.dk/spoerg" target="_blank">Spørg Biblioteket.</a></p>`,
+        "template": `<p>Du kan få hjælp til login, søgning, fjernadgang etc. ved at kontakte <a href="https://www.kb.dk/spoerg-biblioteket" target="_blank">Spørg Biblioteket.</a></p>`,
         "icon":{"code":"forum","group":"communication"}
     },
 //    {}, //DIVIDER, // conceptual
@@ -105,7 +105,7 @@ export const list_of_elements_da = [
         "id":"saving-results-da",
         "title":"Mine favoritter og gemte søgninger",
         "template":  `<p> Når du er logget ind, har du mulighed for at gemme søgninger og gemme enkeltresultater til senere brug i ’Mine favoritter’.</p>
-			<p> Se mere under <a href="" target="_blank">Hjælp til søgning</a> </p> `,
+			<p> Se mere under <a href="https://www.kb.dk/services/laan-og-aflevering/hjaelp-til-soegning" target="_blank">Hjælp til søgning</a> </p> `,
         "icon":{"code":"save","group":"content"}
     },
     {

@@ -34,7 +34,7 @@ export const list_of_elements_en = [
         "template":`<p>Your search will cover the full collections of the Royal Danish Library, including the library collections of Copenhagen, Roskilde and Aarhus universities. These include books (print and electronic), articles, journals, images, manuscripts, scores, film, and more.</p>
         <p>You will also find articles, reviews, etc., from major external databases like JSTOR, PsycInfo, SocIndex, Scopus, Web of Science, and more. </p>
        <p><a href="https://kub.kb.dk/c.php?g=659333&p=4653941">Learn more about what the search system covers</a></p>
-       <p>Additionally, see the full list of the Royal Danish Library <a href= >special collections</a>.</p>`,
+       <p>Additionally, see the full list of the Royal Danish Library <a href="https://www.kb.dk/find-materiale" target="_blank">special collections</a>.</p>`,
         "icon":{"code":"toc","group":"action"}
     },
             {
@@ -48,7 +48,7 @@ export const list_of_elements_en = [
         <li>Your <b>PIN code</b> is for use in the self-service lending machines.</li>
         </tl>
         <br/>
-        <p><a href="https://kub.kb.dk/c.php?g=">Need more help?</a> </p>`,
+        <p><a href="https://www.kb.dk/services/laan-og-aflevering">Need more help?</a> </p>`,
         "icon":{"code":"info","group":"action"},
     },
     {}, //DIVIDER, communication
@@ -69,7 +69,7 @@ export const list_of_elements_en = [
         "id":"ask-us-en",
         "title":"Ask the library",
         "description":"needs definition; how to point to chat? link to ask a librarian?",
-        "template": `<p>For help with login, search, remote access, etc, please <a href="https://www.kb.dk/spoerg" target="_blank">Ask the Library.</a></p>`,
+        "template": `<p>For help with login, search, remote access, etc, please <a href="https://www.kb.dk/spoerg-biblioteket" target="_blank">Ask the Library.</a></p>`,
         "icon":{"code":"forum","group":"communication"}
     },
 
@@ -100,7 +100,7 @@ export const list_of_elements_en = [
         "description":"information about My Library Account functionality- loans, renewals, policies?; may also highlight or link to My Library Account",
         "template": `<p>You need to log in to see your account. You can access your account under your name in the top right corner.</p>
     	<p>Your account provides information on your loans and requestes. You can renew your loans, pay your fines, and change your password and PIN code.</p>
-    	 <p><a href="" target="_blank">Get help on login.</a></p>`,
+    	 <p><a href="https://www.kb.dk/services/laan-og-aflevering" target="_blank">Get help on login.</a></p>`,
         "icon":{"code":"account_box","group":"action"}
     },
     {
@@ -108,7 +108,7 @@ export const list_of_elements_en = [
         "title":"My Favorites, and Saved searches",
         "description":"information about My Favorites, exporting results, ref managers",
         "template":  `<p>You can save searches and individual results in <i>My Favourites</i> if you are logged in.</p>
-			<p>You can get more help on our <a href="" target="_blank">Search Help page</a> </p> `,
+			<p>You can get more help on our <a href="https://www.kb.dk/services/laan-og-aflevering/hjaelp-til-soegning" target="_blank">Search Help page</a> </p> `,
         "icon":{"code":"save","group":"content"}
     },
     {
