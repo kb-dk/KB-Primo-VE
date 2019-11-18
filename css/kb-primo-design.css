@@ -151,7 +151,9 @@ button, .md-button {
 
 .top-nav-bar-links {
   padding-left: 2.5em;
-  float: left; }
+  float: left;
+  flex-direction: row;
+  display: flex; }
 
 .search-elements-wrapper {
   max-width: 80% !important; }
