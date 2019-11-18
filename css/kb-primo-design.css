@@ -329,6 +329,9 @@ prm-static[section="homepage"] {
   padding: 0; }
   prm-static[section="homepage"] .default-card {
     padding: 1.5rem; }
+    prm-static[section="homepage"] .default-card .cell {
+      padding-left: 1rem;
+      padding-right: 1rem; }
   prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a {
     margin-bottom: .75rem; }
     prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a:hover, prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a:active {
