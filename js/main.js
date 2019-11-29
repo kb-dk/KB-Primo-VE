@@ -88,4 +88,4 @@ require('kb-primo-ve-announcement');
 require('kb-primo-ve-hide-new-user-if-loggedin');
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-libChat.git
-require('kb-primo-ve-libchat');
+// require('kb-primo-ve-libchat');
