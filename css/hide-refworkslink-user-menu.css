@@ -1,0 +1,4 @@
+/*CSS to Hide link to RefWorks in user menu dropdown (Feb2020 release) */
+.my-refworks-ctm {
+    display:none;
+}

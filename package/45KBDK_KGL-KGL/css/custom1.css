@@ -10621,6 +10621,11 @@ div.helpMenu--location{
 #search-help-dialog a:hover{background-color: transparent;box-shadow: none;}
 #search-help-dialog md-dialog-actions {display:none;}
 
+/*CSS to Hide link to RefWorks in user menu dropdown (Feb2020 release) */
+.my-refworks-ctm {
+    display:none;
+}
+
 /*CSS to Hide Virtual Browse and Virtual Browse Button/link on Full Display */
 #virtualBrowse {
     display:none;
