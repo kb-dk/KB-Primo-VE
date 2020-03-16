@@ -4,8 +4,10 @@ class PrmLocationItemsAfterController {
     }
 
     activateFilter(intervalId) {
+        // Two different filter buttons in different pages. Hopefully there is not more
         let filterBtn1 = angular.element(document.querySelectorAll("prm-locations > div > button"));
         let filterBtn2 = angular.element(document.querySelectorAll("prm-location-items  div  button"));
+        // If the filter div exists it means it is already open
         let filterDiv = angular.element(document.querySelectorAll("prm-locations-filter md-input-container"));
 
         if ((filterBtn1.length || filterBtn2.length) && !filterDiv.length) {
