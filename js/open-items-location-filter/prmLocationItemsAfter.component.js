@@ -10,9 +10,6 @@ class PrmLocationItemsAfterController {
         if (filterBtn.length && !filterDiv.length) {
             this.$interval.cancel(intervalId);
             filterBtn.triggerHandler('click');
-            console.log('found');
-        } else{
-            console.log('not found or already open');
         }
     }
 
