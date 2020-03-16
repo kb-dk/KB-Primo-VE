@@ -4,6 +4,7 @@ class KbLanguageController {
         this.$window = $window;
         this.$location = $location;
         this.lang = this.parentCtrl.lang;
+
     };
 
     changeLanguage() {

@@ -23,6 +23,9 @@ import {list_of_elements_da} from './help-menu/list_of_elements_da';
 // ChatBox scriptId
 import {scriptIds} from "./chat-box/scriptIds.constant";
 
+// Open items location filter
+import {PrmLocationItemsAfterConfig} from "./open-items-location-filter/prmLocationItemsAfter.component";
+
 angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
     .constant('viewName', (function () {
@@ -76,6 +79,9 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
     // Navigation header
     .component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)
     .component(KbNavigationHeaderConfig.name, KbNavigationHeaderConfig.config)
+
+    // Open items location filter
+    .component(PrmLocationItemsAfterConfig.name, PrmLocationItemsAfterConfig.config)
 
     // Language switcher
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
