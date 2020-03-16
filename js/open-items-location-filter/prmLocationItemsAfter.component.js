@@ -4,12 +4,22 @@ class PrmLocationItemsAfterController {
     }
 
     activateFilter(intervalId) {
-        let filterBtn = angular.element(document.querySelectorAll("prm-locations > div > button"));
-        let filterDiv = angular.element(document.querySelectorAll("prm-locations-filter"));
+        let filterBtn1 = angular.element(document.querySelectorAll("prm-locations > div > button"));
+        let filterBtn2 = angular.element(document.querySelectorAll("prm-location-items  div  button"));
+        let filterDiv = angular.element(document.querySelectorAll("prm-locations-filter md-input-container"));
 
-        if (filterBtn.length && !filterDiv.length) {
+        if ((filterBtn1.length || filterBtn2.length) && !filterDiv.length) {
             this.$interval.cancel(intervalId);
-            filterBtn.triggerHandler('click');
+            if (filterBtn1.length){
+                filterBtn1.triggerHandler('click');
+            }
+            if (filterBtn2.length){
+                filterBtn2.triggerHandler('click');
+            }
+        }else{
+            if (filterDiv.length){
+                this.$interval.cancel(intervalId);
+            }
         }
     }
 
