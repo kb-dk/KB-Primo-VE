@@ -10633,6 +10633,12 @@ div.helpMenu--location{
 button[aria-label="Virtual Browse"]{
     display:none;
 }
+prm-location-item md-list md-list-item div.end.center div.skewed-divider,
+prm-location-item md-list md-list-item div.end.center div.x{
+    display:none;
+}
+
+
 prm-databases-categorize .sticking-wrapper {
     padding-top: 24px;
     background-color: #f3f3f3;

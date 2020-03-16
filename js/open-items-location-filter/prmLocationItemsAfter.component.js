@@ -5,10 +5,14 @@ class PrmLocationItemsAfterController {
 
     activateFilter(intervalId) {
         let filterBtn = angular.element(document.querySelectorAll("prm-locations > div > button"));
+        let filterDiv = angular.element(document.querySelectorAll("prm-locations-filter"));
 
-        if (filterBtn.length) {
+        if (filterBtn.length && !filterDiv.length) {
             this.$interval.cancel(intervalId);
             filterBtn.triggerHandler('click');
+            console.log('found');
+        } else{
+            console.log('not found or already open');
         }
     }
 
