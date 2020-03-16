@@ -10633,12 +10633,6 @@ div.helpMenu--location{
 button[aria-label="Virtual Browse"]{
     display:none;
 }
-prm-location-item md-list md-list-item div.end.center div.skewed-divider,
-prm-location-item md-list md-list-item div.end.center div.x{
-    display:none;
-}
-
-
 prm-databases-categorize .sticking-wrapper {
     padding-top: 24px;
     background-color: #f3f3f3;
@@ -10989,6 +10983,30 @@ prm-static[section="homepage"] {
       box-shadow: none; }
   prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a, prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a div {
     width: 100%; }
+
+/* Hide 'kopibestiling' button */
+prm-location-items md-list md-list-item div.skewed-divider,
+prm-location-items md-list md-list-item div[layout-align="end center"] > div:nth-child(2){
+    display:none;
+}
+
+/* Style 'bestil' link as button */
+prm-location-items prm-service-button .md-button.button-as-link{
+    background-color: #002E70;
+    border: 1px solid #002E70;
+    color: white;
+    font-family: "nowayregular", sans-serif;
+    height: 2.875rem;
+    font-size: .875rem;
+    margin: 1rem;
+    padding: 4.2px 16px!important;
+    border-radius: 5px;
+}
+prm-location-items prm-service-button .md-button.button-as-link:hover:not([disabled]){
+    background-color: #00193d;
+    color: white;
+}
+
 
 /* Change the order, and move the send to section to the top */
 #full-view-container > *:first-child {
