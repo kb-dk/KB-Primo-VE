@@ -26,6 +26,9 @@ import {scriptIds} from "./chat-box/scriptIds.constant";
 // Open items location filter
 import {PrmLocationItemsAfterConfig} from "./open-items-location-filter/prmLocationItemsAfter.component";
 
+// Move request-another-volume
+import {PrmServiceButtonAfterConfig} from "./move-request-another-bin/prmServiceButtonAfter.component";
+
 angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
     .constant('viewName', (function () {
@@ -82,6 +85,9 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
     // Open items location filter
     .component(PrmLocationItemsAfterConfig.name, PrmLocationItemsAfterConfig.config)
+
+    // Move request-another-volume
+    .component(PrmServiceButtonAfterConfig.name, PrmServiceButtonAfterConfig.config)
 
     // Language switcher
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
