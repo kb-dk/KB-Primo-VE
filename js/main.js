@@ -29,6 +29,10 @@ import {PrmLocationItemsAfterConfig} from "./open-items-location-filter/prmLocat
 // Move request-another-volume
 import {PrmServiceButtonAfterConfig} from "./move-request-another-bin/prmServiceButtonAfter.component";
 
+// Add pickup numbers
+import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
+import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
+
 angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
     .constant('viewName', (function () {
@@ -92,6 +96,10 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
     // Language switcher
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
     .component(KbLanguageConfig.name, KbLanguageConfig.config)
+
+    // Add pickup numbers
+    .service('pickUpNumbersService', PickUpNumbersService)
+    .component(PrmRequestsAfterConfig.name, PrmRequestsAfterConfig.config)
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
 require('kb-primo-ve-announcement');
