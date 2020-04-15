@@ -69,13 +69,39 @@ export class PickUpNumbersService {
         }
         return pickUpLabel;
     }
-    insertPickUpNumber(pickUpNumber, request){
-        if (request.element.innerHTML.indexOf('<span class="pickupnumber">') === -1){
-            let pickUpLabel = this.getPickupLabel();
-            let newElement = "<br/><span class='pickupnumber'>" + pickUpLabel + "</span>" + pickUpNumber + "<br/>";
-            angular.element(request.element).append(newElement);
+
+    insertPickUpNumber(pickUpNumber, container){
+        if (container.innerHTML.indexOf('<span class="pickupnumber">') === -1){
+            let newElement = "<br/><span class='pickupnumber'>" + this.getPickupLabel() + "</span>" + pickUpNumber + "<br/>";
+            angular.element(container).append(newElement);
         }
     }
+
+    insertPickupnumbersToOverview(requests){
+        let element = document.querySelectorAll('prm-requests-overview');
+        if (element.length>0){
+            this.addPickupnumbersToOverview(element, requests);
+        }else{
+            ctrl.$scope.$watch(() => element.length,
+                (newVal, oldVal) => {
+                    if (element.length) {
+                        this.addPickupnumbersToOverview(element, requests);
+                    }
+                }
+            );
+        }
+
+    };
+
+    addPickupnumbersToOverview(element, requests){
+        let overview_requests = angular.element(document.querySelectorAll('prm-requests-overview div[class="md-list-item-text layout-fill"]'));
+        for (let index = 0; index < Object.keys(overview_requests).length-1; index++) {
+            if((this._pickUpNumbersForIds[requests[index].requestId])&&(overview_requests[index].innerHTML.indexOf('<span class="pickupnumber">') === -1)){
+                let newElement = '<p class="weak-text"><span class="pickupnumber">'+ this.getPickupLabel() +'</span><span>'+this._pickUpNumbersForIds[requests[index].requestId]+'</span></p>';
+                angular.element(overview_requests[index]).append(newElement);
+            }
+        }
+}
 
     _insert(parentCtrl, targetContainer, requests, selector) {
         let ctrl = this;
@@ -95,15 +121,15 @@ export class PickUpNumbersService {
                     .then(()=>{
                     ctrl._ongoingInsertions = ctrl._ongoingInsertions - 1;
                         if (ctrl._ongoingInsertions === 0) {
+                            this.insertPickupnumbersToOverview(requests);
                             resolve();
-                            return;
                         }
                     })
                     .catch(()=>{
                         ctrl._ongoingInsertions = ctrl._ongoingInsertions - 1;
                         if (ctrl._ongoingInsertions === 0) {
+                            this.insertPickupnumbersToOverview(requests);
                             resolve();
-                            return;
                         }
                     })
             });
@@ -136,7 +162,7 @@ export class PickUpNumbersService {
             if (ctrl._pickUpNumbersForIds[request.id]) {
                 // If the pick-up number for the request is already known, use it.
                 // ctrl._replaceIdText(request, ctrl._pickUpNumbersForIds[request.id]);
-                this.insertPickUpNumber(ctrl._pickUpNumbersForIds[request.id], request);
+                this.insertPickUpNumber(ctrl._pickUpNumbersForIds[request.id], request.element);
                 resolve();
             } else if (request.expandedDisplay.find((field) => field.label === "request.holds.request_date")) {
                 // Else, if it has a hold deadline, retrieve and insert the pick-up number.
@@ -146,7 +172,7 @@ export class PickUpNumbersService {
                         // Insert the pick-up number text.
                         let pickUpNumber = response.data.number;
                         ctrl._pickUpNumbersForIds[request.id] = pickUpNumber;
-                        this.insertPickUpNumber(pickUpNumber, request);
+                        this.insertPickUpNumber(pickUpNumber, request.element);
                         resolve();
                     })
                     .catch(err => {
