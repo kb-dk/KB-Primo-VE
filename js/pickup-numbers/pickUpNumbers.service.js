@@ -65,7 +65,7 @@ export class PickUpNumbersService {
         if (lang === 'en') {
             pickUpLabel = 'Pickup number: ';
         } else {
-            pickUpLabel = 'Ventehyde nummer: ';
+            pickUpLabel = 'Ventehyldenummer: ';
         }
         return pickUpLabel;
     }
