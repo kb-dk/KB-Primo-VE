@@ -72,7 +72,7 @@ export class PickUpNumbersService {
     getServiceBaseUrl(){
         let baseUrl = this.location.$$absUrl;
         if (baseUrl.includes('kbdk-kgl-psb.primo.exlibrisgroup')){
-            return 'https://public-stage.statsbiblioteket.dk/alma-pickupnumbers/services/public/pickupnumber';
+            return 'https://public-stage.statsbiblioteket.dk/alma-pickupnumbers/services/public/pickupnumber/';
         } else if (baseUrl.includes('soeg.kb.dk')){
             return ''
         } else {
