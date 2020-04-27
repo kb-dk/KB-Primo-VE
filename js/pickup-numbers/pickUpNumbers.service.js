@@ -5,7 +5,6 @@ export class PickUpNumbersService {
     constructor($http, $location) {
         this.$http = $http;
         this.location = $location;
-        this._serviceBaseUrl = 'https://developer.statsbiblioteket.dk/alma-pickupnumbers/services/public/pickupnumber/';
         this._pickUpNumbersForIds = {};
         this._runningPromise;
         this._ongoingInsertions = 0;
@@ -68,6 +67,17 @@ export class PickUpNumbersService {
             pickUpLabel = 'Ventehyldenummer: ';
         }
         return pickUpLabel;
+    }
+
+    getServiceBaseUrl(){
+        let baseUrl = this.location.$$absUrl;
+        if (baseUrl.includes('kbdk-kgl-psb.primo.exlibrisgroup')){
+            return 'https://public-stage.statsbiblioteket.dk/alma-pickupnumbers/services/public/pickupnumber';
+        } else if (baseUrl.includes('soeg.kb.dk')){
+            return ''
+        } else {
+            return 'https://developer.statsbiblioteket.dk/alma-pickupnumbers/services/public/pickupnumber/';
+        }
     }
 
     insertPickUpNumber(pickUpNumber, container){
@@ -193,7 +203,7 @@ export class PickUpNumbersService {
     // Retrieves the pick up numbers from the associated service.
     // Request URL may look like the following.
     _retrievePickUpNumber(requestId) {
-        return this.$http.get(this._serviceBaseUrl + requestId);
+        return this.$http.get(this.getServiceBaseUrl() + requestId);
     }
 
 
