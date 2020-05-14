@@ -74,7 +74,7 @@ export class PickUpNumbersService {
         if (baseUrl.includes('kbdk-kgl-psb.primo.exlibrisgroup')){
             return 'https://public-stage.statsbiblioteket.dk/alma-pickupnumbers/services/public/pickupnumber/';
         } else if (baseUrl.includes('soeg.kb.dk')){
-            return ''
+            return 'https://webservice.kb.dk/alma-pickupnumbers/services/public/pickupnumber/'
         } else {
             return 'https://developer.statsbiblioteket.dk/alma-pickupnumbers/services/public/pickupnumber/';
         }
