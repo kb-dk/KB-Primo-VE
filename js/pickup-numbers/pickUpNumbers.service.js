@@ -154,7 +154,8 @@ export class PickUpNumbersService {
             return {
                 element: targetElements[index],
                 id: request.requestId,
-                expandedDisplay: request.expandedDisplay
+                expandedDisplay: request.expandedDisplay,
+                isAlert: request.isAlert  // isAlert is a Primo field, that most likely says if a booking is ready for pickup or not
             }
         });
     };
@@ -174,23 +175,23 @@ export class PickUpNumbersService {
                 // ctrl._replaceIdText(request, ctrl._pickUpNumbersForIds[request.id]);
                 this.insertPickUpNumber(ctrl._pickUpNumbersForIds[request.id], request.element);
                 resolve();
-            } else if (request.expandedDisplay.find((field) => field.label === "request.holds.request_date")) {
-                // Else, if it has a hold deadline, retrieve and insert the pick-up number.
-                // The requested item can only have a pick up number if it has a hold deadline.
-                ctrl._retrievePickUpNumber(request.id)
-                    .then(response => {
-                        // Insert the pick-up number text.
-                        let pickUpNumber = response.data.number;
-                        ctrl._pickUpNumbersForIds[request.id] = pickUpNumber;
-                        this.insertPickUpNumber(pickUpNumber, request.element);
-                        resolve();
-                    })
-                    .catch(err => {
-                        // ctrl._removeIdText(request);
-                        console.log('Could not retrieve the pick up number.');
-                        reject(err);
-                        return err;
-                    });
+            } else if (request.isAlert) {
+                // Else, if isAlert set to true, retrieve and insert the pick-up number.
+                // The requested item can probably only have a pick up number if its isAlert is set to true.
+                    ctrl._retrievePickUpNumber(request.id)
+                        .then(response => {
+                            // Insert the pick-up number text.
+                            let pickUpNumber = response.data.number;
+                            ctrl._pickUpNumbersForIds[request.id] = pickUpNumber;
+                            this.insertPickUpNumber(pickUpNumber, request.element);
+                            resolve();
+                        })
+                        .catch(err => {
+                            // ctrl._removeIdText(request);
+                            console.log('Could not retrieve the pick up number.');
+                            reject(err);
+                            return err;
+                        });
 
             } else {
                 resolve();
