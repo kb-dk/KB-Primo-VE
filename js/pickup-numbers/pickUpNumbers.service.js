@@ -15,8 +15,8 @@ export class PickUpNumbersService {
      * The watcher watches for the elements
      * containing the request IDs, and when the
      * elements become available, inserts the pickup
-     * numbers if they exist.
-     */
+     * numbers if they exist.*/
+
     waitForIdsAndInsertPickUpNumbers(ctrl) {
         ctrl.$scope.$watch(() => ctrl.selector(ctrl.parentElement).length,
             (newVal, oldVal) => {
