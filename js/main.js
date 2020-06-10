@@ -41,7 +41,8 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
         // If there are other parameters after vid, then remove them
         let vid = query.substring(0, query.indexOf('&')) ? query.substring(0, query.indexOf('&')) : query;
         vid = vid.replace("%3A", "-");
-        return vid.replace(":", "-");
+        //return vid.replace(":", "-");
+        return vid.substring(vid.indexOf(':')+1);
     })()
     )
         
