@@ -80,10 +80,10 @@ export class PickUpNumbersService {
         }
     }
 
-    insertPickUpNumber(pickUpNumber, container){
-        if (container.innerHTML.indexOf('<span class="pickupnumber">') === -1){
+    insertPickUpNumber(pickUpNumber, container) {
+        if (container.innerHTML.indexOf('<span class="pickupnumber">') === -1) {
             let newElement = "<br/><span class='pickupnumber'>" + this.getPickupLabel() + "</span>" + pickUpNumber + "<br/>";
-            angular.element(container).append(newElement);
+            angular.element(container.querySelectorAll('p.request-location')).append(newElement);
         }
     }
 

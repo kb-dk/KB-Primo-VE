@@ -12,7 +12,7 @@ class PrmRequestsAfterController {
     }
 
     selector(element) {
-        return element.querySelectorAll('p[ng-if="::requestDisplay.secondLineRight"]');
+        return element.querySelectorAll('md-list-item');
     }
 
 }
