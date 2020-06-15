@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-rm -r package/45KBDK_KGL-KGL/
+rm -r package/KGL/
 cd package
-mkdir 45KBDK_KGL-KGL
-cd 45KBDK_KGL-KGL
+mkdir KGL
+cd KGL
 mkdir css
 mkdir fonts
 mkdir html
