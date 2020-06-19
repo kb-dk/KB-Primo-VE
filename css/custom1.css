@@ -10622,9 +10622,11 @@ div.helpMenu--location{
 #search-help-dialog md-dialog-actions {display:none;}
 
 /*CSS to Hide link to RefWorks in user menu dropdown (Feb2020 release) */
-.my-refworks-ctm {
+.my-refworks-ctm,
+.my-refworks-separator-ctm{
     display:none;
 }
+
 
 /*CSS to Hide Virtual Browse and Virtual Browse Button/link on Full Display */
 #virtualBrowse {
