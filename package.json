@@ -14,7 +14,7 @@
   "scripts": {
     "test": "node_modules/karma/bin/karma start ./test/unit/karma.conf.js --single-run",
     "sass": "node_modules/node-sass/bin/node-sass ./css/sass/kb-primo-design.scss ./css/kb-primo-design.css",
-    "start": "( chmod +x ./pack.sh && ./pack.sh && cd ../../../ && gulp run --view KGL --ve --browserify )",
+    "start": "( chmod +x ./pack.sh && ./pack.sh && cd ../../../ && gulp run --view 45KBDK_KGL-KGL --ve --browserify )",
     "pack": "(chmod +x ./pack.sh && ./pack.sh)"
   },
   "devDependencies": {
