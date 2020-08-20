@@ -10576,6 +10576,18 @@ md-backdrop, .md-dialog-container {
 md-toast {
   z-index: 78; }
 
+button[aria-label="nui.aria.request.calcPlaceInQueue"]{
+    background-color: #002E70;
+    border: 1px solid #002E70;
+    color: white;
+    font-family: "nowayregular", sans-serif;
+    height: 2.875rem;
+    font-size: .875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+}
 button.s-lch-widget-float-btn{
     background-color: #caf0fe!important;
     border: none;
@@ -11040,6 +11052,7 @@ prm-location-items prm-service-button .md-button.button-as-link:hover:not([disab
 .full-view-inner-container .services-index-under{
     display: none;
 }
+
 
 prm-request-services .labeled-block .block-body {
     max-height: 30em;
