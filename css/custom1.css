@@ -11053,6 +11053,7 @@ prm-location-items prm-service-button .md-button.button-as-link:hover:not([disab
     display: none;
 }
 
+label[translate="almaDigitizationOther.manualDescription"],
 label[translate="almaDigitization.startPage"],
 label[translate="almaDigitization.endPage"],
 label[translate="almaDigitization.chapterArticleTitle"],
@@ -11060,6 +11061,7 @@ label[translate="almaDigitization.generalUseLabel"]{
     overflow: visible!important;
 }
 
+label[translate="almaDigitizationOther.manualDescription"]::before,
 label[translate="almaDigitization.startPage"]::before,
 label[translate="almaDigitization.endPage"]::before,
 label[translate="almaDigitization.chapterArticleTitle"]::before,
@@ -11073,6 +11075,10 @@ label[translate="almaDigitization.generalUseLabel"]::before{
     top: .2em;
     font-size: 2em;
     transition: all .4s cubic-bezier(.25,.8,.25,1);
+}
+/* Remove the star so it doesn't interfere with default obligatory field style */
+md-input-container.md-input-invalid label:before{
+    content:'';
 }
 prm-request-services .labeled-block .block-body {
     max-height: 30em;
