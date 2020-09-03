@@ -11053,6 +11053,11 @@ prm-location-items prm-service-button .md-button.button-as-link:hover:not([disab
     display: none;
 }
 
+span[translate="almaDigitization.partial"]{
+    font-weight: bold;
+}
+
+
 label[translate="almaDigitizationOther.manualDescription"],
 label[translate="almaDigitization.startPage"],
 label[translate="almaDigitization.endPage"],

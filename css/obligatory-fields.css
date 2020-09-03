@@ -1,3 +1,8 @@
+span[translate="almaDigitization.partial"]{
+    font-weight: bold;
+}
+
+
 label[translate="almaDigitizationOther.manualDescription"],
 label[translate="almaDigitization.startPage"],
 label[translate="almaDigitization.endPage"],
