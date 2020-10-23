@@ -44,7 +44,7 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
         return vid.replace(":", "-");
     })()
     )
-        
+
     .constant(
         'helpMenuConfig', (function () {
             // Find the language from the url
