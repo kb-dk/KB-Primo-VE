@@ -1,3 +1,28 @@
 span[translate="almaDigitization.partial"]{
     font-weight: bold;
 }
+
+
+label[translate="almaDigitization.startPage"],
+label[translate="almaDigitization.chapterArticleTitle"],
+label[translate="almaRequest.publicationDate"]{
+    overflow: visible!important;
+}
+
+label[translate="almaDigitization.startPage"]::before,
+label[translate="almaDigitization.chapterArticleTitle"]::before,
+label[translate="almaRequest.publicationDate"]::before{
+    color: #ff2947;
+    content: "*";
+    position: absolute;
+    left: -.5em;
+    margin: auto;
+    height: .75em;
+    top: .2em;
+    font-size: 2em;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
+}
+/* Remove the star so it doesn't interfere with default obligatory field style */
+md-input-container.md-input-invalid label:before{
+    content:'';
+}
