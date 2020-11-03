@@ -5,9 +5,12 @@ div.top-nav-bar {
 prm-search-bar, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column{
   background-color: $lighter-header;
 }
-prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column{
+
+prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column,
+prm-topbar .md-button:not(.disable-hover), prm-topbar .md-button.button-over-dark:not(.disable-hover){
   color: $links;
 }
+
 prm-topbar .md-button,
 .md-button.button-over-dark,
 prm-search-bar .search-switch-buttons .md-button.switch-to-advanced,

@@ -10775,7 +10775,8 @@ div.top-nav-bar {
 prm-search-bar, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column {
   background-color: #caf0fe; }
 
-prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column {
+prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column,
+prm-topbar .md-button:not(.disable-hover), prm-topbar .md-button.button-over-dark:not(.disable-hover) {
   color: #002e70; }
 
 prm-topbar .md-button,
@@ -10997,6 +10998,7 @@ prm-static[section="homepage"] {
       box-shadow: none; }
   prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a, prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a div {
     width: 100%; }
+
 /* Hide 'kopibestiling' button */
 prm-location-items md-list md-list-item div.skewed-divider,
 prm-location-items md-list md-list-item div[layout-align="end center"] > div:nth-child(2){
