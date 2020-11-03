@@ -2,6 +2,7 @@
 prm-user-area-expandable {
     display: flex;
     flex-direction: row;
+    margin-left: auto;
 }
 
 prm-user-area-expandable .user-button {
@@ -23,4 +24,9 @@ prm-user-area-expandable prm-user-area-expandable-after .change-language{
 /* Show language switcher if not logged in*/
 prm-user-area-expandable button ~ prm-user-area-expandable-after .change-language{
     display:unset;
+}
+
+/**/
+prm-alma-viewer kb-language{
+    display: none;
 }

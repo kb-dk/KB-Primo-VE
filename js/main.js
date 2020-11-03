@@ -36,11 +36,18 @@ import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.componen
 angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
 
     .constant('viewName', (function () {
-        let query = window.location.search.substring(1);
-        query = query.substring(query.indexOf('vid') + 4);
-        // If there are other parameters after vid, then remove them
-        let vid = query.substring(0, query.indexOf('&')) ? query.substring(0, query.indexOf('&')) : query;
+            let url = window.location.search.substring(1);
+            let query = url.substring(url.indexOf('vid') + 4);
+            // in 'Alma Viewer page'
+            if(!url){
+                url = window.location.pathname;
+                query = url.substring(url.indexOf('/delivery/')+10);
+                query = query.substring(0, query.indexOf('/'));
+            }
+            // If there are other parameters after vid, then remove them
+            let vid = query.substring(0, query.indexOf('&')) ? query.substring(0, query.indexOf('&')) : query;
         vid = vid.replace("%3A", "-");
+        console.log('vid:',vid);
         return vid.replace(":", "-");
     })()
     )

@@ -14,7 +14,7 @@
     margin-left: 0;
   }
   .logo {
-    background-image: url(../img/logo-navigation-header.png);
+    background-image: url(../img/logo-navigation-header.svg);
     width: 95px;
   }
 
@@ -31,7 +31,7 @@
 
 // Change the order of the top bars
 
-prm-explore-main, prm-account, prm-full-view-cont{
+prm-explore-main, prm-account, prm-full-view-cont, prm-alma-viewer{
   display: flex;
   flex-direction: column;
 

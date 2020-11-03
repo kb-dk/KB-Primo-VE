@@ -118,7 +118,7 @@ div.top-nav-bar {
 prm-search-bar, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column {
   background-color: #caf0fe; }
 
-prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column, prm-topbar .md-button:not(.disable-hover), prm-topbar .md-button.button-over-dark:not(.disable-hover) {
+prm-collection-discovery .collection-header-inner.has-transparent-topbar.layout-column {
   color: #002e70; }
 
 prm-topbar .md-button,
@@ -270,14 +270,14 @@ prm-logo {
     letter-spacing: -0.2px;
     line-height: 24px; }
 
-prm-explore-main, prm-account, prm-full-view-cont {
+prm-explore-main, prm-account, prm-full-view-cont, prm-alma-viewer {
   display: flex;
   flex-direction: column; }
-  prm-explore-main kb-navigation-header, prm-account kb-navigation-header, prm-full-view-cont kb-navigation-header {
+  prm-explore-main kb-navigation-header, prm-account kb-navigation-header, prm-full-view-cont kb-navigation-header, prm-alma-viewer kb-navigation-header {
     order: -3; }
-  prm-explore-main prm-topbar, prm-account prm-topbar, prm-full-view-cont prm-topbar {
+  prm-explore-main prm-topbar, prm-account prm-topbar, prm-full-view-cont prm-topbar, prm-alma-viewer prm-topbar {
     order: -2; }
-  prm-explore-main prm-search-bar, prm-account prm-search-bar, prm-full-view-cont prm-search-bar {
+  prm-explore-main prm-search-bar, prm-account prm-search-bar, prm-full-view-cont prm-search-bar, prm-alma-viewer prm-search-bar {
     order: -1; }
 
 #select_value_label_7, #select_value_label_10 {
