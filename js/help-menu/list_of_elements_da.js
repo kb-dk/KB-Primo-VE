@@ -41,7 +41,7 @@ export const list_of_elements_da = [
         "title":"Login, passwords, PIN-kode?",
         "template":`<p><a href="https://soeg.kb.dk/discovery/account?vid=45KBDK_KGL:KGL&section=personal_details">Skift password og PIN-kode her</a> </p>
         <tl>
-        <li>Ansatte og studerende ved <b>AU, KU, RUC</b> skal logge ind via WAYF</li>
+        <li>Ansatte og studerende ved <b>AU, KU, RUC, ITU</b> skal logge ind via WAYF</li>
         <li>Ansatte ved <b>hospitaler</b> i Region Midtjylland og Region Hovedstaden skal også logge ind via WAYF</li>
         <li><b>Alle andre brugere</b> skal logge ind via NEM-ID første gang - derefter kan de logge ind med email og password.</li>
         <li>Din <b>PIN-kode</b> skal du bruge i udlånsautomaterne.</li>

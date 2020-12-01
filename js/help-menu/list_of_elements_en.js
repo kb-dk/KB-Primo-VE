@@ -42,7 +42,7 @@ export const list_of_elements_en = [
         "title":"Login, passwords, PIN code?",
         "template":`<p><a href="https://soeg.kb.dk/discovery/account?vid=45KBDK_KGL:KGL&section=personal_details">Change password and PIN code</a> </p>
         <tl>
-        <li><b>AU, KU, RUC</b> students and faculty log in using WAYF and their institution credentials.</li>
+        <li><b>AU, KU, RUC, ITU</b> students and faculty log in using WAYF and their institution credentials.</li>
         <li><b>Hospital</b> employees in Region Midtjylland and Region Hovedstaden also use WAYF to log in.</li>
         <li><b>All other users</b> need to log in using NEM-ID the first time - then email and password can be used to log in.</li>
         <li>Your <b>PIN code</b> is for use in the self-service lending machines.</li>
