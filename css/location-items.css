@@ -20,4 +20,6 @@ prm-location-items prm-service-button .md-button.button-as-link:hover:not([disab
     background-color: #00193d;
     color: white;
 }
-
+prm-location .availability-status.unavailable {
+    color: #002e70;
+}
