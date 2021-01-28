@@ -11025,6 +11025,13 @@ prm-location .availability-status.unavailable {
     color: #002e70;
 }
 
+div[translate="almaRequest.pickupLocation"]{
+    color : red!important;
+}
+
+md-optgroup[label="Udlån til biblioteker"]{
+    display: none;
+}
 /* Change the order, and move the send to section to the top */
 #full-view-container > *:first-child {
     display: flex;
