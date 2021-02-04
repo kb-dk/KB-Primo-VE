@@ -2,11 +2,20 @@
 show up properly and the following code fixes it */
 
 md-backdrop, .md-dialog-container {
-  position: fixed; }
+ position: fixed;
+}
+
+/* Bug fixing: Fix for at un-favorite dialog box takes up the whole space
+   because of the line above */
+md-list md-list-item .md-dialog-container {
+  position: absolute;
+}
 
 .md-dialog-container{
   top: 0!important;
 }
 
 md-toast {
-  z-index: 78; }
+  z-index: 78;
+}
+

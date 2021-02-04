@@ -10567,14 +10567,23 @@ article {
 show up properly and the following code fixes it */
 
 md-backdrop, .md-dialog-container {
-  position: fixed; }
+ position: fixed;
+}
+
+/* Bug fixing: Fix for at un-favorite dialog box takes up the whole space
+   because of the line above */
+md-list md-list-item .md-dialog-container {
+  position: absolute;
+}
 
 .md-dialog-container{
   top: 0!important;
 }
 
 md-toast {
-  z-index: 78; }
+  z-index: 78;
+}
+
 
 button[aria-label="nui.aria.request.calcPlaceInQueue"]{
     background-color: #002E70;
@@ -11024,11 +11033,14 @@ prm-location-items prm-service-button .md-button.button-as-link:hover:not([disab
 prm-location .availability-status.unavailable {
     color: #002e70;
 }
-
+/* Change the color of pickup location to red,
+   so it attracts more attention
+   in relation to reading-room only loans */
 div[translate="almaRequest.pickupLocation"]{
     color : red!important;
 }
-
+/* Hiding 'Udlån til biblioteker' which is reserved for
+   Fjernlån department but shouldn't be used in Primo */
 md-optgroup[label="Udlån til biblioteker"]{
     display: none;
 }
