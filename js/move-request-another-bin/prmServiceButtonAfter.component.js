@@ -3,7 +3,6 @@ class PrmServiceButtonAfterController {
         this.$element = $element;
         this.$interval = $interval;
     };
-
     $postLink() {
         let _this = this;
         this.intervalId = this.$interval(function(){
@@ -19,11 +18,21 @@ class PrmServiceButtonAfterController {
                     container.append(AlmaRequestOther.parent());
                     AlmaRequestOther.parent().addClass('orderAtTheBottom');
                     AlmaRequestOther.parent().css('float','right');
+                    let requestButtons = angular.element(document.querySelectorAll("span[translate='AlmaItemRequest']"));
+                    for (let i = 0; i < requestButtons.length; i++) {
+                        requestButtons[i].addEventListener("click", function(){
+                            if(document.getElementsByClassName("orderAtTheBottom") && document.getElementsByClassName("orderAtTheBottom").length){
+                                console.log('hej');
+                                AlmaRequestOther.css('display', 'none');
+                            }
+
+                        });
+                    }
                     let backButtons = angular.element(document.querySelectorAll("prm-opac-back-button button"));
                     for (let i = 0; i < backButtons.length; i++) {
                         backButtons[i].addEventListener("click", function(){
-                            if(document.getElementsByClassName("orderAtTheBottom").length){
-                                document.getElementsByClassName("orderAtTheBottom")[0].remove();
+                            if(document.getElementsByClassName("orderAtTheBottom") && document.getElementsByClassName("orderAtTheBottom").length){
+                                AlmaRequestOther.css('display', 'inline-block');
                             }
 
                         });

@@ -11,3 +11,11 @@ prm-brief-result .item-title span {
 h3.item-title a{
   text-decoration-line: none;
 }
+
+md-tabs.tabs-as-app .back-button._md-focused:not([disabled]),
+md-tabs.tabs-as-app .back-button.hovered:not([disabled]),
+md-tabs.tabs-as-app .back-button.md-focused:not([disabled]),
+md-tabs.tabs-as-app .back-button:focus:not([disabled]),
+md-tabs.tabs-as-app .back-button:hover:not([disabled]) {
+  background-color: #00193d;
+}
