@@ -32,6 +32,7 @@ class PrmServiceButtonAfterController {
                     for (let i = 0; i < backButtons.length; i++) {
                         backButtons[i].addEventListener("click", function(){
                             if(document.getElementsByClassName("orderAtTheBottom") && document.getElementsByClassName("orderAtTheBottom").length){
+                                document.getElementsByClassName("orderAtTheBottom")[0].remove();
                                 AlmaRequestOther.css('display', 'inline-block');
                             }
 
