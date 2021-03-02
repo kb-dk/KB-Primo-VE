@@ -41,3 +41,7 @@ prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top{
 prm-explore-main .header {
   z-index: 15;
 }
+
+span.availability-status.not_restricted{
+  color: $links;
+}

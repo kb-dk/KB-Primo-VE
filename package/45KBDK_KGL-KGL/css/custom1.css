@@ -10752,6 +10752,9 @@ prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top {
 prm-explore-main .header {
   z-index: 15; }
 
+span.availability-status.not_restricted {
+  color: #002e70; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title, #facets .sidebar-header {
