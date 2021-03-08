@@ -10755,6 +10755,12 @@ prm-explore-main .header {
 span.availability-status.not_restricted {
   color: #002e70; }
 
+span[translate="delivery.code.fulltext"] {
+  color: #002e70; }
+
+prm-search-result-availability-line span.fulltext {
+  color: #002e70; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title, #facets .sidebar-header {
