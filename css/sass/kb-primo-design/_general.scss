@@ -42,6 +42,6 @@ prm-explore-main .header {
   z-index: 15;
 }
 
-prm-search-result-availability-line span.fulltext[translate="delivery.code.fulltext"] {
+#searchResultsContainer prm-search-result-availability-line span.fulltext[translate="delivery.code.fulltext"] {
   color: $links;
 }

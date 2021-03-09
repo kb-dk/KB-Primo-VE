@@ -86,13 +86,7 @@ prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top {
 prm-explore-main .header {
   z-index: 15; }
 
-span.availability-status.not_restricted {
-  color: #002e70; }
-
-span[translate="delivery.code.fulltext"] {
-  color: #002e70; }
-
-prm-search-result-availability-line span.fulltext {
+#searchResultsContainer prm-search-result-availability-line span.fulltext[translate="delivery.code.fulltext"] {
   color: #002e70; }
 
 #facets {
