@@ -45,3 +45,8 @@ prm-explore-main .header {
 #searchResultsContainer prm-search-result-availability-line span.fulltext[translate="delivery.code.fulltext"] {
   color: $links;
 }
+
+button span[class*="available"],
+button span.fulltext{
+  color: $secondary-color !important;
+}

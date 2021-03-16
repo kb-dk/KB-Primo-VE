@@ -10755,6 +10755,10 @@ prm-explore-main .header {
 #searchResultsContainer prm-search-result-availability-line span.fulltext[translate="delivery.code.fulltext"] {
   color: #002e70; }
 
+button span[class*="available"],
+button span.fulltext {
+  color: #002e70 !important; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title, #facets .sidebar-header {
@@ -10893,9 +10897,6 @@ button.button-large.button-with-icon md-icon[md-svg-icon="primo-ui:magnifying-gl
   color: #989898 !important; }
   .result-item-actions .md-icon-button:hover {
     color: #171717 !important; }
-
-button span[class*="available"] {
-  color: #002e70 !important; }
 
 .icon.icon-facebook {
   background-image: url(../img/icon-facebook.svg); }
