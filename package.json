@@ -36,7 +36,7 @@
   "dependencies": {
     "browserify": "^13.3.0",
     "jsonld": "^0.4.12",
-    "lodash": "^4.17.4",
-    "x2js": "^3.1.0"
+    "lodash": "^4.17.21",
+    "x2js": "^3.4.1"
   }
 }

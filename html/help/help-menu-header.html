@@ -1,0 +1,13 @@
+<md-button ng-hide="$ctrl.bodyContent === 'main-menu'"
+           class="md-icon-button md-button md-primoExplore-theme md-ink-ripple"
+           ng-click="$ctrl.changeBodyContent('main-menu')">
+    <prm-icon icon-type="svg" svg-icon-set="navigation" icon-definition="ic_arrow_back_24px"
+              aria-label="return to help content list" ></prm-icon>
+</md-button>
+{{ "fulldisplay.help.mainheader" | translate}}
+<strong ng-if = "$ctrl.bodyContent === 'whats-in-search'"> - {{ "fulldisplay.help.subheader1" | translate}}</strong>
+<strong ng-if = "$ctrl.bodyContent === 'how-to-search'"> - {{ "fulldisplay.help.subheader2" | translate}}</strong>
+<strong ng-if = "$ctrl.bodyContent === 'didnt-find'"> - {{ "fulldisplay.help.subheader3" | translate}}</strong>
+<strong ng-if = "$ctrl.bodyContent === 'feedback'"> - {{ "fulldisplay.help.subheader4" | translate}}</strong>
+<strong ng-if = "$ctrl.bodyContent === 'account'"> - {{ "fulldisplay.help.subheader5" | translate}}</strong>
+<strong ng-if = "$ctrl.bodyContent === 'ask-us'"> - {{ "fulldisplay.help.subheader6" | translate}}</strong>

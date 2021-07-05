@@ -6,6 +6,8 @@ import {KbEditProfileConfig} from './edit-profile/kbEditProfile.component';
 import {PrmExploreFooterAfterConfig} from './footer/prmExploreFooterAfter.component';
 import {KbFooterConfig} from './footer/kbFooter.component';
 
+import {KbHelpConfig} from './footer/kbHelp.component';
+
 // Navigation header
 import {PrmTopBarBeforeConfig} from './navigation-header/prmTopBarBefore';
 import {KbNavigationHeaderConfig} from './navigation-header/kbNavigationHeader';
@@ -77,7 +79,6 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
             }
         })(),
 )
-
     // ChatBox scriptId
     .constant('scriptIds' , scriptIds)
 
@@ -86,9 +87,11 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
     .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
     .component(KbEditProfileConfig.name, KbEditProfileConfig.config)
 
-    // Footer
+    // Footer and help
     .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
     .component(KbFooterConfig.name, KbFooterConfig.config)
+
+    .component(KbHelpConfig.name, KbHelpConfig.config)
 
     // Navigation header
     .component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)

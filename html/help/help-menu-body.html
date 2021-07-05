@@ -1,0 +1,67 @@
+<ul ng-if = "$ctrl.bodyContent === 'main-menu'" style="list-style: none; width: 100%; padding-left: 0px;" aria-hidden="false">
+    <hr aria-hidden="true">
+
+    <!-- Hvad søger jeg i? -->
+    <li class="row">
+        <a ng-click="$ctrl.changeBodyContent('whats-in-search')" class="md-primoExplore-theme">
+            <prm-icon svg-icon-set={{'fulldisplay.help.iconset1' | translate}} icon-definition={{'fulldisplay.help.icondefinition1' | translate}} icon-type="svg" style="padding-right: 10px;">
+            </prm-icon>
+            {{ "fulldisplay.help.subheader1" | translate}}
+        </a>
+    </li>
+
+    <!-- Hvordan søger jeg? -->
+    <li class="row">
+        <a ng-click="$ctrl.changeBodyContent('how-to-search')" class="md-primoExplore-theme">
+            <prm-icon svg-icon-set="{{fulldisplay.help.iconset2  | translate}}" icon-definition="{{fulldisplay.help.icondefinition2  | translate}}" icon-type="svg"
+                      style="padding-right: 10px;">
+            </prm-icon>
+            {{ "fulldisplay.help.subheader2" | translate}}
+        </a>
+    </li>
+
+    <!-- Fandt du ikke det du søgte? -->
+    <li class="row">
+        <a ng-click="$ctrl.changeBodyContent('didnt-find')" class="md-primoExplore-theme">
+            <prm-icon svg-icon-set="fulldisplay.help.iconset3  | translate" icon-definition="{{fulldisplay.help.icondefinition3  | translate}}" icon-type="svg"
+                      style="padding-right: 10px;">
+            </prm-icon>
+            {{ "fulldisplay.help.subheader3" | translate}}
+        </a>
+    </li>
+
+    <hr aria-hidden="true">
+
+    <!-- Login, passwords, PIN-kode? -->
+    <li class="row">
+        <a ng-click="$ctrl.changeBodyContent('feedback')" class="md-primoExplore-theme">
+            <prm-icon svg-icon-set="fulldisplay.help.iconset4  | translate" icon-definition="{{fulldisplay.help.icondefinition4  | translate}}" icon-type="svg" style="padding-right: 10px;">
+            </prm-icon>
+            {{ "fulldisplay.help.subheader4" | translate}}
+        </a>
+    </li>
+
+    <!-- Min konto -->
+    <li class="row">
+        <a ng-click="$ctrl.changeBodyContent('account')" class="md-primoExplore-theme">
+            <prm-icon svg-icon-set="fulldisplay.help.iconset5  | translate" icon-definition="{{fulldisplay.help.icondefinition5  | translate}}" icon-type="svg"
+                      style="padding-right: 10px;">
+            </prm-icon>
+            {{ "fulldisplay.help.subheader5" | translate}}
+        </a>
+    </li>
+
+    <hr aria-hidden="true">
+
+    <!-- Spørg biblioteket -->
+    <li class="row">
+        <a ng-click="$ctrl.changeBodyContent('ask-us')" class="md-primoExplore-theme">
+            <prm-icon svg-icon-set="{{fulldisplay.help.iconset6  | translate}}" icon-definition="{{fulldisplay.help.icondefinition6  | translate}}" icon-type="svg"
+                      style="padding-right: 10px;">
+            </prm-icon>
+            {{ "fulldisplay.help.subheader6" | translate}}
+        </a>
+    </li>
+
+    <hr aria-hidden="true">
+</ul>
