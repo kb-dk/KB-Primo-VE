@@ -10642,6 +10642,71 @@ div.helpMenu--location{
 #search-help-dialog a:hover{background-color: transparent;box-shadow: none;}
 #search-help-dialog md-dialog-actions {display:none;}
 
+
+/* Search help button */
+help-button .md-button.md-icon-button.search-help-button{
+  border-radius: 0;
+  background: #0F2E70 0 0 no-repeat padding-box;
+  box-shadow: 0 0 6px #32323259;
+  border: 1px solid #FFFFFF;
+  transition: 0.3s;
+  z-index: 999;
+  margin: 0;
+}
+
+help-button .search-help-button.md-button:hover{
+  width: 150px;
+}
+
+help-button .search-help-button.md-button:hover md-icon:before{
+  content: 'Hjælp til søgning ';
+  vertical-align: top;
+}
+
+help-button .search-help-button.md-button:hover md-icon{
+  margin: 0;
+}
+
+help-button .search-help-button.md-button:hover svg{
+  display: inline;
+}
+
+help-button .search-help-button.md-button,
+help-button .search-help-button.md-button:hover,
+help-button .search-help-button.md-button.md-focused{
+  color: white!important;
+}
+
+#helpMenu md-toolbar{
+  background-color: #0F2E70;
+  color:white;
+}
+
+#helpMenu md-toolbar md-icon{
+  margin-right:0;
+  width:20px;
+}
+
+#helpMenu md-toolbar .md-button,
+#helpMenu md-toolbar .sub-menu a:hover{
+  color: white;
+}
+#helpMenu md-toolbar .md-toolbar-tools{
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#helpMenu md-toolbar .md-button{
+  /*width:20px;*/
+}
+#helpMenu md-toolbar .sub-menu a,
+#helpMenu md-toolbar .sub-menu a:hover{
+  text-decoration: underline;
+}
+
+#helpMenu md-toolbar .sub-menu{
+  font-size: 15px;
+}
 /*CSS to Hide link to RefWorks in user menu dropdown (Feb2020 release) */
 .my-refworks-ctm,
 .my-refworks-separator-ctm{
