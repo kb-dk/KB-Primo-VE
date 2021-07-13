@@ -1,8 +1,10 @@
-<strong ng-if="$ctrl.bodyContent === 'main-menu'">{{ "fulldisplay.help.mainheader" | translate}}</strong>
+<span ng-if="$ctrl.bodyContent === 'main-menu'">{{ "fulldisplay.help.mainheader" | translate}}</span>
 
 <span class="sub-menu" ng-hide="$ctrl.bodyContent === 'main-menu'">
     <a ng-hide="$ctrl.bodyContent === 'main-menu'" href="" ng-click="$ctrl.changeBodyContent('main-menu')">
-            <prm-icon icon-type="svg" svg-icon-set="navigation" icon-definition="ic_arrow_back_24px"
+            <!--<prm-icon icon-type="svg" svg-icon-set="navigation" icon-definition="ic_arrow_back_24px"-->
+                      <!--aria-label="return to help content list"></prm-icon>-->
+            <prm-icon icon-type="svg" svg-icon-set="primo-ui" icon-definition="chevron-left"
                       aria-label="return to help content list"></prm-icon>
         {{"fulldisplay.help.mainheader" | translate}}</a>
     <strong ng-if="$ctrl.bodyContent === 'whats-in-search'">/ {{ "fulldisplay.help.subheader1" | translate}}</strong>

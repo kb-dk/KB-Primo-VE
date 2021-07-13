@@ -10685,8 +10685,8 @@ help-button .search-help-button.md-button.md-focused{
   min-height: 350px;
 }
 #helpMenu md-toolbar md-icon{
-  margin-right:0;
-  width:20px;
+  margin-right:-4px;
+  margin-top: -4px;
 }
 
 #helpMenu md-toolbar .md-button,
@@ -10694,8 +10694,8 @@ help-button .search-help-button.md-button.md-focused{
   color: white;
 }
 #helpMenu md-toolbar .md-toolbar-tools{
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 #helpMenu md-toolbar .md-button{
