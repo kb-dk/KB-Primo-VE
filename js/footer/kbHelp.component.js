@@ -52,7 +52,7 @@ class KbHelpController {
 
 
     _getTexts(){
-        return this.$http.get(`https://api-eu.hosted.exlibrisgroup.com/primo/v1/translations/45KBDK_KGL:KGL?lang=da&apikey=l8xx9dad8184bb0544f48c23c442bcfc0d3e`);
+        return this.$http.get(`/primaws/rest/pub/translations/45KBDK_KGL:KGL?lang=da`);
     }
 
     openHelpMenu() {
