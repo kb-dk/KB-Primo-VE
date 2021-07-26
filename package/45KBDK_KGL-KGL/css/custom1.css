@@ -10652,15 +10652,29 @@ help-button .md-button.md-icon-button.search-help-button{
   transition: 0.3s;
   z-index: 999;
   margin: 0;
+  position: fixed;
+  top: 50%;
+  right:0
 }
 
 help-button .search-help-button.md-button:hover{
-  width: 150px;
+  /*width: 150px;*/
+  width: max-content;
+  padding-right: 40px;
 }
 
 help-button .search-help-button.md-button:hover md-icon:before{
-  content: 'Hjælp til søgning ';
   vertical-align: top;
+}
+
+help-button .search-help-button.md-button span{
+  display:none;
+  float: left;
+  padding-right: 5px;
+}
+
+help-button .search-help-button.md-button:hover span{
+  display: inline;
 }
 
 help-button .search-help-button.md-button:hover md-icon{

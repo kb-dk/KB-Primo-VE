@@ -10649,18 +10649,36 @@ help-button .md-button.md-icon-button.search-help-button{
   background: #0F2E70 0 0 no-repeat padding-box;
   box-shadow: 0 0 6px #32323259;
   border: 1px solid #FFFFFF;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   z-index: 999;
   margin: 0;
+  position: fixed;
+  top: 50%;
+  right:0
 }
 
 help-button .search-help-button.md-button:hover{
-  width: 150px;
+  width: auto;
+  padding-right: 30px;
 }
 
 help-button .search-help-button.md-button:hover md-icon:before{
-  content: 'Hjælp til søgning ';
   vertical-align: top;
+}
+
+help-button .search-help-button.md-button span{
+  display:none;
+  width: 0;
+  float: left;
+  padding-right: 5px;
+}
+
+help-button .search-help-button.md-button:hover span{
+  display: inline;
+  width: auto;
 }
 
 help-button .search-help-button.md-button:hover md-icon{
