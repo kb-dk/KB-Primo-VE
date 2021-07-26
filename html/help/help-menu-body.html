@@ -1,67 +1,13 @@
 <ul ng-if = "$ctrl.bodyContent === 'main-menu'" style="list-style: none; width: 100%; padding-left: 0px;" aria-hidden="false">
-    <hr aria-hidden="true">
-
-    <!-- Hvad søger jeg i? -->
-    <li class="row">
-        <a ng-click="$ctrl.changeBodyContent('whats-in-search')" class="md-primoExplore-theme">
-            <prm-icon svg-icon-set="action" icon-definition="ic_toc_24px" icon-type="svg" style="padding-right: 10px;">
-            </prm-icon>
-            {{ "fulldisplay.help.subheader1" | translate}}
-        </a>
-    </li>
-
-    <!-- Hvordan søger jeg? -->
-    <li class="row">
-        <a ng-click="$ctrl.changeBodyContent('how-to-search')" class="md-primoExplore-theme">
-            <prm-icon svg-icon-set="action" icon-definition="ic_description_24px" icon-type="svg"
+    <li><hr aria-hidden="true"></li>
+    <li class="row" ng-repeat="(index, option) in $ctrl.help.options">
+        <a ng-if="option.subheader !== 'line'" ng-click="$ctrl.changeBodyContent('submenu'+(index+1))" class="md-primoExplore-theme">
+            <prm-icon svg-icon-set={{option.iconset}} icon-definition={{option.icondefinition}} icon-type="svg"
                       style="padding-right: 10px;">
             </prm-icon>
-            {{ "fulldisplay.help.subheader2" | translate}}
+            {{ "fulldisplay.help.subheader" + (index+1) | translate}}
         </a>
+        <hr ng-if="option.subheader === 'line'" aria-hidden="true">
     </li>
-
-    <!-- Fandt du ikke det du søgte? -->
-    <li class="row">
-        <a ng-click="$ctrl.changeBodyContent('didnt-find')" class="md-primoExplore-theme">
-            <prm-icon svg-icon-set="action" icon-definition="ic_swap_horiz_24px" icon-type="svg"
-                      style="padding-right: 10px;">
-            </prm-icon>
-            {{ "fulldisplay.help.subheader3" | translate}}
-        </a>
-    </li>
-
-    <hr aria-hidden="true">
-
-    <!-- Login, passwords, PIN-kode? -->
-    <li class="row">
-        <a ng-click="$ctrl.changeBodyContent('feedback')" class="md-primoExplore-theme">
-            <prm-icon svg-icon-set="action" icon-definition="ic_info_24px" icon-type="svg" style="padding-right: 10px;">
-            </prm-icon>
-            {{ "fulldisplay.help.subheader4" | translate}}
-        </a>
-    </li>
-
-    <!-- Min konto -->
-    <li class="row">
-        <a ng-click="$ctrl.changeBodyContent('account')" class="md-primoExplore-theme">
-            <prm-icon svg-icon-set=action icon-definition="ic_account_box_24px" icon-type="svg"
-                      style="padding-right: 10px;">
-            </prm-icon>
-            {{ "fulldisplay.help.subheader5" | translate}}
-        </a>
-    </li>
-
-    <hr aria-hidden="true">
-
-    <!-- Spørg biblioteket -->
-    <li class="row">
-        <a ng-click="$ctrl.changeBodyContent('ask-us')" class="md-primoExplore-theme">
-            <prm-icon svg-icon-set="communication" icon-definition="ic_forum_24px" icon-type="svg"
-                      style="padding-right: 10px;">
-            </prm-icon>
-            {{ "fulldisplay.help.subheader6" | translate}}
-        </a>
-    </li>
-
-    <hr aria-hidden="true">
+    <li><hr aria-hidden="true"></li>
 </ul>

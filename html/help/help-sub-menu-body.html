@@ -1,6 +1,3 @@
-<span ng-if = "$ctrl.bodyContent === 'whats-in-search'" translate="fulldisplay.help.sub1"></span>
-<span ng-if = "$ctrl.bodyContent === 'how-to-search'" translate="fulldisplay.help.sub2"></span>
-<span ng-if = "$ctrl.bodyContent === 'didnt-find'" translate="fulldisplay.help.sub3"></span>
-<span ng-if = "$ctrl.bodyContent === 'feedback'" translate="fulldisplay.help.sub4"></span>
-<span ng-if = "$ctrl.bodyContent === 'account'" translate="fulldisplay.help.sub5"></span>
-<span ng-if = "$ctrl.bodyContent === 'ask-us'" translate="fulldisplay.help.sub6"></span>
+<div ng-repeat="(index, option) in $ctrl.help.options" >
+    <span ng-if = "$ctrl.bodyContent === 'submenu'+(index+1)" translate= "fulldisplay.help.sub{{index+1}}"></span>
+</div>
