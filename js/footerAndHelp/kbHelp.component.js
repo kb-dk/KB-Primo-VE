@@ -24,7 +24,6 @@ class KbHelpController {
         this._getTranslations()
             .then(response => {
                 this.help = this.createHelpJson(response.data);
-                console.log(this.help);
             })
             .catch(err => {
                 console.log( err);

@@ -6908,7 +6908,7 @@ angular.module('material.components.card', [
  * The `<md-card>` directive is a container element used within `<md-content>` containers.
  *
  * An image included as a direct descendant will fill the card's width, while the `<md-card-content>`
- * container will wrap text content and provide padding. An `<md-card-footer>` element can be
+ * container will wrap text content and provide padding. An `<md-card-footerAndHelp>` element can be
  * optionally included to put content flush against the bottom edge of the card.
  *
  * Action buttons can be included in an `<md-card-actions>` element, similar to `<md-dialog-actions>`.
@@ -6940,7 +6940,7 @@ angular.module('material.components.card', [
  * fit within a single view on a platform, but it can temporarily expand as needed.
  *
  * @usage
- * ### Card with optional footer
+ * ### Card with optional footerAndHelp
  * <hljs lang="html">
  * <md-card>
  *  <img src="card-image.png" class="md-card-image" alt="image caption">
@@ -6948,9 +6948,9 @@ angular.module('material.components.card', [
  *    <h2>Card headline</h2>
  *    <p>Card content</p>
  *  </md-card-content>
- *  <md-card-footer>
- *    Card footer
- *  </md-card-footer>
+ *  <md-card-footerAndHelp>
+ *    Card footerAndHelp
+ *  </md-card-footerAndHelp>
  * </md-card>
  * </hljs>
  *
@@ -13169,7 +13169,7 @@ GridLayoutFactory.$inject = ["$mdUtil"];
  * @restrict E
  * @description
  * Tiles contain the content of an `md-grid-list`. They span one or more grid
- * cells vertically or horizontally, and use `md-grid-tile-{footer,header}` to
+ * cells vertically or horizontally, and use `md-grid-tile-{footerAndHelp,header}` to
  * display secondary content.
  *
  * ### Responsive Attributes
@@ -13198,12 +13198,12 @@ GridLayoutFactory.$inject = ["$mdUtil"];
  * </md-grid-tile>
  * </hljs>
  *
- * With footer:
+ * With footerAndHelp:
  * <hljs lang="html">
  * <md-grid-tile>
- *   <md-grid-tile-footer>
- *     <h3>This is a footer</h3>
- *   </md-grid-tile-footer>
+ *   <md-grid-tile-footerAndHelp>
+ *     <h3>This is a footerAndHelp</h3>
+ *   </md-grid-tile-footerAndHelp>
  * </md-grid-tile>
  * </hljs>
  *

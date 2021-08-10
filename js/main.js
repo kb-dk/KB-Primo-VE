@@ -3,10 +3,10 @@ import {PrmPersonalInfoAfterConfig} from './edit-profile/prmPersonalInfoAfter.co
 import {KbEditProfileConfig} from './edit-profile/kbEditProfile.component';
 
 // Footer
-import {PrmExploreFooterAfterConfig} from './footer/prmExploreFooterAfter.component';
-import {KbFooterConfig} from './footer/kbFooter.component';
+import {PrmExploreFooterAfterConfig} from './footerAndHelp/prmExploreFooterAfter.component';
+import {KbFooterConfig} from './footerAndHelp/kbFooter.component';
 
-import {KbHelpConfig} from './footer/kbHelp.component';
+import {KbHelpConfig} from './footerAndHelp/kbHelp.component';
 
 // Navigation header
 import {PrmTopBarBeforeConfig} from './navigation-header/prmTopBarBefore';
@@ -15,12 +15,6 @@ import {KbNavigationHeaderConfig} from './navigation-header/kbNavigationHeader';
 // Language switcher
 import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandableAfter.component';
 import {KbLanguageConfig} from './language/kbLanguage.component';
-
-// Search tips (help-menu Visual studio addon - https://github.com/bulib/primo-explore-bu/tree/master/packages/help-menu)
-import 'primo-explore-help-menu';
-
-import {list_of_elements_en} from './help-menu/list_of_elements_en';
-import {list_of_elements_da} from './help-menu/list_of_elements_da';
 
 // ChatBox scriptId
 import {scriptIds} from "./chat-box/scriptIds.constant";
@@ -35,7 +29,7 @@ import {PrmServiceButtonAfterConfig} from "./move-request-another-bin/prmService
 import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
 import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
 
-angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
+angular.module('viewCustom', ['angularLoad'])
 
     .constant('viewName', (function () {
             let url = window.location.search.substring(1);
@@ -54,31 +48,6 @@ angular.module('viewCustom', ['angularLoad', 'helpMenuTopbar'])
     })()
     )
 
-    .constant(
-        'helpMenuConfig', (function () {
-            // Find the language from the url
-            let query = window.location.search.substring(1);
-            query = query.substring(query.indexOf('lang') + 5);
-            let lang;
-            if (query.length > 2) {
-                lang = query.substring(0, query.indexOf('&'));
-            } else {
-                lang = query;
-            }
-            // Set the translations according to the language
-            if (lang === 'en'){
-                return {
-                    "list_of_elements": list_of_elements_en ,
-                    "helpMenuTitle": 'Search help'
-                }
-            } else{
-                return {
-                    "list_of_elements": list_of_elements_da,
-                    "helpMenuTitle": 'Hjælp til søgning'
-                }
-            }
-        })(),
-)
     // ChatBox scriptId
     .constant('scriptIds' , scriptIds)
 
