@@ -110,3 +110,26 @@ help-button .search-help-button.md-button.md-focused{
 #helpMenu md-toolbar .sub-menu{
   font-size: 15px;
 }
+
+#helpMenu .help-menu-cover-page{
+  height: 100vh;
+  background-color: #4a667c;
+  width:100%;
+  z-index:79;
+  opacity: 0.48;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+.md-dialog-container#helpMenu .help-menu-cover-page{
+  visibility: visible;
+}
+
+#search-help-dialog{
+z-index: 80;
+}
+
