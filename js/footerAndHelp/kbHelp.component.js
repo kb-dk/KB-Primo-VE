@@ -2,10 +2,9 @@
 class KbHelpController {
 
     constructor($http, $mdDialog, $location, viewName) {
-        this.lang = this.parentCtrl.lang;
         this.$http = $http;
         this.$mdDialog = $mdDialog;
-        this.lang = $location.search().lang;
+        this.lang = $location.search().lang || "da";
         this.bodyContent = 'main-menu';
         this.helpButtonTemplateUrl = 'custom/' + viewName + '/html/help/help-button.html';
         this.helpMenuTemplateUrl = 'custom/' + viewName + '/html/help/help-menu.html';
@@ -16,7 +15,7 @@ class KbHelpController {
     };
 
     $onInit() {
-        console.log(this.lang);
+        console.log('lang:',this.lang);
         this.getHelpTextFromAPI();
     }
 
@@ -36,8 +35,9 @@ class KbHelpController {
         let subheaders = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.help.subheader'));
         help.options = [];
         help.mainHeader = translationObject["fulldisplay.help.mainheader"];
+        let subheadersLength =  subheaders ? subheaders.length : 0;
 
-        for (let i = 0; i < subheaders.length; i++) {
+        for (let i = 0; i < subheadersLength; i++) {
             if (translationObject[`fulldisplay.help.subheader${i + 1}`] === 'line'){
                 help.options.push({
                     subheader: 'line',
