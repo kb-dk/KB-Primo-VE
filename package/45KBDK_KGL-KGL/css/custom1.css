@@ -10607,6 +10607,28 @@ button.s-lch-widget-float-btn{
 .facet-to-left prm-page-nav-menu{
     bottom: 5em;
 }
+.collection-overlay h3 span{
+    color:#002E70;
+}
+
+.collection-overlay h3{
+    margin-left: 0;
+}
+
+.collection-overlay prm-gallery-collection {
+    height: 295px;
+}
+
+prm-gallery-collection .collection-folder .item-title {
+    top: 40px;
+}
+
+.collection-overlay  md-content {
+    max-width: 1280px;
+    margin: auto;
+    margin-top: -38px;
+    background-color: white;
+}
 prm-personal-info md-card md-card-content button.md-button, #personal_settings-focus{
     display: none;
 }

@@ -1,0 +1,22 @@
+prm-collection-discovery h3 span{
+    color:#002E70;
+}
+
+prm-collection-discovery h3{
+    margin-left: 0;
+}
+
+prm-collection-discovery prm-gallery-collection{
+    height: 295px;
+}
+
+prm-collection-discovery .collection-folder .item-title {
+    top: 40px;
+}
+
+prm-collection-discovery  md-content.md-primoExplore-theme{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: -38px;
+    background-color: white;
+}
