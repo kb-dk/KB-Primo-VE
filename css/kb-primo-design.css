@@ -93,6 +93,9 @@ button span[class*="available"],
 button span.fulltext {
   color: #002e70 !important; }
 
+::selection {
+  background: #D6D6D6; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title, #facets .sidebar-header {

@@ -10607,28 +10607,65 @@ button.s-lch-widget-float-btn{
 .facet-to-left prm-page-nav-menu{
     bottom: 5em;
 }
-.collection-overlay h3 span{
+prm-collection-discovery h3 span{
     color:#002E70;
 }
 
-.collection-overlay h3{
+prm-collection-discovery h3{
     margin-left: 0;
 }
 
-.collection-overlay prm-gallery-collection {
-    height: 295px;
+prm-collection-discovery prm-gallery-collection{
+    /*height: 295px;*/
 }
 
-prm-gallery-collection .collection-folder .item-title {
-    top: 40px;
+prm-collection-discovery .collection-folder .item-title {
+    /*top: 40px;*/
 }
 
-.collection-overlay  md-content {
+prm-collection-discovery  md-content.md-primoExplore-theme{
     max-width: 1280px;
     margin: auto;
-    margin-top: -38px;
+    /*margin-top: -38px;*/
     background-color: white;
 }
+
+prm-topbar.transparent-top-bar .top-nav-bar .md-button:not(.disable-hover){
+    color: white;
+}
+
+prm-collection-discovery prm-gallery-item .collection-element .item-title{
+    color:#002E70;
+}
+
+prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color,
+prm-collection-discovery .skewed-divider {
+    color: #CAF0FE!important;
+}
+
+prm-collection-discovery prm-collection-gallery-header .collection-header-inner.has-backdrop-image .collection-info
+{
+    color:white;
+}
+
+prm-collection-discovery figure {
+    height: auto;
+}
+
+prm-collection-discovery prm-gallery-collection,
+prm-collection-discovery prm-gallery-item{
+    box-shadow: 1px 1px 5px 0px rgb(200 200 200);
+}
+
+prm-collection-discovery prm-gallery-collection .collection-folder h3,
+prm-collection-discovery prm-gallery-item .collection-element .item-title,
+prm-collection-navigation-breadcrumbs-item.root-item,
+prm-collection-navigation-breadcrumbs-item.root-item .md-button span{
+    font-weight: 400!important;
+}
+
+
+
 prm-personal-info md-card md-card-content button.md-button, #personal_settings-focus{
     display: none;
 }
@@ -10889,6 +10926,9 @@ prm-explore-main .header {
 button span[class*="available"],
 button span.fulltext {
   color: #002e70 !important; }
+
+::selection {
+  background: #D6D6D6; }
 
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
