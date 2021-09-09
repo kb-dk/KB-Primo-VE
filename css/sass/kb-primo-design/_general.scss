@@ -50,3 +50,7 @@ button span[class*="available"],
 button span.fulltext{
   color: $secondary-color !important;
 }
+
+::selection {
+  background: #D6D6D6;
+}
