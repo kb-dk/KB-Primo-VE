@@ -10607,45 +10607,29 @@ button.s-lch-widget-float-btn{
 .facet-to-left prm-page-nav-menu{
     bottom: 5em;
 }
-prm-collection-discovery h3 span{
-    color:#002E70;
-}
-
 prm-collection-discovery h3{
     margin-left: 0;
-}
-
-prm-collection-discovery prm-gallery-collection{
-    /*height: 295px;*/
-}
-
-prm-collection-discovery .collection-folder .item-title {
-    /*top: 40px;*/
 }
 
 prm-collection-discovery  md-content.md-primoExplore-theme{
     max-width: 1280px;
     margin: auto;
-    /*margin-top: -38px;*/
     background-color: white;
 }
 
-prm-topbar.transparent-top-bar .top-nav-bar .md-button:not(.disable-hover){
+prm-topbar.transparent-top-bar .top-nav-bar .md-button:not(.disable-hover),
+prm-collection-discovery prm-collection-gallery-header .collection-header-inner.has-backdrop-image .collection-info{
     color: white;
 }
 
-prm-collection-discovery prm-gallery-item .collection-element .item-title{
+prm-collection-discovery prm-gallery-item .collection-element .item-title,
+prm-collection-discovery h3 span{
     color:#002E70;
 }
 
 prm-collection-navigation-breadcrumbs-item .md-button.button-as-link.link-alt-color,
 prm-collection-discovery .skewed-divider {
     color: #CAF0FE!important;
-}
-
-prm-collection-discovery prm-collection-gallery-header .collection-header-inner.has-backdrop-image .collection-info
-{
-    color:white;
 }
 
 prm-collection-discovery figure {
