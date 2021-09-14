@@ -11334,3 +11334,7 @@ prm-user-area-expandable button ~ prm-user-area-expandable-after .change-languag
 prm-alma-viewer kb-language{
     display: none;
 }
+
+kb-language button.change-language{
+    text-align: center;
+}
