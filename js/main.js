@@ -6,7 +6,7 @@ import {KbEditProfileConfig} from './edit-profile/kbEditProfile.component';
 import {PrmExploreFooterAfterConfig} from './footerAndHelp/prmExploreFooterAfter.component';
 import {KbFooterConfig} from './footerAndHelp/kbFooter.component';
 
-import {KbHelpConfig} from './footerAndHelp/kbHelp.component';
+//import {KbHelpConfig} from './footerAndHelp/kbHelp.component';
 
 // Navigation header
 import {PrmTopBarBeforeConfig} from './navigation-header/prmTopBarBefore';
@@ -60,7 +60,7 @@ angular.module('viewCustom', ['angularLoad'])
     .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
     .component(KbFooterConfig.name, KbFooterConfig.config)
 
-    .component(KbHelpConfig.name, KbHelpConfig.config)
+   // .component(KbHelpConfig.name, KbHelpConfig.config)
 
     // Navigation header
     .component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)
