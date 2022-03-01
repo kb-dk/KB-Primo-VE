@@ -10914,6 +10914,9 @@ button span.fulltext {
 ::selection {
   background: #D6D6D6; }
 
+.dark-toolbar prm-pre-filters {
+  color: #002e70; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title, #facets .sidebar-header {
