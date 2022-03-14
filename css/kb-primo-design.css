@@ -99,6 +99,12 @@ button span.fulltext {
 .dark-toolbar prm-pre-filters {
   color: #002e70; }
 
+.medium-uppercase-bold {
+  font-size: 1em;
+  margin: 0;
+  color: #002e70;
+  padding-bottom: 20px; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title, #facets .sidebar-header {
