@@ -6,11 +6,11 @@ class KbHelpController {
         this.$mdDialog = $mdDialog;
         this.lang = "da";
         this.bodyContent = 'main-menu';
-        this.helpButtonTemplateUrl = 'custom/' + viewName + '/html/help/help-button.html';
-        this.helpMenuTemplateUrl = 'custom/' + viewName + '/html/help/help-menu.html';
-        this.helpMenuHeaderTemplateUrl = 'custom/' + viewName + '/html/help/help-menu-header.html';
-        this.helpMenuBodyTemplateUrl = 'custom/' + viewName + '/html/help/help-menu-body.html';
-        this.helpSubMenuBodyTemplateUrl = 'custom/' + viewName + '/html/help/help-sub-menu-body.html';
+        this.helpButtonTemplateUrl = 'custom/' + viewName + '/html/help-button/help-button.html';
+        this.helpMenuTemplateUrl = 'custom/' + viewName + '/html/help-button/help-menu.html';
+        this.helpMenuHeaderTemplateUrl = 'custom/' + viewName + '/html/help-button/help-menu-header.html';
+        this.helpMenuBodyTemplateUrl = 'custom/' + viewName + '/html/help-button/help-menu-body.html';
+        this.helpSubMenuBodyTemplateUrl = 'custom/' + viewName + '/html/help-button/help-sub-menu-body.html';
         this.help = {};
     };
 
@@ -97,7 +97,7 @@ export let KbHelpConfig = {
     config: {
         controller: KbHelpController,
         templateUrl: ["viewName", function(viewName){
-            return 'custom/' + viewName + '/html/help/help.html';
+            return 'custom/' + viewName + '/html/help-button/help.html';
         }],
      },
 };
