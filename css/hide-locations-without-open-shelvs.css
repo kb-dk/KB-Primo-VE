@@ -1,0 +1,8 @@
+div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip{
+    display : none;
+}
+
+div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip[data-facet-value*="–ha"],
+div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip[data-facet-value*="–ba"]{
+    display : flex;
+}
