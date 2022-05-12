@@ -1,3 +1,9 @@
+// KB special view home for university thesis
+import {KbHomeConfig} from './home/kbHome.component';
+
+// Special view
+import {PrmPreFiltersAfterConfig} from './special-view/prmPreFiltersAfter.component';
+
 // Edit profile
 import {PrmPersonalInfoAfterConfig} from './edit-profile/prmPersonalInfoAfter.component';
 import {KbEditProfileConfig} from './edit-profile/kbEditProfile.component';
@@ -51,6 +57,12 @@ angular.module('viewCustom', ['angularLoad'])
     // ChatBox scriptId
     .constant('scriptIds' , scriptIds)
 
+
+    // KB special view home for university thesis
+    .component(KbHomeConfig.name, KbHomeConfig.config)
+
+    // Special view
+    .component(PrmPreFiltersAfterConfig.name, PrmPreFiltersAfterConfig.config)
 
     // Edit profile
     .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
