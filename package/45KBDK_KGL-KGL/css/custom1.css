@@ -10794,6 +10794,14 @@ z-index: 80;
 }
 
 
+div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip{
+    display : none;
+}
+
+div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip[data-facet-value*="–ha"],
+div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip[data-facet-value*="–ba"]{
+    display : flex;
+}
 /*CSS to Hide link to RefWorks in user menu dropdown (Feb2020 release) */
 .my-refworks-ctm,
 .my-refworks-separator-ctm{
@@ -10913,6 +10921,15 @@ button span.fulltext {
 
 ::selection {
   background: #D6D6D6; }
+
+.dark-toolbar prm-pre-filters {
+  color: #002e70; }
+
+.medium-uppercase-bold {
+  font-size: 1em;
+  margin: 0;
+  color: #002e70;
+  padding-bottom: 20px; }
 
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
