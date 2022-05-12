@@ -4,10 +4,13 @@ class PrmPreFiltersAfterController {
     }
 
     $postLink() {
-        // Find containers parent element
-        let parentElement = angular.element(document.querySelectorAll('prm-search-bar form > div > div'));
-
-        parentElement.prepend(this.$element.find('div'));
+        // Add this element only in Special view
+        if (window.location.search.indexOf('45KBDK_KGL:SPEC')){
+            // Find parent element
+            let parentElement = angular.element(document.querySelectorAll('prm-search-bar form > div > div'));
+            // Add the element as the first child of the parent
+            parentElement.prepend(this.$element.find('div'));
+        }
     }
 }
 
