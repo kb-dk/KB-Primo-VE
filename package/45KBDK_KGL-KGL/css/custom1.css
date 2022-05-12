@@ -11315,6 +11315,10 @@ prm-request-services prm-service-button button.md-button.button-as-link:hover:no
     background-color: #00193d;
     color: white;
 }
+prm-search-bar .search-scope {
+    padding: 0 1em;
+    background-color: #fff6c4;
+}
 prm-location-items .summary-brief , .text-trim-ellipsis span{
     white-space: normal!important;
     color: #002E70;
