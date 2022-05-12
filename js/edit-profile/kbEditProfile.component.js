@@ -7,6 +7,7 @@ class KbEditProfileController {
         // Move edit-profile button to the desired position
         let container = angular.element(document.querySelector('md-card#personalDetails .md-toolbar-tools'));
         container.append(this.$element);
+        console.log(window.location.href);
     };
 }
 

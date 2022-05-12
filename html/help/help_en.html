@@ -1,0 +1,295 @@
+<header class="help-page">
+    <prm-topbar ng-class="{'transparent-top-bar': $ctrl.isCollectionDiscoveryFocused}">
+        <prm-top-bar-before parent-ctrl="$ctrl"></prm-top-bar-before>
+        <div class="top-nav-bar layout-row" layout="row" tabindex="-1" role="banner">
+            <prm-skip-to tabindex="-1"><!----><a class="md-button md-primoExplore-theme md-ink-ripple" ng-transclude=""
+                                                 href="" tabindex="0" ng-repeat="link in $ctrl.skipLinks track by link"
+                                                 (click)="$ctrl.scrollToElementId(link)"
+                                                 aria-label="Gå til hovedmenuen"><span
+                    translate="">Gå til hovedmenuen</span></a><!----><a
+                    class="md-button md-primoExplore-theme md-ink-ripple" ng-transclude="" href="" tabindex="0"
+                    ng-repeat="link in $ctrl.skipLinks track by link" (click)="$ctrl.scrollToElementId(link)"
+                    aria-label="Gå til søgning"><span translate="">Gå til søgning</span></a><!---->
+                <prm-skip-to-after parent-ctrl="$ctrl"></prm-skip-to-after>
+            </prm-skip-to>
+            <prm-logo><!---->
+                <div class="product-logo" id="banner" aria-label="Bibliotekets hjemmeside" ng-if="!$ctrl.disableLogo"><a
+                        ng-href="" aria-label="Bibliotekets hjemmeside" class="md-primoExplore-theme"></a><!----><!----><a
+                        class="organization-logo md-button md-primoExplore-theme md-ink-ripple" ng-transclude=""
+                        ng-if="::$ctrl.needSref" ui-state="'exploreMain.search'"
+                        ui-state-params="{vid: '45KBDK_KGL:KGL'}" ui-state-opts="{reload: true, inherit: false}"
+                        href="/discovery/search?vid=45KBDK_KGL%3AKGL" ng-click="$ctrl.logoClick()"><!----><img
+                        class="logo-image" ng-if="::!$ctrl.isEmailMode()" id="logoImage" data-logo="email-template"
+                        translate-attr="{ alt: 'nui.header.LogoAlt' }"
+                        ng-src="custom/thumbnails/thumbnail_45KBDK_KGL-KGL.png"
+                        src="custom/thumbnails/thumbnail_45KBDK_KGL-KGL.png" alt="Bibliotekets logo"><!----> <!----></a>
+                    <!----></div><!----><!---->
+                <prm-logo-after parent-ctrl="$ctrl"></prm-logo-after>
+            </prm-logo><!---->
+            <div flex="50" hide-xs="" class="hide-xs flex-50"></div>
+            <prm-main-menu role="navigation"
+                           ng-class="{'isServicePage': $ctrl.isServicePage(), 'isSummonOverAlma': $ctrl.isSummonOverAlma(), 'isDeposit': $ctrl.isDeposit()}"
+                           menu-type="menu" flex="50" hide-xs="" class="hide-xs flex-50"><!---->
+                <div class="layout-full-height" ng-include="::$ctrl.templateUrl">
+                    <div class="top-nav-bar-links buttons-group" id="mainMenu" tabindex="-1" layout="row"
+                         layout-align="center center" flex="100" role="list"><!---->
+                        <div data-main-menu-item="LibrarySearch"
+                             ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()" style="height: 100%"
+                             role="listitem"><!----><!----><a
+                                class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column"
+                                ng-transclude="" ng-if="::urlConfig['sref']"
+                                href="/discovery/search?vid=45KBDK_KGL%3AKGL&amp;lang=da" target=""
+                                ui-state="urlConfig['sref']['state']" ui-state-params="urlConfig['sref']['params']"
+                                ui-state-opts="urlConfig['sref']['opts']" layout="column" layout-align="center center"
+                                (click)="::$ctrl.performAction(urlConfig)"
+                                ng-disabled="::$ctrl.dispalyResourceSharing(urlConfig.url)"
+                                ng-hide="::$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)"
+                                aria-label="Ny <br/>søgning" aria-hidden="false" tabindex="0"><span class="item-content"
+                                                                                                    translate="mainmenu.label.LibrarySearch">Ny <br>søgning</span>
+                            <div class="md-ripple-container" style=""></div>
+                        </a><!----></div><!---->
+                        <div data-main-menu-item="new_user"
+                             ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()" style="height: 100%"
+                             role="listitem"><!----><a
+                                class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column"
+                                ng-transclude="" ng-if="::urlConfig['href']" href="https://www.kb.dk/bliv-bruger"
+                                target="_blank" layout="column" layout-align="center center"
+                                (click)="::$ctrl.performAction(urlConfig)"
+                                ng-disabled="::$ctrl.dispalyResourceSharing(urlConfig.url)"
+                                ng-hide="::$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)"
+                                aria-label="Bliv <br/>bruger, åbner i et nyt vindue" aria-hidden="false"
+                                tabindex="0"><span class="item-content" translate="mainmenu.label.new_user">Bliv <br>bruger</span></a>
+                            <!----><!----></div><!---->
+                        <div data-main-menu-item="kontakt"
+                             ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()"
+                             style="height: 100%;" role="listitem" class=""><!----><a
+                                class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column"
+                                ng-transclude="" ng-if="::urlConfig['href']" href="https://www.kb.dk/spoerg-biblioteket"
+                                target="_blank" layout="column" layout-align="center center"
+                                (click)="::$ctrl.performAction(urlConfig)"
+                                ng-disabled="::$ctrl.dispalyResourceSharing(urlConfig.url)"
+                                ng-hide="::$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)"
+                                aria-label="Spørg <br/>Biblioteket, åbner i et nyt vindue" aria-hidden="false"
+                                tabindex="0"><span class="item-content" translate="mainmenu.label.kontakt">Spørg <br>Biblioteket</span></a>
+                            <!----><!----></div><!---->
+                        <div data-main-menu-item="fandt"
+                             ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()" style="height: 100%"
+                             role="listitem" class=""><!----><a
+                                class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column"
+                                ng-transclude="" ng-if="::urlConfig['href']"
+                                href="https://www.kb.dk/services/laan-og-aflevering/vi-skaffer-det" target="_blank"
+                                layout="column" layout-align="center center" (click)="::$ctrl.performAction(urlConfig)"
+                                ng-disabled="::$ctrl.dispalyResourceSharing(urlConfig.url)"
+                                ng-hide="::$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)"
+                                aria-label="Fandt du ikke det du søgte?, åbner i et nyt vindue" aria-hidden="false"
+                                tabindex="0"><span class="item-content" translate="mainmenu.label.fandt">Fandt du ikke det du søgte?</span></a>
+                            <!----><!----></div><!----><!---->
+                        <prm-top-nav-bar-links-after parent-ctrl="$ctrl"></prm-top-nav-bar-links-after>
+                    </div>
+                    <prm-main-menu-after parent-ctrl="$ctrl"></prm-main-menu-after>
+                </div>
+            </prm-main-menu>
+            <div flex="50" flex-xs="100" class="flex-xs-100 flex-50"></div>
+            <prm-search-bookmark-filter ng-show="$ctrl.displayFavorites"
+                                        class="view-switcher layout-align-end-center layout-row flex-noshrink"
+                                        layout-align="end center" layout="row" flex="noshrink" aria-hidden="false">
+                <!---->
+                <button class="md-icon-button button-over-dark md-button md-primoExplore-theme md-ink-ripple"
+                        type="button" ng-transclude="" ng-click="$ctrl.openQrDialogForUrl()"
+                        ng-if="$ctrl.showQrCodeButton" id="qrCodeScanner" translate-attr="{'aria-label': 'nui.aria.qr'}"
+                        aria-label="qr" md-labeled-by-tooltip="md-tooltip-0">
+                    <prm-icon icon-type="svg" svg-icon-set="primo-actions" icon-definition="qrCode"><!---->
+                        <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
+                    </prm-icon>
+                </button><!----><!---->
+                <div id="fixed-buttons-holder"
+                     ng-class="{'fixed-to-top': $ctrl.fixedToTop(), 'mobile-bookmarkFilter-pos': (($ctrl.isToolBareEnable() &amp;&amp; ($ctrl.mediaQueries.xs || $ctrl.mediaQueries.sm)) ||  ($ctrl.facetToLeft &amp;&amp; $ctrl.mediaQueries.md))}"
+                     ng-style="($ctrl.mediaQueries.xs &amp;&amp; {'right': '0'})" layout="row"
+                     layout-align="center center"
+                     class="layout-align-center-center layout-row mobile-bookmarkFilter-pos" style=""><!----><!----><a
+                        class="md-icon-button button-over-dark md-button md-primoExplore-theme md-ink-ripple"
+                        ng-transclude="" ng-if="!$ctrl.isFavorites" id="favorites-button" aria-label="Mine favoritter"
+                        ng-click="$ctrl.goToFavorties()" ui-state="$ctrl.FAVORITES_STATE"
+                        ui-state-params="$ctrl.favoritesStateParams" ui-sref-opts="{reload: true, inherit:false}"
+                        href="/discovery/favorites?vid=45KBDK_KGL%3AKGL&amp;lang=da&amp;section=items">
+                    <prm-icon class="rotate-25" icon-type="svg" svg-icon-set="primo-ui" icon-definition="prm_pin">
+                        <!---->
+                        <md-icon
+                                ng-if="::($ctrl.iconDefinition &amp;&amp; !$ctrl.isCustom &amp;&amp; !$ctrl.isEmailMode())"
+                                md-svg-icon="primo-ui:prm_pin" role="presentation" class="md-primoExplore-theme">
+                            <svg id="prm_pin_cache11" width="100%" height="100%" viewBox="0 0 24 24" y="0"
+                                 xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet"
+                                 focusable="false">
+                                <path d="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z"></path>
+                            </svg>
+                        </md-icon><!----><!---->
+                        <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
+                    </prm-icon>
+                </a><!----><!----></div>
+                <prm-search-bookmark-filter-after parent-ctrl="$ctrl"></prm-search-bookmark-filter-after>
+            </prm-search-bookmark-filter><!---->
+            <prm-user-area-expandable hide-xs="" ng-show="!$ctrl.mediaQueries.xs" class="hide-xs" aria-hidden="false">
+                <span id="loggedInIndicator" role="alert" class="accessible-only hidden"></span><!---->
+                <button class="user-button sign-in-btn-ctm md-button md-primoExplore-theme md-ink-ripple" type="button"
+                        ng-transclude="" id="signInBtn" ng-click="$ctrl.handleLogin()" ng-if="!$ctrl.isSignedIn()"
+                        translate-attr="{'aria-label': 'nui.aria.signin'}" aria-label="Log ind"><!----><span
+                        ng-if="!$ctrl.isSignedIn()" translate="eshelf.signin.title">LOGIN <i
+                        class="icon icon-account-circle icon-xsmall"></i></span><!----> <!----></button><!----><!---->
+                <md-menu md-position-mode="target-right target" md-offset="0 60"
+                         ng-if="!$ctrl.isSignedIn()&amp;&amp;($ctrl.displayLanguage || $ctrl.showUserArea)"
+                         class="md-menu _md">
+                    <button class="button-with-menu-arrow md-button md-primoExplore-theme md-ink-ripple" type="button"
+                            ng-transclude="" translate-attr="{'aria-label': 'eshelf.signin.menu'}"
+                            ng-click="$mdOpenMenu($event); $ctrl.mainMenuFocusedDialog()" aria-haspopup="true"
+                            aria-expanded="false" aria-owns="menu_container_2" aria-label="Menu"><span
+                            translate="eshelf.signin.menu">Menu</span> <span class="menu-arrow"></span></button>
+                    <div class="_md md-open-menu-container md-whiteframe-z2" id="menu_container_2"
+                         style="display: none;" aria-hidden="true">
+                        <md-menu-content width="4" class="prm-user-menu-content" role="menu"><!----><!---->
+                            <md-menu-item ng-if="$ctrl.displayLanguage" class="my-languages-ctm">
+                                <button class="md-button md-primoExplore-theme md-ink-ripple" type="button"
+                                        ng-transclude="" aria-label="Vis sprog: Dansk Klik for at ændre sprog"
+                                        ng-click="$ctrl.showLoginDialog()" id="changeLang" role="menuitem">
+                                    <prm-icon class="rotate-20" icon-type="svg" svg-icon-set="primo-ui"
+                                              icon-definition="earth"><!---->
+                                        <md-icon
+                                                ng-if="::($ctrl.iconDefinition &amp;&amp; !$ctrl.isCustom &amp;&amp; !$ctrl.isEmailMode())"
+                                                md-svg-icon="primo-ui:earth" role="presentation"
+                                                class="md-primoExplore-theme">
+                                            <svg id="earth_cache12" width="100%" height="100%" viewBox="0 0 24 24"
+                                                 y="1200" xmlns="http://www.w3.org/2000/svg" fit=""
+                                                 preserveAspectRatio="xMidYMid meet" focusable="false">
+                                                <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
+                                            </svg>
+                                        </md-icon><!----><!---->
+                                        <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
+                                    </prm-icon>
+                                    <span translate="eshelf.menu.displayLangNew">Vis sprog:</span>&nbsp; <span
+                                        class="bold-text" translate="mypref.language.option.da">Dansk</span></button>
+                            </md-menu-item><!----><!---->
+                            <md-menu-divider ng-if="::$ctrl.displayLanguage &amp;&amp; $ctrl.showUserArea"
+                                             role="separator"></md-menu-divider><!----><!---->
+                            <md-menu-item class="my-library-card-ctm" ng-if="::$ctrl.showUserArea">
+                                <button class="button-with-icon md-button md-primoExplore-theme md-ink-ripple"
+                                        type="button" ng-transclude="" ng-click="$ctrl.goToMyLibraryCard()"
+                                        translate-attr="{'aria-label': 'nui.aria.menu.librarycard'}" role="menuitem"
+                                        aria-label="Gå til Min konto">
+                                    <prm-icon class="rotate-20" icon-type="svg" svg-icon-set="primo-ui"
+                                              icon-definition="account-card-details"><!---->
+                                        <md-icon
+                                                ng-if="::($ctrl.iconDefinition &amp;&amp; !$ctrl.isCustom &amp;&amp; !$ctrl.isEmailMode())"
+                                                md-svg-icon="primo-ui:account-card-details" role="presentation"
+                                                class="md-primoExplore-theme">
+                                            <svg id="account-card-details_cache13" width="100%" height="100%"
+                                                 viewBox="0 0 24 24" y="1176" xmlns="http://www.w3.org/2000/svg" fit=""
+                                                 preserveAspectRatio="xMidYMid meet" focusable="false">
+                                                <path d="M2,3H22C23.05,3 24,3.95 24,5V19C24,20.05 23.05,21 22,21H2C0.95,21 0,20.05 0,19V5C0,3.95 0.95,3 2,3M14,6V7H22V6H14M14,8V9H21.5L22,9V8H14M14,10V11H21V10H14M8,13.91C6,13.91 2,15 2,17V18H14V17C14,15 10,13.91 8,13.91M8,6A3,3 0 0,0 5,9A3,3 0 0,0 8,12A3,3 0 0,0 11,9A3,3 0 0,0 8,6Z"></path>
+                                            </svg>
+                                        </md-icon><!----><!---->
+                                        <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
+                                    </prm-icon>
+                                    <span translate="nui.menu.librarycard">Min konto</span></button>
+                            </md-menu-item><!----><!----><!---->
+                            <md-menu-divider ng-if="::$ctrl.showUserArea" role="separator"></md-menu-divider><!---->
+                            <!---->
+                            <md-menu-item class="my-refworks-ctm"
+                                          ng-if="::$ctrl.isRefworksActionEnabled() &amp;&amp; $ctrl.showUserArea"><a
+                                    class="button-with-icon refworks-user-area-btn md-button md-primoExplore-theme md-ink-ripple"
+                                    ng-transclude="" href="https://refworks.proquest.com/"
+                                    ng-click="$ctrl.refworksWithBeacon()" target="refworks-window"
+                                    translate-attr="{'aria-label': 'nui.aria.refWorks'}" role="menuitem"
+                                    aria-label="Gå til RefWorks, åbner i et nyt vindue">
+                                <prm-icon icon-type="svg" svg-icon-set="primo-actions" icon-definition="refworks">
+                                    <!---->
+                                    <md-icon
+                                            ng-if="::($ctrl.iconDefinition &amp;&amp; !$ctrl.isCustom &amp;&amp; !$ctrl.isEmailMode())"
+                                            md-svg-icon="primo-actions:refworks" role="presentation"
+                                            class="md-primoExplore-theme">
+                                        <svg id="refworks_cache10" width="100%" height="100%" viewBox="0 0 24 24"
+                                             y="168" version="1.1" xmlns="http://www.w3.org/2000/svg" fit=""
+                                             preserveAspectRatio="xMidYMid meet" focusable="false">
+                                            <path d="M0,0 L24,0 L24,23.94 L0,23.94 L0,0 Z M8.007,10.785 C8.007,11.381 7.855,11.843 7.553,12.171 C7.251,12.499 6.789,12.663 6.167,12.663 C6.049,12.663 5.934,12.657 5.821,12.644 C5.707,12.631 5.625,12.616 5.575,12.598 L5.575,9.101 C5.667,9.058 5.781,9.021 5.915,8.991 C6.049,8.961 6.201,8.946 6.369,8.946 C6.957,8.946 7.377,9.097 7.629,9.399 C7.881,9.701 8.007,10.163 8.007,10.785 Z M8.057,17.041 L9.834,17.041 L7.251,13.091 L7.251,13.065 C7.595,13.039 7.91,12.966 8.196,12.845 C8.481,12.724 8.725,12.562 8.926,12.359 C9.128,12.156 9.285,11.914 9.399,11.633 C9.512,11.353 9.569,11.044 9.569,10.707 C9.569,9.87 9.306,9.209 8.781,8.725 C8.256,8.242 7.452,8 6.369,8 C5.865,8 5.411,8.048 5.008,8.142 C4.605,8.238 4.269,8.358 4,8.505 L4,17.041 L5.575,17.041 L5.575,13 L5.6,13 L8.057,17.041 Z M18.87,16.79 L20.892,8 L19.394,8 L18.256,13.749 C18.23,13.903 18.204,14.06 18.179,14.222 C18.153,14.384 18.136,14.508 18.128,14.593 C18.119,14.678 18.115,14.729 18.115,14.746 L18.089,14.746 C18.089,14.729 18.083,14.678 18.07,14.593 C18.057,14.508 18.038,14.384 18.012,14.222 C17.987,14.06 17.957,13.903 17.923,13.749 L16.605,8 L15.402,8 L14.071,13.749 C14.037,13.911 14.005,14.071 13.975,14.229 C13.945,14.386 13.924,14.51 13.911,14.599 C13.898,14.689 13.892,14.738 13.892,14.746 L13.866,14.746 C13.866,14.738 13.86,14.689 13.847,14.599 C13.834,14.51 13.815,14.386 13.79,14.229 C13.764,14.071 13.738,13.911 13.713,13.749 L12.625,8 L11,8 L13.022,16.79 L14.455,16.79 L15.76,11.411 C15.828,11.156 15.884,10.836 15.927,10.453 L15.952,10.453 C15.995,10.845 16.05,11.164 16.119,11.411 L17.437,16.79 L18.87,16.79 Z"></path>
+                                        </svg>
+                                    </md-icon><!----><!---->
+                                    <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
+                                </prm-icon>
+                                <span translate="eshelf.menu.refworks">RefWorks</span></a></md-menu-item><!----><!---->
+                            <md-menu-divider class="my-refworks-separator-ctm"
+                                             ng-if="::$ctrl.isRefworksActionEnabled()  &amp;&amp; $ctrl.showUserArea"
+                                             role="separator"></md-menu-divider><!----><!---->
+                            <md-menu-item class="my-favorties-ctm"
+                                          ng-if="::$ctrl.showUserArea &amp;&amp; !$ctrl.isSummonOverAlma()">
+                                <button class="button-with-icon md-button md-primoExplore-theme md-ink-ripple"
+                                        type="button" ng-transclude="" ng-click="$ctrl.goToFavorties()"
+                                        ui-state="$ctrl.FAVORITES_STATE" ui-state-params="$ctrl.favoritesStateParams"
+                                        ui-sref-opts="{reload: true, inherit:false}"
+                                        translate-attr="{'aria-label': 'nui.aria.favorites.goFavorites'}"
+                                        role="menuitem"
+                                        href="/discovery/favorites?vid=45KBDK_KGL%3AKGL&amp;lang=da&amp;section=items"
+                                        aria-label="Mine favoritter">
+                                    <prm-icon class="rotate-25" icon-type="svg" svg-icon-set="primo-ui"
+                                              icon-definition="prm_pin"><!---->
+                                        <md-icon
+                                                ng-if="::($ctrl.iconDefinition &amp;&amp; !$ctrl.isCustom &amp;&amp; !$ctrl.isEmailMode())"
+                                                md-svg-icon="primo-ui:prm_pin" role="presentation"
+                                                class="md-primoExplore-theme">
+                                            <svg id="prm_pin_cache14" width="100%" height="100%" viewBox="0 0 24 24"
+                                                 y="0" xmlns="http://www.w3.org/2000/svg" fit=""
+                                                 preserveAspectRatio="xMidYMid meet" focusable="false">
+                                                <path d="M16,12V4H17V2H7V4H8V12L6,14V16H11.2V22H12.8V16H18V14L16,12Z"></path>
+                                            </svg>
+                                        </md-icon><!----><!---->
+                                        <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
+                                    </prm-icon>
+                                    <span translate="eshelf.menu.savedItems">Mine favoritter</span></button>
+                            </md-menu-item><!----><!---->
+                            <md-menu-item class="my-search-history-ctm"
+                                          ng-if="::$ctrl.showUserArea &amp;&amp; !$ctrl.isSummonOverAlma()">
+                                <button class="button-with-icon md-button md-primoExplore-theme md-ink-ripple"
+                                        type="button" ng-transclude="" ng-click="$ctrl.goToSearchHistory()"
+                                        ui-state="$ctrl.FAVORITES_STATE" ui-state-params="$ctrl.searchHistoryParams"
+                                        ui-sref-opts="{reload: true, inherit:false}"
+                                        translate-attr="{'aria-label': 'nui.aria.goHistory'}"
+                                        (keydown)="$ctrl.keydownSupportSignOut($event)" role="menuitem"
+                                        href="/discovery/favorites?vid=45KBDK_KGL%3AKGL&amp;lang=da&amp;section=search_history"
+                                        aria-label="Gå til søgehistorik">
+                                    <prm-icon class="rotate-25" icon-type="svg" svg-icon-set="primo-ui"
+                                              icon-definition="restore"><!---->
+                                        <md-icon
+                                                ng-if="::($ctrl.iconDefinition &amp;&amp; !$ctrl.isCustom &amp;&amp; !$ctrl.isEmailMode())"
+                                                md-svg-icon="primo-ui:restore" role="presentation"
+                                                class="md-primoExplore-theme">
+                                            <svg id="restore_cache15" width="100%" height="100%" viewBox="0 0 24 24"
+                                                 y="1032" xmlns="http://www.w3.org/2000/svg" fit=""
+                                                 preserveAspectRatio="xMidYMid meet" focusable="false">
+                                                <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path>
+                                            </svg>
+                                        </md-icon><!----><!---->
+                                        <prm-icon-after parent-ctrl="$ctrl"></prm-icon-after>
+                                    </prm-icon>
+                                    <span translate="eshelf.menu.searchHistory">Søgehistorik</span></button>
+                            </md-menu-item><!----></md-menu-content>
+                    </div>
+                </md-menu><!----><!---->
+                <prm-user-area-expandable-after parent-ctrl="$ctrl">
+                    <kb-language parent-ctrl="$ctrl.parentCtrl">
+                        <button class="change-language md-no-style md-button md-ink-ripple width-100"
+                                ng-click="$ctrl.changeLanguage()" aria-label="">
+                            <span translate="nui.menu.language">IN ENGLISH</span>
+                        </button>
+                    </kb-language>
+                </prm-user-area-expandable-after>
+            </prm-user-area-expandable>
+        </div>
+        <prm-topbar-after parent-ctrl="$ctrl"></prm-topbar-after>
+    </prm-topbar>
+</header>
+
+<article class="help-page" layout="row">
+    <div flex="100" layout="column" class="inner-content grid-container">
+        <div class="body-wrapper cell small-12">
+            hi
+        </div>
+    </div>
+
+</article>

@@ -49,7 +49,7 @@ button, .md-button {
   //width: 10% !important;
 }
 
-.search-elements-wrapper {
+.search-elements-wrapper, .body-wrapper {
   padding-left: 1em;
 }
 
@@ -60,14 +60,28 @@ button, .md-button {
   display: flex;
 }
 
-.search-elements-wrapper{
+.search-elements-wrapper {
   max-width: 80% !important;
 }
+
 prm-atoz-search-bar div.layout-column.flex-sm-85.flex-md-75.flex.flex-lg-55.flex-xl-50 {
   max-width: 100% !important;
 }
 
 // Hide the menu button when user is not logged in
-md-menu.md-menu._md button.button-with-menu-arrow:not(.user-menu-button){
+md-menu.md-menu._md button.button-with-menu-arrow:not(.user-menu-button) {
   display: none;
+}
+
+header.help-page {
+  display: flex;
+  flex-direction: column;
+
+  kb-navigation-header {
+    order: -1;
+  }
+}
+
+article.help-page{
+  margin-top: 2rem;
 }
