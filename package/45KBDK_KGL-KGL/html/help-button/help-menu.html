@@ -1,0 +1,25 @@
+<div ng-if="$ctrl.help !== {}" class="" id="helpMenu">
+    <div class="help-menu-cover-page" ng-click="$ctrl.hideHelpMenu()"></div>
+    <md-dialog id="search-help-dialog" aria-label="Search Help Menu Dialog" style="width: 500px;">
+        <form>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <help-menu-header-content ng-include="$ctrl.helpMenuHeaderTemplateUrl"></help-menu-header-content>
+                    <span flex></span>
+                    <md-button class="md-icon-button md-button md-primoExplore-theme md-ink-ripple" ng-click="$ctrl.hideHelpMenu()">
+                        <prm-icon aria-label="Close dialog" icon-type="svg" svg-icon-set="navigation" icon-definition="ic_close_24px"></prm-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-dialog-content>
+                <div class="md-dialog-content">
+                    <help-menu-body-content ng-include="$ctrl.helpMenuBodyTemplateUrl"></help-menu-body-content>
+                    <help-menu-body-content ng-include="$ctrl.helpSubMenuBodyTemplateUrl"></help-menu-body-content>
+                </div>
+            </md-dialog-content>
+            <md-dialog-actions layout="row">
+                <md-button ng-click="openHelpInNewWindow(entry.id)">Open in New Window</md-button>
+            </md-dialog-actions>
+        </form>
+    </md-dialog>
+</div>

@@ -4,13 +4,22 @@ class PrmPreFiltersAfterController {
     }
 
     $postLink() {
-        // Add this element only in Special view
-        if (window.location.search.indexOf('45KBDK_KGL:SPEC')){
+        // Do these operations only in Special view
+        if (window.location.search.indexOf('45KBDK_KGL:SPEC')) {
+            // 1- Move the yellow search scope element into the search bar
             // Find parent element
             let parentElement = angular.element(document.querySelectorAll('prm-search-bar form > div > div'));
             // Add the element as the first child of the parent
             parentElement.prepend(this.$element.find('div'));
+
+
+            // 2- Change placeholder text in the search bar
+            let placeHolderSpan = document.getElementById('specialViewSearchPlaceholder');
+            console.log(angular.element(placeHolderSpan));
         }
+
+
+
     }
 }
 

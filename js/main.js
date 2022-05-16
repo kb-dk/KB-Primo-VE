@@ -8,6 +8,10 @@ import {PrmPreFiltersAfterConfig} from './special-view/prmPreFiltersAfter.compon
 import {PrmPersonalInfoAfterConfig} from './edit-profile/prmPersonalInfoAfter.component';
 import {KbEditProfileConfig} from './edit-profile/kbEditProfile.component';
 
+// Help page
+import {KbHelpPageConfig} from './help-page/kbHelpPage.component';
+import {KbHelpPageHeaderConfig} from './help-page/kbHelpPageHeader.component';
+
 // Footer
 import {PrmExploreFooterAfterConfig} from './footerAndHelp/prmExploreFooterAfter.component';
 import {KbFooterConfig} from './footerAndHelp/kbFooter.component';
@@ -57,6 +61,9 @@ angular.module('viewCustom', ['angularLoad'])
     // ChatBox scriptId
     .constant('scriptIds' , scriptIds)
 
+    // Help page
+    .component(KbHelpPageHeaderConfig.name, KbHelpPageHeaderConfig.config)
+    .component(KbHelpPageConfig.name, KbHelpPageConfig.config)
 
     // KB special view home for university thesis
     .component(KbHomeConfig.name, KbHomeConfig.config)

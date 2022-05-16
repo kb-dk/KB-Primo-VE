@@ -173,7 +173,7 @@ button, .md-button {
 .top-nav-bar > div.flex-50, .layout-row > .flex-0 {
   display: none; }
 
-.search-elements-wrapper {
+.search-elements-wrapper, .body-wrapper {
   padding-left: 1em; }
 
 .top-nav-bar-links {
@@ -190,6 +190,15 @@ prm-atoz-search-bar div.layout-column.flex-sm-85.flex-md-75.flex.flex-lg-55.flex
 
 md-menu.md-menu._md button.button-with-menu-arrow:not(.user-menu-button) {
   display: none; }
+
+header.help-page {
+  display: flex;
+  flex-direction: column; }
+  header.help-page kb-navigation-header {
+    order: -1; }
+
+article.help-page {
+  margin-top: 2rem; }
 
 .prm-secondary-color.prm-hue1,
 .link-alt-color,
