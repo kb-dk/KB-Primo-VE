@@ -1,0 +1,13 @@
+<ul ng-if = "$ctrl.bodyContent === 'main-menu'" style="list-style: none; width: 100%; padding-left: 0px;" aria-hidden="false">
+    <li><hr aria-hidden="true"></li>
+    <li class="row" ng-repeat="(index, option) in $ctrl.help.options">
+        <a ng-if="option.subheader !== 'line'" ng-click="$ctrl.changeBodyContent('submenu'+(index+1))" class="md-primoExplore-theme">
+            <prm-icon svg-icon-set={{option.iconset}} icon-definition={{option.icondefinition}} icon-type="svg"
+                      style="padding-right: 10px;">
+            </prm-icon>
+            {{ "fulldisplay.help.subheader" + (index+1) | translate}}
+        </a>
+        <hr ng-if="option.subheader === 'line'" aria-hidden="true">
+    </li>
+    <li><hr aria-hidden="true"></li>
+</ul>
