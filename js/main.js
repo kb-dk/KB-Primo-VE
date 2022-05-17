@@ -1,3 +1,6 @@
+// General services
+import {GetTranslationsService } from "./services/getTranslations.service";
+
 // KB special view home for university thesis
 import {KbHomeConfig} from './home/kbHome.component';
 
@@ -60,6 +63,9 @@ angular.module('viewCustom', ['angularLoad'])
 
     // ChatBox scriptId
     .constant('scriptIds' , scriptIds)
+
+    // General services
+    .service('getTranslationsService', GetTranslationsService)
 
     // Help page
     .component(KbHelpPageHeaderConfig.name, KbHelpPageHeaderConfig.config)

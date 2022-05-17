@@ -1,7 +1,8 @@
 
 class KbHelpController {
 
-    constructor($http, $location, $mdDialog, viewName) {
+    constructor($http, $location, $mdDialog, viewName, getTranslationsService) {
+        this.getTranslationsService = getTranslationsService;
         this.$http = $http;
         this.$mdDialog = $mdDialog;
         this.lang = "da";
@@ -15,12 +16,11 @@ class KbHelpController {
     };
 
         $onInit() {
-            console.log('lang:',this.lang);
             this.getHelpTextFromAPI();
         }
 
         getHelpTextFromAPI(){
-            this._getTranslations()
+            this._getTranslations(this.lang)
                 .then(response => {
                     this.help = this.createHelpJson(response.data);
                 })
@@ -56,8 +56,10 @@ class KbHelpController {
 
 
         _getTranslations(){
-            return this.$http.get(`/primaws/rest/pub/translations/45KBDK_KGL:KGL?lang=${this.lang}`);
+            return this.getTranslationsService._getTranslations();
         }
+
+
 
     openHelpMenu() {
         this.bodyContent = 'main-menu';
@@ -90,7 +92,7 @@ class KbHelpController {
 
 }
 
-KbHelpController.$inject = ['$http', '$location', '$mdDialog', 'viewName'];
+KbHelpController.$inject = ['$http', '$location', '$mdDialog', 'viewName', 'getTranslationsService'];
 
 export let KbHelpConfig = {
     name: 'kbHelp',

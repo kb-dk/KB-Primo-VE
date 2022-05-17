@@ -11328,6 +11328,18 @@ prm-search-bar .search-scope {
     padding: 0 1em;
     background-color: #fff6c4;
 }
+
+#searchBar.hidePlaceholder::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0; /* Firefox */
+}
+
+#searchBar.hidePlaceholder:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    opacity: 0;
+}
+
+#searchBar.hidePlaceholder::-ms-input-placeholder { /* Microsoft Edge */
+    opacity: 0;
+}
 prm-location-items .summary-brief , .text-trim-ellipsis span{
     white-space: normal!important;
     color: #002E70;
