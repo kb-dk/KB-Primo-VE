@@ -7,12 +7,12 @@ class PrmPreFiltersAfterController {
 
     $postLink() {
         // Do these operations only in Special view
-        if (this.location.search().vid === '45KBDK_KGL:SPEC') {
+        if (this.location.search().vid.indexOf("SPEC") || this.location.search().vid.indexOf("spec")) {
             // 1- Move the yellow search scope element into the search bar
             // Find parent element
-            let parentElement = angular.element(document.querySelectorAll('prm-search-bar form > div > div'));
+            let parentElement = angular.element(document.querySelector('prm-search-bar form > div > div'));
             // Add the element as the first child of the parent
-            parentElement.prepend(this.$element.find('div'));
+            parentElement.prepend(document.getElementById('specialViewSearchScope'));
 
 
             // 2- Change placeholder text in the search bar
