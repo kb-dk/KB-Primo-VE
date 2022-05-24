@@ -20,7 +20,7 @@ class PrmPreFiltersAfterController {
             // Get the translation from the API
             // Wait 500 milliseconds, so the default translation for placeholder comes first
             // And then overwrite the placeholder text and make it visible
-            let lang = this.location.search().lang;
+            let lang = this.location.search().lang || 'da';
             angular.element(document.getElementById('searchBar')).addClass('hidePlaceholder');
             this.changeSearchBarPlaceholder(lang);
         }
