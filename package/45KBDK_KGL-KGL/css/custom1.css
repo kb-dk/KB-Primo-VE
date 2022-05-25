@@ -10658,6 +10658,29 @@ prm-personal-info md-card md-card-content button.md-button, #personal_settings-f
   -webkit-appearance: textfield;
 }
 
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+    color: #0F2E70;
+}
+
+#toc_container a{
+    text-decoration: none;
+}
 /*!*Styles for primo-explore-help-menu: MW 20190409 *!*/
 
 #search-help-menu-content h2 {font-weight: 500;}
@@ -10906,8 +10929,24 @@ prm-search-result-list prm-search-result-tool-bar {
     background-color: white;
     padding-left: 1rem !important; }
 
-prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top {
-  top: 6em !important; }
+prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top,
+kb-help-page #fixedButtonsHolder{
+  top: 8em !important; }
+
+kb-help-page #fixedButtonsHolder{
+  visibility: hidden;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 15;
+  animation: animateStickyButtonIn .7s cubic-bezier(.25,.8,.25,1) forwards;
+}
+
+kb-help-page #fixedButtonsHolder button{
+  color: #080606;
+  background-color: rgba(58, 58, 58, 0.1);
+  transition: opacity .1s ease-in-out;
+}
 
 prm-explore-main .header {
   z-index: 15; }

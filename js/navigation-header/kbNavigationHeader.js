@@ -6,7 +6,6 @@ class KbNavigationHeaderController {
     $postLink() {
         // Find containers parent element
         let parentElement = this.$element.parent().parent().parent().parent();
-        console.log(parentElement);
         // Move navigation header to the top
         let container = angular.element(parentElement.children()[0]);
         container.append(this.$element);
