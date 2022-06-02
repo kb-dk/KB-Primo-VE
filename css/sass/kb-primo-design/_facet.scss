@@ -1,5 +1,6 @@
 #facets {
-  .section-title, .sidebar-header {
+  .section-title,
+  .sidebar-header {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -8,7 +9,8 @@
     margin-bottom: 0;
   }
 
-  h3.section-title-header, strong {
+  h3.section-title-header,
+  strong {
     margin-left: 0;
     font-weight: 400 !important;
   }
@@ -19,15 +21,16 @@
     top: 0;
   }
 
-  div.md-chip, button.button-as-link {
+  div.md-chip,
+  button.button-as-link {
     width: 100%;
   }
 
-  prm-facet-range button.button-as-link{
+  prm-facet-range button.button-as-link {
     width: 71px;
   }
 
-  md-icon[md-svg-icon="primo-ui:exclude-facet"]{
+  md-icon[md-svg-icon="primo-ui:exclude-facet"] {
     position: relative;
   }
 
@@ -37,11 +40,12 @@
   }
 
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */
-  .sidebar-inner-wrapper{
+  .sidebar-inner-wrapper {
     display: flex;
     flex-direction: column;
   }
-  .sidebar-inner-wrapper .sidebar-section:nth-child(2){
-    order:-5;
+
+  .sidebar-inner-wrapper .sidebar-section:nth-child(2) {
+    order: -5;
   }
 }

@@ -681,6 +681,307 @@ md-list.prm-list.prm-linkable-list-items .md-button.arrow-link-button md-list-it
     color: #7d1538; }
 .prm-personalization-bg, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked .md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked ._md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked .md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked ._md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked .md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked ._md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked .md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked ._md-thumb, .sidebar .personalization-section md-checkbox.md-checked .md-icon, .sidebar .personalization-section .sidebar-list li:before, .sidebar .personalization-section ul li:before {
     background-color: #7d1538; }
+
+
+prm-facet .switch-results .md-button md-switch._md-checked ._md-label,
+prm-facet .switch-results .md-button md-switch._md-checked .md-label,
+prm-facet .switch-results .md-button md-switch.md-checked ._md-label,
+prm-facet .switch-results .md-button md-switch.md-checked .md-label {
+    color: #002e70;
+}
+
+.bar prm-authentication .md-button.link-alt-color._md-focused:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color.hovered:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color.md-focused:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color:focus:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color:hover:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button._md-focused:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button.hovered:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button.md-focused:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button:focus:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button:hover:not([disabled]),
+.bar prm-authentication prm-facet .switch-results .md-button._md-focused.active:not([disabled]),
+.bar prm-authentication prm-facet .switch-results .md-button.active:focus:not([disabled]),
+.bar prm-authentication prm-facet .switch-results .md-button.active:hover:not([disabled]),
+.bar prm-authentication prm-facet .switch-results .md-button.hovered.active:not([disabled]),
+.bar prm-authentication prm-facet .switch-results .md-button.md-focused.active:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions ._md-focused.md-button:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions .hovered.md-button:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-button:focus:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-button:hover:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-focused.md-button:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button._md-focused:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button.hovered:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button.md-focused:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button:focus:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button:hover:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions ._md-focused.md-button:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions .hovered.md-button:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions .md-button:focus:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions .md-button:hover:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions .md-focused.md-button:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button._md-focused:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button.hovered:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button.md-focused:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button:focus:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button:hover:not([disabled]),
+.md-button.button-as-link.link-alt-color._md-focused:not([disabled]),
+.md-button.button-as-link.link-alt-color.hovered:not([disabled]),
+.md-button.button-as-link.link-alt-color.md-focused:not([disabled]),
+.md-button.button-as-link.link-alt-color:focus:not([disabled]),
+.md-button.button-as-link.link-alt-color:hover:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button._md-focused:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button.hovered:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button.md-focused:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button:focus:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button:hover:not([disabled]),
+.section-title prm-icon.md-button.button-as-link._md-focused:not([disabled]),
+.section-title prm-icon.md-button.button-as-link.hovered:not([disabled]),
+.section-title prm-icon.md-button.button-as-link.md-focused:not([disabled]),
+.section-title prm-icon.md-button.button-as-link:focus:not([disabled]),
+.section-title prm-icon.md-button.button-as-link:hover:not([disabled]),
+prm-facet .switch-results .bar prm-authentication .md-button._md-focused.active:not([disabled]),
+prm-facet .switch-results .bar prm-authentication .md-button.active:focus:not([disabled]),
+prm-facet .switch-results .bar prm-authentication .md-button.active:hover:not([disabled]),
+prm-facet .switch-results .bar prm-authentication .md-button.hovered.active:not([disabled]),
+prm-facet .switch-results .bar prm-authentication .md-button.md-focused.active:not([disabled]),
+prm-facet .switch-results .md-button.button-as-link._md-focused.active:not([disabled]),
+prm-facet .switch-results .md-button.button-as-link.active:focus:not([disabled]),
+prm-facet .switch-results .md-button.button-as-link.active:hover:not([disabled]),
+prm-facet .switch-results .md-button.button-as-link.hovered.active:not([disabled]),
+prm-facet .switch-results .md-button.button-as-link.md-focused.active:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions ._md-focused.md-button:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions .hovered.md-button:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions .md-button:focus:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions .md-button:hover:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions .md-focused.md-button:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button._md-focused:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button.hovered:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button.md-focused:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button:focus:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button:hover:not([disabled]) {
+    color: #fff;
+    background-color: #002e70;
+}
+
+prm-facet .switch-results .md-button md-switch._md-checked ._md-thumb,
+prm-facet .switch-results .md-button md-switch._md-checked .md-thumb,
+prm-facet .switch-results .md-button md-switch.md-checked ._md-thumb,
+prm-facet .switch-results .md-button md-switch.md-checked .md-thumb {
+    color: #002e70;
+    background-color: #002e70;
+}
+
+prm-facet .switch-results .md-button md-switch._md-checked ._md-bar,
+prm-facet .switch-results .md-button md-switch._md-checked .md-bar,
+prm-facet .switch-results .md-button md-switch.md-checked ._md-bar,
+prm-facet .switch-results .md-button md-switch.md-checked .md-bar {
+    color: #002e70;
+    background-color: #002e70;
+    opacity: .4;
+}
+
+prm-facet-exact .section-title:focus span,
+prm-facet-exact .section-title:hover span {
+    color: #002e70;
+}
+
+prm-personalize-results-button button:hover,
+prm-add-query-to-saved-searches button:hover{
+    color: white!important;
+}
+
+prm-main-menu[menu-type=full] .md-button .md-headline,
+prm-main-menu[menu-type=full] .overlay-menu-item .md-headline {
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #96E2FD;
+}
+
+.md-button.arrow-link-button prm-main-menu[menu-type=full] .button-content:focus span,
+.md-button.arrow-link-button prm-main-menu[menu-type=full] .button-content:hover span,
+prm-main-menu[menu-type=full] .md-button.arrow-link-button .button-content:focus span,
+prm-main-menu[menu-type=full] .md-button.arrow-link-button .button-content:hover span,
+prm-main-menu[menu-type=full] .recommendations-title.hover>span>span span,
+p
+rm-main-menu[menu-type=full] .recommendations-title:hover>span>span span,
+prm-main-menu[menu-type=full] a:focus span,
+prm-main-menu[menu-type=full] a:hover span,
+prm-main-menu[menu-type=full] prm-tags-list .md-chips .md-chip .md-chip-content:hover strong span,
+prm-main-menu[menu-type=full] prm-tags-list .md-chips md-chip .md-chip-content:hover strong span,
+prm-main-menu[menu-type=full] prm-tags-list md-chips .md-chip .md-chip-content:hover strong span,
+prm-main-menu[menu-type=full] prm-tags-list md-chips md-chip .md-chip-content:hover strong span,
+prm-tags-list .md-chips .md-chip .md-chip-content:hover prm-main-menu[menu-type=full] strong span,
+prm-tags-list .md-chips md-chip .md-chip-content:hover prm-main-menu[menu-type=full] strong span,
+prm-tags-list md-chips .md-chip .md-chip-content:hover prm-main-menu[menu-type=full] strong span,
+prm-tags-list md-chips md-chip .md-chip-content:hover prm-main-menu[menu-type=full] strong span {
+    color: #002e70!important;
+}
+
+.hoverable-over-dark:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+.hoverable-over-dark:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+.md-button.button-over-dark:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]):focus,
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]):focus,
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]):focus,
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .md-button .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled]):hover:not([disabled]):focus,
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .md-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]):focus,
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]):focus,
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]):focus,
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .md-button md-select:not(.disable-hover):hover:not([disabled]):hover:not([disabled]):focus,
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]):focus,
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]):focus,
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]):focus,
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy>.md-select-dummy:not(.disable-hover):hover:not([disabled]):hover:not([disabled]):focus,
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]):focus,
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]):focus,
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]):focus,
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] .overlay-menu-item md-select:not(.disable-hover):hover:not([disabled]):hover:not([disabled]):focus,
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-main-menu[menu-type=full] md-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-topbar .md-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-user-area .md-button.user-menu-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled])._md-focused:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled]).hovered:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled]).md-focused:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled]):focus:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):focus:not([disabled]):hover:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled])._md-focused:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]).hovered:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]).md-focused:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]):focus:not([disabled]),
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]):hover:not([disabled]) {
+    color: #002e70;
+    background-color: #fff;
+}
+
+.md-dialog-container.fixed-container {
+    height: 100%!important;
+    position: fixed!important;
+    top: 0!important;
+    background-color: rgba(0, 46, 112,.9);
+}
+
+.close-button.full-view-navigation prm-icon md-icon.md-primoExplore-theme {
+    color: white!important;
+}
 @charset "UTF-8";
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -10668,11 +10969,6 @@ prm-personal-info md-card md-card-content button.md-button, #personal_settings-f
     width: auto;
 }
 
-.toc_title {
-    font-weight: 700;
-    text-align: center;
-}
-
 #toc_container li, #toc_container ul, #toc_container ul li{
     list-style: outside none none !important;
     color: #0F2E70;
@@ -10929,24 +11225,8 @@ prm-search-result-list prm-search-result-tool-bar {
     background-color: white;
     padding-left: 1rem !important; }
 
-prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top,
-kb-help-page #fixedButtonsHolder{
-  top: 8em !important; }
-
-kb-help-page #fixedButtonsHolder{
-  visibility: hidden;
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  z-index: 15;
-  animation: animateStickyButtonIn .7s cubic-bezier(.25,.8,.25,1) forwards;
-}
-
-kb-help-page #fixedButtonsHolder button{
-  color: #080606;
-  background-color: rgba(58, 58, 58, 0.1);
-  transition: opacity .1s ease-in-out;
-}
+prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top {
+  top: 6em !important; }
 
 prm-explore-main .header {
   z-index: 15; }
@@ -10972,21 +11252,24 @@ button span.fulltext {
 
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
-  #facets .section-title, #facets .sidebar-header {
+  #facets .section-title,
+  #facets .sidebar-header {
     position: relative;
     display: inline-flex;
     align-items: center;
     width: 100%;
     cursor: pointer;
     margin-bottom: 0; }
-  #facets h3.section-title-header, #facets strong {
+  #facets h3.section-title-header,
+  #facets strong {
     margin-left: 0;
     font-weight: 400 !important; }
   #facets md-icon {
     position: absolute;
     right: 0;
     top: 0; }
-  #facets div.md-chip, #facets button.button-as-link {
+  #facets div.md-chip,
+  #facets button.button-as-link {
     width: 100%; }
   #facets prm-facet-range button.button-as-link {
     width: 71px; }
