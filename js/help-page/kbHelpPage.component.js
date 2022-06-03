@@ -23,7 +23,7 @@ class KbHelpPageController {
 
     $postLink() {
         let url = window.location.search;
-        let index = url.indexOf('45KBDK_KGL:SPEC');
+        let index = url.indexOf('SPEC');
         this.view = index > 0 ? 'special' : 'general';
 
         document.getElementById('fixedButtonsHolder').onclick = KbHelpPageController.OnFixedButtonsHolderClick;

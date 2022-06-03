@@ -5,6 +5,8 @@ class KbHelpController {
         this.getTranslationsService = getTranslationsService;
         this.$http = $http;
         this.$mdDialog = $mdDialog;
+        this.viewName = viewName;
+        this.location = $location;
         this.lang = "da";
         this.bodyContent = 'main-menu';
         this.helpButtonTemplateUrl = 'custom/' + viewName + '/html/help-button/help-button.html';
@@ -20,12 +22,14 @@ class KbHelpController {
         }
 
         getHelpTextFromAPI(){
-            this._getTranslations(this.lang)
+            let viewName = this.location.search().vid;
+            console.log('viewName:',viewName);
+            this._getTranslations(this.lang, viewName)
                 .then(response => {
                     this.help = this.createHelpJson(response.data);
                 })
                 .catch(err => {
-                    console.log( err);
+                    console.error(err);
                     return err;
                 });
         }
@@ -55,8 +59,8 @@ class KbHelpController {
         }
 
 
-        _getTranslations(){
-            return this.getTranslationsService._getTranslations();
+        _getTranslations(lang, view){
+            return this.getTranslationsService._getTranslations(lang, view);
         }
 
 

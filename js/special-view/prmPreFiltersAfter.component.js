@@ -6,6 +6,7 @@ class PrmPreFiltersAfterController {
     }
 
     $postLink() {
+
         // Do these operations only in Special view
         if (this.location.search().vid.indexOf("SPEC") || this.location.search().vid.indexOf("spec")) {
             // 1- Move the yellow search scope element into the search bar
@@ -20,17 +21,20 @@ class PrmPreFiltersAfterController {
             // Get the translation from the API
             // Wait 500 milliseconds, so the default translation for placeholder comes first
             // And then overwrite the placeholder text and make it visible
-            let lang = this.location.search().lang || 'da';
             angular.element(document.getElementById('searchBar')).addClass('hidePlaceholder');
-            this.changeSearchBarPlaceholder(lang);
+
+            let lang = this.location.search().lang || 'da';
+            let viewName = this.location.search().vid;
+            console.log('viewName:',viewName);
+            this.changeSearchBarPlaceholder(lang, viewName);
         }
 
 
 
     }
 
-    changeSearchBarPlaceholder(lang){
-        this.getTranslationsService._getTranslations(lang)
+    changeSearchBarPlaceholder(lang, viewName){
+        this.getTranslationsService._getTranslations(lang, viewName)
             .then(response => {
                 let placeHolderText = response.data["fulldisplay.homepage.special.search.placeholder"];
                 setTimeout(function(){

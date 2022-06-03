@@ -37,6 +37,19 @@ prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top{
   top: 6em!important;
 }
 
+kb-help-page #fixedButtonsHolder.fixed-to-top {
+  top: 26em !important;
+  position: fixed;
+  right: 2em;
+  z-index: 15;
+  animation: animateStickyButtonIn .7s cubic-bezier(.25, .8, .25, 1) forwards;
+
+  button{
+    color: #080606;
+    background-color: rgba(58, 58, 58, 0.1);
+  }
+}
+
 // Fixes the original bug for floating icons hide under the selected post
 prm-explore-main .header {
   z-index: 15;
