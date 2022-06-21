@@ -11113,11 +11113,14 @@ z-index: 80;
 }
 
 
+/* https://sbprojects.statsbiblioteket.dk/jira/browse/BSV-210
+   PRIMO: Location facet til åbne hylder location*/
 div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip{
     display : none;
 }
 
 div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip[data-facet-value*="–ha"],
+div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip[data-facet-value*="–sa"],
 div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip[data-facet-value*="–ba"]{
     display : flex;
 }
