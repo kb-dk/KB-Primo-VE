@@ -1,14 +1,18 @@
 class KbHomeController {
 
-    constructor() {
+    constructor($location) {
+        this.location = $location;
     };
 
     $postLink() {
-        let url = window.location.search;
-        let index = url.indexOf('SPEC');
+        this.vid = this.location.search().vid.replace(":", "-");
+        let index = this.vid.indexOf('SPEC');
         this.view = index > 0 ? 'special' : 'general';
     };
 }
+
+KbHomeController.$inject = ['$location'];
+
 
 export let KbHomeConfig = {
     name: 'kbHome',
