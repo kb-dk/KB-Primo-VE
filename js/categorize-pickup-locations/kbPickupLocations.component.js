@@ -51,18 +51,18 @@ class KbPickupLocationsController {
                     if (pickupLocationSelectInput.length) {
                         pickupLocationSelectInput[0].addEventListener("click", function () {
                             const mdOptions = document.querySelectorAll('md-select-menu md-optgroup md-option');
-
-                            for (let i = 0; i < mdOptions.length; i++) {
-                                mdOptions[i].style.display = "none";
+                            mdOptions.forEach(mdOption => {
+                                mdOption.style.display = "none";
                                 // It is a fix for the options which are further down the menu
                                 // that is, for some weired reasons, menu won't get closed after choosing an option.
-                                mdOptions[i].addEventListener("click", function () {
+                                mdOption.addEventListener("click", function () {
                                         if (document.querySelector('body > .md-select-menu-container')) {
                                             document.querySelector('body > .md-select-menu-container').style.display = 'none';
                                         }
                                     }
                                 );
-                            }
+                            });
+
                             const labels = document.querySelectorAll('md-select-menu md-optgroup label');
                             labels.forEach((label, index) => {
                                 label.style.fontWeight = 'bold';
