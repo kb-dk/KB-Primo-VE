@@ -37,12 +37,12 @@ class KbPickupLocationsController {
             label.classList.remove('minus');
 
             label.addEventListener("click", function () {
-                KbPickupLocationsController.openOrCloseLocationList(event, labels, index);
+                KbPickupLocationsController.openOrCloseALocationGroup(event, labels, index);
             });
         });
     }
 
-    static openOrCloseLocationList (event, labels, i) {
+    static openOrCloseALocationGroup(event, labels, i) {
         event.stopImmediatePropagation();
         let children = event.currentTarget.parentNode.children;
         for (let j = 0; j < children.length; j++) {
@@ -60,16 +60,16 @@ class KbPickupLocationsController {
         }
     }
 
-    static startSearchingForPickupLocationField(){
-            var intervalId = setInterval(function () {
-                const pickupLocationSelectInput = angular.element(document.querySelectorAll('#form_field_pickupLocation md-select'));
-                // When 'pickupLocation field' is found then attach the changes to its click event and stop the interval.
-                if (pickupLocationSelectInput.length) {
-                    pickupLocationSelectInput[0].addEventListener("click", KbPickupLocationsController.addCssAndJavascriptEventsToLabelsAndOptions);
-                    clearInterval(intervalId);
-                }
+    static startSearchingForPickupLocationField() {
+        var intervalId = setInterval(function () {
+            const pickupLocationSelectInput = angular.element(document.querySelectorAll('#form_field_pickupLocation md-select'));
+            // When 'pickupLocation field' is found then attach the changes to its click event and stop the interval.
+            if (pickupLocationSelectInput.length) {
+                pickupLocationSelectInput[0].addEventListener("click", KbPickupLocationsController.addCssAndJavascriptEventsToLabelsAndOptions);
+                clearInterval(intervalId);
+            }
 
-            }, 2000);
+        }, 2000);
     }
 
     static findRequestButtonAndAttachJavascriptToIt() {
