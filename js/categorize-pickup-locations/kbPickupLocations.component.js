@@ -12,16 +12,37 @@ class KbPickupLocationsController {
     $postLink() {
         // Because we hook to prmRequestAfter, and the button is not in that group
         // so we need to wait a bit so the button is there (hopefully).
-        setTimeout(this.findRequestButtonAndAttachJavascriptToIt, 5000);
+        setTimeout(KbPickupLocationsController.findRequestButtonAndAttachJavascriptToIt, 5000);
     };
 
 
-    repeatUntilFormIsOpened() {
+    static addCssAndJavascriptEventsToLabelsAndOptions() {
+        const mdOptions = document.querySelectorAll('md-select-menu md-optgroup md-option');
+        mdOptions.forEach(mdOption => {
+            mdOption.style.display = "none";
+            // It is a fix for the options which are further down the menu
+            // that is, for some weired reasons, menu won't get closed after choosing an option.
+            mdOption.addEventListener("click", function () {
+                    if (document.querySelector('body > .md-select-menu-container')) {
+                        document.querySelector('body > .md-select-menu-container').style.display = 'none';
+                    }
+                }
+            );
+        });
 
+        const labels = document.querySelectorAll('md-select-menu md-optgroup label');
+        labels.forEach((label, index) => {
+            label.style.fontWeight = 'bold';
+            label.classList.add('plus');
+            label.classList.remove('minus');
+
+            label.addEventListener("click", function () {
+                KbPickupLocationsController.openOrCloseLocationList(event, labels, index);
+            });
+        });
     }
 
     static openOrCloseLocationList (event, labels, i) {
-        console.log(labels, i);
         event.stopImmediatePropagation();
         let children = event.currentTarget.parentNode.children;
         for (let j = 0; j < children.length; j++) {
@@ -39,47 +60,22 @@ class KbPickupLocationsController {
         }
     }
 
-    findRequestButtonAndAttachJavascriptToIt() {
+    static startSearchingForPickupLocationField(){
+            var intervalId = setInterval(function () {
+                const pickupLocationSelectInput = angular.element(document.querySelectorAll('#form_field_pickupLocation md-select'));
+                // When 'pickupLocation field' is found then attach the changes to its click event and stop the interval.
+                if (pickupLocationSelectInput.length) {
+                    pickupLocationSelectInput[0].addEventListener("click", KbPickupLocationsController.addCssAndJavascriptEventsToLabelsAndOptions);
+                    clearInterval(intervalId);
+                }
+
+            }, 2000);
+    }
+
+    static findRequestButtonAndAttachJavascriptToIt() {
         const prmServiceButtons = angular.element(document.querySelectorAll('prm-service-button button'));
-        let _this = this;
         for (let i = 0; i < prmServiceButtons.length; i++) {
-            prmServiceButtons[i].addEventListener("click", function () {
-                var intervalId = setInterval(function () {
-                    const pickupLocationSelectInput = angular.element(document.querySelectorAll('#form_field_pickupLocation md-select'));
-
-                    // If 'pickupLocation field' is found then attach the changes to its click event.
-                    if (pickupLocationSelectInput.length) {
-                        pickupLocationSelectInput[0].addEventListener("click", function () {
-                            const mdOptions = document.querySelectorAll('md-select-menu md-optgroup md-option');
-                            mdOptions.forEach(mdOption => {
-                                mdOption.style.display = "none";
-                                // It is a fix for the options which are further down the menu
-                                // that is, for some weired reasons, menu won't get closed after choosing an option.
-                                mdOption.addEventListener("click", function () {
-                                        if (document.querySelector('body > .md-select-menu-container')) {
-                                            document.querySelector('body > .md-select-menu-container').style.display = 'none';
-                                        }
-                                    }
-                                );
-                            });
-
-                            const labels = document.querySelectorAll('md-select-menu md-optgroup label');
-                            labels.forEach((label, index) => {
-                                label.style.fontWeight = 'bold';
-                                label.classList.add('plus');
-                                label.classList.remove('minus');
-
-                                label.addEventListener("click", function () {
-                                    KbPickupLocationsController.openOrCloseLocationList(event, labels, index);
-                                });
-                            });
-
-                            clearInterval(intervalId);
-                        });
-                    }
-
-                }, 2000);
-            });
+            prmServiceButtons[i].addEventListener("click", KbPickupLocationsController.startSearchingForPickupLocationField);
         }
     }
 }
