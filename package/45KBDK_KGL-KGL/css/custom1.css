@@ -11632,6 +11632,15 @@ label[translate="almaRequest.publicationDate"]::before{
 md-input-container.md-input-invalid label:before{
     content:'';
 }
+/* Related to following Jira Issue*/
+/* https://sbprojects.statsbiblioteket.dk/jira/browse/BSV-213*/
+.plus::before{
+    content: '+ ';
+}
+
+.minus::before{
+    content: '- ';
+}
 prm-request-services .labeled-block .block-body {
     max-height: 30em;
 }
