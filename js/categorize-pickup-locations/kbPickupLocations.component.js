@@ -64,15 +64,16 @@ class KbPickupLocationsController {
                                 );
                             }
                             const labels = document.querySelectorAll('md-select-menu md-optgroup label');
-                            for (let i = 0; i < labels.length; i++) {
-                                labels[i].style.fontWeight = 'bold';
-                                labels[i].classList.add('plus');
-                                labels[i].classList.remove('minus');
+                            labels.forEach((label, index) => {
+                                label.style.fontWeight = 'bold';
+                                label.classList.add('plus');
+                                label.classList.remove('minus');
 
-                                labels[i].addEventListener("click", function() {
-                                    KbPickupLocationsController.openOrCloseLocationList (event, labels, i);
+                                label.addEventListener("click", function () {
+                                    KbPickupLocationsController.openOrCloseLocationList(event, labels, index);
                                 });
-                            }
+                            });
+
                             clearInterval(intervalId);
                         });
                     }
