@@ -20,6 +20,24 @@ class KbPickupLocationsController {
 
     }
 
+    static openOrCloseLocationList (event, labels, i) {
+        console.log(labels, i);
+        event.stopImmediatePropagation();
+        let children = event.currentTarget.parentNode.children;
+        for (let j = 0; j < children.length; j++) {
+            if (children[j] !== event.target) {
+                if (children[j].style.display === "none") {
+                    children[j].style.display = "flex";
+                    labels[i].classList.add('minus');
+                    labels[i].classList.remove('plus');
+                } else {
+                    children[j].style.display = "none";
+                    labels[i].classList.add('plus');
+                    labels[i].classList.remove('minus');
+                }
+            }
+        }
+    }
 
     findRequestButtonAndAttachJavascriptToIt() {
         const prmServiceButtons = angular.element(document.querySelectorAll('prm-service-button button'));
@@ -51,22 +69,8 @@ class KbPickupLocationsController {
                                 labels[i].classList.add('plus');
                                 labels[i].classList.remove('minus');
 
-                                labels[i].addEventListener("click", function (event) {
-                                    event.stopImmediatePropagation();
-                                    let children = event.currentTarget.parentNode.children;
-                                    for (let j = 0; j < children.length; j++) {
-                                        if (children[j] !== event.target) {
-                                            if (children[j].style.display === "none") {
-                                                children[j].style.display = "flex";
-                                                labels[i].classList.add('minus');
-                                                labels[i].classList.remove('plus');
-                                            } else {
-                                                children[j].style.display = "none";
-                                                labels[i].classList.add('plus');
-                                                labels[i].classList.remove('minus');
-                                            }
-                                        }
-                                    }
+                                labels[i].addEventListener("click", function() {
+                                    KbPickupLocationsController.openOrCloseLocationList (event, labels, i);
                                 });
                             }
                             clearInterval(intervalId);
