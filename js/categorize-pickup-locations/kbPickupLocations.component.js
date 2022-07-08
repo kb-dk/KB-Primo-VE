@@ -12,7 +12,8 @@ class KbPickupLocationsController {
     $postLink() {
         // Because we hook to prmRequestAfter, and the button is not in that group
         // so we need to wait a bit so the button is there (hopefully).
-        setTimeout(KbPickupLocationsController.findRequestButtonAndAttachJavascriptToIt, 5000);
+        KbPickupLocationsController.timesRunIntervalIdFindButton = 0;
+        KbPickupLocationsController.intervalIdFindButton = setInterval(KbPickupLocationsController.findRequestButtonAndAttachJavascriptToIt, 1000);
     };
 
 
@@ -61,19 +62,29 @@ class KbPickupLocationsController {
     }
 
     static startSearchingForPickupLocationField() {
-        var intervalId = setInterval(function () {
+        KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect = 0;
+        KbPickupLocationsController.intervalIdFindPickupLocationSelect = setInterval(function () {
+            KbPickupLocationsController.intervalIdFindPickupLocationSelect += 1;
             const pickupLocationSelectInput = angular.element(document.querySelectorAll('#form_field_pickupLocation md-select'));
             // When 'pickupLocation field' is found then attach the changes to its click event and stop the interval.
             if (pickupLocationSelectInput.length) {
                 pickupLocationSelectInput[0].addEventListener("click", KbPickupLocationsController.addCssAndJavascriptEventsToLabelsAndOptions);
-                clearInterval(intervalId);
+                clearInterval(KbPickupLocationsController.intervalIdFindPickupLocationSelect);
+            } else {
+                if(KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect === 10){
+                    clearInterval(KbPickupLocationsController.intervalIdFindPickupLocationSelect);
+                }
             }
 
         }, 2000);
     }
 
     static findRequestButtonAndAttachJavascriptToIt() {
+        KbPickupLocationsController.timesRunIntervalIdFindButton += 1;
         const prmServiceButtons = angular.element(document.querySelectorAll('prm-service-button button'));
+        if (KbPickupLocationsController.timesRunIntervalIdFindButton === 10 || prmServiceButtons.length){
+            clearInterval(KbPickupLocationsController.intervalIdFindButton);
+        }
         for (let i = 0; i < prmServiceButtons.length; i++) {
             prmServiceButtons[i].addEventListener("click", KbPickupLocationsController.startSearchingForPickupLocationField);
         }
