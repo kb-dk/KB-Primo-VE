@@ -13,7 +13,7 @@ class KbPickupLocationsController {
         // Because we hook to prmRequestAfter, and the button is not in that group
         // so we need to wait a bit so the button is there (hopefully).
         KbPickupLocationsController.timesRunIntervalIdFindButton = 0;
-        KbPickupLocationsController.intervalIdFindButton = setInterval(KbPickupLocationsController.findRequestButtonAndAttachJavascriptToIt, 1000);
+        KbPickupLocationsController.intervalIdFindButton = setInterval(KbPickupLocationsController.findRequestButtonAndAttachJavascriptToIt, 500);
     };
 
 
@@ -79,7 +79,7 @@ class KbPickupLocationsController {
                 }
             }
 
-        }, 2000);
+        }, 500);
     }
 
     static findRequestButtonAndAttachJavascriptToIt() {
