@@ -19,6 +19,7 @@ class KbPickupLocationsController {
 
     static addCssAndJavascriptEventsToLabelsAndOptions() {
         const mdOptions = document.querySelectorAll('md-select-menu md-optgroup md-option');
+        console.log('mdOptions:', mdOptions);
         mdOptions.forEach(mdOption => {
             mdOption.style.display = "none";
             // It is a fix for the options which are further down the menu
@@ -32,6 +33,7 @@ class KbPickupLocationsController {
         });
 
         const labels = document.querySelectorAll('md-select-menu md-optgroup label');
+        console.log('labels:', labels);
         labels.forEach((label, index) => {
             label.style.fontWeight = 'bold';
             label.classList.add('plus');
@@ -64,8 +66,9 @@ class KbPickupLocationsController {
     static startSearchingForPickupLocationField() {
         KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect = 0;
         KbPickupLocationsController.intervalIdFindPickupLocationSelect = setInterval(function () {
-            KbPickupLocationsController.intervalIdFindPickupLocationSelect += 1;
+            KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect += 1;
             const pickupLocationSelectInput = angular.element(document.querySelectorAll('#form_field_pickupLocation md-select'));
+            console.log('pickupLocationSelectInput', pickupLocationSelectInput, 'timesRunIntervalIdFindPickupLocationSelect:', KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect);
             // When 'pickupLocation field' is found then attach the changes to its click event and stop the interval.
             if (pickupLocationSelectInput.length) {
                 pickupLocationSelectInput[0].addEventListener("click", KbPickupLocationsController.addCssAndJavascriptEventsToLabelsAndOptions);
@@ -82,6 +85,7 @@ class KbPickupLocationsController {
     static findRequestButtonAndAttachJavascriptToIt() {
         KbPickupLocationsController.timesRunIntervalIdFindButton += 1;
         const prmServiceButtons = angular.element(document.querySelectorAll('prm-service-button button'));
+        console.log('prmServiceButtons:', prmServiceButtons, 'timesRunIntervalIdFindButton:', KbPickupLocationsController.timesRunIntervalIdFindButton);
         if (KbPickupLocationsController.timesRunIntervalIdFindButton === 10 || prmServiceButtons.length){
             clearInterval(KbPickupLocationsController.intervalIdFindButton);
         }
