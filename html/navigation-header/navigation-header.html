@@ -6,10 +6,50 @@
                     &nbsp;
                 </div>
             </div>
-            <div class="right-panel small-6 cell" >
-                <a translate="fulldisplay.topnavigation.link.label"
-                   href="{{ 'fulldisplay.topnavigation.link' | translate }}">
-                </a>
+            <div class="right-panel small-6 cell">
+                <div id="backTo" ng-click="$ctrl.showBackToMenu($event)">
+                    {{ 'fulldisplay.topnavigation.list.placeholder' | translate }}
+                    <span class="menu-arrow"></span>
+                </div>
+                <div id="backToItems" style="display: none;">
+                    <div style="position: fixed;top: 0;left: 0;width: 100vw;height: 100vw;z-index: 2000;background-color: transparent;"
+                         ng-click="$ctrl.hideBackToMenu($event)">
+                    </div>
+                    <ul style="z-index: 2001;">
+                        <li>
+                            <a href="{{'fulldisplay.topnavigation.list.link1' | translate}}">{{'fulldisplay.topnavigation.list.item1' | translate}}
+                                <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
+                                          icon-definition="permalink">
+
+                                </prm-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{'fulldisplay.topnavigation.list.link2' | translate}}">{{'fulldisplay.topnavigation.list.item2' | translate}}
+                                <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
+                                          icon-definition="permalink">
+
+                                </prm-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{'fulldisplay.topnavigation.list.link3' | translate}}">{{'fulldisplay.topnavigation.list.item3' | translate}}
+                                <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
+                                          icon-definition="permalink">
+
+                                </prm-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{'fulldisplay.topnavigation.list.link4' | translate}}">{{'fulldisplay.topnavigation.list.item4' | translate}}
+                                <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
+                                          icon-definition="permalink">
+
+                                </prm-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

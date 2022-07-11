@@ -10,6 +10,16 @@ class KbNavigationHeaderController {
         let container = angular.element(parentElement.children()[0]);
         container.append(this.$element);
     };
+
+    showBackToMenu($event){
+        console.log($event.currentTarget);
+        document.getElementById('backToItems').style.display = 'block';
+    }
+
+    hideBackToMenu($event){
+        console.log($event.currentTarget);
+        document.getElementById('backToItems').style.display = 'none';
+    }
 }
 
 KbNavigationHeaderController.$inject = ['$element'];
