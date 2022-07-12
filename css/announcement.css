@@ -11,8 +11,9 @@ md-list md-list-item .md-dialog-container {
   position: absolute;
 }
 
-.md-dialog-container{
-  top: 0!important;
+.md-dialog-container,
+div.md-scroll-mask{
+  top: 48px!important;
 }
 
 md-toast {
