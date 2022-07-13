@@ -984,6 +984,10 @@ prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable
 .close-button.full-view-navigation prm-icon md-icon.md-primoExplore-theme {
     color: white!important;
 }
+
+.recommendations-title{
+    color: #002e70;
+}
 @charset "UTF-8";
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
