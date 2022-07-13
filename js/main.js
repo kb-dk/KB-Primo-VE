@@ -28,6 +28,8 @@ import {KbNavigationHeaderConfig} from './navigation-header/kbNavigationHeader';
 // Language switcher
 import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandableAfter.component';
 import {KbLanguageConfig} from './language/kbLanguage.component';
+import {KbEditPincodeConfig} from './language/kbEditPincode.component';
+
 
 // ChatBox scriptId
 import {scriptIds} from "./chat-box/scriptIds.constant";
@@ -100,6 +102,7 @@ angular.module('viewCustom', ['angularLoad'])
     // Language switcher
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
     .component(KbLanguageConfig.name, KbLanguageConfig.config)
+    .component(KbEditPincodeConfig.name, KbEditPincodeConfig.config)
 
     // Add pickup numbers
     .service('pickUpNumbersService', PickUpNumbersService)
