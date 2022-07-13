@@ -1,3 +1,4 @@
+// https://sbprojects.statsbiblioteket.dk/jira/browse/BSV-239
 class KbEditPincodeController {
 
     constructor($location,getTranslationsService) {
