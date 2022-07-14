@@ -11263,6 +11263,12 @@ button span.fulltext {
   color: #002e70;
   padding-bottom: 20px; }
 
+md-menu-item.kb-edit-pincode-ctm {
+  display: none; }
+
+md-menu-content md-menu-item.kb-edit-pincode-ctm {
+  display: block; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title,
