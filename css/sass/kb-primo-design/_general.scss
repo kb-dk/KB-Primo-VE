@@ -81,6 +81,9 @@ button span.fulltext{
 md-menu-item.kb-edit-pincode-ctm {
   display: none;
 }
+md-menu-item.kb-edit-pincode-ctm a{
+  box-shadow: none;
+}
 md-menu-content md-menu-item.kb-edit-pincode-ctm {
   display: block;
 }

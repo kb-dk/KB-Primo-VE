@@ -1,8 +1,7 @@
 // https://sbprojects.statsbiblioteket.dk/jira/browse/BSV-239
 class KbEditPincodeController {
-    constructor($location,getTranslationsService) {
+    constructor($location) {
         this.location = $location;
-        this.getTranslationsService = getTranslationsService;
     };
 
     $onInit() {
@@ -36,22 +35,9 @@ class KbEditPincodeController {
             }
         }
     }
-
-    goToEditUserinfo() {
-        let viewName = this.location.search().vid;
-        let lang = this.location.search().lang || 'da';
-        this.getTranslationsService._getTranslations(lang, viewName)
-            .then(response => {
-                window.open(response.data['nui.details.editProfileUrl'], '_blank');
-            })
-            .catch(err => {
-                console.error(err);
-                return err;
-            });
-    }
 }
 
-KbEditPincodeController.$inject = ['$location','getTranslationsService'];
+KbEditPincodeController.$inject = ['$location'];
 
 export let KbEditPincodeConfig=  {
     name: 'kbEditPincode',
