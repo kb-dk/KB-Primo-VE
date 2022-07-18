@@ -26,7 +26,7 @@ export let KbLanguageConfig=  {
         },
         controller: KbLanguageController,
         templateUrl: ["viewName", function(viewName){
-            return 'custom/' + viewName + '/html/language/language.html';
+            return 'custom/' + viewName + '/html/language-and-pincode/language-and-pincode.html';
         }],
     }
 };

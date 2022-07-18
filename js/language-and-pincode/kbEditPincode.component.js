@@ -42,7 +42,7 @@ class KbEditPincodeController {
         let lang = this.location.search().lang || 'da';
         this.getTranslationsService._getTranslations(lang, viewName)
             .then(response => {
-                window.location=response.data['nui.details.editProfileUrl']
+                window.open(response.data['nui.details.editProfileUrl'], '_blank');
             })
             .catch(err => {
                 console.error(err);
@@ -61,7 +61,7 @@ export let KbEditPincodeConfig=  {
         },
         controller: KbEditPincodeController,
         templateUrl: ["viewName", function(viewName){
-            return 'custom/' + viewName + '/html/language/edit-pincode.html';
+            return 'custom/' + viewName + '/html/language-and-pincode/edit-pincode.html';
         }],
     }
 };

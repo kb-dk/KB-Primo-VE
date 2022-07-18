@@ -11,7 +11,7 @@ describe('Announcement', function() {
     browser.get(browser.params.targetUrl);
   });
 
-  it('should be displayed when the language changes and should be dismissable. (Assuming that the BackOffice provides an announcement in English.)', function() {
+  it('should be displayed when the language-and-pincode changes and should be dismissable. (Assuming that the BackOffice provides an announcement in English.)', function() {
 
     browser.wait(EC.elementToBeClickable(userArea), 2000);
     userArea.click();

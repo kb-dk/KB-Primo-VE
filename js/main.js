@@ -26,9 +26,9 @@ import {PrmTopBarBeforeConfig} from './navigation-header/prmTopBarBefore';
 import {KbNavigationHeaderConfig} from './navigation-header/kbNavigationHeader';
 
 // Language switcher
-import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandableAfter.component';
-import {KbLanguageConfig} from './language/kbLanguage.component';
-import {KbEditPincodeConfig} from './language/kbEditPincode.component';
+import {PrmUserAreaExpandableAfterConfig} from './language-and-pincode/prmUserAreaExpandableAfter.component';
+import {KbLanguageConfig} from './language-and-pincode/kbLanguage.component';
+import {KbEditPincodeConfig} from './language-and-pincode/kbEditPincode.component';
 
 
 // ChatBox scriptId
