@@ -395,3 +395,7 @@ prm-static[section="homepage"] {
       box-shadow: none; }
   prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a, prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a div {
     width: 100%; }
+
+kb-home md-content a {
+  text-decoration: none;
+  color: #002E70; }
