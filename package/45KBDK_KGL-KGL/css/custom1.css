@@ -11279,7 +11279,7 @@ kb-help-page #fixedButtonsHolder.fixed-to-top {
     background-color: rgba(58, 58, 58, 0.1); }
 
 prm-explore-main .header {
-  z-index: 15; }
+  z-index: unset; }
 
 #searchResultsContainer prm-search-result-availability-line span.fulltext[translate="delivery.code.fulltext"] {
   color: #002e70; }
@@ -11308,6 +11308,48 @@ md-menu-item.kb-edit-pincode-ctm a {
 
 md-menu-content md-menu-item.kb-edit-pincode-ctm {
   display: block; }
+
+md-dialog.light-on-dark-dialog {
+  background-color: rgba(0, 46, 112, 0.8);
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff; }
+  md-dialog.light-on-dark-dialog .custom-links-container {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  md-dialog.light-on-dark-dialog md-dialog-content prm-main-menu > div > div {
+    background-color: #CAF0FE;
+    color: #002e70; }
+  md-dialog.light-on-dark-dialog .md-button {
+    color: #002e70; }
+  md-dialog.light-on-dark-dialog a.transparent-card {
+    align-items: start;
+    align-content: start; }
+    md-dialog.light-on-dark-dialog a.transparent-card br {
+      display: none; }
+    md-dialog.light-on-dark-dialog a.transparent-card:hover, md-dialog.light-on-dark-dialog a.transparent-card:focus {
+      background-color: transparent !important;
+      border-bottom: none !important; }
+    md-dialog.light-on-dark-dialog a.transparent-card > span:hover, md-dialog.light-on-dark-dialog a.transparent-card > span:focus {
+      color: #002e70;
+      background-color: transparent;
+      border-bottom: 2px solid #002E70;
+      transition: border-bottom-color 0.1s ease-in-out; }
+    md-dialog.light-on-dark-dialog a.transparent-card > span.md-subhead {
+      display: none; }
+
+prm-main-menu[menu-type=full] .custom-links-container .main-menu-button {
+  width: 100%; }
+
+prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=full] .overlay-menu-item .md-headline {
+  color: #002e70;
+  font-weight: normal; }
+
+prm-main-menu[menu-type=full] .custom-links-container .main-menu-button .transparent-card {
+  padding: 0; }
+
+.background-dark md-backdrop.md-opaque {
+  top: 48px; }
 
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
