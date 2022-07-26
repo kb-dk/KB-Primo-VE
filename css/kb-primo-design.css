@@ -145,6 +145,15 @@ button span.fulltext {
   color: #002e70;
   padding-bottom: 20px; }
 
+md-menu-item.kb-edit-pincode-ctm {
+  display: none; }
+
+md-menu-item.kb-edit-pincode-ctm a {
+  box-shadow: none; }
+
+md-menu-content md-menu-item.kb-edit-pincode-ctm {
+  display: block; }
+
 md-dialog.light-on-dark-dialog {
   background-color: rgba(0, 46, 112, 0.8);
   border: 1px solid #fff;
@@ -502,3 +511,7 @@ prm-static[section="homepage"] {
       box-shadow: none; }
   prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a, prm-static[section="homepage"] .org-c2710682-7e51-4505-bd94-d40665c25bda a div {
     width: 100%; }
+
+kb-home md-content a {
+  text-decoration: none;
+  color: #002E70; }
