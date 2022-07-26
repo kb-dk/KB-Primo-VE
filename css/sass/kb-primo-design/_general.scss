@@ -80,6 +80,16 @@ button span.fulltext {
   color: #002e70;
   padding-bottom: 20px;
 }
+md-menu-item.kb-edit-pincode-ctm {
+  display: none;
+}
+md-menu-item.kb-edit-pincode-ctm a{
+  box-shadow: none;
+}
+md-menu-content md-menu-item.kb-edit-pincode-ctm {
+  display: block;
+}
+
 
 // Style dialog box
 md-dialog.light-on-dark-dialog {
