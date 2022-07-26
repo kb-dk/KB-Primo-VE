@@ -11553,7 +11553,8 @@ prm-logo {
     float: right;
     padding: 0 6px;
     box-shadow: inset 0 1px 1px #666;
-    font-size: 12px; }
+    font-size: 12px;
+    cursor: pointer; }
     .org_navigation-header #backTo .menu-arrow {
       display: inline-block;
       float: right; }

@@ -16,32 +16,8 @@
                          ng-click="$ctrl.hideBackToMenu($event)">
                     </div>
                     <ul style="z-index: 2001;">
-                        <li>
-                            <a href="{{'fulldisplay.topnavigation.list.link1' | translate}}">{{'fulldisplay.topnavigation.list.item1' | translate}}
-                                <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
-                                          icon-definition="permalink">
-
-                                </prm-icon>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{'fulldisplay.topnavigation.list.link2' | translate}}">{{'fulldisplay.topnavigation.list.item2' | translate}}
-                                <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
-                                          icon-definition="permalink">
-
-                                </prm-icon>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{'fulldisplay.topnavigation.list.link3' | translate}}">{{'fulldisplay.topnavigation.list.item3' | translate}}
-                                <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
-                                          icon-definition="permalink">
-
-                                </prm-icon>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{'fulldisplay.topnavigation.list.link4' | translate}}">{{'fulldisplay.topnavigation.list.item4' | translate}}
+                        <li ng-repeat="(index, item) in $ctrl.menu.items">
+                            <a href="{{'fulldisplay.topnavigation.list.link' + (index + 1) | translate}}">{{item | translate}}
                                 <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
                                           icon-definition="permalink">
 
