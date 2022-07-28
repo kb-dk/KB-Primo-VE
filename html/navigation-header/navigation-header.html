@@ -8,7 +8,7 @@
             </div>
             <div class="right-panel small-6 cell">
                 <div id="backTo" ng-click="$ctrl.showBackToMenu($event)">
-                    {{ 'fulldisplay.topnavigation.list.placeholder' | translate }}
+                    <span translate="fulldisplay.topnavigation.list.placeholder"></span>
                     <span class="menu-arrow"></span>
                 </div>
                 <div id="backToItems" style="display: none;">
@@ -17,7 +17,7 @@
                     </div>
                     <ul style="z-index: 2001;">
                         <li ng-repeat="(index, item) in $ctrl.menu.items">
-                            <a href="{{'fulldisplay.topnavigation.list.link' + (index + 1) | translate}}">{{item | translate}}
+                            <a href="{{'fulldisplay.topnavigation.list.link' + (index + 1) | translate}}"><span translate={{item}}></span>
                                 <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
                                           icon-definition="permalink">
 
