@@ -3,6 +3,7 @@ class KbNavigationHeaderController {
         this.$element = $element;
         this.getTranslationsService = getTranslationsService;
         this.location = $location;
+        this.viewName = this.location.search().vid;
     };
 
     $postLink() {
@@ -23,8 +24,7 @@ class KbNavigationHeaderController {
     }
 
     getMenuPointsFromPI(){
-        let viewName = this.location.search().vid;
-        this._getTranslations(this.lang, viewName)
+        this._getTranslations(this.lang, this.viewName)
             .then(response => {
                 this.menu = this.createMenuJson(response.data);
             })
@@ -39,9 +39,11 @@ class KbNavigationHeaderController {
     }
 
     createMenuJson(translationObject) {
+        let view = this.viewName.indexOf('SPEC') > 0 ? '.special' : '.general';
+        console.log('fulldisplay.topnavigation'+ view +'list.item');
         let menu = {};
-        menu.items = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation.list.item'));
-        menu.links = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation.list.link'));
+        menu.items = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation'+ view +'.list.item'));
+        menu.links = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation '+ view +'.list.link'));
         return menu;
     }
 }
