@@ -40,10 +40,9 @@ class KbNavigationHeaderController {
 
     createMenuJson(translationObject) {
         this.view = this.viewName.indexOf('SPEC') > 0 ? '.special' : '.general';
-        console.log('fulldisplay.topnavigation'+ this.view +'list.item');
         let menu = {};
         menu.items = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation'+ this.view +'.list.item'));
-        menu.links = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation '+ this.view +'.list.link'));
+        menu.links = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation'+ this.view +'.list.link'));
         return menu;
     }
 }
