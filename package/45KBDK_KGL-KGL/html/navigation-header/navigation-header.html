@@ -17,7 +17,7 @@
                     </div>
                     <ul style="z-index: 2001;">
                         <li ng-repeat="(index, item) in $ctrl.menu.items">
-                            <a href="{{'fulldisplay.topnavigation.list.link' + (index + 1) | translate}}"><span translate={{item}}></span>
+                            <a href="{{'fulldisplay.topnavigation'+ ($ctrl.view) +'.list.link' + (index + 1) | translate}}"><span translate={{item}}></span>
                                 <prm-icon class="md-icon-button-custom" icon-type="svg" svg-icon-set="primo-actions"
                                           icon-definition="permalink">
 

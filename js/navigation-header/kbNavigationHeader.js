@@ -39,11 +39,11 @@ class KbNavigationHeaderController {
     }
 
     createMenuJson(translationObject) {
-        let view = this.viewName.indexOf('SPEC') > 0 ? '.special' : '.general';
-        console.log('fulldisplay.topnavigation'+ view +'list.item');
+        this.view = this.viewName.indexOf('SPEC') > 0 ? '.special' : '.general';
+        console.log('fulldisplay.topnavigation'+ this.view +'list.item');
         let menu = {};
-        menu.items = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation'+ view +'.list.item'));
-        menu.links = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation '+ view +'.list.link'));
+        menu.items = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation'+ this.view +'.list.item'));
+        menu.links = Object.keys(translationObject).filter(v => v.startsWith('fulldisplay.topnavigation '+ this.view +'.list.link'));
         return menu;
     }
 }
