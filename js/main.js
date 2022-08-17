@@ -44,7 +44,7 @@ import {PrmServiceButtonAfterConfig} from "./move-request-another-bin/prmService
 import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
 import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
 
-angular.module('viewCustom', ['angularLoad'])
+angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
 
     .constant('viewName', (function () {
             let url = window.location.search.substring(1);

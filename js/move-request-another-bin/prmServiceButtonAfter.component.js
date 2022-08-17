@@ -22,7 +22,6 @@ class PrmServiceButtonAfterController {
                     for (let i = 0; i < requestButtons.length; i++) {
                         requestButtons[i].addEventListener("click", function(){
                             if(document.getElementsByClassName("orderAtTheBottom") && document.getElementsByClassName("orderAtTheBottom").length){
-                                console.log('hej');
                                 AlmaRequestOther.css('display', 'none');
                             }
 

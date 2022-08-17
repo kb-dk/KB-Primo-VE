@@ -1,5 +1,5 @@
 // Fetch item fields more visibale color
-.request-form md-input-container label, .request-form md-input-container label:not(.md-no-float):not(._md-container-ignore){
+.request-form md-input-container label, .request-form md-input-container label:not(.md-no-float):not(._md-container-ignore) {
   opacity: 1;
 }
 
@@ -7,13 +7,14 @@
 .prm-alert-border, .bar.alert-bar, .classic-input .search-scope {
   border-color: #fff6c4;
 }
+
 .prm-alert-bg, .bar.alert-bar, .classic-input .search-scope {
   background-color: #fff6c4;
 }
 
 // Change title color in result list in browse search
 md-list.prm-list.prm-linkable-list-items md-list-item ._md-list-item-inner {
-  h3{
+  h3 {
     color: $links;
   }
 }
@@ -24,17 +25,18 @@ primo-explore > div {
 }
 
 // Fixes style issues in the prm-search reslt toolbar
-prm-search-result-list prm-search-result-tool-bar{
+prm-search-result-list prm-search-result-tool-bar {
   padding-right: 1.5rem;
-  md-toolbar.md-toolbar-tools.results-title{
+
+  md-toolbar.md-toolbar-tools.results-title {
     background-color: white;
-    padding-left: 1rem!important;
+    padding-left: 1rem !important;
   }
 }
 
 // Fixes the original bug for floating icons hide under the search result toolbox
-prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top{
-  top: 6em!important;
+prm-search-bookmark-filter #fixed-buttons-holder.fixed-to-top {
+  top: 6em !important;
 }
 
 kb-help-page #fixedButtonsHolder.fixed-to-top {
@@ -44,7 +46,7 @@ kb-help-page #fixedButtonsHolder.fixed-to-top {
   z-index: 15;
   animation: animateStickyButtonIn .7s cubic-bezier(.25, .8, .25, 1) forwards;
 
-  button{
+  button {
     color: #080606;
     background-color: rgba(58, 58, 58, 0.1);
   }
@@ -52,7 +54,7 @@ kb-help-page #fixedButtonsHolder.fixed-to-top {
 
 // Fixes the original bug for floating icons hide under the selected post
 prm-explore-main .header {
-  z-index: 15;
+  z-index: unset;
 }
 
 #searchResultsContainer prm-search-result-availability-line span.fulltext[translate="delivery.code.fulltext"] {
@@ -60,7 +62,7 @@ prm-explore-main .header {
 }
 
 button span[class*="available"],
-button span.fulltext{
+button span.fulltext {
   color: $secondary-color !important;
 }
 
@@ -68,11 +70,11 @@ button span.fulltext{
   background: #D6D6D6;
 }
 
-.dark-toolbar prm-pre-filters{
-  color:$secondary-color;
+.dark-toolbar prm-pre-filters {
+  color: $secondary-color;
 }
 
-.medium-uppercase-bold{
+.medium-uppercase-bold {
   font-size: 1em;
   margin: 0;
   color: #002e70;
@@ -86,4 +88,72 @@ md-menu-item.kb-edit-pincode-ctm a{
 }
 md-menu-content md-menu-item.kb-edit-pincode-ctm {
   display: block;
+}
+
+
+// Style dialog box
+md-dialog.light-on-dark-dialog {
+  background-color: rgba(0, 46, 112, 0.8);
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+
+  .custom-links-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  md-dialog-content prm-main-menu > div > div {
+    background-color: #CAF0FE;
+    color: #002e70;
+  }
+
+  .md-button {
+    color: #002e70;
+  }
+
+  a.transparent-card {
+    align-items: start;
+    align-content: start;
+
+    br {
+      display: none;
+    }
+    &:hover,
+    &:focus {
+      background-color: transparent!important;
+      border-bottom: none!important;
+    }
+
+    > span {
+      &:hover,
+      &:focus {
+        color: #002e70;
+        background-color: transparent;
+        border-bottom: 2px solid #002E70;
+        transition: border-bottom-color 0.1s ease-in-out;
+      }
+      &.md-subhead{
+        display: none;
+      }
+    }
+
+  }
+}
+
+prm-main-menu[menu-type=full] .custom-links-container .main-menu-button {
+  width: 100%;
+}
+
+prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=full] .overlay-menu-item .md-headline {
+  color: #002e70;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+prm-main-menu[menu-type=full] .custom-links-container .main-menu-button .transparent-card {
+  padding: 0;
+}
+
+.background-dark md-backdrop.md-opaque {
+  top: 48px;
 }

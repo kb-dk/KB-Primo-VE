@@ -14,7 +14,6 @@ class KbEditPincodeController {
 
     userSignedId() {
         KbEditPincodeController.count += 1;
-        console.log(KbEditPincodeController.id + " " + KbEditPincodeController.count);
         if (KbEditPincodeController.count >= 5){
             clearInterval(KbEditPincodeController.id);
             KbEditPincodeController.id = undefined;
