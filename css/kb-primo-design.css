@@ -268,17 +268,17 @@ button, .md-button {
 .top-nav-bar > div.flex-50, .layout-row > .flex-0 {
   display: none; }
 
-.search-elements-wrapper, .body-wrapper {
-  padding-left: 1em; }
+@media (min-width: 600px) {
+  .search-elements-wrapper {
+    max-width: 80% !important; }
+    .search-elements-wrapper .body-wrapper {
+      padding-left: 1em; } }
 
 .top-nav-bar-links {
   padding-left: 2.5em;
   float: left;
   flex-direction: row;
   display: flex; }
-
-.search-elements-wrapper {
-  max-width: 80% !important; }
 
 prm-atoz-search-bar div.layout-column.flex-sm-85.flex-md-75.flex.flex-lg-55.flex-xl-50 {
   max-width: 100% !important; }
