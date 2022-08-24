@@ -650,7 +650,7 @@ md-toolbar.default-toolbar:not(.md-menu-toolbar) {
     color: #7a1300; }
 
 .prm-citation-title, prm-citation-trails-item.active-item .item-title, prm-chapters-and-reviews .item-title, prm-opac .related-title .related-title-name, prm-gallery-collection .collection-folder .collection-overlay, prm-gallery-item .collection-element .item-title, prm-browse-search md-list.prm-list.prm-linkable-list-items md-list-item .item-title, prm-tags-results-list md-list.prm-list.prm-linkable-list-items md-list-item .item-title, md-list.prm-list.prm-linkable-list-items md-list-item .item-title {
-    color: #44707b; }
+    color: #002e70; }
 
 .prm-hover-list-element-bg, prm-brief-result-container .list-item-primary-content:before, prm-browse-search md-list.prm-list.prm-linkable-list-items md-list-item > .md-button > a:hover + .md-list-item-inner,
 prm-browse-search md-list.prm-list.prm-linkable-list-items md-list-item > .md-button > a:hover + ._md-list-item-inner, prm-browse-search md-list.prm-list.prm-linkable-list-items md-list-item > .md-button > a:focus + .md-list-item-inner,

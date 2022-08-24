@@ -650,7 +650,7 @@ md-toolbar.default-toolbar:not(.md-menu-toolbar) {
     color: #7a1300; }
 
 .prm-citation-title, prm-citation-trails-item.active-item .item-title, prm-chapters-and-reviews .item-title, prm-opac .related-title .related-title-name, prm-gallery-collection .collection-folder .collection-overlay, prm-gallery-item .collection-element .item-title, prm-browse-search md-list.prm-list.prm-linkable-list-items md-list-item .item-title, prm-tags-results-list md-list.prm-list.prm-linkable-list-items md-list-item .item-title, md-list.prm-list.prm-linkable-list-items md-list-item .item-title {
-    color: #44707b; }
+    color: #002e70; }
 
 .prm-hover-list-element-bg, prm-brief-result-container .list-item-primary-content:before, prm-browse-search md-list.prm-list.prm-linkable-list-items md-list-item > .md-button > a:hover + .md-list-item-inner,
 prm-browse-search md-list.prm-list.prm-linkable-list-items md-list-item > .md-button > a:hover + ._md-list-item-inner, prm-browse-search md-list.prm-list.prm-linkable-list-items md-list-item > .md-button > a:focus + .md-list-item-inner,
@@ -11352,6 +11352,12 @@ prm-main-menu[menu-type=full] .custom-links-container .main-menu-button .transpa
 .background-dark md-backdrop.md-opaque {
   top: 48px; }
 
+prm-banner-card-content > a {
+  display: inline;
+  text-decoration: none; }
+  prm-banner-card-content > a md-truncate.bigger-title.main-text-banner.md-truncate {
+    line-height: normal; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title,
@@ -11384,6 +11390,34 @@ prm-main-menu[menu-type=full] .custom-links-container .main-menu-button .transpa
     flex-direction: column; }
   #facets .sidebar-inner-wrapper .sidebar-section:nth-child(2) {
     order: -5; }
+
+prm-facet .switch-results md-switch._md-checked ._md-label,
+prm-facet .switch-results md-switch._md-checked .md-label,
+prm-facet .switch-results md-switch._md-checked ._md-bar,
+prm-facet .switch-results md-switch._md-checked .md-bar,
+prm-facet .switch-results md-switch._md-checked ._md-thumb,
+prm-facet .switch-results md-switch._md-checked .md-thumb,
+prm-facet .switch-results md-switch.md-checked ._md-label,
+prm-facet .switch-results md-switch.md-checked .md-label,
+prm-facet .switch-results md-switch.md-checked ._md-bar,
+prm-facet .switch-results md-switch.md-checked .md-bar,
+prm-facet .switch-results md-switch.md-checked ._md-thumb,
+prm-facet .switch-results md-switch.md-checked .md-thumb {
+  color: #002E70; }
+
+prm-facet .switch-results md-switch._md-checked ._md-bar,
+prm-facet .switch-results md-switch._md-checked .md-bar,
+prm-facet .switch-results md-switch._md-checked .md-thumb,
+prm-facet .switch-results md-switch._md-checked ._md-thumb,
+prm-facet .switch-results md-switch.md-checked ._md-bar,
+prm-facet .switch-results md-switch.md-checked .md-bar,
+prm-facet .switch-results md-switch.md-checked .md-thumb,
+prm-facet .switch-results md-switch.md-checked ._md-thumb {
+  background-color: #002E70; }
+
+prm-facet .switch-results md-switch:focus.active,
+prm-facet .switch-results md-switch:hover.active {
+  background-color: #002E70; }
 
 footer a {
   color: white !important; }

@@ -197,6 +197,12 @@ prm-main-menu[menu-type=full] .custom-links-container .main-menu-button .transpa
 .background-dark md-backdrop.md-opaque {
   top: 48px; }
 
+prm-banner-card-content > a {
+  display: inline;
+  text-decoration: none; }
+  prm-banner-card-content > a md-truncate.bigger-title.main-text-banner.md-truncate {
+    line-height: normal; }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title,
@@ -229,6 +235,34 @@ prm-main-menu[menu-type=full] .custom-links-container .main-menu-button .transpa
     flex-direction: column; }
   #facets .sidebar-inner-wrapper .sidebar-section:nth-child(2) {
     order: -5; }
+
+prm-facet .switch-results md-switch._md-checked ._md-label,
+prm-facet .switch-results md-switch._md-checked .md-label,
+prm-facet .switch-results md-switch._md-checked ._md-bar,
+prm-facet .switch-results md-switch._md-checked .md-bar,
+prm-facet .switch-results md-switch._md-checked ._md-thumb,
+prm-facet .switch-results md-switch._md-checked .md-thumb,
+prm-facet .switch-results md-switch.md-checked ._md-label,
+prm-facet .switch-results md-switch.md-checked .md-label,
+prm-facet .switch-results md-switch.md-checked ._md-bar,
+prm-facet .switch-results md-switch.md-checked .md-bar,
+prm-facet .switch-results md-switch.md-checked ._md-thumb,
+prm-facet .switch-results md-switch.md-checked .md-thumb {
+  color: #002E70; }
+
+prm-facet .switch-results md-switch._md-checked ._md-bar,
+prm-facet .switch-results md-switch._md-checked .md-bar,
+prm-facet .switch-results md-switch._md-checked .md-thumb,
+prm-facet .switch-results md-switch._md-checked ._md-thumb,
+prm-facet .switch-results md-switch.md-checked ._md-bar,
+prm-facet .switch-results md-switch.md-checked .md-bar,
+prm-facet .switch-results md-switch.md-checked .md-thumb,
+prm-facet .switch-results md-switch.md-checked ._md-thumb {
+  background-color: #002E70; }
+
+prm-facet .switch-results md-switch:focus.active,
+prm-facet .switch-results md-switch:hover.active {
+  background-color: #002E70; }
 
 footer a {
   color: white !important; }
