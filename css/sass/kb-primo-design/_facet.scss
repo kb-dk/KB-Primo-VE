@@ -49,3 +49,29 @@
     order: -5;
   }
 }
+
+prm-facet .switch-results{
+   md-switch._md-checked,
+   md-switch.md-checked {
+    ._md-label,
+    .md-label,
+    ._md-bar,
+    .md-bar,
+    ._md-thumb,
+    .md-thumb{
+      color: #002E70;
+    }
+
+    ._md-bar,
+    .md-bar,
+    .md-thumb,
+    ._md-thumb{
+      background-color: #002E70;
+    }
+  }
+
+  md-switch:focus.active,
+  md-switch:hover.active{
+    background-color: #002E70;
+  }
+}
