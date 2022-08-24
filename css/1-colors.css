@@ -970,6 +970,8 @@ prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable
 prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable-hover):hover:not([disabled]):hover:not([disabled]) {
     color: #002e70;
     background-color: #fff;
+    border-bottom: 2px solid #002E70;
+    transition: border-bottom-color 0.1s ease-in-out;
 }
 
 .md-dialog-container.fixed-container {
@@ -981,4 +983,8 @@ prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:not(.disable
 
 .close-button.full-view-navigation prm-icon md-icon.md-primoExplore-theme {
     color: white!important;
+}
+
+.recommendations-title{
+    color: #002e70;
 }

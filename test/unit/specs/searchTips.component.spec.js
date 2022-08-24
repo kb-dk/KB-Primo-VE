@@ -18,7 +18,7 @@ describe('searchTipsContoller,', function() {
 
   }));
 
-  describe('when the selected language is English,', function() {
+  describe('when the selected language-and-pincode is English,', function() {
     
     beforeEach(function() {
       localeService.current = () => 'en';
@@ -32,7 +32,7 @@ describe('searchTipsContoller,', function() {
     });    
   });
 
-  describe('when the selected language is Danish,', function() {
+  describe('when the selected language-and-pincode is Danish,', function() {
     
     beforeEach(function() {
       localeService.current = () => 'da';  

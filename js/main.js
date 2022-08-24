@@ -26,8 +26,10 @@ import {PrmTopBarBeforeConfig} from './navigation-header/prmTopBarBefore';
 import {KbNavigationHeaderConfig} from './navigation-header/kbNavigationHeader';
 
 // Language switcher
-import {PrmUserAreaExpandableAfterConfig} from './language/prmUserAreaExpandableAfter.component';
-import {KbLanguageConfig} from './language/kbLanguage.component';
+import {PrmUserAreaExpandableAfterConfig} from './language-and-pincode/prmUserAreaExpandableAfter.component';
+import {KbLanguageConfig} from './language-and-pincode/kbLanguage.component';
+import {KbEditPincodeConfig} from './language-and-pincode/kbEditPincode.component';
+
 
 // ChatBox scriptId
 import {scriptIds} from "./chat-box/scriptIds.constant";
@@ -36,18 +38,18 @@ import {scriptIds} from "./chat-box/scriptIds.constant";
 import {PrmLocationItemsAfterConfig} from "./open-items-location-filter/prmLocationItemsAfter.component";
 
 // Move request-another-volume
-import {PrmServiceButtonAfterConfig} from "./move-request-another-bin/prmServiceButtonAfter.component";
+import {PrmServiceButtonAfterConfig} from "./move-request-another-bin-and-categorize-pickup-location/prmServiceButtonAfter.component";
+import {KbPickupLocationsConfig} from "./move-request-another-bin-and-categorize-pickup-location/kbPickupLocations.component";
 
 // Add pickup numbers
 import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
 import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
 
 // Categorize pickup locations
-import {PrmRequestAfterConfig} from "./categorize-pickup-locations/prmRequestAfter.component";
-import {KbPickupLocationsConfig} from "./categorize-pickup-locations/kbPickupLocations.component";
+// import {PrmRequestAfterConfig} from "./categorize-pickup-locations/prmRequestAfter.component";
+// import {KbPickupLocationsConfig} from "./categorize-pickup-locations/kbPickupLocations.component";
 
-angular.module('viewCustom', ['angularLoad'])
-
+angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .constant('viewName', (function () {
             let url = window.location.search.substring(1);
             let query = url.substring(url.indexOf('vid') + 4);
@@ -82,8 +84,8 @@ angular.module('viewCustom', ['angularLoad'])
     .component(PrmPreFiltersAfterConfig.name, PrmPreFiltersAfterConfig.config)
 
     // Categorize pickup locations
-    .component(PrmRequestAfterConfig.name, PrmRequestAfterConfig.config)
-    .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
+    // .component(PrmRequestAfterConfig.name, PrmRequestAfterConfig.config)
+    // .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
 
     // Edit profile
     .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
@@ -104,10 +106,12 @@ angular.module('viewCustom', ['angularLoad'])
 
     // Move request-another-volume
     .component(PrmServiceButtonAfterConfig.name, PrmServiceButtonAfterConfig.config)
+    .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
 
     // Language switcher
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
     .component(KbLanguageConfig.name, KbLanguageConfig.config)
+    .component(KbEditPincodeConfig.name, KbEditPincodeConfig.config)
 
     // Add pickup numbers
     .service('pickUpNumbersService', PickUpNumbersService)

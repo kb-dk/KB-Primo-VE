@@ -5,21 +5,23 @@ class KbPickupLocationsController {
     };
 
     // Test here:
-    // http://192.168.225.128:8003/discovery/fulldisplay?docid=alma99122559747705763&context=L&vid=45KBDK_KGL:KGL&lang=da&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,kvinde&offset=0
+    // /discovery/fulldisplay?docid=alma99122559747705763&context=L&vid=45KBDK_KGL:KGL&lang=da&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,kvinde&offset=0
     // Login
     // Click on 'Bestil'
     // Afhentningssted
     $postLink() {
-        // Because we hook to prmRequestAfter, and the button is not in that group
-        // so we need to wait a bit so the button is there (hopefully).
-        KbPickupLocationsController.timesRunIntervalIdFindButton = 0;
-        KbPickupLocationsController.intervalIdFindButton = setInterval(KbPickupLocationsController.findRequestButtonAndAttachJavascriptToIt, 500);
+        // prmServiceButtonAfter is called two times
+        if (KbPickupLocationsController.intervalIdFindButton === undefined){
+            KbPickupLocationsController.timesRunIntervalIdFindButton = 0;
+            // We hook to prmServiceButtonAfter, and the button is not there in the beginning,
+            // so we need to wait a bit so the button is there.
+            KbPickupLocationsController.intervalIdFindButton = setInterval(KbPickupLocationsController.findRequestButtonAndAttachJavascriptToIt, 500);
+        }
     };
 
 
     static addCssAndJavascriptEventsToLabelsAndOptions() {
         const mdOptions = document.querySelectorAll('md-select-menu md-optgroup md-option');
-        console.log('mdOptions:', mdOptions);
         mdOptions.forEach(mdOption => {
             mdOption.style.display = "none";
             // It is a fix for the options which are further down the menu
@@ -33,7 +35,6 @@ class KbPickupLocationsController {
         });
 
         const labels = document.querySelectorAll('md-select-menu md-optgroup label');
-        console.log('labels:', labels);
         labels.forEach((label, index) => {
             label.style.fontWeight = 'bold';
             label.classList.add('plus');
@@ -68,7 +69,6 @@ class KbPickupLocationsController {
         KbPickupLocationsController.intervalIdFindPickupLocationSelect = setInterval(function () {
             KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect += 1;
             const pickupLocationSelectInput = angular.element(document.querySelectorAll('#form_field_pickupLocation md-select'));
-            console.log('pickupLocationSelectInput', pickupLocationSelectInput, 'timesRunIntervalIdFindPickupLocationSelect:', KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect);
             // When 'pickupLocation field' is found then attach the changes to its click event and stop the interval.
             if (pickupLocationSelectInput.length) {
                 pickupLocationSelectInput[0].addEventListener("click", KbPickupLocationsController.addCssAndJavascriptEventsToLabelsAndOptions);
@@ -85,7 +85,6 @@ class KbPickupLocationsController {
     static findRequestButtonAndAttachJavascriptToIt() {
         KbPickupLocationsController.timesRunIntervalIdFindButton += 1;
         const prmServiceButtons = angular.element(document.querySelectorAll('prm-service-button button'));
-        console.log('prmServiceButtons:', prmServiceButtons, 'timesRunIntervalIdFindButton:', KbPickupLocationsController.timesRunIntervalIdFindButton);
         if (KbPickupLocationsController.timesRunIntervalIdFindButton === 10 || prmServiceButtons.length){
             clearInterval(KbPickupLocationsController.intervalIdFindButton);
         }
