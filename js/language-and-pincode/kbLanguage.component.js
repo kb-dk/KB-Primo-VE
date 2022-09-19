@@ -3,9 +3,11 @@ class KbLanguageController {
     constructor($window, $location) {
         this.$window = $window;
         this.$location = $location;
-        this.lang = this.parentCtrl.lang;
-
     };
+
+    $onInit() {
+        this.lang = this.parentCtrl.lang;
+    }
 
     changeLanguage() {
         let newLang = this.lang === 'da'? 'en' : 'da';

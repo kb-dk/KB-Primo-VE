@@ -25,7 +25,7 @@ class PrmLocationItemsAfterController {
         }
     }
 
-    $postLink() {
+    $onInit() {
         let _this = this;
         this.$intervalId = this.$interval(function(){
             _this.activateFilter(_this.$intervalId);

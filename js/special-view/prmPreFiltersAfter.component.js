@@ -25,7 +25,6 @@ class PrmPreFiltersAfterController {
 
             let lang = this.location.search().lang || 'da';
             let viewName = this.location.search().vid;
-            console.log('viewName:',viewName);
             this.changeSearchBarPlaceholder(lang, viewName);
         }
 
@@ -43,7 +42,7 @@ class PrmPreFiltersAfterController {
                 }, 500);
             })
             .catch(err => {
-                console.log( err);
+                console.error( err);
                 return err;
             });
     }

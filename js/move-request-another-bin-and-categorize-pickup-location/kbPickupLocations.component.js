@@ -1,7 +1,8 @@
 // Related to following Jira Issue:
 // https://sbprojects.statsbiblioteket.dk/jira/browse/BSV-213
 class KbPickupLocationsController {
-    constructor() {
+    constructor(getTranslationsService) {
+        this.getTranslationsService = getTranslationsService;
     };
 
     // Test here:
@@ -9,16 +10,15 @@ class KbPickupLocationsController {
     // Login
     // Click on 'Bestil'
     // Afhentningssted
-    $postLink() {
+    $onInit() {
         // prmServiceButtonAfter is called two times
-        if (KbPickupLocationsController.intervalIdFindButton === undefined){
+        if (KbPickupLocationsController.intervalIdFindButton === undefined) {
             KbPickupLocationsController.timesRunIntervalIdFindButton = 0;
             // We hook to prmServiceButtonAfter, and the button is not there in the beginning,
             // so we need to wait a bit so the button is there.
             KbPickupLocationsController.intervalIdFindButton = setInterval(KbPickupLocationsController.findRequestButtonAndAttachJavascriptToIt, 500);
         }
-    };
-
+    }
 
     static addCssAndJavascriptEventsToLabelsAndOptions() {
         const mdOptions = document.querySelectorAll('md-select-menu md-optgroup md-option');
@@ -74,7 +74,7 @@ class KbPickupLocationsController {
                 pickupLocationSelectInput[0].addEventListener("click", KbPickupLocationsController.addCssAndJavascriptEventsToLabelsAndOptions);
                 clearInterval(KbPickupLocationsController.intervalIdFindPickupLocationSelect);
             } else {
-                if(KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect === 10){
+                if (KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect === 10) {
                     clearInterval(KbPickupLocationsController.intervalIdFindPickupLocationSelect);
                 }
             }
@@ -85,7 +85,7 @@ class KbPickupLocationsController {
     static findRequestButtonAndAttachJavascriptToIt() {
         KbPickupLocationsController.timesRunIntervalIdFindButton += 1;
         const prmServiceButtons = angular.element(document.querySelectorAll('prm-service-button button'));
-        if (KbPickupLocationsController.timesRunIntervalIdFindButton === 10 || prmServiceButtons.length){
+        if (KbPickupLocationsController.timesRunIntervalIdFindButton === 10 || prmServiceButtons.length) {
             clearInterval(KbPickupLocationsController.intervalIdFindButton);
         }
         for (let i = 0; i < prmServiceButtons.length; i++) {
@@ -94,9 +94,14 @@ class KbPickupLocationsController {
     }
 }
 
+KbPickupLocationsController.$inject = ['getTranslationsService'];
+
 export let KbPickupLocationsConfig = {
     name: 'kbPickupLocations',
     config: {
-        controller: KbPickupLocationsController
+        controller: KbPickupLocationsController,
+        bindings: {
+            parentCtrl: '<',
+        },
     }
 };
