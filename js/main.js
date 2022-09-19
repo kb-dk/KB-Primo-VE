@@ -45,10 +45,6 @@ import {KbPickupLocationsConfig} from "./move-request-another-bin-and-categorize
 import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
 import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
 
-// Categorize pickup locations
-// import {PrmRequestAfterConfig} from "./categorize-pickup-locations/prmRequestAfter.component";
-// import {KbPickupLocationsConfig} from "./categorize-pickup-locations/kbPickupLocations.component";
-
 angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .constant('viewName', (function () {
             let url = window.location.search.substring(1);
@@ -82,10 +78,6 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
 
     // Special view
     .component(PrmPreFiltersAfterConfig.name, PrmPreFiltersAfterConfig.config)
-
-    // Categorize pickup locations
-    // .component(PrmRequestAfterConfig.name, PrmRequestAfterConfig.config)
-    // .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
 
     // Edit profile
     .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)
