@@ -22,7 +22,7 @@ module.exports = function (config) {
             'helpers/*.js',
             '../../html/*.html',
             'specs/*.spec.js',
-            '../../js/custom.module.js',
+            // '../../js/custom.module.js',
             '../../js/custom.js',
         ],
 
