@@ -28,7 +28,7 @@
     "kb-primo-ve-announcement": "^1.0.5",
     "kb-primo-ve-hide-new-user-if-loggedin": "^1.1.0",
     "kb-primo-ve-libchat": "^1.0.6",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "primo-explore-help-menu": "^1.2.1",
     "protractor": "^5.1.1",
     "watchify": "^3.8.0"

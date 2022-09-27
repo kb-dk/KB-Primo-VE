@@ -9,8 +9,13 @@ The following instructions are intended for Unix-like operating systems.
 ## Installation
 - Clone or download this repository into the proper place in your [Primo Development Environment](https://github.com/ExLibrisGroup/primo-explore-devenv).
 - Navigate into the directory where you cloned this repository.
+- Install node version v14.19.0
 - Run `npm install` to install development dependencies.
-- Run `npm run start` to run the package locally.
+- cd /primo-explore-devenv/primo-explore/custom/
+- git clone https://github.com/kb-dk/KB-Primo-VE.git 45KBDK_KGL-KGL
+- cd 45KBDK_KGL-KGL
+- Run `npm install` 
+- Run `npm start` to run the package locally.
 - Run `npm run pack` to create the final customization package into the package folder.
 
 ## Building the package from primo-explore-devenv
