@@ -45,6 +45,9 @@ import {KbPickupLocationsConfig} from "./move-request-another-bin-and-categorize
 import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
 import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
 
+// Resource recommender
+import {PrmResourceRecommenderAfterConfig} from "./resource-recommender/prmResourceRecommenderAfter.component";
+
 angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .constant('viewName', (function () {
             let url = window.location.search.substring(1);
@@ -108,6 +111,9 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     // Add pickup numbers
     .service('pickUpNumbersService', PickUpNumbersService)
     .component(PrmRequestsAfterConfig.name, PrmRequestsAfterConfig.config)
+
+    // Resource recommender
+    .component(PrmResourceRecommenderAfterConfig.name, PrmResourceRecommenderAfterConfig.config)
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
 require('kb-primo-ve-announcement');

@@ -165,3 +165,30 @@ prm-banner-card-content > a{
     line-height: normal;
   }
 }
+
+// Make resource recommender close button more visible on both light and dark image backgrounds
+prm-resource-recommender {
+  .main-banner-content button[data-qa="close_banner_btn"],
+  .main-banner-content button[data-qa="close_banner_btn"]:hover {
+    color: #fff;
+    background-color: #3a3a3a;
+  }
+
+  & > div:last-of-type {
+    border: solid 1px lightgray;
+    padding: 10px;
+    position: relative;
+    display: none;
+    &.visible{
+      display: flex;
+    }
+  }
+
+  button#closeRecommender {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #3a3a3a;
+    background: rgba(58, 58, 58, .12);
+  }
+}

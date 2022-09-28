@@ -203,6 +203,26 @@ prm-banner-card-content > a {
   prm-banner-card-content > a md-truncate.bigger-title.main-text-banner.md-truncate {
     line-height: normal; }
 
+prm-resource-recommender .main-banner-content button[data-qa="close_banner_btn"],
+prm-resource-recommender .main-banner-content button[data-qa="close_banner_btn"]:hover {
+  color: #fff;
+  background-color: #3a3a3a; }
+
+prm-resource-recommender > div:last-of-type {
+  border: solid 1px lightgray;
+  padding: 10px;
+  position: relative;
+  display: none; }
+  prm-resource-recommender > div:last-of-type.visible {
+    display: flex; }
+
+prm-resource-recommender button#closeRecommender {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #3a3a3a;
+  background: rgba(58, 58, 58, 0.12); }
+
 #facets {
   /* 'Søg også materialer uden fuldtekstadgang' above 'Afgræns resultat' */ }
   #facets .section-title,
