@@ -86,3 +86,8 @@ header.help-page {
 article.help-page{
   margin-top: 2rem;
 }
+.top-nav-bar-links prm-icon md-icon, .top-nav-bar-links prm-icon md-icon.md-primoExplore-theme,
+kb-language .md-button:not(.disable-hover):not(.close-btn-favorits-warning-message),
+prm-user-area-expandable .md-button:not(.disable-hover):not(.close-btn-favorits-warning-message){
+    color: $links!important;
+  }
