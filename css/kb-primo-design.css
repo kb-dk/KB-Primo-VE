@@ -211,8 +211,7 @@ prm-resource-recommender .main-banner-content button[data-qa="close_banner_btn"]
 prm-resource-recommender > div:last-of-type {
   border: solid 1px lightgray;
   padding: 10px;
-  position: relative;
-  display: none; }
+  position: relative; }
   prm-resource-recommender > div:last-of-type.visible {
     display: flex; }
 

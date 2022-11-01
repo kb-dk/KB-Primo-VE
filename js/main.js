@@ -101,7 +101,7 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
 
     // Move request-another-volume
     .component(PrmServiceButtonAfterConfig.name, PrmServiceButtonAfterConfig.config)
-    .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
+    // .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
 
     // Language switcher
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
@@ -113,7 +113,7 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .component(PrmRequestsAfterConfig.name, PrmRequestsAfterConfig.config)
 
     // Resource recommender
-    .component(PrmResourceRecommenderAfterConfig.name, PrmResourceRecommenderAfterConfig.config)
+    // .component(PrmResourceRecommenderAfterConfig.name, PrmResourceRecommenderAfterConfig.config)
 
 // Get more info at https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE-Announcement
 require('kb-primo-ve-announcement');
