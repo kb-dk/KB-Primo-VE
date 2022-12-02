@@ -11512,6 +11512,12 @@ kb-language .md-button:not(.disable-hover):not(.close-btn-favorits-warning-messa
 prm-user-area-expandable .md-button:not(.disable-hover):not(.close-btn-favorits-warning-message) {
   color: #002e70 !important; }
 
+prm-user-area-expandable-after {
+  display: flex; }
+
+prm-user-area-expandable kb-become-user div a.md-button {
+  text-transform: uppercase; }
+
 .prm-secondary-color.prm-hue1,
 .link-alt-color,
 .section-title prm-icon,

@@ -91,3 +91,12 @@ kb-language .md-button:not(.disable-hover):not(.close-btn-favorits-warning-messa
 prm-user-area-expandable .md-button:not(.disable-hover):not(.close-btn-favorits-warning-message){
     color: $links!important;
   }
+
+prm-user-area-expandable-after{
+  display: flex;
+}
+
+prm-user-area-expandable kb-become-user div a.md-button{
+  text-transform: uppercase;
+  box-shadow: none;
+}
