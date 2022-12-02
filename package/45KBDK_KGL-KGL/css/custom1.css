@@ -11516,7 +11516,8 @@ prm-user-area-expandable-after {
   display: flex; }
 
 prm-user-area-expandable kb-become-user div a.md-button {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  box-shadow: none; }
 
 .prm-secondary-color.prm-hue1,
 .link-alt-color,
