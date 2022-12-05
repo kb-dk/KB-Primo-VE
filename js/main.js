@@ -29,7 +29,7 @@ import {KbNavigationHeaderConfig} from './navigation-header/kbNavigationHeader';
 import {PrmUserAreaExpandableAfterConfig} from './language-and-pincode/prmUserAreaExpandableAfter.component';
 import {KbLanguageConfig} from './language-and-pincode/kbLanguage.component';
 import {KbEditPincodeConfig} from './language-and-pincode/kbEditPincode.component';
-import {KbBecomeUserConfig} from './language-and-pincode/kbBecomeUser.component';
+import {KbMoveBecomeUserConfig} from './language-and-pincode/kbMoveBecomeUser.component';
 
 
 // ChatBox scriptId
@@ -108,7 +108,7 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
     .component(KbLanguageConfig.name, KbLanguageConfig.config)
     .component(KbEditPincodeConfig.name, KbEditPincodeConfig.config)
-    .component(KbBecomeUserConfig.name, KbBecomeUserConfig.config)
+    .component(KbMoveBecomeUserConfig.name, KbMoveBecomeUserConfig.config)
 
     // Add pickup numbers
     .service('pickUpNumbersService', PickUpNumbersService)
