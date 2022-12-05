@@ -356,7 +356,7 @@ prm-user-area-expandable .md-button:not(.disable-hover):not(.close-btn-favorits-
 prm-user-area-expandable-after {
   display: flex; }
 
-prm-user-area-expandable kb-become-user div a.md-button {
+prm-user-area-expandable div[data-main-menu-item="new_user"] a {
   text-transform: uppercase;
   box-shadow: none; }
 

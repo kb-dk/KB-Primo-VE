@@ -13,7 +13,7 @@ class KbMoveBecomeUserController {
     }
 
     findBecomeUserDiv(intervalId){
-        const becomeUserDiv = angular.element(document.querySelectorAll('div[data-main-menu-item="help"]'));
+        const becomeUserDiv = angular.element(document.querySelectorAll('div[data-main-menu-item="new_user"]'));
         if (becomeUserDiv.length){
             this.$interval.cancel(intervalId);
             this.moveBecomeUserDiv(becomeUserDiv);
