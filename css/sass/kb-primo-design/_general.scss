@@ -139,7 +139,9 @@ md-dialog.light-on-dark-dialog {
 
   }
 }
-
+prm-topbar .md-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]):not(.close-btn-favorits-warning-message){
+  color: #002e70;
+}
 prm-main-menu[menu-type=full] .custom-links-container .main-menu-button {
   width: 100%;
 }
@@ -174,11 +176,11 @@ prm-resource-recommender {
     background-color: #3a3a3a;
   }
 
-  & > div:last-of-type {
+  & > div:not(.main-banner-content) {
     border: solid 1px lightgray;
     padding: 10px;
     position: relative;
-    //display: none;
+    display: none;
     &.visible{
       display: flex;
     }
@@ -189,6 +191,10 @@ prm-resource-recommender {
     top: 0;
     right: 0;
     color: #3a3a3a;
+    display: none;
     background: rgba(58, 58, 58, .12);
+    &.visible{
+      display: flex;
+    }
   }
 }
