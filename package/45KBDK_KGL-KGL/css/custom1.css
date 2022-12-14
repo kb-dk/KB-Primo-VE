@@ -11133,26 +11133,84 @@ prm-report-problem .report-container .md-button.report-problem-btn:hover{
   background-color: #F4B664;
 }
 
-prm-report-problem:hover .report-container .report-problem-btn::before {
-  content: "Rapporter defekt link. Venlig hilsen Zahra";
+prm-report-problem .report-container .report-problem-btn:hover::before {
+  content: "Rapporter defekt link";
+  color: #002E70;
+  padding-right: 1em;
 }
 
-prm-report-problem:hover .report-container .report-problem-btn {
+prm-report-problem .report-container .report-problem-btn:hover {
   width: auto;
   background-color: #F4B664;
 }
 
 prm-report-problem .report-container button.report-problem-btn{
-  background-color: #F4B664;
+  background-color: #F4B664!important;
   top: calc(50% + 40px);
   width: 40px;
   height: 40px;
   min-height: 24px;
   min-width: 24px;
   right: 0;
+  background-image: url(../img/brokenlink.svg);
+  background-position: right;
+  line-height: 25px;
 }
 
+prm-report-problem .report-problem-content.report-menu-content-desktop {
+  border-radius: 0;
+  border: 1px solid #002E70;
+}
 
+prm-report-problem #closeReportBrokenLink{
+  color: #002e70;
+  position: absolute;
+  right: 15px;
+  text-decoration: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  stroke: #002e70;
+}
+
+/*<md-tooltip md-delay="400" class="md-panel md-tooltip md-origin-bottom md-primoExplore-theme md-show" tabindex="-1" style="pointer-events: all;" role="tooltip"><span translate="report.tooltip">Giv os feedback</span></md-tooltip>*/
+
+prm-report-problem .report-problem-content.report-menu-content-desktop div.report-header {
+  background-color: #F4B664;
+}
+
+prm-report-problem .report-problem-content.report-menu-content-desktop div.report-header h2{
+  color: #002E70;
+  font-weight: normal;
+}
+prm-report-problem .form-content button.button-link{
+  background-color: #002E70 !important;
+  color: white !important;
+  border: 1px solid #0F2E70;
+  border-radius: 5px;
+}
+
+prm-report-problem .form-content div.message-box{
+  background-color: white;
+  color: #0F2E70;
+  border: 1px solid #0F2E70;
+  border-radius: 0;
+}
+
+prm-report-problem .form-content button.button-link:hover{
+  border-radius: 5px;
+}
+
+prm-report-problem .message-box:after{
+  display: none;
+}
+.report-problem-content.report-menu-content-desktop {
+  border-radius: 11px;
+  z-index: 100;
+  position: fixed;
+  right: calc(50% - 133px);
+  top: calc(50% - 200px);
+}
 
 prm-databases prm-databases-categorize,
 prm-databases #facets{

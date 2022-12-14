@@ -159,7 +159,7 @@ prm-report-problem .report-container .report-problem-btn:hover {
 }
 
 prm-report-problem .report-container button.report-problem-btn{
-  background-color: #F4B664;
+  background-color: #F4B664!important;
   top: calc(50% + 40px);
   width: 40px;
   height: 40px;
@@ -175,6 +175,19 @@ prm-report-problem .report-problem-content.report-menu-content-desktop {
   border-radius: 0;
   border: 1px solid #002E70;
 }
+
+prm-report-problem #closeReportBrokenLink{
+  color: #002e70;
+  position: absolute;
+  right: 15px;
+  text-decoration: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  stroke: #002e70;
+}
+
+/*<md-tooltip md-delay="400" class="md-panel md-tooltip md-origin-bottom md-primoExplore-theme md-show" tabindex="-1" style="pointer-events: all;" role="tooltip"><span translate="report.tooltip">Giv os feedback</span></md-tooltip>*/
 
 prm-report-problem .report-problem-content.report-menu-content-desktop div.report-header {
   background-color: #F4B664;
