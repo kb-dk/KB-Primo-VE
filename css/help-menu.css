@@ -8,7 +8,7 @@
   margin: 20px;
   padding: 10px;
 }
-a.helpMenu--location-button {
+a.helpMenu--location-button, prm-report-problem button.report-problem-btn {
   padding: 6px;
   background-color: #22647B;
   border-radius: 4px;
@@ -27,7 +27,7 @@ div.helpMenu--location{
 
 
 /* Search help button */
-help-button .md-button.md-icon-button.search-help-button{
+help-button .md-button.md-icon-button.search-help-button, prm-report-problem button.report-problem-btn{
   border-radius: 0;
   background: #0F2E70 0 0 no-repeat padding-box;
   box-shadow: 0 0 6px #32323259;
@@ -43,12 +43,12 @@ help-button .md-button.md-icon-button.search-help-button{
   right:0
 }
 
-help-button .search-help-button.md-button:hover{
+help-button .search-help-button.md-button:hover, prm-report-problem button.report-problem-btn:hover{
   width: auto;
   padding-right: 30px;
 }
 
-help-button .search-help-button.md-button:hover md-icon:before{
+help-button .search-help-button.md-button:hover md-icon:before, prm-report-problem button.report-problem-btn md-icon{
   vertical-align: top;
 }
 
@@ -133,3 +133,82 @@ help-button .search-help-button.md-button.md-focused{
 z-index: 80;
 }
 
+/*Mowing feedback button*/
+
+prm-report-problem .report-container .report-problem-btn prm-icon md-icon {
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+  min-width: 24px;
+  display: none;
+}
+
+prm-report-problem .report-container .md-button.report-problem-btn:hover{
+  background-color: #F4B664;
+}
+
+prm-report-problem .report-container .report-problem-btn:hover::before {
+  content: "Rapporter defekt link";
+  color: #002E70;
+  padding-right: 1em;
+}
+
+prm-report-problem .report-container .report-problem-btn:hover {
+  width: auto;
+  background-color: #F4B664;
+}
+
+prm-report-problem .report-container button.report-problem-btn{
+  background-color: #F4B664;
+  top: calc(50% + 40px);
+  width: 40px;
+  height: 40px;
+  min-height: 24px;
+  min-width: 24px;
+  right: 0;
+  background-image: url(../img/brokenlink.svg);
+  background-position: right;
+  line-height: 25px;
+}
+
+prm-report-problem .report-problem-content.report-menu-content-desktop {
+  border-radius: 0;
+  border: 1px solid #002E70;
+}
+
+prm-report-problem .report-problem-content.report-menu-content-desktop div.report-header {
+  background-color: #F4B664;
+}
+
+prm-report-problem .report-problem-content.report-menu-content-desktop div.report-header h2{
+  color: #002E70;
+  font-weight: normal;
+}
+prm-report-problem .form-content button.button-link{
+  background-color: #002E70 !important;
+  color: white !important;
+  border: 1px solid #0F2E70;
+  border-radius: 5px;
+}
+
+prm-report-problem .form-content div.message-box{
+  background-color: white;
+  color: #0F2E70;
+  border: 1px solid #0F2E70;
+  border-radius: 0;
+}
+
+prm-report-problem .form-content button.button-link:hover{
+  border-radius: 5px;
+}
+
+prm-report-problem .message-box:after{
+  display: none;
+}
+.report-problem-content.report-menu-content-desktop {
+  border-radius: 11px;
+  z-index: 100;
+  position: fixed;
+  right: calc(50% - 133px);
+  top: calc(50% - 200px);
+}

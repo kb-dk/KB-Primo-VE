@@ -10994,7 +10994,7 @@ prm-personal-info md-card md-card-content button.md-button, #personal_settings-f
   margin: 20px;
   padding: 10px;
 }
-a.helpMenu--location-button {
+a.helpMenu--location-button, prm-report-problem button.report-problem-btn {
   padding: 6px;
   background-color: #22647B;
   border-radius: 4px;
@@ -11013,7 +11013,7 @@ div.helpMenu--location{
 
 
 /* Search help button */
-help-button .md-button.md-icon-button.search-help-button{
+help-button .md-button.md-icon-button.search-help-button, prm-report-problem button.report-problem-btn{
   border-radius: 0;
   background: #0F2E70 0 0 no-repeat padding-box;
   box-shadow: 0 0 6px #32323259;
@@ -11029,12 +11029,12 @@ help-button .md-button.md-icon-button.search-help-button{
   right:0
 }
 
-help-button .search-help-button.md-button:hover{
+help-button .search-help-button.md-button:hover, prm-report-problem button.report-problem-btn:hover{
   width: auto;
   padding-right: 30px;
 }
 
-help-button .search-help-button.md-button:hover md-icon:before{
+help-button .search-help-button.md-button:hover md-icon:before, prm-report-problem button.report-problem-btn md-icon{
   vertical-align: top;
 }
 
@@ -11118,6 +11118,40 @@ help-button .search-help-button.md-button.md-focused{
 #search-help-dialog{
 z-index: 80;
 }
+
+/*Mowing feedback button*/
+
+prm-report-problem .report-container .report-problem-btn prm-icon md-icon {
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+  min-width: 24px;
+  display: none;
+}
+
+prm-report-problem .report-container .md-button.report-problem-btn:hover{
+  background-color: #F4B664;
+}
+
+prm-report-problem:hover .report-container .report-problem-btn::before {
+  content: "Rapporter defekt link. Venlig hilsen Zahra";
+}
+
+prm-report-problem:hover .report-container .report-problem-btn {
+  width: auto;
+  background-color: #F4B664;
+}
+
+prm-report-problem .report-container button.report-problem-btn{
+  background-color: #F4B664;
+  top: calc(50% + 40px);
+  width: 40px;
+  height: 40px;
+  min-height: 24px;
+  min-width: 24px;
+  right: 0;
+}
+
 
 
 prm-databases prm-databases-categorize,

@@ -46,6 +46,9 @@ import {KbPickupLocationsConfig} from "./move-request-another-bin-and-categorize
 import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
 import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
 
+// Close broken link feedback
+import {PrmReportProblemAfterConfig} from "./brokenLinkFeedback/prmReportProblemAfter";
+
 // Resource recommender
 import {PrmResourceRecommenderAfterConfig} from "./resource-recommender/prmResourceRecommenderAfter.component";
 
@@ -113,6 +116,9 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     // Add pickup numbers
     .service('pickUpNumbersService', PickUpNumbersService)
     .component(PrmRequestsAfterConfig.name, PrmRequestsAfterConfig.config)
+
+    // Close report broken link feedback
+    .component(PrmReportProblemAfterConfig.name, PrmReportProblemAfterConfig.config)
 
     // Resource recommender
     .component(PrmResourceRecommenderAfterConfig.name, PrmResourceRecommenderAfterConfig.config)
