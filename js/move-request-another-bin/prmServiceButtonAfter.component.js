@@ -52,6 +52,5 @@ export let PrmServiceButtonAfterConfig = {
             parentCtrl: '<'
         },
         controller: PrmServiceButtonAfterController,
-        template: `<kb-pickup-locations parent-ctrl='$ctrl.parentCtrl'></kb-pickup-locations>`,
     },
 }

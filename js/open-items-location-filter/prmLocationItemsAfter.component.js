@@ -10,16 +10,16 @@ class PrmLocationItemsAfterController {
         // If the filter div exists it means it is already open
         let filterDiv = angular.element(document.querySelectorAll("prm-locations-filter md-input-container"));
 
-        if ((filterBtn1.length || filterBtn2.length) && !filterDiv.length) {
+        if (((filterBtn1 && filterBtn1.length) || (filterBtn2 && filterBtn2.length)) && !filterDiv.length) {
             this.$interval.cancel(intervalId);
-            if (filterBtn1.length){
+            if (filterBtn1 && filterBtn1.length){
                 filterBtn1.triggerHandler('click');
             }
-            if (filterBtn2.length){
+            if (filterBtn2 && filterBtn2.length){
                 filterBtn2.triggerHandler('click');
             }
         }else{
-            if (filterDiv.length){
+            if (filterDiv && filterDiv.length){
                 this.$interval.cancel(intervalId);
             }
         }

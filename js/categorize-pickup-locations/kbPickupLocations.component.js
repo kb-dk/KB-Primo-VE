@@ -20,6 +20,10 @@ class KbPickupLocationsController {
         }
     }
 
+    $onDestroy(){
+        clearInterval(KbPickupLocationsController.intervalIdFindButton);
+    }
+
     static addCssAndJavascriptEventsToLabelsAndOptions() {
         const mdOptions = document.querySelectorAll('md-select-menu md-optgroup md-option');
         mdOptions.forEach(mdOption => {
@@ -69,27 +73,25 @@ class KbPickupLocationsController {
         KbPickupLocationsController.intervalIdFindPickupLocationSelect = setInterval(function () {
             KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect += 1;
             const pickupLocationSelectInput = angular.element(document.querySelectorAll('#form_field_pickupLocation md-select'));
-            // When 'pickupLocation field' is found then attach the changes to its click event and stop the interval.
+            // When 'pickupLocation field' is found then attach the changes to its click event.
             if (pickupLocationSelectInput.length) {
                 pickupLocationSelectInput[0].addEventListener("click", KbPickupLocationsController.addCssAndJavascriptEventsToLabelsAndOptions);
-                clearInterval(KbPickupLocationsController.intervalIdFindPickupLocationSelect);
-            } else {
-                if (KbPickupLocationsController.timesRunIntervalIdFindPickupLocationSelect === 10) {
-                    clearInterval(KbPickupLocationsController.intervalIdFindPickupLocationSelect);
-                }
+                clearInterval(KbPickupLocationsController.intervalIdFindButton);
             }
 
-        }, 500);
+        }, 1000);
     }
 
     static findRequestButtonAndAttachJavascriptToIt() {
         KbPickupLocationsController.timesRunIntervalIdFindButton += 1;
         const prmServiceButtons = angular.element(document.querySelectorAll('prm-service-button button'));
-        if (KbPickupLocationsController.timesRunIntervalIdFindButton === 10 || prmServiceButtons.length) {
+        if (KbPickupLocationsController.timesRunIntervalIdFindButton === 10 || (prmServiceButtons && prmServiceButtons.length)) {
             clearInterval(KbPickupLocationsController.intervalIdFindButton);
         }
-        for (let i = 0; i < prmServiceButtons.length; i++) {
-            prmServiceButtons[i].addEventListener("click", KbPickupLocationsController.startSearchingForPickupLocationField);
+        if(prmServiceButtons){
+            for (let i = 0; i < prmServiceButtons.length; i++) {
+                prmServiceButtons[i].addEventListener("click", KbPickupLocationsController.startSearchingForPickupLocationField);
+            }
         }
     }
 }
@@ -100,8 +102,5 @@ export let KbPickupLocationsConfig = {
     name: 'kbPickupLocations',
     config: {
         controller: KbPickupLocationsController,
-        bindings: {
-            parentCtrl: '<',
-        },
     }
 };
