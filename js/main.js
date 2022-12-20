@@ -39,8 +39,11 @@ import {scriptIds} from "./chat-box/scriptIds.constant";
 import {PrmLocationItemsAfterConfig} from "./open-items-location-filter/prmLocationItemsAfter.component";
 
 // Move request-another-volume
-import {PrmServiceButtonAfterConfig} from "./move-request-another-bin-and-categorize-pickup-location/prmServiceButtonAfter.component";
-import {KbPickupLocationsConfig} from "./move-request-another-bin-and-categorize-pickup-location/kbPickupLocations.component";
+import {PrmServiceButtonAfterConfig} from "./move-request-another-bin/prmServiceButtonAfter.component";
+
+// Categorize pickup locations
+import {KbPickupLocationsConfig} from "./categorize-pickup-locations/kbPickupLocations.component";
+import {PrmRequestAfterConfig} from "./categorize-pickup-locations/prmRequestAfter.component";
 
 // Add pickup numbers
 import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
@@ -105,7 +108,6 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
 
     // Move request-another-volume
     .component(PrmServiceButtonAfterConfig.name, PrmServiceButtonAfterConfig.config)
-    // .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
 
     // Language switcher and pincode and become user
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
@@ -117,8 +119,13 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .service('pickUpNumbersService', PickUpNumbersService)
     .component(PrmRequestsAfterConfig.name, PrmRequestsAfterConfig.config)
 
+    // Categorize pickup locations
+    .component(PrmRequestAfterConfig.name, PrmRequestAfterConfig.config)
+    .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
+
     // Close report broken link feedback
     .component(PrmReportProblemAfterConfig.name, PrmReportProblemAfterConfig.config)
+
 
     // Resource recommender
     .component(PrmResourceRecommenderAfterConfig.name, PrmResourceRecommenderAfterConfig.config)

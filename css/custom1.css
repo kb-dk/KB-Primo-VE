@@ -11467,7 +11467,8 @@ prm-resource-recommender > div:not(.main-banner-content) {
   padding: 10px;
   position: relative;
   display: none; }
-  prm-resource-recommender > div:not(.main-banner-content).visible {
+
+prm-resource-recommender > div:not(.main-banner-content).visible {
     display: flex; }
 
 prm-resource-recommender button#closeRecommender {
