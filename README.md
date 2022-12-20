@@ -23,6 +23,14 @@ Alternative to 'npm run start' from view folder (root of this repository) is to 
 
      gulp run --view VIEWNAME --ve --browserify
 
+## Use labels instead of hardcoding a text or link
+There is a possibility in the Alma, Discovery/labels, which is to define labels and their translations and separate them from the code.
+If you need to use a text or link in the code, find or create a label in a code table (fulldisplay table has been normally used).
+For at use a label in the code there is two ways:
+1. To use translate filter, which uses the translated text in the exact place as the label:  `href="{{'fulldisplay.newUser.link' | translate}}"` which results in `href="XXX"`
+2. To use translate attribute, which adds the translated text to the tag as the text value:  `<a translate="fulldisplay.homepage.card1.link3.label"></a>` which results in `<a translate="fulldisplay.homepage.card1.link3.label">XXX</a>`
+There is a list of our custom labels her:
+https://sbprojects.statsbiblioteket.dk/pages/viewpage.action?spaceKey=ATD&title=Primo+customization+tekster+og+links
 ## CSS preprocessing
 We utilize [SASS](http://sass-lang.com/) (with the SCSS syntax) for CSS preprocessing. SASS files are located under [css/sass](https://github.com/Det-Kongelige-Bibliotek/KB-Primo-VE/tree/master/css/sass). To start CSS preproccessing, run the following command in view folder (root of this repository). 
 

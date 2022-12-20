@@ -9,11 +9,12 @@ class PrmResourceRecommenderAfterController {
     }
 
     addCloseButtonAndOpenRecommenderIfNeeded(element) {
-        let parentElement = element.parent()[0].childNodes[element.parent()[0].childNodes.length - 3];
+        let parentElement = document.querySelectorAll('prm-resource-recommender > div:not(.main-banner-content)')[0];
         const elem = document.getElementById('closeRecommender');
         if (elem && parentElement){
+            angular.element(elem).addClass('visible');
             parentElement.prepend(elem);
-            if (!sessionStorage.closeRecommender){
+            if (!sessionStorage.hideRecommender){
                 angular.element(elem).parent().addClass('visible');
             }
         }
@@ -22,7 +23,7 @@ class PrmResourceRecommenderAfterController {
     closeRecommender(){
         const elem = document.getElementById('closeRecommender');
         angular.element(elem).parent().removeClass('visible');
-        sessionStorage.closeRecommender = true;
+        sessionStorage.hideRecommender = true;
     }
 }
 

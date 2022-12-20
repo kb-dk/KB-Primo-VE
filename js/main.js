@@ -29,6 +29,7 @@ import {KbNavigationHeaderConfig} from './navigation-header/kbNavigationHeader';
 import {PrmUserAreaExpandableAfterConfig} from './language-and-pincode/prmUserAreaExpandableAfter.component';
 import {KbLanguageConfig} from './language-and-pincode/kbLanguage.component';
 import {KbEditPincodeConfig} from './language-and-pincode/kbEditPincode.component';
+import {KbMoveBecomeUserConfig} from './language-and-pincode/kbMoveBecomeUser.component';
 
 
 // ChatBox scriptId
@@ -47,6 +48,9 @@ import {PrmRequestAfterConfig} from "./categorize-pickup-locations/prmRequestAft
 // Add pickup numbers
 import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
 import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
+
+// Close broken link feedback
+import {PrmReportProblemAfterConfig} from "./brokenLinkFeedback/prmReportProblemAfter";
 
 // Resource recommender
 import {PrmResourceRecommenderAfterConfig} from "./resource-recommender/prmResourceRecommenderAfter.component";
@@ -105,10 +109,11 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     // Move request-another-volume
     .component(PrmServiceButtonAfterConfig.name, PrmServiceButtonAfterConfig.config)
 
-    // Language switcher
+    // Language switcher and pincode and become user
     .component(PrmUserAreaExpandableAfterConfig.name, PrmUserAreaExpandableAfterConfig.config)
     .component(KbLanguageConfig.name, KbLanguageConfig.config)
     .component(KbEditPincodeConfig.name, KbEditPincodeConfig.config)
+    .component(KbMoveBecomeUserConfig.name, KbMoveBecomeUserConfig.config)
 
     // Add pickup numbers
     .service('pickUpNumbersService', PickUpNumbersService)
@@ -117,6 +122,10 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     // Categorize pickup locations
     .component(PrmRequestAfterConfig.name, PrmRequestAfterConfig.config)
     .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
+
+    // Close report broken link feedback
+    .component(PrmReportProblemAfterConfig.name, PrmReportProblemAfterConfig.config)
+
 
     // Resource recommender
     .component(PrmResourceRecommenderAfterConfig.name, PrmResourceRecommenderAfterConfig.config)
