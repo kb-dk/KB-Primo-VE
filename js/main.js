@@ -120,8 +120,8 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .component(PrmRequestsAfterConfig.name, PrmRequestsAfterConfig.config)
 
     // Categorize pickup locations
-    // .component(PrmRequestAfterConfig.name, PrmRequestAfterConfig.config)
-    // .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
+    .component(PrmRequestAfterConfig.name, PrmRequestAfterConfig.config)
+    .component(KbPickupLocationsConfig.name, KbPickupLocationsConfig.config)
 
     // Close report broken link feedback
     .component(PrmReportProblemAfterConfig.name, PrmReportProblemAfterConfig.config)
