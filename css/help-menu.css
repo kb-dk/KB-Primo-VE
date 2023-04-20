@@ -148,7 +148,6 @@ prm-report-problem .report-container .md-button.report-problem-btn:hover{
 }
 
 prm-report-problem .report-container .report-problem-btn:hover::before {
-  content: "Rapporter defekt link";
   color: #002E70;
   padding-right: 1em;
 }

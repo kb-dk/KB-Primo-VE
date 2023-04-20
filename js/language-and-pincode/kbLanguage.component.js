@@ -1,12 +1,14 @@
 class KbLanguageController {
 
-    constructor($window, $location) {
+    constructor($window, $location, $rootScope) {
         this.$window = $window;
         this.$location = $location;
+        this.$rootScope = $rootScope;
     };
 
     $onInit() {
         this.lang = this.parentCtrl.lang;
+        console.log('Root', this.$rootScope.$root);
     }
 
     changeLanguage() {
@@ -18,7 +20,7 @@ class KbLanguageController {
 
 }
 
-KbLanguageController.$inject = ['$window', '$location'];
+KbLanguageController.$inject = ['$window', '$location', '$rootScope'];
 
 export let KbLanguageConfig=  {
     name: 'kbLanguage',

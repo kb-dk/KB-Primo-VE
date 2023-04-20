@@ -56,6 +56,10 @@ import {PrmReportProblemAfterConfig} from "./brokenLinkFeedback/prmReportProblem
 import {PrmResourceRecommenderAfterConfig} from "./resource-recommender/prmResourceRecommenderAfter.component";
 
 angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
+    // .run(['$rootScope', ($rootScope) => {
+    //     console.log('viewName:',$rootScope);
+    //     // $rootScope.viewName = viewName;
+    // }])
     .constant('viewName', (function () {
             let url = window.location.search.substring(1);
             let query = url.substring(url.indexOf('vid') + 4);
@@ -125,7 +129,6 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
 
     // Close report broken link feedback
     .component(PrmReportProblemAfterConfig.name, PrmReportProblemAfterConfig.config)
-
 
     // Resource recommender
     .component(PrmResourceRecommenderAfterConfig.name, PrmResourceRecommenderAfterConfig.config)
