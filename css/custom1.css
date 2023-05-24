@@ -11943,6 +11943,26 @@ md-input-container.md-input-invalid label:before{
 .minus::before{
     content: '- ';
 }
+prm-resource-type-filter-bar .md-button {
+    background-color: white;
+    color: #171717!important;
+}
+
+prm-resource-type-filter-bar prm-icon,
+prm-resource-type-filter-bar md-input-container{
+    color: #002E70!important;
+}
+
+prm-resource-type-filter-bar .selectedResourceTypeOption prm-icon,
+prm-resource-type-filter-bar .md-button:hover prm-icon{
+    color: white!important;
+}
+
+prm-resource-type-filter-bar .selectedResourceTypeOption,
+prm-resource-type-filter-bar .md-button:hover{
+    background-color: #002E70!important;
+    color: #fff!important;
+}
 prm-request-services .labeled-block .block-body {
     max-height: 30em;
 }
