@@ -7,7 +7,6 @@ class PrmSearchBarAfterController {
 
     $onInit() {
         // Do these operations only in Special view
-        console.log(this.location.search().vid.indexOf("SPEC") , this.location.search().vid.indexOf("SPEC") || this.location.search().vid.indexOf("spec"));
         if (this.location.search().vid.indexOf("SPECIALER") !== -1) {
             let _this = this;
             setTimeout(function () {
