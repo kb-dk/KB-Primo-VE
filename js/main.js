@@ -5,7 +5,7 @@ import {GetTranslationsService } from "./services/getTranslations.service";
 import {KbHomeConfig} from './home/kbHome.component';
 
 // Special view
-import {PrmPreFiltersAfterConfig} from './special-view/prmPreFiltersAfter.component';
+import {PrmSearchBarAfterConfig} from './special-view/prmSearchBarAfter.component';
 
 // Edit profile
 import {PrmPersonalInfoAfterConfig} from './edit-profile/prmPersonalInfoAfter.component';
@@ -91,7 +91,7 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .component(KbHomeConfig.name, KbHomeConfig.config)
 
     // Special view
-    .component(PrmPreFiltersAfterConfig.name, PrmPreFiltersAfterConfig.config)
+    .component(PrmSearchBarAfterConfig.name, PrmSearchBarAfterConfig.config)
 
     // Edit profile
     .component(PrmPersonalInfoAfterConfig.name, PrmPersonalInfoAfterConfig.config)

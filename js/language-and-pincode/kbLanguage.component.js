@@ -8,7 +8,6 @@ class KbLanguageController {
 
     $onInit() {
         this.lang = this.parentCtrl.lang;
-        console.log('Root', this.$rootScope.$root);
     }
 
     changeLanguage() {
