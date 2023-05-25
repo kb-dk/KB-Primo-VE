@@ -11946,6 +11946,8 @@ md-input-container.md-input-invalid label:before{
 prm-resource-type-filter-bar .md-button {
     background-color: white;
     color: #171717!important;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 prm-resource-type-filter-bar prm-icon,
