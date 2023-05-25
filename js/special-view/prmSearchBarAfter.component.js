@@ -7,14 +7,17 @@ class PrmSearchBarAfterController {
 
     $onInit() {
         // Do these operations only in Special view
-        if (this.location.search().vid.indexOf("SPEC") || this.location.search().vid.indexOf("spec")) {
+        console.log(this.location.search().vid.indexOf("SPEC") , this.location.search().vid.indexOf("SPEC") || this.location.search().vid.indexOf("spec"));
+        if (this.location.search().vid.indexOf("SPECIALER") !== -1) {
             let _this = this;
             setTimeout(function () {
                 // 1- Move the yellow search scope element into the search bar
                 // Find parent element
                 let parentElement = angular.element(document.querySelector('prm-search-bar form > div > div'))[0];
                 // Add the element as the first child of the parent
-                parentElement.prepend(document.getElementById('specialViewSearchScope'));
+                let yellowBox = document.getElementById('specialViewSearchScope');
+                yellowBox.style.display = "flex";
+                parentElement.prepend(yellowBox);
 
                 // 2- Change placeholder text in the search bar
                 // First hide the placeholder so the default one won't appear
