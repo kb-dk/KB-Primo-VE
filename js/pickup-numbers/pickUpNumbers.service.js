@@ -2,27 +2,31 @@
  * Service to insert the pickup numbers for the requested items.
  */
 export class PickUpNumbersService {
-    constructor($location) {
+    constructor($location, getTranslationsService) {
+        this.getTranslationsService = getTranslationsService;
         this.location = $location;
     }
 
     getPickupLabel(){
         let lang = this.location.search().lang;
-        let pickUpLabel;
-        if (lang === 'en') {
-            pickUpLabel = 'Pickup number: ';
-        } else {
-            pickUpLabel = 'Ventehyldenummer: ';
-        }
-        return pickUpLabel;
+        lang = lang ? lang : 'da';
+        let viewName = this.location.search().vid;
+        return this.getTranslationsService._getTranslation(lang , viewName, 'fulldisplay.pickupnumber');
     }
 
     insertPickUpNumber(pickUpNumber, container) {
         if (container.innerHTML.indexOf('<span class="pickup_number">') === -1) {
-            let newElement = "<br/><span class='pickup_number'>" + this.getPickupLabel() + "</span>" + pickUpNumber + "<br/>";
-            angular.element(container.querySelectorAll('p.request-location')).append(newElement);
+            this.getPickupLabel()
+                .then(pickupLabel => {
+                    this.addPickupLineToReservation(pickupLabel, pickUpNumber, container);
+                });
         }
+    }
+
+    addPickupLineToReservation(pickupLabel, pickUpNumber, container) {
+        let newElement = "<br/><span class='pickup_number'>" + pickupLabel + ": </span>" + pickUpNumber + "<br/>";
+        angular.element(container.querySelectorAll('p.request-location')).append(newElement);
     }
 }
 
-PickUpNumbersService.$inject = ['$location'];
+PickUpNumbersService.$inject = ['$location', 'getTranslationsService'];
