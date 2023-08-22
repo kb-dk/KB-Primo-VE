@@ -11053,12 +11053,12 @@ prm-user-area-expandable .md-button.user-button .menu-arrow:after{
 }
 
 /* Show PROFIL instead of user's name*/
-prm-user-area-expandable .md-button.user-button:before{
-    content: 'PROFIL ';
-}
-md-menu .user-button span.user-name{
-    display: none;
-}
+/*prm-user-area-expandable .md-button.user-button:before{*/
+/*    content: 'PROFIL ';*/
+/*}*/
+/*md-menu .user-button span.user-name{*/
+/*    display: none;*/
+/*}*/
 prm-personal-info md-card md-card-content button.md-button, #personal_settings-focus{
     display: none;
 }
