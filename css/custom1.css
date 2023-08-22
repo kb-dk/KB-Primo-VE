@@ -10958,6 +10958,107 @@ prm-collection-navigation-breadcrumbs-item.root-item .md-button span{
 
 
 
+.md-open-menu-container{
+    border: 1px solid #002E70;
+    color: #002E70;
+    z-index: 1000;
+}
+
+.md-open-menu-container md-menu-content .md-button{
+    color: #002E70;
+    width: 100%;
+    height: 100%;
+}
+
+.md-open-menu-container md-menu-content .md-button span{
+    text-transform: none!important;
+    font-size: 15px;
+    font-weight: normal!important;
+}
+
+.md-open-menu-container md-menu-content .md-button:hover,
+.md-open-menu-container md-menu-content .md-button.md-primary:hover:not([disabled]),
+.md-open-menu-container md-menu-content .md-button:focus,
+.md-open-menu-container md-menu-content .md-button:hover prm-icon,
+.md-open-menu-container md-menu-content .md-button.md-primary:hover:not([disabled]) prm-icon,
+.md-open-menu-container md-menu-content .md-button:focus prm-icon{
+    color: white;
+}
+
+.md-open-menu-container md-menu-content .md-button:hover,
+.md-open-menu-container md-menu-content .md-button.md-primary:hover:not([disabled]),
+.md-open-menu-container md-menu-content .md-button:focus{
+    background-color: #002E70;
+}
+
+md-menu-content md-menu-item{
+    border-bottom: 1px solid #002E70;
+}
+
+md-menu-content md-menu-item:first-of-type div.user-menu-header{
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+md-menu-content md-menu-item:first-of-type div.user-menu-header div,
+md-menu-content md-menu-divider{
+    display: none;
+}
+
+md-menu-content md-menu-item button{
+    text-align: left;
+}
+
+md-menu-content md-menu-item:first-of-type{
+    order: 10;
+    border-bottom: 0;
+}
+md-menu-content md-menu-item:last-of-type{
+
+}
+md-menu-content md-menu-item prm-icon{
+    position: absolute;
+    right: 13px;
+    color: #002E70;
+    opacity: 1;
+}
+
+md-menu-content{
+    padding-bottom: 0;
+}
+
+md-menu-item.menu-item-indented .md-button,
+md-menu-item .md-button{
+    padding-left: 16px;
+    text-align: left;
+}
+
+md-menu-item .md-button.md-primary:hover:not([disabled]),
+md-menu-item .md-button.md-primary:focus:not([disabled]){
+    color: #002E70;
+    background-color: white;
+}
+
+prm-user-area-expandable .md-button.user-button .menu-arrow{
+    font: normal normal normal 14px/1 'material-icons';
+    color: #002E70;
+}
+
+prm-user-area-expandable .md-button.user-button .menu-arrow:after{
+    content: '\f205';
+    transform: none;
+    position: relative;
+    top: 0;
+}
+
+/* Show PROFIL instead of user's name*/
+/*prm-user-area-expandable .md-button.user-button:before{*/
+/*    content: 'PROFIL ';*/
+/*}*/
+/*md-menu .user-button span.user-name{*/
+/*    display: none;*/
+/*}*/
 prm-personal-info md-card md-card-content button.md-button, #personal_settings-focus{
     display: none;
 }
