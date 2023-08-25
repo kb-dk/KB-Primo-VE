@@ -11051,19 +11051,35 @@ md-menu-item .md-button:after{
 }
 
 md-menu-item .md-button[aria-label="myEditPincode"]:after{
-    content: url("../img/password_blue_24dp.svg");
+    content: url("../img/icon_password_blue_24dp.svg");
 }
 
 md-menu-item .md-button[aria-label="My Loans"]:after{
-    content: url("../img/library_books_blue_24dp.svg");
+    content: url("../img/icon_library_books_blue_24dp.svg");
 }
 
 md-menu-item .md-button[aria-label="My Requests"]:after{
-    content: url("../img/book_blue_24dp.svg");
+    content: url("../img/icon_book_blue_24dp.svg");
 }
 
 md-menu-item .md-button[aria-label="Sign out"]:after{
-    content: url("../img/logout_blue_24dp.svg");
+    content: url("../img/icon_logout_blue_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="myEditPincode"]:hover:after{
+    content: url("../img/icon_password_white_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="My Loans"]:hover:after{
+    content: url("../img/icon_library_books_white_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="My Requests"]:hover:after{
+    content: url("../img/icon_book_white_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="Sign out"]:hover:after{
+    content: url("../img/icon_logout_white_24dp.svg");
 }
 
 prm-user-area-expandable .md-button.user-button .menu-arrow{

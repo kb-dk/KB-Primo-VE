@@ -1,5 +1,9 @@
 /* primary color hook */
 /* commenttttt*/
+prm-personal-settings .switch-options .switch-without-button md-switch ._md-thumb, prm-personal-settings .switch-options .switch-without-button md-switch .md-thumb{
+    color: #002E70!important;
+    background-color: #002E70!important;
+}
 .md-button {
     color: #3a3a3a; }
 .md-button:hover:not([disabled]), .md-button:focus:not([disabled]), .md-button.hovered:not([disabled]), .md-button.md-focused:not([disabled]), .md-button._md-focused:not([disabled]) {
@@ -11040,14 +11044,42 @@ md-menu-item .md-button.md-primary:focus:not([disabled]){
     background-color: white;
 }
 
-
-md-menu-item [aria-label="myEditPincode"]:after{
-    content: url("../img/password_black_24dp.svg");
-    mask: url("../img/password_black_24dp.svg");
+md-menu-item .md-button:after{
     position: absolute;
     right: 13px;
-    color: #002E70;
     opacity: 1;
+}
+
+md-menu-item .md-button[aria-label="myEditPincode"]:after{
+    content: url("../img/icon_password_blue_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="My Loans"]:after{
+    content: url("../img/icon_library_books_blue_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="My Requests"]:after{
+    content: url("../img/icon_book_blue_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="Sign out"]:after{
+    content: url("../img/icon_logout_blue_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="myEditPincode"]:hover:after{
+    content: url("../img/icon_password_white_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="My Loans"]:hover:after{
+    content: url("../img/icon_library_books_white_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="My Requests"]:hover:after{
+    content: url("../img/icon_book_white_24dp.svg");
+}
+
+md-menu-item .md-button[aria-label="Sign out"]:hover:after{
+    content: url("../img/icon_logout_white_24dp.svg");
 }
 
 prm-user-area-expandable .md-button.user-button .menu-arrow{
@@ -11069,8 +11101,6 @@ prm-user-area-expandable .md-button.user-button .menu-arrow:after{
 /*md-menu .user-button span.user-name{*/
 /*    display: none;*/
 /*}*/
-
-
 prm-personal-info md-card md-card-content button.md-button, #personal_settings-focus{
     display: none;
 }
