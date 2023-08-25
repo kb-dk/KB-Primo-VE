@@ -1,13 +1,17 @@
 // https://sbprojects.statsbiblioteket.dk/jira/browse/BSV-437
 class PrmRequestsAfterController {
 
-    constructor($element, pickUpNumbersService) {
+    constructor($element, pickUpNumbersService, $interval) {
         this.$element = $element;
         this.pickUpNumbersService = pickUpNumbersService;
+        this.$interval = $interval;
     }
 
     $onInit() {
-        setTimeout(this.createAndInsertPickupNumbers, 2000, this);
+        let _this = this;
+        this.$intervalId = this.$interval(function(){
+            _this.createAndInsertPickupNumbers(_this);
+        }, 500);
     }
 
     createAndInsertPickupNumbers(_this) {
@@ -22,7 +26,7 @@ class PrmRequestsAfterController {
         let day = this.getDay(message);
         if (this.isDay(day)) {
             let shelf_nr = this.getPickupNumber(requestNumber, day);
-            this.pickUpNumbersService.insertPickUpNumber(shelf_nr, reservations[requestNumber]);
+            this.pickUpNumbersService.insertPickUpNumber(shelf_nr, requestNumber);
         }
     }
 
@@ -68,9 +72,13 @@ class PrmRequestsAfterController {
     isDay(day) {
         return parseInt(day) >= 1 && parseInt(day) <= 31;
     }
+
+    $onDestroy(){
+    this.$interval.cancel(this.$intervalId);
+    }
 }
 
-PrmRequestsAfterController.$inject = ['$element', 'pickUpNumbersService'];
+PrmRequestsAfterController.$inject = ['$element', 'pickUpNumbersService', '$interval'];
 
 export let PrmRequestsAfterConfig = {
     name: 'prmRequestsAfter',
