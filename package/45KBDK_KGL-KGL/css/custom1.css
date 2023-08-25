@@ -11040,6 +11040,16 @@ md-menu-item .md-button.md-primary:focus:not([disabled]){
     background-color: white;
 }
 
+
+md-menu-item [aria-label="myEditPincode"]:after{
+    content: url("../img/password_black_24dp.svg");
+    mask: url("../img/password_black_24dp.svg");
+    position: absolute;
+    right: 13px;
+    color: #002E70;
+    opacity: 1;
+}
+
 prm-user-area-expandable .md-button.user-button .menu-arrow{
     font: normal normal normal 14px/1 'material-icons';
     color: #002E70;
@@ -11059,6 +11069,8 @@ prm-user-area-expandable .md-button.user-button .menu-arrow:after{
 /*md-menu .user-button span.user-name{*/
 /*    display: none;*/
 /*}*/
+
+
 prm-personal-info md-card md-card-content button.md-button, #personal_settings-focus{
     display: none;
 }

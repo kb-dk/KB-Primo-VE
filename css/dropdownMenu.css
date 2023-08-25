@@ -80,6 +80,14 @@ md-menu-item .md-button.md-primary:focus:not([disabled]){
     background-color: white;
 }
 
+md-menu-item [aria-label="myEditPincode"]:after{
+    content: url("../img/password_black_24dp.svg");
+    mask: url("../img/password_black_24dp.svg");
+    position: absolute;
+    right: 13px;
+    opacity: 1;
+}
+
 prm-user-area-expandable .md-button.user-button .menu-arrow{
     font: normal normal normal 14px/1 'material-icons';
     color: #002E70;
