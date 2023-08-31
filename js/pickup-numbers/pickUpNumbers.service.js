@@ -14,18 +14,34 @@ export class PickUpNumbersService {
         return this.getTranslationsService._getTranslation(lang , viewName, 'fulldisplay.pickupnumber');
     }
 
-    insertPickUpNumber(pickUpNumber, container) {
-        if (container.innerHTML.indexOf('<span class="pickup_number">') === -1) {
+    insertPickUpNumber(pickUpNumber, requestNumber) {
             this.getPickupLabel()
                 .then(pickupLabel => {
-                    this.addPickupLineToReservation(pickupLabel, pickUpNumber, container);
+                        if(!document.getElementById('pickup_number_'+requestNumber)){
+                            this.addPickupLineToReservation(pickupLabel, pickUpNumber, requestNumber);
+                        }
+
                 });
-        }
     }
 
-    addPickupLineToReservation(pickupLabel, pickUpNumber, container) {
-        let newElement = "<br/><span class='pickup_number'>" + pickupLabel + ": </span>" + pickUpNumber + "<br/>";
-        angular.element(container.querySelectorAll('p.request-location')).append(newElement);
+    addPickupLineToReservation(pickupLabel, pickUpNumber, requestNumber) {
+        let pickup_id = 'pickup_number_' + requestNumber;
+        let newElement = "<br/><span id='" + pickup_id + "' class='pickup_number'>" + pickupLabel + ": </span>" + pickUpNumber + "<br/>";
+        let container = document.querySelectorAll('prm-requests md-list md-list-item')[requestNumber];
+        if (container){
+            let parentLocation = container.querySelectorAll('p.request-location');
+            if(angular.element(parentLocation)){
+                angular.element(parentLocation).append(newElement);
+            }
+            for(let i=0; i<10; i++){
+                if(!document.getElementById(pickup_id)){
+                    let parentLocation = container.querySelectorAll('p.request-location');
+                    if(angular.element(parentLocation)){
+                        angular.element(parentLocation[0]).prepend(newElement);
+                    }
+                }
+            }
+        }
     }
 }
 
