@@ -145,14 +145,20 @@ button span.fulltext {
   color: #002e70;
   padding-bottom: 20px; }
 
-md-menu-item.kb-edit-pincode-ctm {
+md-menu-item.kb-edit-pincode-ctm,
+md-menu-item.kb-fine-and-fees-ctm,
+md-menu-item.kb-print-acount-ctm {
   display: none; }
 
-md-menu-item.kb-edit-pincode-ctm a {
+md-menu-item.kb-fine-and-fees-ctm a,
+md-menu-item.kb-edit-pincode-ctm a,
+md-menu-item.kb-print-acount-ctm a {
   box-shadow: none; }
 
-md-menu-content md-menu-item.kb-edit-pincode-ctm {
-  display: block; }
+md-menu-content md-menu-item.kb-fine-and-fees-ctm,
+md-menu-content md-menu-item.kb-edit-pincode-ctm,
+md-menu-content md-menu-item.kb-print-acount-ctm {
+  display: flex; }
 
 md-dialog.light-on-dark-dialog {
   background-color: rgba(0, 46, 112, 0.8);

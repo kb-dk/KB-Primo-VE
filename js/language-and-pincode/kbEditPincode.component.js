@@ -29,7 +29,7 @@ class KbEditPincodeController {
             for (let i = 0; i < userButtons.length; i++) {
                 userButtons[i].addEventListener('click', function () {
                     let menuItem = angular.element(document.querySelector('md-menu-item.my-library-card-ctm'));
-                    menuItem[0].parentNode.insertBefore(editPincodeItem[0].firstChild, menuItem[0].nextSibling);
+                    menuItem[0].parentNode.insertBefore(editPincodeItem[0], menuItem[0].nextSibling);
                 });
             }
         }

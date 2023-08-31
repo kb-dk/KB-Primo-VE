@@ -11016,11 +11016,8 @@ md-menu-content md-menu-item button{
 
 md-menu-content md-menu-item:first-of-type{
     order: 10;
-    border-bottom: 0;
 }
-md-menu-content md-menu-item:last-of-type{
 
-}
 md-menu-content md-menu-item prm-icon{
     position: absolute;
     right: 13px;
@@ -11044,42 +11041,55 @@ md-menu-item .md-button.md-primary:focus:not([disabled]){
     background-color: white;
 }
 
-md-menu-item .md-button:after{
+md-menu-item .md-button:after,
+md-menu-item a md-icon{
     position: absolute;
     right: 13px;
     opacity: 1;
 }
 
-md-menu-item .md-button[aria-label="myEditPincode"]:after{
+md-menu-item.kb-edit-pincode-ctm .md-button:after{
     content: url("../img/icon_password_blue_24dp.svg");
 }
 
-md-menu-item .md-button[aria-label="My Loans"]:after{
+md-menu-item.kb-fine-and-fees-ctm .md-button:after{
+    content: url("../img/icon-payments_blue_24dp.svg");
+}
+
+md-menu-item.my-loans-ctm .md-button:after{
     content: url("../img/icon_library_books_blue_24dp.svg");
 }
 
-md-menu-item .md-button[aria-label="My Requests"]:after{
+md-menu-item.my-requests-ctm .md-button:after{
     content: url("../img/icon_book_blue_24dp.svg");
 }
 
-md-menu-item .md-button[aria-label="Sign out"]:after{
+md-menu-item #signOutButton:after{
     content: url("../img/icon_logout_blue_24dp.svg");
 }
 
-md-menu-item .md-button[aria-label="myEditPincode"]:hover:after{
+md-menu-item.kb-edit-pincode-ctm .md-button:hover:after{
     content: url("../img/icon_password_white_24dp.svg");
 }
 
-md-menu-item .md-button[aria-label="My Loans"]:hover:after{
+md-menu-item.kb-fine-and-fees-ctm .md-button:hover:after{
+    content: url("../img/icon-payments_white_24dp.svg");
+}
+
+md-menu-item.my-loans-ctm .md-button:hover:after{
     content: url("../img/icon_library_books_white_24dp.svg");
 }
 
-md-menu-item .md-button[aria-label="My Requests"]:hover:after{
+md-menu-item.my-requests-ctm .md-button:hover:after{
     content: url("../img/icon_book_white_24dp.svg");
 }
 
-md-menu-item .md-button[aria-label="Sign out"]:hover:after{
+md-menu-item #signOutButton:hover:after{
     content: url("../img/icon_logout_white_24dp.svg");
+}
+
+md-menu-item.my-PersonalDetails-ctm{
+    display: none;
 }
 
 prm-user-area-expandable .md-button.user-button .menu-arrow{
@@ -11538,14 +11548,20 @@ button span.fulltext {
   color: #002e70;
   padding-bottom: 20px; }
 
-md-menu-item.kb-edit-pincode-ctm {
+md-menu-item.kb-edit-pincode-ctm,
+md-menu-item.kb-fine-and-fees-ctm,
+md-menu-item.kb-print-acount-ctm {
   display: none; }
 
-md-menu-item.kb-edit-pincode-ctm a {
+md-menu-item.kb-fine-and-fees-ctm a,
+md-menu-item.kb-edit-pincode-ctm a,
+md-menu-item.kb-print-acount-ctm a {
   box-shadow: none; }
 
-md-menu-content md-menu-item.kb-edit-pincode-ctm {
-  display: block; }
+md-menu-content md-menu-item.kb-fine-and-fees-ctm,
+md-menu-content md-menu-item.kb-edit-pincode-ctm,
+md-menu-content md-menu-item.kb-print-acount-ctm {
+  display: flex; }
 
 md-dialog.light-on-dark-dialog {
   background-color: rgba(0, 46, 112, 0.8);
