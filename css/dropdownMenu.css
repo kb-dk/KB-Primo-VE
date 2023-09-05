@@ -16,19 +16,26 @@
     font-weight: normal!important;
 }
 
-.md-open-menu-container md-menu-content .md-button:hover,
-.md-open-menu-container md-menu-content .md-button.md-primary:hover:not([disabled]),
 .md-open-menu-container md-menu-content .md-button:focus,
-.md-open-menu-container md-menu-content .md-button:hover prm-icon,
-.md-open-menu-container md-menu-content .md-button.md-primary:hover:not([disabled]) prm-icon,
 .md-open-menu-container md-menu-content .md-button:focus prm-icon{
-    color: white;
+    color: #002E70;
+}
+
+.md-open-menu-container md-menu-content .md-button:focus{
+    background-color: white;
 }
 
 .md-open-menu-container md-menu-content .md-button:hover,
 .md-open-menu-container md-menu-content .md-button.md-primary:hover:not([disabled]),
-.md-open-menu-container md-menu-content .md-button:focus{
+.md-open-menu-container md-menu-content .md-button:hover prm-icon,
+.md-open-menu-container md-menu-content .md-button.md-primary:hover:not([disabled]) prm-icon{
+    color: white;
+}
+
+.md-open-menu-container md-menu-content .md-button:hover,
+.md-open-menu-container md-menu-content .md-button.md-primary:hover:not([disabled]){
     background-color: #002E70;
+    color: white;
 }
 
 md-menu-content md-menu-item{
@@ -77,11 +84,14 @@ md-menu-item .md-button.md-primary:focus:not([disabled]){
     background-color: white;
 }
 
-md-menu-item .md-button:after,
+md-menu-item .md-button:after{
+    position: absolute;
+    right: 17px;
+    top: 11px;
+}
 md-menu-item a md-icon{
     position: absolute;
     right: 13px;
-    opacity: 1;
 }
 
 md-menu-item.kb-edit-pincode-ctm .md-button:after{
@@ -102,6 +112,7 @@ md-menu-item.my-requests-ctm .md-button:after{
 
 md-menu-item #signOutButton:after{
     content: url("../img/icon_logout_blue_24dp.svg");
+    top: 11px;
 }
 
 md-menu-item.kb-edit-pincode-ctm .md-button:hover:after{
