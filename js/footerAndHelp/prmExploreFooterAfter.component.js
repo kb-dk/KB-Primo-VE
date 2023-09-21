@@ -2,7 +2,7 @@ export let PrmExploreFooterAfterConfig = {
     name: 'prmExploreFooterAfter',
     config: {
         bindings: {parentCtrl: '<'},
-        template: `<kb-footer></kb-footer>
+        template: `<kb-primo-footer></kb-primo-footer>
                    <kb-help parent-ctrl='$ctrl.parentCtrl'></kb-help>`,
     }
 };
