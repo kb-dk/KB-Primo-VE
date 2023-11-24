@@ -17,7 +17,7 @@ import {KbHelpPageHeaderConfig} from './help-page/kbHelpPageHeader.component';
 
 // Footer
 import {PrmExploreFooterAfterConfig} from './footerAndHelp/prmExploreFooterAfter.component';
-import {KbFooterConfig} from './footerAndHelp/kbFooter.component';
+import {KbPrimoFooterConfig} from './footerAndHelp/kbPrimoFooter.component';
 
 import {KbHelpConfig} from './footerAndHelp/kbHelp.component';
 
@@ -99,7 +99,7 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
 
     // Footer and help
     .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
-    .component(KbFooterConfig.name, KbFooterConfig.config)
+    .component(KbPrimoFooterConfig.name, KbPrimoFooterConfig.config)
 
    .component(KbHelpConfig.name, KbHelpConfig.config)
 

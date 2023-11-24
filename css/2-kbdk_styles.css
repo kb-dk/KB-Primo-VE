@@ -8202,22 +8202,6 @@ blockquote:before {
 .theme-bg .filter-btn:not(.active), .theme-bg .org-63a1bc7e-5093-4bf0-8d2e-fcf5bfe32aca .show-more:not(.active), .org-63a1bc7e-5093-4bf0-8d2e-fcf5bfe32aca .theme-bg .show-more:not(.active) {
     background-color: white; }
 
-.footer-logo {
-    width: 7rem;
-    height: 100%;
-    background-image: url(../img/footer-logo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
-@media print, screen and (min-width: 64em) {
-    .footer-logo {
-        background-image: url(../img/footer-logo.svg);
-        width: 7rem; } }
-.footer-logo span {
-    display: inline-block;
-    width: 100%;
-    height: 100%; }
-
 .gab {
     height: 20rem; }
 

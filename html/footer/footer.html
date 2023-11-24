@@ -1,161 +1,29 @@
-<footer>
-	<div class="inner-content grid-container">
-		<div class="grid-x grid-padding-x grid-padding-y">
-			<div class="small-6 medium-3 cell">
-				<ul class="link-list">
-					<li>
-						<h3 translate="fulldisplay.footer.title"></h3>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.link1' | translate}}" target="_blank"
-							translate="fulldisplay.footer.link1.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.link2' | translate}}" target="_blank"
-						   translate ="fulldisplay.footer.link2.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.link3' | translate}}" target="_blank"
-						   translate = "fulldisplay.footer.link3.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.link4' | translate}}" target="_blank"
-						translate = "fulldisplay.footer.link4.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.link5' | translate}}" target="_blank"
-						   translate = "fulldisplay.footer.link5.label">
-						</a>
-					</li>
-				</ul>
-
-			</div>
-			<div class="small-6 medium-3 cell">
-				<ul class="link-list">
-					<li>
-						<h3 translate="fulldisplay.footer.col2.title">
-						</h3>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col2.link1' | translate}}" target="_blank"
-						translate="fulldisplay.footer.col2.link1.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col2.link2' | translate}}" target="_blank"
-						translate = "fulldisplay.footer.col2.link2.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col2.link3' | translate}}" target="_blank"
-						   translate="fulldisplay.footer.col2.link3.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col2.link4' | translate}}" target="_blank"
-						   translate="fulldisplay.footer.col2.link4.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col2.link5' | translate}}" target="_blank"
-						   translate="fulldisplay.footer.col2.link5.label">
-						</a>
-					</li>
-				</ul>
-
-			</div>
-			<div class="small-6 medium-3 cell">
-				<ul class="link-list">
-					<li>
-						<h3 translate="fulldisplay.footer.col3.title"></h3>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col3.link1' | translate}}" target="_blank"
-						   translate="fulldisplay.footer.col3.link1.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col3.link2' | translate}}" target="_blank"
-						   translate="fulldisplay.footer.col3.link2.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col3.link3' | translate}}" target="_blank"
-						   translate="fulldisplay.footer.col3.link3.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col3.link4' | translate}}" target="_blank"
-						   translate="fulldisplay.footer.col3.link4.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col3.link5' | translate}}" target="_blank"
-						   translate="fulldisplay.footer.col3.link5.label">
-						</a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col3.link6' | translate}}" target="_blank"
-                        translate="fulldisplay.footer.col3.link6.label">
-                        </a>
-					</li>
-					<li>
-						<a href="{{'fulldisplay.footer.col3.link7' | translate}}" target="_blank"
-                        translate="fulldisplay.footer.col3.link7.label">
-                        </a>
-					</li>
-				</ul>
-			</div>
-			<div class="small-6 medium-3 cell">
-				<ul class="link-list">
-					<li>
-						<div class="footer-logo">
-							<span class="">&nbsp;</span>
-							<span class="mobile">&nbsp;</span>
-						</div>
-
-					</li>
-					<li>
-						<span>Tlf: (+45) 33 47 47 47</span>
-					</li>
-					<li>
-						<span>kb@kb.dk</span>
-					</li>
-					<li>
-						<span>EAN: 5798000795297</span>
-					</li>
-					<li>
-						<span>CVR: 28988842</span>
-					</li>
-					<li class="show-for-medium">
-						<a href="https://www.kb.dk/om-os/foelg-os">
-							<i class="icon icon-facebook icon-medium">
-							</i>
-						</a>
-						<a href="https://www.kb.dk/om-os/foelg-os">
-							<i class="icon icon-twitter icon-medium">
-							</i>
-						</a>
-					</li>
-				</ul>
-
-			</div>
-			<div class="small-12 show-for-small-only cell">
-				<div class="box flex-container align-center">
-					<a href="https://www.kb.dk/om-os/foelg-os">
-						<i class="icon icon-facebook icon-medium">
-						</i>
-					</a>
-					<a href="https://www.kb.dk/om-os/foelg-os">
-						<i class="icon icon-twitter icon-medium">
-						</i>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+<kb-footer language= "{{ $ctrl.lang }}">
+    <ul id="appFooterColumn">
+        <li>
+            <a href="{{'fulldisplay.footer.link1' | translate}}" target="_blank"
+               translate="fulldisplay.footer.link1.label">
+            </a>
+        </li>
+        <li>
+            <a href="{{'fulldisplay.footer.link2' | translate}}" target="_blank"
+               translate="fulldisplay.footer.link2.label">
+            </a>
+        </li>
+        <li>
+            <a href="{{'fulldisplay.footer.link3' | translate}}" target="_blank"
+               translate="fulldisplay.footer.link3.label">
+            </a>
+        </li>
+        <li>
+            <a href="{{'fulldisplay.footer.link4' | translate}}" target="_blank"
+               translate="fulldisplay.footer.link4.label">
+            </a>
+        </li>
+        <li>
+            <a href="{{'fulldisplay.footer.link5' | translate}}" target="_blank"
+               translate="fulldisplay.footer.link5.label">
+            </a>
+        </li>
+    </ul>
+</kb-footer>
