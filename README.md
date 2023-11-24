@@ -15,7 +15,7 @@ The following instructions are intended for Unix-like operating systems.
 - git clone https://github.com/kb-dk/KB-Primo-VE.git 45KBDK_KGL-KGL
 - cd 45KBDK_KGL-KGL
 - Run `npm install` 
-- Run `npm start` to run the package locally.
+- Run `npm start` to run the package locally. Open this url: (port nr. may vary, check your terminal for the correct one) http://localhost:8003/discovery/search?vid=45KBDK_KGL:KGL&lang=da
 - Run `npm run pack` to create the final customization package into the package folder.
 
 ## Building the package from primo-explore-devenv
