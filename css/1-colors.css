@@ -1,5 +1,9 @@
 /* primary color hook */
 /* commenttttt*/
+prm-personal-settings .switch-options .switch-without-button md-switch ._md-thumb, prm-personal-settings .switch-options .switch-without-button md-switch .md-thumb{
+    color: #002E70!important;
+    background-color: #002E70!important;
+}
 .md-button {
     color: #3a3a3a; }
 .md-button:hover:not([disabled]), .md-button:focus:not([disabled]), .md-button.hovered:not([disabled]), .md-button.md-focused:not([disabled]), .md-button._md-focused:not([disabled]) {
