@@ -11359,10 +11359,6 @@ prm-report-problem .message-box:after{
   top: calc(50% - 200px);
 }
 
-prm-databases prm-databases-categorize,
-prm-databases #facets{
-    display: none!important;
-}
 /* https://sbprojects.statsbiblioteket.dk/jira/browse/BSV-210
    PRIMO: Location facet til åbne hylder location*/
 div[data-facet-group = 'location_code'] .section-content .md-chips .md-chip{
