@@ -39,9 +39,12 @@ help-button .md-button.md-icon-button.search-help-button, prm-report-problem but
   z-index: 999;
   margin: 0;
   position: fixed;
-  top: calc(50% + 144px);
+  top: calc(50% + 1px);
 
   right:0
+}
+prm-search .ra-container .research-assistant-side-button{
+bottom: 50%;
 }
 
 help-button .search-help-button.md-button:hover, prm-report-problem button.report-problem-btn:hover{
@@ -160,7 +163,7 @@ prm-report-problem .report-container .report-problem-btn:hover {
 
 prm-report-problem .report-container button.report-problem-btn{
   background-color: #F4B664!important;
-  top: calc(50% + 186px);
+  top: calc(50% + 41px);
   width: 40px;
   height: 40px;
   min-height: 24px;
