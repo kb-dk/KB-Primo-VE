@@ -10858,6 +10858,23 @@ article {
 .overview .left {
     float: left; }
 
+#rscBanner div.banner-content{
+    background-image: url(../img/ai_research_assistant.jpg)!important;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+}
+
+
+#rscBanner h2.banner-title{
+    line-height: 32px;
+    padding: 10px;
+}
+
+#rscBanner .banner-display-name{
+    display:none;
+}
 /* Bug fixing: after adding the announcement bar the overlays (like when you click on the more (...) button) don't
 show up properly and the following code fixes it */
 

@@ -1,0 +1,17 @@
+#rscBanner div.banner-content{
+    background-image: url(../img/ai_research_assistant.jpg)!important;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+}
+
+
+#rscBanner h2.banner-title{
+    line-height: 32px;
+    padding: 10px;
+}
+
+#rscBanner .banner-display-name{
+    display:none;
+}
