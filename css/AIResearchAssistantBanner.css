@@ -15,3 +15,28 @@
 #rscBanner .banner-display-name{
     display:none;
 }
+
+#rscBanner div:hover .banner-title{
+    font-size: 43px;
+    opacity: 1;
+    color: white;
+    word-spacing: 0;
+    text-transform: uppercase;
+    line-height: 32px;
+    position: static;
+    background: black;
+    height: 52px;
+}
+
+#rscBanner div:hover md-card-title-text.md-truncate{
+    margin-bottom: 4.8px;
+    padding: 29px 0;
+}
+
+#rscBanner div:hover .bigger-title{
+    margin-bottom: 4.8px
+}
+
+#rscBanner div:hover .banner-subhead{
+    display: block;
+}
