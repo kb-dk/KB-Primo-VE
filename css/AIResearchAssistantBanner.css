@@ -6,7 +6,6 @@
     background-size: auto 100%;
 }
 
-
 #rscBanner h2.banner-title{
     line-height: 32px;
     padding: 10px;
@@ -16,7 +15,8 @@
     display:none;
 }
 
-#rscBanner div:hover .banner-title{
+#rscBanner div:hover .banner-title,
+#rscBanner div:focus .banner-title{
     font-size: 43px;
     opacity: 1;
     color: white;
@@ -28,15 +28,20 @@
     height: 52px;
 }
 
-#rscBanner div:hover md-card-title-text.md-truncate{
+#rscBanner div:hover md-card-title-text.md-truncate,
+#rscBanner div:focus md-card-title-text.md-truncate{
     margin-bottom: 4.8px;
     padding: 29px 0;
 }
 
-#rscBanner div:hover .bigger-title{
+#rscBanner div:hover .bigger-title,
+#rscBanner div:focus .bigger-title{
     margin-bottom: 4.8px
 }
 
-#rscBanner div:hover .banner-subhead{
+#rscBanner div:hover .banner-subhead,
+#rscBanner div:focus .banner-subhead{
     display: block;
 }
+
+
