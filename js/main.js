@@ -1,5 +1,5 @@
 // General services
-import {GetTranslationsService } from "./services/getTranslations.service";
+import {GetTranslationsService} from "./services/getTranslations.service";
 
 // KB special view home for university thesis
 import {KbHomeConfig} from './home/kbHome.component';
@@ -46,7 +46,7 @@ import {KbPickupLocationsConfig} from "./categorize-pickup-locations/kbPickupLoc
 import {PrmRequestAfterConfig} from "./categorize-pickup-locations/prmRequestAfter.component";
 
 // Add pickup numbers
-import {PickUpNumbersService } from "./pickup-numbers/pickUpNumbers.service";
+import {PickUpNumbersService} from "./pickup-numbers/pickUpNumbers.service";
 import {PrmRequestsAfterConfig} from "./pickup-numbers/prmRequestsAfter.component";
 
 // Close broken link feedback
@@ -56,29 +56,45 @@ import {PrmReportProblemAfterConfig} from "./brokenLinkFeedback/prmReportProblem
 import {PrmResourceRecommenderAfterConfig} from "./resource-recommender/prmResourceRecommenderAfter.component";
 
 angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
-    // .run(['$rootScope', ($rootScope) => {
-    //     console.log('viewName:',$rootScope);
-    //     // $rootScope.viewName = viewName;
-    // }])
+    // URL examples:
+    // https://soeg.kb.dk/discovery/search?query=any,contains,topic%20maps&tab=Specialer&search_scope=Specialer&vid=45KBDK_KGL:SPECIALER&lang=da&offset=0
+    // https://soeg.kb.dk/discovery/search?query=any,contains,english%20spoken%20n%C3%B8rrebros%20teater&tab=Everything&search_scope=MyInst_and_CI&vid=45KBDK_KGL:LEGANTO2&lang=da&offset=0
+    // https://soeg.kb.dk/discovery/search?query=any,contains,english%20spoken%20n%C3%B8rrebros%20teater&tab=Everything&search_scope=MyInst_and_CI&vid=45KBDK_KGL:KGL&lang=da&offset=0
+    // https://soeg.kb.dk/discovery/fulldisplay/alma99125390090005763/45KBDK_KGL:KGL
     .constant('viewName', (function () {
             let url = window.location.search.substring(1);
             let query = url.substring(url.indexOf('vid') + 4);
             // in 'Alma Viewer page'
-            if(!url){
+            if (!url) {
                 url = window.location.pathname;
-                query = url.substring(url.indexOf('/delivery/')+10);
-                query = query.substring(0, query.indexOf('/'));
+                if (url.search("45KBDK_KGL:KGL") >= 0) {
+                    console.log('vid:', "45KBDK_KGL:KGL");
+                    return "45KBDK_KGL-KGL";
+                }
+                if (url.search("45KBDK_KGL:SPECIALER") >= 0) {
+                    console.log('vid:', "45KBDK_KGL:SPECIALER");
+                    return "45KBDK_KGL-SPECIALER";
+                }
+                if (url.search("45KBDK_KGL:LEGANTO2") >= 0) {
+                    console.log('vid:', "45KBDK_KGL:LEGANTO2");
+                    return "45KBDK_KGL-LEGANTO2";
+                }
+                console.log('View name error: None of the view names are found in the url. Default view name is used: "45KBDK_KGL:KGL".');
+                return "45KBDK_KGL-KGL";
             }
             // If there are other parameters after vid, then remove them
             let vid = query.substring(0, query.indexOf('&')) ? query.substring(0, query.indexOf('&')) : query;
-        vid = vid.replace("%3A", "-");
-        console.log('vid:',vid);
-        return vid.replace(":", "-");
-    })()
+            vid = vid.replace("%3A", "-");
+            console.log('vid:', vid);
+            if (!vid) {
+                vid = "45KBDK_KGL-KGL";
+            }
+            return vid.replace(":", "-");
+        })()
     )
 
     // ChatBox scriptId
-    .constant('scriptIds' , scriptIds)
+    .constant('scriptIds', scriptIds)
 
     // General services
     .service('getTranslationsService', GetTranslationsService)
@@ -101,7 +117,7 @@ angular.module('viewCustom', ['angularLoad', 'ngMaterial'])
     .component(PrmExploreFooterAfterConfig.name, PrmExploreFooterAfterConfig.config)
     .component(KbPrimoFooterConfig.name, KbPrimoFooterConfig.config)
 
-   .component(KbHelpConfig.name, KbHelpConfig.config)
+    .component(KbHelpConfig.name, KbHelpConfig.config)
 
     // Navigation header
     .component(PrmTopBarBeforeConfig.name, PrmTopBarBeforeConfig.config)

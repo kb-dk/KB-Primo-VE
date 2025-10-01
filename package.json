@@ -36,6 +36,7 @@
   "dependencies": {
     "@kb-dk/kb-footer": "2.13.0",
     "browserify": "^13.3.0",
+    "gulp": "^5.0.1",
     "jsonld": "^0.4.12",
     "lodash": "^4.17.21",
     "sass": "^1.56.1",
