@@ -22,8 +22,7 @@ class KbHelpController {
         }
 
         getHelpTextFromAPI(){
-            let viewName = this.location.search().vid;
-            this._getTranslations(this.lang, viewName)
+            this._getTranslations(this.lang, this.viewName)
                 .then(response => {
                     this.help = this.createHelpJson(response.data);
                 })

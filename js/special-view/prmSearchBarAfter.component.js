@@ -26,7 +26,8 @@ class PrmSearchBarAfterController {
                 angular.element(document.getElementById('searchBar')).addClass('hidePlaceholder');
 
                 let lang = _this.location.search().lang || 'da';
-                let viewName = _this.location.search().vid;
+                let viewName = _this.location.search().vid || '45KBDK_KGL-KGL';
+                console.log("PrmSearchBarAfterController: Lang= ", lang, "viewName= ", viewName);
                 _this.changeSearchBarPlaceholder(lang, viewName);
             }, 0);
         }
