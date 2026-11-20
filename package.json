@@ -34,7 +34,7 @@
     "watchify": "^3.8.0"
   },
   "dependencies": {
-    "@kb-dk/kb-footer": "2.13.0",
+    "@kb-dk/kb-footer": "2.15.0",
     "browserify": "^13.3.0",
     "gulp": "^5.0.1",
     "jsonld": "^0.4.12",
